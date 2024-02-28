@@ -4,6 +4,8 @@ info:
   version: v1beta1
 servers:
 - url: /
+security:
+- Basic: []
 paths:
   /api/v1/namespaces/{namespace}/persistentvolumeclaims:
     get:
@@ -41111,4 +41113,8 @@ components:
             $ref: '#/components/schemas/network.harvesterhci.io.v1beta1.NetworkInterface'
           type: array
       type: object
+  securitySchemes:
+    Basic:
+      scheme: basic
+      type: http
 x-original-swagger-version: "2.0"
