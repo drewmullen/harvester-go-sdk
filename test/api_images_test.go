@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/drewmullen/harvester-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_ImagesAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService CreateNamespacedVirtualMachineImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -38,7 +39,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService DeleteNamespacedVirtualMachineImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -53,7 +54,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService ListNamespacedVirtualMachineImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -67,7 +68,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService ListVirtualMachineImageForAllNamespaces", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.ImagesAPI.ListVirtualMachineImageForAllNamespaces(context.Background()).Execute()
 
@@ -79,7 +80,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService PatchNamespacedVirtualMachineImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -94,7 +95,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService ReadNamespacedVirtualMachineImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -109,7 +110,7 @@ func Test_openapi_ImagesAPIService(t *testing.T) {
 
 	t.Run("Test ImagesAPIService ReplaceNamespacedVirtualMachineImage", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string

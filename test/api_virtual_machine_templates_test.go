@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/drewmullen/harvester-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService CreateNamespacedVirtualMachineTemplate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -38,7 +39,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService CreateNamespacedVirtualMachineTemplateVersion", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -52,7 +53,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService DeleteNamespacedVirtualMachineTemplate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -67,7 +68,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService DeleteNamespacedVirtualMachineTemplateVersion", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -82,7 +83,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ListNamespacedVirtualMachineTemplate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -96,7 +97,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ListNamespacedVirtualMachineTemplateVersion", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -110,7 +111,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ListVirtualMachineTemplateForAllNamespaces", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.VirtualMachineTemplatesAPI.ListVirtualMachineTemplateForAllNamespaces(context.Background()).Execute()
 
@@ -122,7 +123,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ListVirtualMachineTemplateVersionForAllNamespaces", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.VirtualMachineTemplatesAPI.ListVirtualMachineTemplateVersionForAllNamespaces(context.Background()).Execute()
 
@@ -134,7 +135,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService PatchNamespacedVirtualMachineTemplate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -149,7 +150,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService PatchNamespacedVirtualMachineTemplateVersion", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -164,7 +165,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ReadNamespacedVirtualMachineTemplate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -179,7 +180,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ReadNamespacedVirtualMachineTemplateVersion", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -194,7 +195,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ReplaceNamespacedVirtualMachineTemplate", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -209,7 +210,7 @@ func Test_openapi_VirtualMachineTemplatesAPIService(t *testing.T) {
 
 	t.Run("Test VirtualMachineTemplatesAPIService ReplaceNamespacedVirtualMachineTemplateVersion", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string

@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/drewmullen/harvester-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_SSHKeysAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService CreateNamespacedKeyPair", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -38,7 +39,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService DeleteNamespacedKeyPair", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -53,7 +54,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService ListKeyPairForAllNamespaces", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.SSHKeysAPI.ListKeyPairForAllNamespaces(context.Background()).Execute()
 
@@ -65,7 +66,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService ListNamespacedKeyPair", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -79,7 +80,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService PatchNamespacedKeyPair", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -94,7 +95,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService ReadNamespacedKeyPair", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -109,7 +110,7 @@ func Test_openapi_SSHKeysAPIService(t *testing.T) {
 
 	t.Run("Test SSHKeysAPIService ReplaceNamespacedKeyPair", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string

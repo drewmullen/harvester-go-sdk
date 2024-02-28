@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/drewmullen/harvester-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_SupportBundlesAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService CreateNamespacedSupportBundle", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -38,7 +39,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService DeleteNamespacedSupportBundle", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -53,7 +54,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService ListNamespacedSupportBundle", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -67,7 +68,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService ListSupportBundleForAllNamespaces", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.SupportBundlesAPI.ListSupportBundleForAllNamespaces(context.Background()).Execute()
 
@@ -79,7 +80,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService PatchNamespacedSupportBundle", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -94,7 +95,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService ReadNamespacedSupportBundle", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -109,7 +110,7 @@ func Test_openapi_SupportBundlesAPIService(t *testing.T) {
 
 	t.Run("Test SupportBundlesAPIService ReplaceNamespacedSupportBundle", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string

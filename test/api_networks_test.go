@@ -11,10 +11,11 @@ package openapi
 
 import (
 	"context"
+	"testing"
+
+	openapiclient "github.com/drewmullen/harvester-go-sdk"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
-	"testing"
-	openapiclient "github.com/GIT_USER_ID/GIT_REPO_ID"
 )
 
 func Test_openapi_NetworksAPIService(t *testing.T) {
@@ -24,7 +25,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService CreateNamespacedClusterNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -38,7 +39,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService CreateNamespacedNetworkAttachmentDefinition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -52,7 +53,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService CreateNamespacedNodeNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -66,7 +67,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService DeleteNamespacedClusterNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -81,7 +82,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService DeleteNamespacedNetworkAttachmentDefinition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -96,7 +97,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService DeleteNamespacedNodeNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -111,7 +112,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ListNamespacedClusterNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -125,7 +126,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ListNamespacedNetworkAttachmentDefinition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -139,7 +140,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ListNamespacedNodeNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var namespace string
 
@@ -153,7 +154,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ListNetworkAttachmentDefinitionForAllNamespaces", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		resp, httpRes, err := apiClient.NetworksAPI.ListNetworkAttachmentDefinitionForAllNamespaces(context.Background()).Execute()
 
@@ -165,7 +166,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService PatchNamespacedClusterNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -180,7 +181,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService PatchNamespacedNetworkAttachmentDefinition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -195,7 +196,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService PatchNamespacedNodeNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -210,7 +211,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ReadNamespacedClusterNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -225,7 +226,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ReadNamespacedNetworkAttachmentDefinition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -240,7 +241,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ReadNamespacedNodeNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -255,7 +256,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ReplaceNamespacedClusterNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -270,7 +271,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ReplaceNamespacedNetworkAttachmentDefinition", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
@@ -285,7 +286,7 @@ func Test_openapi_NetworksAPIService(t *testing.T) {
 
 	t.Run("Test NetworksAPIService ReplaceNamespacedNodeNetwork", func(t *testing.T) {
 
-		t.Skip("skip test")  // remove to run test
+		t.Skip("skip test") // remove to run test
 
 		var name string
 		var namespace string
