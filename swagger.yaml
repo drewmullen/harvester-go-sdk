@@ -4,6 +4,7 @@ info:
   version: v1beta1
 security:
 - Basic: []
+- Bearer: []
 servers:
 - url: /
 paths:
@@ -6864,6 +6865,9 @@ components:
     Basic:
       type: http
       scheme: basic
+    BearerAuth:
+      type: http
+      scheme: bearer
   schemas:
     harvesterhci.io.v1beta1.BackupTarget:
       type: object

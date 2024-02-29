@@ -6,6 +6,7 @@ servers:
 - url: /
 security:
 - Basic: []
+- Bearer: []
 paths:
   /api/v1/namespaces/{namespace}/persistentvolumeclaims:
     get:
@@ -41116,5 +41117,8 @@ components:
   securitySchemes:
     Basic:
       scheme: basic
+      type: http
+    BearerAuth:
+      scheme: bearer
       type: http
 x-original-swagger-version: "2.0"
