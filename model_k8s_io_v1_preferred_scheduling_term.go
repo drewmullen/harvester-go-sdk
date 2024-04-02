@@ -43,7 +43,7 @@ func NewK8sIoV1PreferredSchedulingTerm(preference K8sIoV1NodeSelectorTerm, weigh
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1PreferredSchedulingTermWithDefaults() *K8sIoV1PreferredSchedulingTerm {
 	this := K8sIoV1PreferredSchedulingTerm{}
-	var preference K8sIoV1NodeSelectorTerm = {}
+	var preference K8sIoV1NodeSelectorTerm
 	this.Preference = preference
 	var weight int32 = 0
 	this.Weight = weight

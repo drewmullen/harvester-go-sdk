@@ -38,11 +38,11 @@ func NewK8sIoV1PersistentVolumeClaim(apiVersion string, kind string) *K8sIoV1Per
 	this := K8sIoV1PersistentVolumeClaim{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec K8sIoV1PersistentVolumeClaimSpec = {}
+	var spec K8sIoV1PersistentVolumeClaimSpec
 	this.Spec = &spec
-	var status K8sIoV1PersistentVolumeClaimStatus = {}
+	var status K8sIoV1PersistentVolumeClaimStatus
 	this.Status = &status
 	return &this
 }
@@ -52,11 +52,11 @@ func NewK8sIoV1PersistentVolumeClaim(apiVersion string, kind string) *K8sIoV1Per
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1PersistentVolumeClaimWithDefaults() *K8sIoV1PersistentVolumeClaim {
 	this := K8sIoV1PersistentVolumeClaim{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec K8sIoV1PersistentVolumeClaimSpec = {}
+	var spec K8sIoV1PersistentVolumeClaimSpec
 	this.Spec = &spec
-	var status K8sIoV1PersistentVolumeClaimStatus = {}
+	var status K8sIoV1PersistentVolumeClaimStatus
 	this.Status = &status
 	return &this
 }

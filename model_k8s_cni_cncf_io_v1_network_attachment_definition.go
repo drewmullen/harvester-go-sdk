@@ -37,7 +37,7 @@ func NewK8sCniCncfIoV1NetworkAttachmentDefinition(apiVersion string, kind string
 	this := K8sCniCncfIoV1NetworkAttachmentDefinition{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
 	this.Spec = spec
 	return &this
@@ -48,9 +48,9 @@ func NewK8sCniCncfIoV1NetworkAttachmentDefinition(apiVersion string, kind string
 // but it doesn't guarantee that properties required by API are set
 func NewK8sCniCncfIoV1NetworkAttachmentDefinitionWithDefaults() *K8sCniCncfIoV1NetworkAttachmentDefinition {
 	this := K8sCniCncfIoV1NetworkAttachmentDefinition{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec K8sCniCncfIoV1NetworkAttachmentDefinitionSpec = {}
+	var spec K8sCniCncfIoV1NetworkAttachmentDefinitionSpec
 	this.Spec = spec
 	return &this
 }

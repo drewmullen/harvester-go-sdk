@@ -41,7 +41,7 @@ func NewK8sIoV1Status(apiVersion string, kind string) *K8sIoV1Status {
 	this := K8sIoV1Status{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
 }
@@ -51,7 +51,7 @@ func NewK8sIoV1Status(apiVersion string, kind string) *K8sIoV1Status {
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1StatusWithDefaults() *K8sIoV1Status {
 	this := K8sIoV1Status{}
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
 }

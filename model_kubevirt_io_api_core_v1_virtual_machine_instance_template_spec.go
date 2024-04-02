@@ -29,9 +29,9 @@ type KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec struct {
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec() *KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec = {}
+	var spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec
 	this.Spec = &spec
 	return &this
 }
@@ -41,9 +41,9 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec() *KubevirtIoApiCo
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpecWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec = {}
+	var spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec
 	this.Spec = &spec
 	return &this
 }

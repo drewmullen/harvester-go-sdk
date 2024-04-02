@@ -47,7 +47,7 @@ func NewHarvesterhciIoV1beta1KeyPairList(apiVersion string, items []Harvesterhci
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1KeyPairListWithDefaults() *HarvesterhciIoV1beta1KeyPairList {
 	this := HarvesterhciIoV1beta1KeyPairList{}
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = metadata
 	return &this
 }

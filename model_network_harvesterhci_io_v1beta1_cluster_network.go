@@ -37,9 +37,9 @@ func NewNetworkHarvesterhciIoV1beta1ClusterNetwork(apiVersion string, kind strin
 	this := NetworkHarvesterhciIoV1beta1ClusterNetwork{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var status NetworkHarvesterhciIoV1beta1ClusterNetworkStatus = {}
+	var status NetworkHarvesterhciIoV1beta1ClusterNetworkStatus
 	this.Status = &status
 	return &this
 }
@@ -49,9 +49,9 @@ func NewNetworkHarvesterhciIoV1beta1ClusterNetwork(apiVersion string, kind strin
 // but it doesn't guarantee that properties required by API are set
 func NewNetworkHarvesterhciIoV1beta1ClusterNetworkWithDefaults() *NetworkHarvesterhciIoV1beta1ClusterNetwork {
 	this := NetworkHarvesterhciIoV1beta1ClusterNetwork{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var status NetworkHarvesterhciIoV1beta1ClusterNetworkStatus = {}
+	var status NetworkHarvesterhciIoV1beta1ClusterNetworkStatus
 	this.Status = &status
 	return &this
 }

@@ -35,7 +35,7 @@ type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec struct 
 // will change when the set of required properties is changed
 func NewKubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec() *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec {
 	this := KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec{}
-	var resources K8sIoV1ResourceRequirements = {}
+	var resources K8sIoV1ResourceRequirements
 	this.Resources = &resources
 	return &this
 }
@@ -45,7 +45,7 @@ func NewKubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec() *K
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpecWithDefaults() *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec {
 	this := KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec{}
-	var resources K8sIoV1ResourceRequirements = {}
+	var resources K8sIoV1ResourceRequirements
 	this.Resources = &resources
 	return &this
 }

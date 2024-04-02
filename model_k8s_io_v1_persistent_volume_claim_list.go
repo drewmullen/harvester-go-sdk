@@ -38,7 +38,7 @@ func NewK8sIoV1PersistentVolumeClaimList(apiVersion string, items []K8sIoV1Persi
 	this.ApiVersion = apiVersion
 	this.Items = items
 	this.Kind = kind
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
 }
@@ -48,7 +48,7 @@ func NewK8sIoV1PersistentVolumeClaimList(apiVersion string, items []K8sIoV1Persi
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1PersistentVolumeClaimListWithDefaults() *K8sIoV1PersistentVolumeClaimList {
 	this := K8sIoV1PersistentVolumeClaimList{}
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
 }

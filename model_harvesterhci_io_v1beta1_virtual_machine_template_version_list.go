@@ -47,7 +47,7 @@ func NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionList(apiVersion string
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionListWithDefaults() *HarvesterhciIoV1beta1VirtualMachineTemplateVersionList {
 	this := HarvesterhciIoV1beta1VirtualMachineTemplateVersionList{}
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = metadata
 	return &this
 }

@@ -38,7 +38,7 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationList(apiVersion string
 	this.ApiVersion = apiVersion
 	this.Items = items
 	this.Kind = kind
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
 }
@@ -48,7 +48,7 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationList(apiVersion string
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationListWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList{}
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
 }

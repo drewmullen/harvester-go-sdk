@@ -38,10 +38,10 @@ func NewHarvesterhciIoV1beta1Upgrade(apiVersion string, kind string, spec Harves
 	this := HarvesterhciIoV1beta1Upgrade{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
 	this.Spec = spec
-	var status HarvesterhciIoV1beta1UpgradeStatus = {}
+	var status HarvesterhciIoV1beta1UpgradeStatus
 	this.Status = &status
 	return &this
 }
@@ -51,11 +51,11 @@ func NewHarvesterhciIoV1beta1Upgrade(apiVersion string, kind string, spec Harves
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1UpgradeWithDefaults() *HarvesterhciIoV1beta1Upgrade {
 	this := HarvesterhciIoV1beta1Upgrade{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec HarvesterhciIoV1beta1UpgradeSpec = {}
+	var spec HarvesterhciIoV1beta1UpgradeSpec
 	this.Spec = spec
-	var status HarvesterhciIoV1beta1UpgradeStatus = {}
+	var status HarvesterhciIoV1beta1UpgradeStatus
 	this.Status = &status
 	return &this
 }

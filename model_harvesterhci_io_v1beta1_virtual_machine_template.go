@@ -38,11 +38,11 @@ func NewHarvesterhciIoV1beta1VirtualMachineTemplate(apiVersion string, kind stri
 	this := HarvesterhciIoV1beta1VirtualMachineTemplate{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec HarvesterhciIoV1beta1VirtualMachineTemplateSpec = {}
+	var spec HarvesterhciIoV1beta1VirtualMachineTemplateSpec
 	this.Spec = &spec
-	var status HarvesterhciIoV1beta1VirtualMachineTemplateStatus = {}
+	var status HarvesterhciIoV1beta1VirtualMachineTemplateStatus
 	this.Status = &status
 	return &this
 }
@@ -52,11 +52,11 @@ func NewHarvesterhciIoV1beta1VirtualMachineTemplate(apiVersion string, kind stri
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VirtualMachineTemplateWithDefaults() *HarvesterhciIoV1beta1VirtualMachineTemplate {
 	this := HarvesterhciIoV1beta1VirtualMachineTemplate{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec HarvesterhciIoV1beta1VirtualMachineTemplateSpec = {}
+	var spec HarvesterhciIoV1beta1VirtualMachineTemplateSpec
 	this.Spec = &spec
-	var status HarvesterhciIoV1beta1VirtualMachineTemplateStatus = {}
+	var status HarvesterhciIoV1beta1VirtualMachineTemplateStatus
 	this.Status = &status
 	return &this
 }

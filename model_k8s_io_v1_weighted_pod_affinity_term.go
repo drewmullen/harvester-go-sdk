@@ -43,7 +43,7 @@ func NewK8sIoV1WeightedPodAffinityTerm(podAffinityTerm K8sIoV1PodAffinityTerm, w
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1WeightedPodAffinityTermWithDefaults() *K8sIoV1WeightedPodAffinityTerm {
 	this := K8sIoV1WeightedPodAffinityTerm{}
-	var podAffinityTerm K8sIoV1PodAffinityTerm = {}
+	var podAffinityTerm K8sIoV1PodAffinityTerm
 	this.PodAffinityTerm = podAffinityTerm
 	var weight int32 = 0
 	this.Weight = weight

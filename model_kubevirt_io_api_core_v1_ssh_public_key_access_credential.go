@@ -43,9 +43,9 @@ func NewKubevirtIoApiCoreV1SSHPublicKeyAccessCredential(propagationMethod Kubevi
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1SSHPublicKeyAccessCredentialWithDefaults() *KubevirtIoApiCoreV1SSHPublicKeyAccessCredential {
 	this := KubevirtIoApiCoreV1SSHPublicKeyAccessCredential{}
-	var propagationMethod KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod = {}
+	var propagationMethod KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod
 	this.PropagationMethod = propagationMethod
-	var source KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource = {}
+	var source KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource
 	this.Source = source
 	return &this
 }

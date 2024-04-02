@@ -33,7 +33,7 @@ type HarvesterhciIoV1beta1VolumeRestore struct {
 // will change when the set of required properties is changed
 func NewHarvesterhciIoV1beta1VolumeRestore() *HarvesterhciIoV1beta1VolumeRestore {
 	this := HarvesterhciIoV1beta1VolumeRestore{}
-	var persistentVolumeClaimSpec HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec = {}
+	var persistentVolumeClaimSpec HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec
 	this.PersistentVolumeClaimSpec = &persistentVolumeClaimSpec
 	return &this
 }
@@ -43,7 +43,7 @@ func NewHarvesterhciIoV1beta1VolumeRestore() *HarvesterhciIoV1beta1VolumeRestore
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VolumeRestoreWithDefaults() *HarvesterhciIoV1beta1VolumeRestore {
 	this := HarvesterhciIoV1beta1VolumeRestore{}
-	var persistentVolumeClaimSpec HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec = {}
+	var persistentVolumeClaimSpec HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec
 	this.PersistentVolumeClaimSpec = &persistentVolumeClaimSpec
 	return &this
 }

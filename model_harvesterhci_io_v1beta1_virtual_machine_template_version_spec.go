@@ -37,7 +37,7 @@ type _HarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec HarvesterhciIoV1bet
 func NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec(templateId string) *HarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec {
 	this := HarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec{}
 	this.TemplateId = templateId
-	var vm HarvesterhciIoV1beta1VirtualMachineSourceSpec = {}
+	var vm HarvesterhciIoV1beta1VirtualMachineSourceSpec
 	this.Vm = &vm
 	return &this
 }
@@ -49,7 +49,7 @@ func NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpecWithDefaults() *Ha
 	this := HarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec{}
 	var templateId string = ""
 	this.TemplateId = templateId
-	var vm HarvesterhciIoV1beta1VirtualMachineSourceSpec = {}
+	var vm HarvesterhciIoV1beta1VirtualMachineSourceSpec
 	this.Vm = &vm
 	return &this
 }

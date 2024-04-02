@@ -47,7 +47,7 @@ func NewNetworkHarvesterhciIoV1beta1ClusterNetworkList(apiVersion string, items 
 // but it doesn't guarantee that properties required by API are set
 func NewNetworkHarvesterhciIoV1beta1ClusterNetworkListWithDefaults() *NetworkHarvesterhciIoV1beta1ClusterNetworkList {
 	this := NetworkHarvesterhciIoV1beta1ClusterNetworkList{}
-	var metadata K8sIoV1ListMeta = {}
+	var metadata K8sIoV1ListMeta
 	this.Metadata = metadata
 	return &this
 }

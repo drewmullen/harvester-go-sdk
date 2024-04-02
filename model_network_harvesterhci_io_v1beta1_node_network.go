@@ -38,11 +38,11 @@ func NewNetworkHarvesterhciIoV1beta1NodeNetwork(apiVersion string, kind string) 
 	this := NetworkHarvesterhciIoV1beta1NodeNetwork{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec NetworkHarvesterhciIoV1beta1NodeNetworkSpec = {}
+	var spec NetworkHarvesterhciIoV1beta1NodeNetworkSpec
 	this.Spec = &spec
-	var status NetworkHarvesterhciIoV1beta1NodeNetworkStatus = {}
+	var status NetworkHarvesterhciIoV1beta1NodeNetworkStatus
 	this.Status = &status
 	return &this
 }
@@ -52,11 +52,11 @@ func NewNetworkHarvesterhciIoV1beta1NodeNetwork(apiVersion string, kind string) 
 // but it doesn't guarantee that properties required by API are set
 func NewNetworkHarvesterhciIoV1beta1NodeNetworkWithDefaults() *NetworkHarvesterhciIoV1beta1NodeNetwork {
 	this := NetworkHarvesterhciIoV1beta1NodeNetwork{}
-	var metadata K8sIoV1ObjectMeta = {}
+	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
-	var spec NetworkHarvesterhciIoV1beta1NodeNetworkSpec = {}
+	var spec NetworkHarvesterhciIoV1beta1NodeNetworkSpec
 	this.Spec = &spec
-	var status NetworkHarvesterhciIoV1beta1NodeNetworkStatus = {}
+	var status NetworkHarvesterhciIoV1beta1NodeNetworkStatus
 	this.Status = &status
 	return &this
 }
