@@ -4,33 +4,33 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedClusterNetwork**](NetworksAPI.md#CreateNamespacedClusterNetwork) | **Post** /apis/network.harvesterhci.io/v1beta1/clusternetworks | Create a Cluster Network
-[**CreateNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#CreateNamespacedNetworkAttachmentDefinition) | **Post** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions | Create a Network Attachment Definition
-[**CreateNamespacedNodeNetwork**](NetworksAPI.md#CreateNamespacedNodeNetwork) | **Post** /apis/network.harvesterhci.io/v1beta1/nodenetworks | Create a Node Network
-[**DeleteNamespacedClusterNetwork**](NetworksAPI.md#DeleteNamespacedClusterNetwork) | **Delete** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Delete a Cluster Network
-[**DeleteNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#DeleteNamespacedNetworkAttachmentDefinition) | **Delete** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Delete a Network Attachment Definition
-[**DeleteNamespacedNodeNetwork**](NetworksAPI.md#DeleteNamespacedNodeNetwork) | **Delete** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Delete a Node Network
-[**ListNamespacedClusterNetwork**](NetworksAPI.md#ListNamespacedClusterNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/clusternetworks | List Cluster Networks
-[**ListNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#ListNamespacedNetworkAttachmentDefinition) | **Get** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions | List Network Attachment Definitions
-[**ListNamespacedNodeNetwork**](NetworksAPI.md#ListNamespacedNodeNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/nodenetworks | List Node Networks
+[**CreateNamespacedClusterNetwork**](NetworksAPI.md#CreateNamespacedClusterNetwork) | **Post** /apis/network.harvesterhci.io/v1beta1/clusternetworks | Create a Namespaced Cluster Network
+[**CreateNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#CreateNamespacedNetworkAttachmentDefinition) | **Post** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions | Create a Namespaced Network Attachment Definition
+[**CreateNamespacedNodeNetwork**](NetworksAPI.md#CreateNamespacedNodeNetwork) | **Post** /apis/network.harvesterhci.io/v1beta1/nodenetworks | Create a Namespaced Node Network
+[**DeleteNamespacedClusterNetwork**](NetworksAPI.md#DeleteNamespacedClusterNetwork) | **Delete** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Delete a Namespaced Cluster Network
+[**DeleteNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#DeleteNamespacedNetworkAttachmentDefinition) | **Delete** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Delete a Namespaced Network Attachment Definition
+[**DeleteNamespacedNodeNetwork**](NetworksAPI.md#DeleteNamespacedNodeNetwork) | **Delete** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Delete a Namespaced Node Network
+[**ListNamespacedClusterNetwork**](NetworksAPI.md#ListNamespacedClusterNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/clusternetworks | List Namespaced Cluster Networks
+[**ListNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#ListNamespacedNetworkAttachmentDefinition) | **Get** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions | List Namespaced Network Attachment Definitions
+[**ListNamespacedNodeNetwork**](NetworksAPI.md#ListNamespacedNodeNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/nodenetworks | List Namespaced Node Networks
 [**ListNetworkAttachmentDefinitionForAllNamespaces**](NetworksAPI.md#ListNetworkAttachmentDefinitionForAllNamespaces) | **Get** /apis/k8s.cni.cncf.io/v1/network-attachment-definitions | List Network Attachment Definitions For All Namespaces
-[**PatchNamespacedClusterNetwork**](NetworksAPI.md#PatchNamespacedClusterNetwork) | **Patch** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Patch a Cluster Network
-[**PatchNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#PatchNamespacedNetworkAttachmentDefinition) | **Patch** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Patch a Network Attachment Definition
-[**PatchNamespacedNodeNetwork**](NetworksAPI.md#PatchNamespacedNodeNetwork) | **Patch** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Patch a Node Network
-[**ReadNamespacedClusterNetwork**](NetworksAPI.md#ReadNamespacedClusterNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Read a Cluster Network
-[**ReadNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#ReadNamespacedNetworkAttachmentDefinition) | **Get** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Read a Network Attachment Definition
-[**ReadNamespacedNodeNetwork**](NetworksAPI.md#ReadNamespacedNodeNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Read a Node Network
-[**ReplaceNamespacedClusterNetwork**](NetworksAPI.md#ReplaceNamespacedClusterNetwork) | **Put** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Replace a Cluster Network
-[**ReplaceNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#ReplaceNamespacedNetworkAttachmentDefinition) | **Put** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Replace a Network Attachment Definition
-[**ReplaceNamespacedNodeNetwork**](NetworksAPI.md#ReplaceNamespacedNodeNetwork) | **Put** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Replace a Node Network
+[**PatchNamespacedClusterNetwork**](NetworksAPI.md#PatchNamespacedClusterNetwork) | **Patch** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Patch a Namespaced Cluster Network
+[**PatchNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#PatchNamespacedNetworkAttachmentDefinition) | **Patch** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Patch a Namespaced Network Attachment Definition
+[**PatchNamespacedNodeNetwork**](NetworksAPI.md#PatchNamespacedNodeNetwork) | **Patch** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Patch a Namespaced Node Network
+[**ReadNamespacedClusterNetwork**](NetworksAPI.md#ReadNamespacedClusterNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Read a Namespaced Cluster Network
+[**ReadNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#ReadNamespacedNetworkAttachmentDefinition) | **Get** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Read a Namespaced Network Attachment Definition
+[**ReadNamespacedNodeNetwork**](NetworksAPI.md#ReadNamespacedNodeNetwork) | **Get** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Read a Namespaced Node Network
+[**ReplaceNamespacedClusterNetwork**](NetworksAPI.md#ReplaceNamespacedClusterNetwork) | **Put** /apis/network.harvesterhci.io/v1beta1/clusternetworks/{name} | Replace a Namespaced Cluster Network
+[**ReplaceNamespacedNetworkAttachmentDefinition**](NetworksAPI.md#ReplaceNamespacedNetworkAttachmentDefinition) | **Put** /apis/k8s.cni.cncf.io/v1/namespaces/{namespace}/network-attachment-definitions/{name} | Replace a Namespaced Network Attachment Definition
+[**ReplaceNamespacedNodeNetwork**](NetworksAPI.md#ReplaceNamespacedNodeNetwork) | **Put** /apis/network.harvesterhci.io/v1beta1/nodenetworks/{name} | Replace a Namespaced Node Network
 
 
 
 ## CreateNamespacedClusterNetwork
 
-> NetworkHarvesterhciIoV1beta1ClusterNetwork CreateNamespacedClusterNetwork(ctx, namespace).Body(body).Execute()
+> NetworkHarvesterhciIoV1beta1ClusterNetwork CreateNamespacedClusterNetwork(ctx, namespace).NetworkHarvesterhciIoV1beta1ClusterNetwork(networkHarvesterhciIoV1beta1ClusterNetwork).Execute()
 
-Create a Cluster Network
+Create a Namespaced Cluster Network
 
 
 
@@ -48,11 +48,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
+	networkHarvesterhciIoV1beta1ClusterNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.CreateNamespacedClusterNetwork(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.NetworksAPI.CreateNamespacedClusterNetwork(context.Background(), namespace).NetworkHarvesterhciIoV1beta1ClusterNetwork(networkHarvesterhciIoV1beta1ClusterNetwork).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.CreateNamespacedClusterNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -78,7 +78,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedClusterNet
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md) |  | 
+ **networkHarvesterhciIoV1beta1ClusterNetwork** | [**NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md) |  | 
 
 ### Return type
 
@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -100,9 +100,9 @@ Name | Type | Description  | Notes
 
 ## CreateNamespacedNetworkAttachmentDefinition
 
-> K8sCniCncfIoV1NetworkAttachmentDefinition CreateNamespacedNetworkAttachmentDefinition(ctx, namespace).Body(body).Execute()
+> K8sCniCncfIoV1NetworkAttachmentDefinition CreateNamespacedNetworkAttachmentDefinition(ctx, namespace).K8sCniCncfIoV1NetworkAttachmentDefinition(k8sCniCncfIoV1NetworkAttachmentDefinition).Execute()
 
-Create a Network Attachment Definition
+Create a Namespaced Network Attachment Definition
 
 
 
@@ -120,11 +120,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition("ApiVersion_example", "Kind_example", *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
+	k8sCniCncfIoV1NetworkAttachmentDefinition := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition("ApiVersion_example", "Kind_example", *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.CreateNamespacedNetworkAttachmentDefinition(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.NetworksAPI.CreateNamespacedNetworkAttachmentDefinition(context.Background(), namespace).K8sCniCncfIoV1NetworkAttachmentDefinition(k8sCniCncfIoV1NetworkAttachmentDefinition).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.CreateNamespacedNetworkAttachmentDefinition``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -150,7 +150,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedNetworkAtt
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**K8sCniCncfIoV1NetworkAttachmentDefinition**](K8sCniCncfIoV1NetworkAttachmentDefinition.md) |  | 
+ **k8sCniCncfIoV1NetworkAttachmentDefinition** | [**K8sCniCncfIoV1NetworkAttachmentDefinition**](K8sCniCncfIoV1NetworkAttachmentDefinition.md) |  | 
 
 ### Return type
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -172,9 +172,9 @@ Name | Type | Description  | Notes
 
 ## CreateNamespacedNodeNetwork
 
-> NetworkHarvesterhciIoV1beta1NodeNetwork CreateNamespacedNodeNetwork(ctx, namespace).Body(body).Execute()
+> NetworkHarvesterhciIoV1beta1NodeNetwork CreateNamespacedNodeNetwork(ctx, namespace).NetworkHarvesterhciIoV1beta1NodeNetwork(networkHarvesterhciIoV1beta1NodeNetwork).Execute()
 
-Create a Node Network
+Create a Namespaced Node Network
 
 
 
@@ -192,11 +192,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1NodeNetwork | 
+	networkHarvesterhciIoV1beta1NodeNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1NodeNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.CreateNamespacedNodeNetwork(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.NetworksAPI.CreateNamespacedNodeNetwork(context.Background(), namespace).NetworkHarvesterhciIoV1beta1NodeNetwork(networkHarvesterhciIoV1beta1NodeNetwork).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.CreateNamespacedNodeNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -222,7 +222,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedNodeNetwor
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**NetworkHarvesterhciIoV1beta1NodeNetwork**](NetworkHarvesterhciIoV1beta1NodeNetwork.md) |  | 
+ **networkHarvesterhciIoV1beta1NodeNetwork** | [**NetworkHarvesterhciIoV1beta1NodeNetwork**](NetworkHarvesterhciIoV1beta1NodeNetwork.md) |  | 
 
 ### Return type
 
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -244,9 +244,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedClusterNetwork
 
-> K8sIoV1Status DeleteNamespacedClusterNetwork(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedClusterNetwork(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Cluster Network
+Delete a Namespaced Cluster Network
 
 
 
@@ -265,14 +265,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.DeleteNamespacedClusterNetwork(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.NetworksAPI.DeleteNamespacedClusterNetwork(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.DeleteNamespacedClusterNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -300,7 +300,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -325,9 +325,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedNetworkAttachmentDefinition
 
-> K8sIoV1Status DeleteNamespacedNetworkAttachmentDefinition(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedNetworkAttachmentDefinition(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Network Attachment Definition
+Delete a Namespaced Network Attachment Definition
 
 
 
@@ -346,14 +346,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.DeleteNamespacedNetworkAttachmentDefinition(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.NetworksAPI.DeleteNamespacedNetworkAttachmentDefinition(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.DeleteNamespacedNetworkAttachmentDefinition``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -392,7 +392,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -406,9 +406,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedNodeNetwork
 
-> K8sIoV1Status DeleteNamespacedNodeNetwork(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedNodeNetwork(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Node Network
+Delete a Namespaced Node Network
 
 
 
@@ -427,14 +427,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.DeleteNamespacedNodeNetwork(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.NetworksAPI.DeleteNamespacedNodeNetwork(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.DeleteNamespacedNodeNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -462,7 +462,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -473,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -489,7 +489,7 @@ Name | Type | Description  | Notes
 
 > NetworkHarvesterhciIoV1beta1ClusterNetworkList ListNamespacedClusterNetwork(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Cluster Networks
+List Namespaced Cluster Networks
 
 
 
@@ -559,12 +559,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 > K8sCniCncfIoV1NetworkAttachmentDefinitionList ListNamespacedNetworkAttachmentDefinition(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Network Attachment Definitions
+List Namespaced Network Attachment Definitions
 
 
 
@@ -645,12 +645,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -661,7 +661,7 @@ Name | Type | Description  | Notes
 
 > NetworkHarvesterhciIoV1beta1NodeNetworkList ListNamespacedNodeNetwork(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Node Networks
+List Namespaced Node Networks
 
 
 
@@ -731,12 +731,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -811,12 +811,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -827,7 +827,7 @@ Name | Type | Description  | Notes
 
 > NetworkHarvesterhciIoV1beta1ClusterNetwork PatchNamespacedClusterNetwork(ctx, name, namespace).Body(body).Execute()
 
-Patch a Cluster Network
+Patch a Namespaced Cluster Network
 
 
 
@@ -886,7 +886,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -902,7 +902,7 @@ Name | Type | Description  | Notes
 
 > K8sCniCncfIoV1NetworkAttachmentDefinition PatchNamespacedNetworkAttachmentDefinition(ctx, name, namespace).Body(body).Execute()
 
-Patch a Network Attachment Definition
+Patch a Namespaced Network Attachment Definition
 
 
 
@@ -961,7 +961,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -977,7 +977,7 @@ Name | Type | Description  | Notes
 
 > NetworkHarvesterhciIoV1beta1NodeNetwork PatchNamespacedNodeNetwork(ctx, name, namespace).Body(body).Execute()
 
-Patch a Node Network
+Patch a Namespaced Node Network
 
 
 
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -1052,7 +1052,7 @@ Name | Type | Description  | Notes
 
 > NetworkHarvesterhciIoV1beta1ClusterNetwork ReadNamespacedClusterNetwork(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Cluster Network
+Read a Namespaced Cluster Network
 
 
 
@@ -1113,12 +1113,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1129,7 +1129,7 @@ Name | Type | Description  | Notes
 
 > K8sCniCncfIoV1NetworkAttachmentDefinition ReadNamespacedNetworkAttachmentDefinition(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Network Attachment Definition
+Read a Namespaced Network Attachment Definition
 
 
 
@@ -1190,12 +1190,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1206,7 +1206,7 @@ Name | Type | Description  | Notes
 
 > NetworkHarvesterhciIoV1beta1NodeNetwork ReadNamespacedNodeNetwork(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Node Network
+Read a Namespaced Node Network
 
 
 
@@ -1267,12 +1267,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -1281,9 +1281,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedClusterNetwork
 
-> NetworkHarvesterhciIoV1beta1ClusterNetwork ReplaceNamespacedClusterNetwork(ctx, name, namespace).Body(body).Execute()
+> NetworkHarvesterhciIoV1beta1ClusterNetwork ReplaceNamespacedClusterNetwork(ctx, name, namespace).NetworkHarvesterhciIoV1beta1ClusterNetwork(networkHarvesterhciIoV1beta1ClusterNetwork).Execute()
 
-Replace a Cluster Network
+Replace a Namespaced Cluster Network
 
 
 
@@ -1302,11 +1302,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
+	networkHarvesterhciIoV1beta1ClusterNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ReplaceNamespacedClusterNetwork(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.NetworksAPI.ReplaceNamespacedClusterNetwork(context.Background(), name, namespace).NetworkHarvesterhciIoV1beta1ClusterNetwork(networkHarvesterhciIoV1beta1ClusterNetwork).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ReplaceNamespacedClusterNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1334,7 +1334,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md) |  | 
+ **networkHarvesterhciIoV1beta1ClusterNetwork** | [**NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md) |  | 
 
 ### Return type
 
@@ -1342,7 +1342,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -1356,9 +1356,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedNetworkAttachmentDefinition
 
-> K8sCniCncfIoV1NetworkAttachmentDefinition ReplaceNamespacedNetworkAttachmentDefinition(ctx, name, namespace).Body(body).Execute()
+> K8sCniCncfIoV1NetworkAttachmentDefinition ReplaceNamespacedNetworkAttachmentDefinition(ctx, name, namespace).K8sCniCncfIoV1NetworkAttachmentDefinition(k8sCniCncfIoV1NetworkAttachmentDefinition).Execute()
 
-Replace a Network Attachment Definition
+Replace a Namespaced Network Attachment Definition
 
 
 
@@ -1377,11 +1377,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition("ApiVersion_example", "Kind_example", *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
+	k8sCniCncfIoV1NetworkAttachmentDefinition := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition("ApiVersion_example", "Kind_example", *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ReplaceNamespacedNetworkAttachmentDefinition(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.NetworksAPI.ReplaceNamespacedNetworkAttachmentDefinition(context.Background(), name, namespace).K8sCniCncfIoV1NetworkAttachmentDefinition(k8sCniCncfIoV1NetworkAttachmentDefinition).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ReplaceNamespacedNetworkAttachmentDefinition``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1409,7 +1409,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sCniCncfIoV1NetworkAttachmentDefinition**](K8sCniCncfIoV1NetworkAttachmentDefinition.md) |  | 
+ **k8sCniCncfIoV1NetworkAttachmentDefinition** | [**K8sCniCncfIoV1NetworkAttachmentDefinition**](K8sCniCncfIoV1NetworkAttachmentDefinition.md) |  | 
 
 ### Return type
 
@@ -1417,7 +1417,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -1431,9 +1431,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedNodeNetwork
 
-> NetworkHarvesterhciIoV1beta1NodeNetwork ReplaceNamespacedNodeNetwork(ctx, name, namespace).Body(body).Execute()
+> NetworkHarvesterhciIoV1beta1NodeNetwork ReplaceNamespacedNodeNetwork(ctx, name, namespace).NetworkHarvesterhciIoV1beta1NodeNetwork(networkHarvesterhciIoV1beta1NodeNetwork).Execute()
 
-Replace a Node Network
+Replace a Namespaced Node Network
 
 
 
@@ -1452,11 +1452,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1NodeNetwork | 
+	networkHarvesterhciIoV1beta1NodeNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1NodeNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ReplaceNamespacedNodeNetwork(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.NetworksAPI.ReplaceNamespacedNodeNetwork(context.Background(), name, namespace).NetworkHarvesterhciIoV1beta1NodeNetwork(networkHarvesterhciIoV1beta1NodeNetwork).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ReplaceNamespacedNodeNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1484,7 +1484,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**NetworkHarvesterhciIoV1beta1NodeNetwork**](NetworkHarvesterhciIoV1beta1NodeNetwork.md) |  | 
+ **networkHarvesterhciIoV1beta1NodeNetwork** | [**NetworkHarvesterhciIoV1beta1NodeNetwork**](NetworkHarvesterhciIoV1beta1NodeNetwork.md) |  | 
 
 ### Return type
 
@@ -1492,7 +1492,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

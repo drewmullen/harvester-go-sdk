@@ -42,6 +42,8 @@ func NewHarvesterhciIoV1beta1VirtualMachineBackupSpec(source K8sIoV1TypedLocalOb
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VirtualMachineBackupSpecWithDefaults() *HarvesterhciIoV1beta1VirtualMachineBackupSpec {
 	this := HarvesterhciIoV1beta1VirtualMachineBackupSpec{}
+	var source K8sIoV1TypedLocalObjectReference = {}
+	this.Source = source
 	return &this
 }
 

@@ -35,6 +35,8 @@ type K8sIoV1PersistentVolumeClaimSpec struct {
 // will change when the set of required properties is changed
 func NewK8sIoV1PersistentVolumeClaimSpec() *K8sIoV1PersistentVolumeClaimSpec {
 	this := K8sIoV1PersistentVolumeClaimSpec{}
+	var resources K8sIoV1ResourceRequirements = {}
+	this.Resources = &resources
 	return &this
 }
 
@@ -43,6 +45,8 @@ func NewK8sIoV1PersistentVolumeClaimSpec() *K8sIoV1PersistentVolumeClaimSpec {
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1PersistentVolumeClaimSpecWithDefaults() *K8sIoV1PersistentVolumeClaimSpec {
 	this := K8sIoV1PersistentVolumeClaimSpec{}
+	var resources K8sIoV1ResourceRequirements = {}
+	this.Resources = &resources
 	return &this
 }
 

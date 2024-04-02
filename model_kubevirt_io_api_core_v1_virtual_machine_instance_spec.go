@@ -60,6 +60,8 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceSpec(domain KubevirtIoApiCoreV1
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceSpecWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceSpec {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceSpec{}
+	var domain KubevirtIoApiCoreV1DomainSpec = {}
+	this.Domain = domain
 	return &this
 }
 

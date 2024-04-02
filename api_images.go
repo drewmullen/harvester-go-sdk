@@ -27,11 +27,11 @@ type ApiCreateNamespacedVirtualMachineImageRequest struct {
 	ctx context.Context
 	ApiService *ImagesAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineImage
+	harvesterhciIoV1beta1VirtualMachineImage *HarvesterhciIoV1beta1VirtualMachineImage
 }
 
-func (r ApiCreateNamespacedVirtualMachineImageRequest) Body(body HarvesterhciIoV1beta1VirtualMachineImage) ApiCreateNamespacedVirtualMachineImageRequest {
-	r.body = &body
+func (r ApiCreateNamespacedVirtualMachineImageRequest) HarvesterhciIoV1beta1VirtualMachineImage(harvesterhciIoV1beta1VirtualMachineImage HarvesterhciIoV1beta1VirtualMachineImage) ApiCreateNamespacedVirtualMachineImageRequest {
+	r.harvesterhciIoV1beta1VirtualMachineImage = &harvesterhciIoV1beta1VirtualMachineImage
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedVirtualMachineImageRequest) Execute() (*HarvesterhciI
 }
 
 /*
-CreateNamespacedVirtualMachineImage Create a Virtual Machine Image
+CreateNamespacedVirtualMachineImage Create a Namespaced Virtual Machine Image
 
 Create a VirtualMachineImage object.
 
@@ -77,8 +77,8 @@ func (a *ImagesAPIService) CreateNamespacedVirtualMachineImageExecute(r ApiCreat
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineImage == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineImage is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *ImagesAPIService) CreateNamespacedVirtualMachineImageExecute(r ApiCreat
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineImage
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedVirtualMachineImageRequest struct {
 	ApiService *ImagesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedVirtualMachineImageRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineImageRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedVirtualMachineImageRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineImageRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedVirtualMachineImageRequest) Execute() (*K8sIoV1Status
 }
 
 /*
-DeleteNamespacedVirtualMachineImage Delete a Virtual Machine Image
+DeleteNamespacedVirtualMachineImage Delete a Namespaced Virtual Machine Image
 
 Delete a VirtualMachineImage object.
 
@@ -226,8 +226,8 @@ func (a *ImagesAPIService) DeleteNamespacedVirtualMachineImageExecute(r ApiDelet
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *ImagesAPIService) DeleteNamespacedVirtualMachineImageExecute(r ApiDelet
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedVirtualMachineImageRequest) Execute() (*HarvesterhciIoV
 }
 
 /*
-ListNamespacedVirtualMachineImage List Virtual Machine Images
+ListNamespacedVirtualMachineImage List Namespaced Virtual Machine Images
 
 Get a list of VirtualMachineImage objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *ImagesAPIService) ListNamespacedVirtualMachineImageExecute(r ApiListNam
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -633,7 +633,7 @@ func (a *ImagesAPIService) ListVirtualMachineImageForAllNamespacesExecute(r ApiL
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedVirtualMachineImageRequest) Execute() (*HarvesterhciIo
 }
 
 /*
-PatchNamespacedVirtualMachineImage Patch a Virtual Machine Image
+PatchNamespacedVirtualMachineImage Patch a Namespaced Virtual Machine Image
 
 Patch a VirtualMachineImage object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedVirtualMachineImageRequest) Execute() (*HarvesterhciIoV
 }
 
 /*
-ReadNamespacedVirtualMachineImage Read a Virtual Machine Image
+ReadNamespacedVirtualMachineImage Read a Namespaced Virtual Machine Image
 
 Get a VirtualMachineImage object.
 
@@ -898,7 +898,7 @@ func (a *ImagesAPIService) ReadNamespacedVirtualMachineImageExecute(r ApiReadNam
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedVirtualMachineImageRequest struct {
 	ApiService *ImagesAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineImage
+	harvesterhciIoV1beta1VirtualMachineImage *HarvesterhciIoV1beta1VirtualMachineImage
 }
 
-func (r ApiReplaceNamespacedVirtualMachineImageRequest) Body(body HarvesterhciIoV1beta1VirtualMachineImage) ApiReplaceNamespacedVirtualMachineImageRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedVirtualMachineImageRequest) HarvesterhciIoV1beta1VirtualMachineImage(harvesterhciIoV1beta1VirtualMachineImage HarvesterhciIoV1beta1VirtualMachineImage) ApiReplaceNamespacedVirtualMachineImageRequest {
+	r.harvesterhciIoV1beta1VirtualMachineImage = &harvesterhciIoV1beta1VirtualMachineImage
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedVirtualMachineImageRequest) Execute() (*Harvesterhci
 }
 
 /*
-ReplaceNamespacedVirtualMachineImage Replace a Virtual Machine Image
+ReplaceNamespacedVirtualMachineImage Replace a Namespaced Virtual Machine Image
 
 Update a VirtualMachineImage object.
 
@@ -1010,8 +1010,8 @@ func (a *ImagesAPIService) ReplaceNamespacedVirtualMachineImageExecute(r ApiRepl
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineImage == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineImage is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *ImagesAPIService) ReplaceNamespacedVirtualMachineImageExecute(r ApiRepl
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineImage
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

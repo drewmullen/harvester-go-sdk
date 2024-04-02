@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PropagationMethod** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod.md) |  | 
-**Source** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource.md) |  | 
+**PropagationMethod** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod.md) |  | [default to {}]
+**Source** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource.md) |  | [default to {}]
 
 ## Methods
 

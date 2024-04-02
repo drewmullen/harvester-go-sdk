@@ -7,14 +7,14 @@ Name | Type | Description | Notes
 **Chassis** | Pointer to [**KubevirtIoApiCoreV1Chassis**](KubevirtIoApiCoreV1Chassis.md) |  | [optional] 
 **Clock** | Pointer to [**KubevirtIoApiCoreV1Clock**](KubevirtIoApiCoreV1Clock.md) |  | [optional] 
 **Cpu** | Pointer to [**KubevirtIoApiCoreV1CPU**](KubevirtIoApiCoreV1CPU.md) |  | [optional] 
-**Devices** | [**KubevirtIoApiCoreV1Devices**](KubevirtIoApiCoreV1Devices.md) |  | 
+**Devices** | [**KubevirtIoApiCoreV1Devices**](KubevirtIoApiCoreV1Devices.md) |  | [default to {}]
 **Features** | Pointer to [**KubevirtIoApiCoreV1Features**](KubevirtIoApiCoreV1Features.md) |  | [optional] 
 **Firmware** | Pointer to [**KubevirtIoApiCoreV1Firmware**](KubevirtIoApiCoreV1Firmware.md) |  | [optional] 
 **IoThreadsPolicy** | Pointer to **string** |  | [optional] 
 **LaunchSecurity** | Pointer to [**KubevirtIoApiCoreV1LaunchSecurity**](KubevirtIoApiCoreV1LaunchSecurity.md) |  | [optional] 
 **Machine** | Pointer to [**KubevirtIoApiCoreV1Machine**](KubevirtIoApiCoreV1Machine.md) |  | [optional] 
 **Memory** | Pointer to [**KubevirtIoApiCoreV1Memory**](KubevirtIoApiCoreV1Memory.md) |  | [optional] 
-**Resources** | Pointer to [**KubevirtIoApiCoreV1ResourceRequirements**](KubevirtIoApiCoreV1ResourceRequirements.md) |  | [optional] 
+**Resources** | Pointer to [**KubevirtIoApiCoreV1ResourceRequirements**](KubevirtIoApiCoreV1ResourceRequirements.md) |  | [optional] [default to {}]
 
 ## Methods
 

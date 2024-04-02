@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Details** | Pointer to [**K8sIoV1StatusDetails**](K8sIoV1StatusDetails.md) |  | [optional] 
 **Kind** | **string** |  | 
 **Message** | Pointer to **string** |  | [optional] 
-**Metadata** | Pointer to [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [optional] [default to {}]
 **Reason** | Pointer to **string** |  | [optional] 
 **Status** | Pointer to **string** |  | [optional] 
 

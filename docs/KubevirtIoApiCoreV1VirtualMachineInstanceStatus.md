@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **CurrentCPUTopology** | Pointer to [**KubevirtIoApiCoreV1CPUTopology**](KubevirtIoApiCoreV1CPUTopology.md) |  | [optional] 
 **EvacuationNodeName** | Pointer to **string** |  | [optional] 
 **FsFreezeStatus** | Pointer to **string** |  | [optional] 
-**GuestOSInfo** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo**](KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo.md) |  | [optional] 
+**GuestOSInfo** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo**](KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo.md) |  | [optional] [default to {}]
 **Interfaces** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface**](KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface.md) |  | [optional] 
 **LauncherContainerImageVersion** | Pointer to **string** |  | [optional] 
 **Machine** | Pointer to [**KubevirtIoApiCoreV1Machine**](KubevirtIoApiCoreV1Machine.md) |  | [optional] 

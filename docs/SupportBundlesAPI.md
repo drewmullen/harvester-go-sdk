@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedSupportBundle**](SupportBundlesAPI.md#CreateNamespacedSupportBundle) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles | Create a Support Bundle
-[**DeleteNamespacedSupportBundle**](SupportBundlesAPI.md#DeleteNamespacedSupportBundle) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Delete a Support Bundle
-[**ListNamespacedSupportBundle**](SupportBundlesAPI.md#ListNamespacedSupportBundle) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles | List Support Bundles
+[**CreateNamespacedSupportBundle**](SupportBundlesAPI.md#CreateNamespacedSupportBundle) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles | Create a Namespaced Support Bundle
+[**DeleteNamespacedSupportBundle**](SupportBundlesAPI.md#DeleteNamespacedSupportBundle) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Delete a Namespaced Support Bundle
+[**ListNamespacedSupportBundle**](SupportBundlesAPI.md#ListNamespacedSupportBundle) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles | List Namespaced Support Bundles
 [**ListSupportBundleForAllNamespaces**](SupportBundlesAPI.md#ListSupportBundleForAllNamespaces) | **Get** /apis/harvesterhci.io/v1beta1/supportbundles | List Support Bundles For All Namespaces
-[**PatchNamespacedSupportBundle**](SupportBundlesAPI.md#PatchNamespacedSupportBundle) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Patch a Support Bundle
-[**ReadNamespacedSupportBundle**](SupportBundlesAPI.md#ReadNamespacedSupportBundle) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Read a Support Bundle
-[**ReplaceNamespacedSupportBundle**](SupportBundlesAPI.md#ReplaceNamespacedSupportBundle) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Replace a Support Bundle
+[**PatchNamespacedSupportBundle**](SupportBundlesAPI.md#PatchNamespacedSupportBundle) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Patch a Namespaced Support Bundle
+[**ReadNamespacedSupportBundle**](SupportBundlesAPI.md#ReadNamespacedSupportBundle) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Read a Namespaced Support Bundle
+[**ReplaceNamespacedSupportBundle**](SupportBundlesAPI.md#ReplaceNamespacedSupportBundle) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/supportbundles/{name} | Replace a Namespaced Support Bundle
 
 
 
 ## CreateNamespacedSupportBundle
 
-> HarvesterhciIoV1beta1SupportBundle CreateNamespacedSupportBundle(ctx, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1SupportBundle CreateNamespacedSupportBundle(ctx, namespace).HarvesterhciIoV1beta1SupportBundle(harvesterhciIoV1beta1SupportBundle).Execute()
 
-Create a Support Bundle
+Create a Namespaced Support Bundle
 
 
 
@@ -36,11 +36,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1SupportBundle("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1SupportBundleSpec("Description_example")) // HarvesterhciIoV1beta1SupportBundle | 
+	harvesterhciIoV1beta1SupportBundle := *openapiclient.NewHarvesterhciIoV1beta1SupportBundle("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1SupportBundleSpec("Description_example")) // HarvesterhciIoV1beta1SupportBundle | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SupportBundlesAPI.CreateNamespacedSupportBundle(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.SupportBundlesAPI.CreateNamespacedSupportBundle(context.Background(), namespace).HarvesterhciIoV1beta1SupportBundle(harvesterhciIoV1beta1SupportBundle).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SupportBundlesAPI.CreateNamespacedSupportBundle``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedSupportBun
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**HarvesterhciIoV1beta1SupportBundle**](HarvesterhciIoV1beta1SupportBundle.md) |  | 
+ **harvesterhciIoV1beta1SupportBundle** | [**HarvesterhciIoV1beta1SupportBundle**](HarvesterhciIoV1beta1SupportBundle.md) |  | 
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -88,9 +88,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedSupportBundle
 
-> K8sIoV1Status DeleteNamespacedSupportBundle(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedSupportBundle(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Support Bundle
+Delete a Namespaced Support Bundle
 
 
 
@@ -109,14 +109,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SupportBundlesAPI.DeleteNamespacedSupportBundle(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.SupportBundlesAPI.DeleteNamespacedSupportBundle(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SupportBundlesAPI.DeleteNamespacedSupportBundle``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1SupportBundleList ListNamespacedSupportBundle(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Support Bundles
+List Namespaced Support Bundles
 
 
 
@@ -241,12 +241,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -321,12 +321,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1SupportBundle PatchNamespacedSupportBundle(ctx, name, namespace).Body(body).Execute()
 
-Patch a Support Bundle
+Patch a Namespaced Support Bundle
 
 
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1SupportBundle ReadNamespacedSupportBundle(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Support Bundle
+Read a Namespaced Support Bundle
 
 
 
@@ -473,12 +473,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -487,9 +487,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedSupportBundle
 
-> HarvesterhciIoV1beta1SupportBundle ReplaceNamespacedSupportBundle(ctx, name, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1SupportBundle ReplaceNamespacedSupportBundle(ctx, name, namespace).HarvesterhciIoV1beta1SupportBundle(harvesterhciIoV1beta1SupportBundle).Execute()
 
-Replace a Support Bundle
+Replace a Namespaced Support Bundle
 
 
 
@@ -508,11 +508,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1SupportBundle("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1SupportBundleSpec("Description_example")) // HarvesterhciIoV1beta1SupportBundle | 
+	harvesterhciIoV1beta1SupportBundle := *openapiclient.NewHarvesterhciIoV1beta1SupportBundle("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1SupportBundleSpec("Description_example")) // HarvesterhciIoV1beta1SupportBundle | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SupportBundlesAPI.ReplaceNamespacedSupportBundle(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.SupportBundlesAPI.ReplaceNamespacedSupportBundle(context.Background(), name, namespace).HarvesterhciIoV1beta1SupportBundle(harvesterhciIoV1beta1SupportBundle).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SupportBundlesAPI.ReplaceNamespacedSupportBundle``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**HarvesterhciIoV1beta1SupportBundle**](HarvesterhciIoV1beta1SupportBundle.md) |  | 
+ **harvesterhciIoV1beta1SupportBundle** | [**HarvesterhciIoV1beta1SupportBundle**](HarvesterhciIoV1beta1SupportBundle.md) |  | 
 
 ### Return type
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedVirtualMachineImage**](ImagesAPI.md#CreateNamespacedVirtualMachineImage) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages | Create a Virtual Machine Image
-[**DeleteNamespacedVirtualMachineImage**](ImagesAPI.md#DeleteNamespacedVirtualMachineImage) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Delete a Virtual Machine Image
-[**ListNamespacedVirtualMachineImage**](ImagesAPI.md#ListNamespacedVirtualMachineImage) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages | List Virtual Machine Images
+[**CreateNamespacedVirtualMachineImage**](ImagesAPI.md#CreateNamespacedVirtualMachineImage) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages | Create a Namespaced Virtual Machine Image
+[**DeleteNamespacedVirtualMachineImage**](ImagesAPI.md#DeleteNamespacedVirtualMachineImage) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Delete a Namespaced Virtual Machine Image
+[**ListNamespacedVirtualMachineImage**](ImagesAPI.md#ListNamespacedVirtualMachineImage) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages | List Namespaced Virtual Machine Images
 [**ListVirtualMachineImageForAllNamespaces**](ImagesAPI.md#ListVirtualMachineImageForAllNamespaces) | **Get** /apis/harvesterhci.io/v1beta1/virtualmachineimages | List Virtual Machine Images For All Namespaces
-[**PatchNamespacedVirtualMachineImage**](ImagesAPI.md#PatchNamespacedVirtualMachineImage) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Patch a Virtual Machine Image
-[**ReadNamespacedVirtualMachineImage**](ImagesAPI.md#ReadNamespacedVirtualMachineImage) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Read a Virtual Machine Image
-[**ReplaceNamespacedVirtualMachineImage**](ImagesAPI.md#ReplaceNamespacedVirtualMachineImage) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Replace a Virtual Machine Image
+[**PatchNamespacedVirtualMachineImage**](ImagesAPI.md#PatchNamespacedVirtualMachineImage) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Patch a Namespaced Virtual Machine Image
+[**ReadNamespacedVirtualMachineImage**](ImagesAPI.md#ReadNamespacedVirtualMachineImage) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Read a Namespaced Virtual Machine Image
+[**ReplaceNamespacedVirtualMachineImage**](ImagesAPI.md#ReplaceNamespacedVirtualMachineImage) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachineimages/{name} | Replace a Namespaced Virtual Machine Image
 
 
 
 ## CreateNamespacedVirtualMachineImage
 
-> HarvesterhciIoV1beta1VirtualMachineImage CreateNamespacedVirtualMachineImage(ctx, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineImage CreateNamespacedVirtualMachineImage(ctx, namespace).HarvesterhciIoV1beta1VirtualMachineImage(harvesterhciIoV1beta1VirtualMachineImage).Execute()
 
-Create a Virtual Machine Image
+Create a Namespaced Virtual Machine Image
 
 
 
@@ -36,11 +36,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImage("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImageSpec("DisplayName_example", "SourceType_example")) // HarvesterhciIoV1beta1VirtualMachineImage | 
+	harvesterhciIoV1beta1VirtualMachineImage := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImage("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImageSpec("DisplayName_example", "SourceType_example")) // HarvesterhciIoV1beta1VirtualMachineImage | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ImagesAPI.CreateNamespacedVirtualMachineImage(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.ImagesAPI.CreateNamespacedVirtualMachineImage(context.Background(), namespace).HarvesterhciIoV1beta1VirtualMachineImage(harvesterhciIoV1beta1VirtualMachineImage).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImagesAPI.CreateNamespacedVirtualMachineImage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedVirtualMac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineImage**](HarvesterhciIoV1beta1VirtualMachineImage.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineImage** | [**HarvesterhciIoV1beta1VirtualMachineImage**](HarvesterhciIoV1beta1VirtualMachineImage.md) |  | 
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -88,9 +88,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedVirtualMachineImage
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineImage(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedVirtualMachineImage(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Virtual Machine Image
+Delete a Namespaced Virtual Machine Image
 
 
 
@@ -109,14 +109,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ImagesAPI.DeleteNamespacedVirtualMachineImage(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.ImagesAPI.DeleteNamespacedVirtualMachineImage(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImagesAPI.DeleteNamespacedVirtualMachineImage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineImageList ListNamespacedVirtualMachineImage(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Virtual Machine Images
+List Namespaced Virtual Machine Images
 
 
 
@@ -241,12 +241,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -321,12 +321,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineImage PatchNamespacedVirtualMachineImage(ctx, name, namespace).Body(body).Execute()
 
-Patch a Virtual Machine Image
+Patch a Namespaced Virtual Machine Image
 
 
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineImage ReadNamespacedVirtualMachineImage(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Virtual Machine Image
+Read a Namespaced Virtual Machine Image
 
 
 
@@ -473,12 +473,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -487,9 +487,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedVirtualMachineImage
 
-> HarvesterhciIoV1beta1VirtualMachineImage ReplaceNamespacedVirtualMachineImage(ctx, name, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineImage ReplaceNamespacedVirtualMachineImage(ctx, name, namespace).HarvesterhciIoV1beta1VirtualMachineImage(harvesterhciIoV1beta1VirtualMachineImage).Execute()
 
-Replace a Virtual Machine Image
+Replace a Namespaced Virtual Machine Image
 
 
 
@@ -508,11 +508,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImage("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImageSpec("DisplayName_example", "SourceType_example")) // HarvesterhciIoV1beta1VirtualMachineImage | 
+	harvesterhciIoV1beta1VirtualMachineImage := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImage("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineImageSpec("DisplayName_example", "SourceType_example")) // HarvesterhciIoV1beta1VirtualMachineImage | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.ImagesAPI.ReplaceNamespacedVirtualMachineImage(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.ImagesAPI.ReplaceNamespacedVirtualMachineImage(context.Background(), name, namespace).HarvesterhciIoV1beta1VirtualMachineImage(harvesterhciIoV1beta1VirtualMachineImage).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImagesAPI.ReplaceNamespacedVirtualMachineImage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineImage**](HarvesterhciIoV1beta1VirtualMachineImage.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineImage** | [**HarvesterhciIoV1beta1VirtualMachineImage**](HarvesterhciIoV1beta1VirtualMachineImage.md) |  | 
 
 ### Return type
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

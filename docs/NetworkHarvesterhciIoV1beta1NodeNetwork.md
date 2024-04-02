@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | Pointer to [**NetworkHarvesterhciIoV1beta1NodeNetworkSpec**](NetworkHarvesterhciIoV1beta1NodeNetworkSpec.md) |  | [optional] 
-**Status** | Pointer to [**NetworkHarvesterhciIoV1beta1NodeNetworkStatus**](NetworkHarvesterhciIoV1beta1NodeNetworkStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | Pointer to [**NetworkHarvesterhciIoV1beta1NodeNetworkSpec**](NetworkHarvesterhciIoV1beta1NodeNetworkSpec.md) |  | [optional] [default to {}]
+**Status** | Pointer to [**NetworkHarvesterhciIoV1beta1NodeNetworkStatus**](NetworkHarvesterhciIoV1beta1NodeNetworkStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 

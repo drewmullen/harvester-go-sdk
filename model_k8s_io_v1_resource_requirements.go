@@ -20,8 +20,8 @@ var _ MappedNullable = &K8sIoV1ResourceRequirements{}
 // K8sIoV1ResourceRequirements struct for K8sIoV1ResourceRequirements
 type K8sIoV1ResourceRequirements struct {
 	Claims []K8sIoV1ResourceClaim `json:"claims,omitempty"`
-	Limits *map[string]string `json:"limits,omitempty"`
-	Requests *map[string]string `json:"requests,omitempty"`
+	Limits map[string]string `json:"limits,omitempty"`
+	Requests map[string]string `json:"requests,omitempty"`
 }
 
 // NewK8sIoV1ResourceRequirements instantiates a new K8sIoV1ResourceRequirements object
@@ -79,14 +79,14 @@ func (o *K8sIoV1ResourceRequirements) GetLimits() map[string]string {
 		var ret map[string]string
 		return ret
 	}
-	return *o.Limits
+	return o.Limits
 }
 
 // GetLimitsOk returns a tuple with the Limits field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *K8sIoV1ResourceRequirements) GetLimitsOk() (*map[string]string, bool) {
+func (o *K8sIoV1ResourceRequirements) GetLimitsOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Limits) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Limits, true
 }
@@ -102,7 +102,7 @@ func (o *K8sIoV1ResourceRequirements) HasLimits() bool {
 
 // SetLimits gets a reference to the given map[string]string and assigns it to the Limits field.
 func (o *K8sIoV1ResourceRequirements) SetLimits(v map[string]string) {
-	o.Limits = &v
+	o.Limits = v
 }
 
 // GetRequests returns the Requests field value if set, zero value otherwise.
@@ -111,14 +111,14 @@ func (o *K8sIoV1ResourceRequirements) GetRequests() map[string]string {
 		var ret map[string]string
 		return ret
 	}
-	return *o.Requests
+	return o.Requests
 }
 
 // GetRequestsOk returns a tuple with the Requests field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *K8sIoV1ResourceRequirements) GetRequestsOk() (*map[string]string, bool) {
+func (o *K8sIoV1ResourceRequirements) GetRequestsOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Requests) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Requests, true
 }
@@ -134,7 +134,7 @@ func (o *K8sIoV1ResourceRequirements) HasRequests() bool {
 
 // SetRequests gets a reference to the given map[string]string and assigns it to the Requests field.
 func (o *K8sIoV1ResourceRequirements) SetRequests(v map[string]string) {
-	o.Requests = &v
+	o.Requests = v
 }
 
 func (o K8sIoV1ResourceRequirements) MarshalJSON() ([]byte, error) {

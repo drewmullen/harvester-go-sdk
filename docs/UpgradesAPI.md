@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedUpgrade**](UpgradesAPI.md#CreateNamespacedUpgrade) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades | Create an Upgrade
-[**DeleteNamespacedUpgrade**](UpgradesAPI.md#DeleteNamespacedUpgrade) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Delete an Upgrade
-[**ListNamespacedUpgrade**](UpgradesAPI.md#ListNamespacedUpgrade) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades | List Upgrades
+[**CreateNamespacedUpgrade**](UpgradesAPI.md#CreateNamespacedUpgrade) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades | Create a Namespaced Upgrade
+[**DeleteNamespacedUpgrade**](UpgradesAPI.md#DeleteNamespacedUpgrade) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Delete a Namespaced Upgrade
+[**ListNamespacedUpgrade**](UpgradesAPI.md#ListNamespacedUpgrade) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades | List Namespaced Upgrades
 [**ListUpgradeForAllNamespaces**](UpgradesAPI.md#ListUpgradeForAllNamespaces) | **Get** /apis/harvesterhci.io/v1beta1/upgrades | List Upgrades For All Namespaces
-[**PatchNamespacedUpgrade**](UpgradesAPI.md#PatchNamespacedUpgrade) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Patch an Upgrade
-[**ReadNamespacedUpgrade**](UpgradesAPI.md#ReadNamespacedUpgrade) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Read an Upgrade
-[**ReplaceNamespacedUpgrade**](UpgradesAPI.md#ReplaceNamespacedUpgrade) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Replace an Upgrade
+[**PatchNamespacedUpgrade**](UpgradesAPI.md#PatchNamespacedUpgrade) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Patch a Namespaced Upgrade
+[**ReadNamespacedUpgrade**](UpgradesAPI.md#ReadNamespacedUpgrade) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Read a Namespaced Upgrade
+[**ReplaceNamespacedUpgrade**](UpgradesAPI.md#ReplaceNamespacedUpgrade) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/upgrades/{name} | Replace a Namespaced Upgrade
 
 
 
 ## CreateNamespacedUpgrade
 
-> HarvesterhciIoV1beta1Upgrade CreateNamespacedUpgrade(ctx, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1Upgrade CreateNamespacedUpgrade(ctx, namespace).HarvesterhciIoV1beta1Upgrade(harvesterhciIoV1beta1Upgrade).Execute()
 
-Create an Upgrade
+Create a Namespaced Upgrade
 
 
 
@@ -36,11 +36,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1Upgrade("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1UpgradeSpec()) // HarvesterhciIoV1beta1Upgrade | 
+	harvesterhciIoV1beta1Upgrade := *openapiclient.NewHarvesterhciIoV1beta1Upgrade("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1UpgradeSpec()) // HarvesterhciIoV1beta1Upgrade | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UpgradesAPI.CreateNamespacedUpgrade(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.UpgradesAPI.CreateNamespacedUpgrade(context.Background(), namespace).HarvesterhciIoV1beta1Upgrade(harvesterhciIoV1beta1Upgrade).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UpgradesAPI.CreateNamespacedUpgrade``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedUpgradeReq
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**HarvesterhciIoV1beta1Upgrade**](HarvesterhciIoV1beta1Upgrade.md) |  | 
+ **harvesterhciIoV1beta1Upgrade** | [**HarvesterhciIoV1beta1Upgrade**](HarvesterhciIoV1beta1Upgrade.md) |  | 
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -88,9 +88,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedUpgrade
 
-> K8sIoV1Status DeleteNamespacedUpgrade(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedUpgrade(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete an Upgrade
+Delete a Namespaced Upgrade
 
 
 
@@ -109,14 +109,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UpgradesAPI.DeleteNamespacedUpgrade(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.UpgradesAPI.DeleteNamespacedUpgrade(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UpgradesAPI.DeleteNamespacedUpgrade``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1UpgradeList ListNamespacedUpgrade(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Upgrades
+List Namespaced Upgrades
 
 
 
@@ -241,12 +241,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -321,12 +321,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1Upgrade PatchNamespacedUpgrade(ctx, name, namespace).Body(body).Execute()
 
-Patch an Upgrade
+Patch a Namespaced Upgrade
 
 
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1Upgrade ReadNamespacedUpgrade(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read an Upgrade
+Read a Namespaced Upgrade
 
 
 
@@ -473,12 +473,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -487,9 +487,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedUpgrade
 
-> HarvesterhciIoV1beta1Upgrade ReplaceNamespacedUpgrade(ctx, name, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1Upgrade ReplaceNamespacedUpgrade(ctx, name, namespace).HarvesterhciIoV1beta1Upgrade(harvesterhciIoV1beta1Upgrade).Execute()
 
-Replace an Upgrade
+Replace a Namespaced Upgrade
 
 
 
@@ -508,11 +508,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1Upgrade("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1UpgradeSpec()) // HarvesterhciIoV1beta1Upgrade | 
+	harvesterhciIoV1beta1Upgrade := *openapiclient.NewHarvesterhciIoV1beta1Upgrade("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1UpgradeSpec()) // HarvesterhciIoV1beta1Upgrade | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.UpgradesAPI.ReplaceNamespacedUpgrade(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.UpgradesAPI.ReplaceNamespacedUpgrade(context.Background(), name, namespace).HarvesterhciIoV1beta1Upgrade(harvesterhciIoV1beta1Upgrade).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `UpgradesAPI.ReplaceNamespacedUpgrade``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**HarvesterhciIoV1beta1Upgrade**](HarvesterhciIoV1beta1Upgrade.md) |  | 
+ **harvesterhciIoV1beta1Upgrade** | [**HarvesterhciIoV1beta1Upgrade**](HarvesterhciIoV1beta1Upgrade.md) |  | 
 
 ### Return type
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

@@ -37,9 +37,9 @@ type _K8sIoV1PersistentVolumeClaimCondition K8sIoV1PersistentVolumeClaimConditio
 // will change when the set of required properties is changed
 func NewK8sIoV1PersistentVolumeClaimCondition(status string, type_ string) *K8sIoV1PersistentVolumeClaimCondition {
 	this := K8sIoV1PersistentVolumeClaimCondition{}
-	var lastProbeTime string = ""
+	var lastProbeTime string = "{}"
 	this.LastProbeTime = &lastProbeTime
-	var lastTransitionTime string = ""
+	var lastTransitionTime string = "{}"
 	this.LastTransitionTime = &lastTransitionTime
 	this.Status = status
 	this.Type = type_
@@ -51,9 +51,9 @@ func NewK8sIoV1PersistentVolumeClaimCondition(status string, type_ string) *K8sI
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1PersistentVolumeClaimConditionWithDefaults() *K8sIoV1PersistentVolumeClaimCondition {
 	this := K8sIoV1PersistentVolumeClaimCondition{}
-	var lastProbeTime string = ""
+	var lastProbeTime string = "{}"
 	this.LastProbeTime = &lastProbeTime
-	var lastTransitionTime string = ""
+	var lastTransitionTime string = "{}"
 	this.LastTransitionTime = &lastTransitionTime
 	var status string = ""
 	this.Status = status

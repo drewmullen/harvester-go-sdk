@@ -29,6 +29,10 @@ type HarvesterhciIoV1beta1VirtualMachineSourceSpec struct {
 // will change when the set of required properties is changed
 func NewHarvesterhciIoV1beta1VirtualMachineSourceSpec() *HarvesterhciIoV1beta1VirtualMachineSourceSpec {
 	this := HarvesterhciIoV1beta1VirtualMachineSourceSpec{}
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
+	var spec KubevirtIoApiCoreV1VirtualMachineSpec = {}
+	this.Spec = &spec
 	return &this
 }
 
@@ -37,6 +41,10 @@ func NewHarvesterhciIoV1beta1VirtualMachineSourceSpec() *HarvesterhciIoV1beta1Vi
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VirtualMachineSourceSpecWithDefaults() *HarvesterhciIoV1beta1VirtualMachineSourceSpec {
 	this := HarvesterhciIoV1beta1VirtualMachineSourceSpec{}
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
+	var spec KubevirtIoApiCoreV1VirtualMachineSpec = {}
+	this.Spec = &spec
 	return &this
 }
 

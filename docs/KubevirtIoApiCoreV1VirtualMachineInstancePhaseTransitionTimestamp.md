@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Phase** | Pointer to **string** |  | [optional] 
-**PhaseTransitionTimestamp** | Pointer to **string** |  | [optional] [default to ""]
+**PhaseTransitionTimestamp** | Pointer to **string** |  | [optional] [default to "{}"]
 
 ## Methods
 

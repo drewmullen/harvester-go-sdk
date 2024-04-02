@@ -38,6 +38,8 @@ func NewKubevirtIoApiCoreV1DataVolumeTemplateSpec(apiVersion string, kind string
 	this := KubevirtIoApiCoreV1DataVolumeTemplateSpec{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
 	this.Spec = spec
 	return &this
 }
@@ -47,6 +49,10 @@ func NewKubevirtIoApiCoreV1DataVolumeTemplateSpec(apiVersion string, kind string
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1DataVolumeTemplateSpecWithDefaults() *KubevirtIoApiCoreV1DataVolumeTemplateSpec {
 	this := KubevirtIoApiCoreV1DataVolumeTemplateSpec{}
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
+	var spec KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec = {}
+	this.Spec = spec
 	return &this
 }
 

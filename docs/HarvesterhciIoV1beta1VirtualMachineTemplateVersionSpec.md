@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **ImageId** | Pointer to **string** |  | [optional] 
 **KeyPairIds** | Pointer to **[]string** |  | [optional] 
 **TemplateId** | **string** |  | [default to ""]
-**Vm** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineSourceSpec**](HarvesterhciIoV1beta1VirtualMachineSourceSpec.md) |  | [optional] 
+**Vm** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineSourceSpec**](HarvesterhciIoV1beta1VirtualMachineSourceSpec.md) |  | [optional] [default to {}]
 
 ## Methods
 

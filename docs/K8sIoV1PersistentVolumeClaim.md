@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | Pointer to [**K8sIoV1PersistentVolumeClaimSpec**](K8sIoV1PersistentVolumeClaimSpec.md) |  | [optional] 
-**Status** | Pointer to [**K8sIoV1PersistentVolumeClaimStatus**](K8sIoV1PersistentVolumeClaimStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | Pointer to [**K8sIoV1PersistentVolumeClaimSpec**](K8sIoV1PersistentVolumeClaimSpec.md) |  | [optional] [default to {}]
+**Status** | Pointer to [**K8sIoV1PersistentVolumeClaimStatus**](K8sIoV1PersistentVolumeClaimStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 

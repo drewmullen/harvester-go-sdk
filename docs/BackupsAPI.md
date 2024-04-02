@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedVirtualMachineBackup**](BackupsAPI.md#CreateNamespacedVirtualMachineBackup) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups | Create a Virtual Machine Backup
-[**DeleteNamespacedVirtualMachineBackup**](BackupsAPI.md#DeleteNamespacedVirtualMachineBackup) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Delete a Virtual Machine Backup
-[**ListNamespacedVirtualMachineBackup**](BackupsAPI.md#ListNamespacedVirtualMachineBackup) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups | List Virtual Machine Backups
+[**CreateNamespacedVirtualMachineBackup**](BackupsAPI.md#CreateNamespacedVirtualMachineBackup) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups | Create a Namespaced Virtual Machine Backup
+[**DeleteNamespacedVirtualMachineBackup**](BackupsAPI.md#DeleteNamespacedVirtualMachineBackup) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Delete a Namespaced Virtual Machine Backup
+[**ListNamespacedVirtualMachineBackup**](BackupsAPI.md#ListNamespacedVirtualMachineBackup) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups | List Namespaced Virtual Machine Backups
 [**ListVirtualMachineBackupForAllNamespaces**](BackupsAPI.md#ListVirtualMachineBackupForAllNamespaces) | **Get** /apis/harvesterhci.io/v1beta1/virtualmachinebackups | List Virtual Machine Backups For All Namespaces
-[**PatchNamespacedVirtualMachineBackup**](BackupsAPI.md#PatchNamespacedVirtualMachineBackup) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Patch a Virtual Machine Backup
-[**ReadNamespacedVirtualMachineBackup**](BackupsAPI.md#ReadNamespacedVirtualMachineBackup) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Read a Virtual Machine Backup
-[**ReplaceNamespacedVirtualMachineBackup**](BackupsAPI.md#ReplaceNamespacedVirtualMachineBackup) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Replace a Virtual Machine Backup
+[**PatchNamespacedVirtualMachineBackup**](BackupsAPI.md#PatchNamespacedVirtualMachineBackup) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Patch a Namespaced Virtual Machine Backup
+[**ReadNamespacedVirtualMachineBackup**](BackupsAPI.md#ReadNamespacedVirtualMachineBackup) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Read a Namespaced Virtual Machine Backup
+[**ReplaceNamespacedVirtualMachineBackup**](BackupsAPI.md#ReplaceNamespacedVirtualMachineBackup) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinebackups/{name} | Replace a Namespaced Virtual Machine Backup
 
 
 
 ## CreateNamespacedVirtualMachineBackup
 
-> HarvesterhciIoV1beta1VirtualMachineBackup CreateNamespacedVirtualMachineBackup(ctx, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineBackup CreateNamespacedVirtualMachineBackup(ctx, namespace).HarvesterhciIoV1beta1VirtualMachineBackup(harvesterhciIoV1beta1VirtualMachineBackup).Execute()
 
-Create a Virtual Machine Backup
+Create a Namespaced Virtual Machine Backup
 
 
 
@@ -36,11 +36,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackup("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackupSpec(*openapiclient.NewK8sIoV1TypedLocalObjectReference("Kind_example", "Name_example"))) // HarvesterhciIoV1beta1VirtualMachineBackup | 
+	harvesterhciIoV1beta1VirtualMachineBackup := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackup("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackupSpec(*openapiclient.NewK8sIoV1TypedLocalObjectReference("Kind_example", "Name_example"))) // HarvesterhciIoV1beta1VirtualMachineBackup | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.BackupsAPI.CreateNamespacedVirtualMachineBackup(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.BackupsAPI.CreateNamespacedVirtualMachineBackup(context.Background(), namespace).HarvesterhciIoV1beta1VirtualMachineBackup(harvesterhciIoV1beta1VirtualMachineBackup).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `BackupsAPI.CreateNamespacedVirtualMachineBackup``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedVirtualMac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineBackup**](HarvesterhciIoV1beta1VirtualMachineBackup.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineBackup** | [**HarvesterhciIoV1beta1VirtualMachineBackup**](HarvesterhciIoV1beta1VirtualMachineBackup.md) |  | 
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -88,9 +88,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedVirtualMachineBackup
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineBackup(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedVirtualMachineBackup(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Virtual Machine Backup
+Delete a Namespaced Virtual Machine Backup
 
 
 
@@ -109,14 +109,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.BackupsAPI.DeleteNamespacedVirtualMachineBackup(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.BackupsAPI.DeleteNamespacedVirtualMachineBackup(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `BackupsAPI.DeleteNamespacedVirtualMachineBackup``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineBackupList ListNamespacedVirtualMachineBackup(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Virtual Machine Backups
+List Namespaced Virtual Machine Backups
 
 
 
@@ -241,12 +241,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -321,12 +321,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineBackup PatchNamespacedVirtualMachineBackup(ctx, name, namespace).Body(body).Execute()
 
-Patch a Virtual Machine Backup
+Patch a Namespaced Virtual Machine Backup
 
 
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineBackup ReadNamespacedVirtualMachineBackup(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Virtual Machine Backup
+Read a Namespaced Virtual Machine Backup
 
 
 
@@ -473,12 +473,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -487,9 +487,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedVirtualMachineBackup
 
-> HarvesterhciIoV1beta1VirtualMachineBackup ReplaceNamespacedVirtualMachineBackup(ctx, name, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineBackup ReplaceNamespacedVirtualMachineBackup(ctx, name, namespace).HarvesterhciIoV1beta1VirtualMachineBackup(harvesterhciIoV1beta1VirtualMachineBackup).Execute()
 
-Replace a Virtual Machine Backup
+Replace a Namespaced Virtual Machine Backup
 
 
 
@@ -508,11 +508,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackup("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackupSpec(*openapiclient.NewK8sIoV1TypedLocalObjectReference("Kind_example", "Name_example"))) // HarvesterhciIoV1beta1VirtualMachineBackup | 
+	harvesterhciIoV1beta1VirtualMachineBackup := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackup("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineBackupSpec(*openapiclient.NewK8sIoV1TypedLocalObjectReference("Kind_example", "Name_example"))) // HarvesterhciIoV1beta1VirtualMachineBackup | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.BackupsAPI.ReplaceNamespacedVirtualMachineBackup(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.BackupsAPI.ReplaceNamespacedVirtualMachineBackup(context.Background(), name, namespace).HarvesterhciIoV1beta1VirtualMachineBackup(harvesterhciIoV1beta1VirtualMachineBackup).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `BackupsAPI.ReplaceNamespacedVirtualMachineBackup``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineBackup**](HarvesterhciIoV1beta1VirtualMachineBackup.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineBackup** | [**HarvesterhciIoV1beta1VirtualMachineBackup**](HarvesterhciIoV1beta1VirtualMachineBackup.md) |  | 
 
 ### Return type
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

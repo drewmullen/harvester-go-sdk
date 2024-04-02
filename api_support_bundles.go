@@ -27,11 +27,11 @@ type ApiCreateNamespacedSupportBundleRequest struct {
 	ctx context.Context
 	ApiService *SupportBundlesAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1SupportBundle
+	harvesterhciIoV1beta1SupportBundle *HarvesterhciIoV1beta1SupportBundle
 }
 
-func (r ApiCreateNamespacedSupportBundleRequest) Body(body HarvesterhciIoV1beta1SupportBundle) ApiCreateNamespacedSupportBundleRequest {
-	r.body = &body
+func (r ApiCreateNamespacedSupportBundleRequest) HarvesterhciIoV1beta1SupportBundle(harvesterhciIoV1beta1SupportBundle HarvesterhciIoV1beta1SupportBundle) ApiCreateNamespacedSupportBundleRequest {
+	r.harvesterhciIoV1beta1SupportBundle = &harvesterhciIoV1beta1SupportBundle
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedSupportBundleRequest) Execute() (*HarvesterhciIoV1bet
 }
 
 /*
-CreateNamespacedSupportBundle Create a Support Bundle
+CreateNamespacedSupportBundle Create a Namespaced Support Bundle
 
 Create a SupportBundle object.
 
@@ -77,8 +77,8 @@ func (a *SupportBundlesAPIService) CreateNamespacedSupportBundleExecute(r ApiCre
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1SupportBundle == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1SupportBundle is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *SupportBundlesAPIService) CreateNamespacedSupportBundleExecute(r ApiCre
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1SupportBundle
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedSupportBundleRequest struct {
 	ApiService *SupportBundlesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedSupportBundleRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedSupportBundleRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedSupportBundleRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedSupportBundleRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedSupportBundleRequest) Execute() (*K8sIoV1Status, *htt
 }
 
 /*
-DeleteNamespacedSupportBundle Delete a Support Bundle
+DeleteNamespacedSupportBundle Delete a Namespaced Support Bundle
 
 Delete a SupportBundle object.
 
@@ -226,8 +226,8 @@ func (a *SupportBundlesAPIService) DeleteNamespacedSupportBundleExecute(r ApiDel
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *SupportBundlesAPIService) DeleteNamespacedSupportBundleExecute(r ApiDel
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedSupportBundleRequest) Execute() (*HarvesterhciIoV1beta1
 }
 
 /*
-ListNamespacedSupportBundle List Support Bundles
+ListNamespacedSupportBundle List Namespaced Support Bundles
 
 Get a list of SupportBundle objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *SupportBundlesAPIService) ListNamespacedSupportBundleExecute(r ApiListN
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -633,7 +633,7 @@ func (a *SupportBundlesAPIService) ListSupportBundleForAllNamespacesExecute(r Ap
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedSupportBundleRequest) Execute() (*HarvesterhciIoV1beta
 }
 
 /*
-PatchNamespacedSupportBundle Patch a Support Bundle
+PatchNamespacedSupportBundle Patch a Namespaced Support Bundle
 
 Patch a SupportBundle object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedSupportBundleRequest) Execute() (*HarvesterhciIoV1beta1
 }
 
 /*
-ReadNamespacedSupportBundle Read a Support Bundle
+ReadNamespacedSupportBundle Read a Namespaced Support Bundle
 
 Get a SupportBundle object.
 
@@ -898,7 +898,7 @@ func (a *SupportBundlesAPIService) ReadNamespacedSupportBundleExecute(r ApiReadN
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedSupportBundleRequest struct {
 	ApiService *SupportBundlesAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1SupportBundle
+	harvesterhciIoV1beta1SupportBundle *HarvesterhciIoV1beta1SupportBundle
 }
 
-func (r ApiReplaceNamespacedSupportBundleRequest) Body(body HarvesterhciIoV1beta1SupportBundle) ApiReplaceNamespacedSupportBundleRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedSupportBundleRequest) HarvesterhciIoV1beta1SupportBundle(harvesterhciIoV1beta1SupportBundle HarvesterhciIoV1beta1SupportBundle) ApiReplaceNamespacedSupportBundleRequest {
+	r.harvesterhciIoV1beta1SupportBundle = &harvesterhciIoV1beta1SupportBundle
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedSupportBundleRequest) Execute() (*HarvesterhciIoV1be
 }
 
 /*
-ReplaceNamespacedSupportBundle Replace a Support Bundle
+ReplaceNamespacedSupportBundle Replace a Namespaced Support Bundle
 
 Update a SupportBundle object.
 
@@ -1010,8 +1010,8 @@ func (a *SupportBundlesAPIService) ReplaceNamespacedSupportBundleExecute(r ApiRe
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1SupportBundle == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1SupportBundle is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *SupportBundlesAPIService) ReplaceNamespacedSupportBundleExecute(r ApiRe
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1SupportBundle
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

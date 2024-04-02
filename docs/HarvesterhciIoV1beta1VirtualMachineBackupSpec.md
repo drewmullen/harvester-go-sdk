@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Source** | [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) |  | 
+**Source** | [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) |  | [default to {}]
 **Type** | Pointer to **string** |  | [optional] 
 
 ## Methods

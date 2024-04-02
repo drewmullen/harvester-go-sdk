@@ -37,9 +37,9 @@ type _KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition KubevirtIoApiC
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition(status string, type_ string) *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition{}
-	var lastProbeTime string = ""
+	var lastProbeTime string = "{}"
 	this.LastProbeTime = &lastProbeTime
-	var lastTransitionTime string = ""
+	var lastTransitionTime string = "{}"
 	this.LastTransitionTime = &lastTransitionTime
 	this.Status = status
 	this.Type = type_
@@ -51,9 +51,9 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition(status strin
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationConditionWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition{}
-	var lastProbeTime string = ""
+	var lastProbeTime string = "{}"
 	this.LastProbeTime = &lastProbeTime
-	var lastTransitionTime string = ""
+	var lastTransitionTime string = "{}"
 	this.LastTransitionTime = &lastTransitionTime
 	var status string = ""
 	this.Status = status

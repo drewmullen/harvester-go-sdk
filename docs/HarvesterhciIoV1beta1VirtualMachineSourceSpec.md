@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineSpec**](KubevirtIoApiCoreV1VirtualMachineSpec.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineSpec**](KubevirtIoApiCoreV1VirtualMachineSpec.md) |  | [optional] [default to {}]
 
 ## Methods
 

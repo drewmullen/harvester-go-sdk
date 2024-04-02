@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | [**KubevirtIoApiCoreV1VirtualMachineSpec**](KubevirtIoApiCoreV1VirtualMachineSpec.md) |  | 
-**Status** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineStatus**](KubevirtIoApiCoreV1VirtualMachineStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | [**KubevirtIoApiCoreV1VirtualMachineSpec**](KubevirtIoApiCoreV1VirtualMachineSpec.md) |  | [default to {}]
+**Status** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineStatus**](KubevirtIoApiCoreV1VirtualMachineStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 

@@ -27,11 +27,11 @@ type ApiCreateNamespacedVirtualMachineTemplateRequest struct {
 	ctx context.Context
 	ApiService *VirtualMachineTemplatesAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineTemplate
+	harvesterhciIoV1beta1VirtualMachineTemplate *HarvesterhciIoV1beta1VirtualMachineTemplate
 }
 
-func (r ApiCreateNamespacedVirtualMachineTemplateRequest) Body(body HarvesterhciIoV1beta1VirtualMachineTemplate) ApiCreateNamespacedVirtualMachineTemplateRequest {
-	r.body = &body
+func (r ApiCreateNamespacedVirtualMachineTemplateRequest) HarvesterhciIoV1beta1VirtualMachineTemplate(harvesterhciIoV1beta1VirtualMachineTemplate HarvesterhciIoV1beta1VirtualMachineTemplate) ApiCreateNamespacedVirtualMachineTemplateRequest {
+	r.harvesterhciIoV1beta1VirtualMachineTemplate = &harvesterhciIoV1beta1VirtualMachineTemplate
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedVirtualMachineTemplateRequest) Execute() (*Harvesterh
 }
 
 /*
-CreateNamespacedVirtualMachineTemplate Create a Virtual Machine Template
+CreateNamespacedVirtualMachineTemplate Create a Namespaced Virtual Machine Template
 
 Create a VirtualMachineTemplate object.
 
@@ -77,8 +77,8 @@ func (a *VirtualMachineTemplatesAPIService) CreateNamespacedVirtualMachineTempla
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineTemplate == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineTemplate is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *VirtualMachineTemplatesAPIService) CreateNamespacedVirtualMachineTempla
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineTemplate
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -151,11 +151,11 @@ type ApiCreateNamespacedVirtualMachineTemplateVersionRequest struct {
 	ctx context.Context
 	ApiService *VirtualMachineTemplatesAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineTemplateVersion
+	harvesterhciIoV1beta1VirtualMachineTemplateVersion *HarvesterhciIoV1beta1VirtualMachineTemplateVersion
 }
 
-func (r ApiCreateNamespacedVirtualMachineTemplateVersionRequest) Body(body HarvesterhciIoV1beta1VirtualMachineTemplateVersion) ApiCreateNamespacedVirtualMachineTemplateVersionRequest {
-	r.body = &body
+func (r ApiCreateNamespacedVirtualMachineTemplateVersionRequest) HarvesterhciIoV1beta1VirtualMachineTemplateVersion(harvesterhciIoV1beta1VirtualMachineTemplateVersion HarvesterhciIoV1beta1VirtualMachineTemplateVersion) ApiCreateNamespacedVirtualMachineTemplateVersionRequest {
+	r.harvesterhciIoV1beta1VirtualMachineTemplateVersion = &harvesterhciIoV1beta1VirtualMachineTemplateVersion
 	return r
 }
 
@@ -164,7 +164,7 @@ func (r ApiCreateNamespacedVirtualMachineTemplateVersionRequest) Execute() (*Har
 }
 
 /*
-CreateNamespacedVirtualMachineTemplateVersion Create a Virtual Machine Template Version
+CreateNamespacedVirtualMachineTemplateVersion Create a Namespaced Virtual Machine Template Version
 
 Create a VirtualMachineTemplateVersion object.
 
@@ -201,8 +201,8 @@ func (a *VirtualMachineTemplatesAPIService) CreateNamespacedVirtualMachineTempla
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineTemplateVersion == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineTemplateVersion is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -223,7 +223,7 @@ func (a *VirtualMachineTemplatesAPIService) CreateNamespacedVirtualMachineTempla
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineTemplateVersion
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -276,14 +276,14 @@ type ApiDeleteNamespacedVirtualMachineTemplateRequest struct {
 	ApiService *VirtualMachineTemplatesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedVirtualMachineTemplateRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineTemplateRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedVirtualMachineTemplateRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineTemplateRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -310,7 +310,7 @@ func (r ApiDeleteNamespacedVirtualMachineTemplateRequest) Execute() (*K8sIoV1Sta
 }
 
 /*
-DeleteNamespacedVirtualMachineTemplate Delete a Virtual Machine Template
+DeleteNamespacedVirtualMachineTemplate Delete a Namespaced Virtual Machine Template
 
 Delete a VirtualMachineTemplate object.
 
@@ -350,8 +350,8 @@ func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTempla
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -381,7 +381,7 @@ func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTempla
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -434,14 +434,14 @@ type ApiDeleteNamespacedVirtualMachineTemplateVersionRequest struct {
 	ApiService *VirtualMachineTemplatesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineTemplateVersionRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineTemplateVersionRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -468,7 +468,7 @@ func (r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) Execute() (*K8s
 }
 
 /*
-DeleteNamespacedVirtualMachineTemplateVersion Delete a Virtual Machine Template Version
+DeleteNamespacedVirtualMachineTemplateVersion Delete a Namespaced Virtual Machine Template Version
 
 Delete a VirtualMachineTemplateVersion object.
 
@@ -508,8 +508,8 @@ func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTempla
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -539,7 +539,7 @@ func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTempla
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -654,7 +654,7 @@ func (r ApiListNamespacedVirtualMachineTemplateRequest) Execute() (*Harvesterhci
 }
 
 /*
-ListNamespacedVirtualMachineTemplate List Virtual Machine Templates
+ListNamespacedVirtualMachineTemplate List Namespaced Virtual Machine Templates
 
 Get a list of VirtualMachineTemplate objects in a namespace.
 
@@ -726,7 +726,7 @@ func (a *VirtualMachineTemplatesAPIService) ListNamespacedVirtualMachineTemplate
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -847,7 +847,7 @@ func (r ApiListNamespacedVirtualMachineTemplateVersionRequest) Execute() (*Harve
 }
 
 /*
-ListNamespacedVirtualMachineTemplateVersion List Virtual Machine Template Versions
+ListNamespacedVirtualMachineTemplateVersion List Namespaced Virtual Machine Template Versions
 
 Get a list of VirtualMachineTemplateVersion objects in a namespace.
 
@@ -919,7 +919,7 @@ func (a *VirtualMachineTemplatesAPIService) ListNamespacedVirtualMachineTemplate
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1108,7 +1108,7 @@ func (a *VirtualMachineTemplatesAPIService) ListVirtualMachineTemplateForAllName
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1297,7 +1297,7 @@ func (a *VirtualMachineTemplatesAPIService) ListVirtualMachineTemplateVersionFor
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1369,7 +1369,7 @@ func (r ApiPatchNamespacedVirtualMachineTemplateRequest) Execute() (*Harvesterhc
 }
 
 /*
-PatchNamespacedVirtualMachineTemplate Patch a Virtual Machine Template
+PatchNamespacedVirtualMachineTemplate Patch a Namespaced Virtual Machine Template
 
 Patch a VirtualMachineTemplate object.
 
@@ -1497,7 +1497,7 @@ func (r ApiPatchNamespacedVirtualMachineTemplateVersionRequest) Execute() (*Harv
 }
 
 /*
-PatchNamespacedVirtualMachineTemplateVersion Patch a Virtual Machine Template Version
+PatchNamespacedVirtualMachineTemplateVersion Patch a Namespaced Virtual Machine Template Version
 
 Patch a VirtualMachineTemplateVersion object.
 
@@ -1633,7 +1633,7 @@ func (r ApiReadNamespacedVirtualMachineTemplateRequest) Execute() (*Harvesterhci
 }
 
 /*
-ReadNamespacedVirtualMachineTemplate Read a Virtual Machine Template
+ReadNamespacedVirtualMachineTemplate Read a Namespaced Virtual Machine Template
 
 Get a VirtualMachineTemplate object.
 
@@ -1690,7 +1690,7 @@ func (a *VirtualMachineTemplatesAPIService) ReadNamespacedVirtualMachineTemplate
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1770,7 +1770,7 @@ func (r ApiReadNamespacedVirtualMachineTemplateVersionRequest) Execute() (*Harve
 }
 
 /*
-ReadNamespacedVirtualMachineTemplateVersion Read a Virtual Machine Template Version
+ReadNamespacedVirtualMachineTemplateVersion Read a Namespaced Virtual Machine Template Version
 
 Get a VirtualMachineTemplateVersion object.
 
@@ -1827,7 +1827,7 @@ func (a *VirtualMachineTemplatesAPIService) ReadNamespacedVirtualMachineTemplate
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1886,11 +1886,11 @@ type ApiReplaceNamespacedVirtualMachineTemplateRequest struct {
 	ApiService *VirtualMachineTemplatesAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineTemplate
+	harvesterhciIoV1beta1VirtualMachineTemplate *HarvesterhciIoV1beta1VirtualMachineTemplate
 }
 
-func (r ApiReplaceNamespacedVirtualMachineTemplateRequest) Body(body HarvesterhciIoV1beta1VirtualMachineTemplate) ApiReplaceNamespacedVirtualMachineTemplateRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedVirtualMachineTemplateRequest) HarvesterhciIoV1beta1VirtualMachineTemplate(harvesterhciIoV1beta1VirtualMachineTemplate HarvesterhciIoV1beta1VirtualMachineTemplate) ApiReplaceNamespacedVirtualMachineTemplateRequest {
+	r.harvesterhciIoV1beta1VirtualMachineTemplate = &harvesterhciIoV1beta1VirtualMachineTemplate
 	return r
 }
 
@@ -1899,7 +1899,7 @@ func (r ApiReplaceNamespacedVirtualMachineTemplateRequest) Execute() (*Harvester
 }
 
 /*
-ReplaceNamespacedVirtualMachineTemplate Replace a Virtual Machine Template
+ReplaceNamespacedVirtualMachineTemplate Replace a Namespaced Virtual Machine Template
 
 Update a VirtualMachineTemplate object.
 
@@ -1939,8 +1939,8 @@ func (a *VirtualMachineTemplatesAPIService) ReplaceNamespacedVirtualMachineTempl
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineTemplate == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineTemplate is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1961,7 +1961,7 @@ func (a *VirtualMachineTemplatesAPIService) ReplaceNamespacedVirtualMachineTempl
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineTemplate
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2014,11 +2014,11 @@ type ApiReplaceNamespacedVirtualMachineTemplateVersionRequest struct {
 	ApiService *VirtualMachineTemplatesAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineTemplateVersion
+	harvesterhciIoV1beta1VirtualMachineTemplateVersion *HarvesterhciIoV1beta1VirtualMachineTemplateVersion
 }
 
-func (r ApiReplaceNamespacedVirtualMachineTemplateVersionRequest) Body(body HarvesterhciIoV1beta1VirtualMachineTemplateVersion) ApiReplaceNamespacedVirtualMachineTemplateVersionRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedVirtualMachineTemplateVersionRequest) HarvesterhciIoV1beta1VirtualMachineTemplateVersion(harvesterhciIoV1beta1VirtualMachineTemplateVersion HarvesterhciIoV1beta1VirtualMachineTemplateVersion) ApiReplaceNamespacedVirtualMachineTemplateVersionRequest {
+	r.harvesterhciIoV1beta1VirtualMachineTemplateVersion = &harvesterhciIoV1beta1VirtualMachineTemplateVersion
 	return r
 }
 
@@ -2027,7 +2027,7 @@ func (r ApiReplaceNamespacedVirtualMachineTemplateVersionRequest) Execute() (*Ha
 }
 
 /*
-ReplaceNamespacedVirtualMachineTemplateVersion Replace a Virtual Machine Template Version
+ReplaceNamespacedVirtualMachineTemplateVersion Replace a Namespaced Virtual Machine Template Version
 
 Update a VirtualMachineTemplateVersion object.
 
@@ -2067,8 +2067,8 @@ func (a *VirtualMachineTemplatesAPIService) ReplaceNamespacedVirtualMachineTempl
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineTemplateVersion == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineTemplateVersion is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -2089,7 +2089,7 @@ func (a *VirtualMachineTemplatesAPIService) ReplaceNamespacedVirtualMachineTempl
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineTemplateVersion
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Host** | Pointer to **string** |  | [optional] 
 **HttpHeaders** | Pointer to [**[]K8sIoV1HTTPHeader**](K8sIoV1HTTPHeader.md) |  | [optional] 
 **Path** | Pointer to **string** |  | [optional] 
-**Port** | **string** |  | 
+**Port** | **string** |  | [default to "{}"]
 **Scheme** | Pointer to **string** |  | [optional] 
 
 ## Methods

@@ -27,11 +27,11 @@ type ApiCreateNamespacedUpgradeRequest struct {
 	ctx context.Context
 	ApiService *UpgradesAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1Upgrade
+	harvesterhciIoV1beta1Upgrade *HarvesterhciIoV1beta1Upgrade
 }
 
-func (r ApiCreateNamespacedUpgradeRequest) Body(body HarvesterhciIoV1beta1Upgrade) ApiCreateNamespacedUpgradeRequest {
-	r.body = &body
+func (r ApiCreateNamespacedUpgradeRequest) HarvesterhciIoV1beta1Upgrade(harvesterhciIoV1beta1Upgrade HarvesterhciIoV1beta1Upgrade) ApiCreateNamespacedUpgradeRequest {
+	r.harvesterhciIoV1beta1Upgrade = &harvesterhciIoV1beta1Upgrade
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedUpgradeRequest) Execute() (*HarvesterhciIoV1beta1Upgr
 }
 
 /*
-CreateNamespacedUpgrade Create an Upgrade
+CreateNamespacedUpgrade Create a Namespaced Upgrade
 
 Create a Upgrade object.
 
@@ -77,8 +77,8 @@ func (a *UpgradesAPIService) CreateNamespacedUpgradeExecute(r ApiCreateNamespace
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1Upgrade == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1Upgrade is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *UpgradesAPIService) CreateNamespacedUpgradeExecute(r ApiCreateNamespace
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1Upgrade
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedUpgradeRequest struct {
 	ApiService *UpgradesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedUpgradeRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedUpgradeRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedUpgradeRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedUpgradeRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedUpgradeRequest) Execute() (*K8sIoV1Status, *http.Resp
 }
 
 /*
-DeleteNamespacedUpgrade Delete an Upgrade
+DeleteNamespacedUpgrade Delete a Namespaced Upgrade
 
 Delete a Upgrade object.
 
@@ -226,8 +226,8 @@ func (a *UpgradesAPIService) DeleteNamespacedUpgradeExecute(r ApiDeleteNamespace
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *UpgradesAPIService) DeleteNamespacedUpgradeExecute(r ApiDeleteNamespace
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedUpgradeRequest) Execute() (*HarvesterhciIoV1beta1Upgrad
 }
 
 /*
-ListNamespacedUpgrade List Upgrades
+ListNamespacedUpgrade List Namespaced Upgrades
 
 Get a list of Upgrade objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *UpgradesAPIService) ListNamespacedUpgradeExecute(r ApiListNamespacedUpg
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -633,7 +633,7 @@ func (a *UpgradesAPIService) ListUpgradeForAllNamespacesExecute(r ApiListUpgrade
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedUpgradeRequest) Execute() (*HarvesterhciIoV1beta1Upgra
 }
 
 /*
-PatchNamespacedUpgrade Patch an Upgrade
+PatchNamespacedUpgrade Patch a Namespaced Upgrade
 
 Patch a Upgrade object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedUpgradeRequest) Execute() (*HarvesterhciIoV1beta1Upgrad
 }
 
 /*
-ReadNamespacedUpgrade Read an Upgrade
+ReadNamespacedUpgrade Read a Namespaced Upgrade
 
 Get a Upgrade object.
 
@@ -898,7 +898,7 @@ func (a *UpgradesAPIService) ReadNamespacedUpgradeExecute(r ApiReadNamespacedUpg
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedUpgradeRequest struct {
 	ApiService *UpgradesAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1Upgrade
+	harvesterhciIoV1beta1Upgrade *HarvesterhciIoV1beta1Upgrade
 }
 
-func (r ApiReplaceNamespacedUpgradeRequest) Body(body HarvesterhciIoV1beta1Upgrade) ApiReplaceNamespacedUpgradeRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedUpgradeRequest) HarvesterhciIoV1beta1Upgrade(harvesterhciIoV1beta1Upgrade HarvesterhciIoV1beta1Upgrade) ApiReplaceNamespacedUpgradeRequest {
+	r.harvesterhciIoV1beta1Upgrade = &harvesterhciIoV1beta1Upgrade
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedUpgradeRequest) Execute() (*HarvesterhciIoV1beta1Upg
 }
 
 /*
-ReplaceNamespacedUpgrade Replace an Upgrade
+ReplaceNamespacedUpgrade Replace a Namespaced Upgrade
 
 Update a Upgrade object.
 
@@ -1010,8 +1010,8 @@ func (a *UpgradesAPIService) ReplaceNamespacedUpgradeExecute(r ApiReplaceNamespa
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1Upgrade == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1Upgrade is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *UpgradesAPIService) ReplaceNamespacedUpgradeExecute(r ApiReplaceNamespa
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1Upgrade
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

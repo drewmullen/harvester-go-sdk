@@ -21,7 +21,7 @@ var _ MappedNullable = &HarvesterhciIoV1beta1UpgradeStatus{}
 type HarvesterhciIoV1beta1UpgradeStatus struct {
 	Conditions []HarvesterhciIoV1beta1Condition `json:"conditions,omitempty"`
 	ImageID *string `json:"imageID,omitempty"`
-	NodeStatuses *map[string]HarvesterhciIoV1beta1NodeUpgradeStatus `json:"nodeStatuses,omitempty"`
+	NodeStatuses map[string]HarvesterhciIoV1beta1NodeUpgradeStatus `json:"nodeStatuses,omitempty"`
 	PreviousVersion *string `json:"previousVersion,omitempty"`
 	RepoInfo *string `json:"repoInfo,omitempty"`
 	SingleNode *string `json:"singleNode,omitempty"`
@@ -115,14 +115,14 @@ func (o *HarvesterhciIoV1beta1UpgradeStatus) GetNodeStatuses() map[string]Harves
 		var ret map[string]HarvesterhciIoV1beta1NodeUpgradeStatus
 		return ret
 	}
-	return *o.NodeStatuses
+	return o.NodeStatuses
 }
 
 // GetNodeStatusesOk returns a tuple with the NodeStatuses field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *HarvesterhciIoV1beta1UpgradeStatus) GetNodeStatusesOk() (*map[string]HarvesterhciIoV1beta1NodeUpgradeStatus, bool) {
+func (o *HarvesterhciIoV1beta1UpgradeStatus) GetNodeStatusesOk() (map[string]HarvesterhciIoV1beta1NodeUpgradeStatus, bool) {
 	if o == nil || IsNil(o.NodeStatuses) {
-		return nil, false
+		return map[string]HarvesterhciIoV1beta1NodeUpgradeStatus{}, false
 	}
 	return o.NodeStatuses, true
 }
@@ -138,7 +138,7 @@ func (o *HarvesterhciIoV1beta1UpgradeStatus) HasNodeStatuses() bool {
 
 // SetNodeStatuses gets a reference to the given map[string]HarvesterhciIoV1beta1NodeUpgradeStatus and assigns it to the NodeStatuses field.
 func (o *HarvesterhciIoV1beta1UpgradeStatus) SetNodeStatuses(v map[string]HarvesterhciIoV1beta1NodeUpgradeStatus) {
-	o.NodeStatuses = &v
+	o.NodeStatuses = v
 }
 
 // GetPreviousVersion returns the PreviousVersion field value if set, zero value otherwise.

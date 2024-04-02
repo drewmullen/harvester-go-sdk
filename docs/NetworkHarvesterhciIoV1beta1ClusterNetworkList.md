@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ApiVersion** | **string** |  | 
 **Items** | [**[]NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md) |  | 
 **Kind** | **string** |  | 
-**Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | 
+**Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [default to {}]
 
 ## Methods
 

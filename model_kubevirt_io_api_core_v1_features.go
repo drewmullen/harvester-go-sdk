@@ -33,6 +33,8 @@ type KubevirtIoApiCoreV1Features struct {
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1Features() *KubevirtIoApiCoreV1Features {
 	this := KubevirtIoApiCoreV1Features{}
+	var acpi KubevirtIoApiCoreV1FeatureState = {}
+	this.Acpi = &acpi
 	return &this
 }
 
@@ -41,6 +43,8 @@ func NewKubevirtIoApiCoreV1Features() *KubevirtIoApiCoreV1Features {
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1FeaturesWithDefaults() *KubevirtIoApiCoreV1Features {
 	this := KubevirtIoApiCoreV1Features{}
+	var acpi KubevirtIoApiCoreV1FeatureState = {}
+	this.Acpi = &acpi
 	return &this
 }
 

@@ -19,9 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1ResourceRequirements{}
 
 // KubevirtIoApiCoreV1ResourceRequirements struct for KubevirtIoApiCoreV1ResourceRequirements
 type KubevirtIoApiCoreV1ResourceRequirements struct {
-	Limits *map[string]string `json:"limits,omitempty"`
+	Limits map[string]string `json:"limits,omitempty"`
 	OvercommitGuestOverhead *bool `json:"overcommitGuestOverhead,omitempty"`
-	Requests *map[string]string `json:"requests,omitempty"`
+	Requests map[string]string `json:"requests,omitempty"`
 }
 
 // NewKubevirtIoApiCoreV1ResourceRequirements instantiates a new KubevirtIoApiCoreV1ResourceRequirements object
@@ -47,14 +47,14 @@ func (o *KubevirtIoApiCoreV1ResourceRequirements) GetLimits() map[string]string 
 		var ret map[string]string
 		return ret
 	}
-	return *o.Limits
+	return o.Limits
 }
 
 // GetLimitsOk returns a tuple with the Limits field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *KubevirtIoApiCoreV1ResourceRequirements) GetLimitsOk() (*map[string]string, bool) {
+func (o *KubevirtIoApiCoreV1ResourceRequirements) GetLimitsOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Limits) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Limits, true
 }
@@ -70,7 +70,7 @@ func (o *KubevirtIoApiCoreV1ResourceRequirements) HasLimits() bool {
 
 // SetLimits gets a reference to the given map[string]string and assigns it to the Limits field.
 func (o *KubevirtIoApiCoreV1ResourceRequirements) SetLimits(v map[string]string) {
-	o.Limits = &v
+	o.Limits = v
 }
 
 // GetOvercommitGuestOverhead returns the OvercommitGuestOverhead field value if set, zero value otherwise.
@@ -111,14 +111,14 @@ func (o *KubevirtIoApiCoreV1ResourceRequirements) GetRequests() map[string]strin
 		var ret map[string]string
 		return ret
 	}
-	return *o.Requests
+	return o.Requests
 }
 
 // GetRequestsOk returns a tuple with the Requests field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *KubevirtIoApiCoreV1ResourceRequirements) GetRequestsOk() (*map[string]string, bool) {
+func (o *KubevirtIoApiCoreV1ResourceRequirements) GetRequestsOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Requests) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Requests, true
 }
@@ -134,7 +134,7 @@ func (o *KubevirtIoApiCoreV1ResourceRequirements) HasRequests() bool {
 
 // SetRequests gets a reference to the given map[string]string and assigns it to the Requests field.
 func (o *KubevirtIoApiCoreV1ResourceRequirements) SetRequests(v map[string]string) {
-	o.Requests = &v
+	o.Requests = v
 }
 
 func (o KubevirtIoApiCoreV1ResourceRequirements) MarshalJSON() ([]byte, error) {

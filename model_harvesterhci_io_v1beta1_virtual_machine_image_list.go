@@ -47,6 +47,8 @@ func NewHarvesterhciIoV1beta1VirtualMachineImageList(apiVersion string, items []
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VirtualMachineImageListWithDefaults() *HarvesterhciIoV1beta1VirtualMachineImageList {
 	this := HarvesterhciIoV1beta1VirtualMachineImageList{}
+	var metadata K8sIoV1ListMeta = {}
+	this.Metadata = metadata
 	return &this
 }
 

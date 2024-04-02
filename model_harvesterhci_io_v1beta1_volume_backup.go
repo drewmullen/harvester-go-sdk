@@ -58,6 +58,8 @@ func NewHarvesterhciIoV1beta1VolumeBackupWithDefaults() *HarvesterhciIoV1beta1Vo
 	this.CreationTime = &creationTime
 	var csiDriverName string = ""
 	this.CsiDriverName = csiDriverName
+	var persistentVolumeClaim HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec = {}
+	this.PersistentVolumeClaim = persistentVolumeClaim
 	var volumeName string = ""
 	this.VolumeName = volumeName
 	return &this

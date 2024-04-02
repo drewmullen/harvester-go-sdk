@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Architecture** | Pointer to **string** |  | [optional] 
 **DnsConfig** | Pointer to [**K8sIoV1PodDNSConfig**](K8sIoV1PodDNSConfig.md) |  | [optional] 
 **DnsPolicy** | Pointer to **string** |  | [optional] 
-**Domain** | [**KubevirtIoApiCoreV1DomainSpec**](KubevirtIoApiCoreV1DomainSpec.md) |  | 
+**Domain** | [**KubevirtIoApiCoreV1DomainSpec**](KubevirtIoApiCoreV1DomainSpec.md) |  | [default to {}]
 **EvictionStrategy** | Pointer to **string** |  | [optional] 
 **Hostname** | Pointer to **string** |  | [optional] 
 **LivenessProbe** | Pointer to [**KubevirtIoApiCoreV1Probe**](KubevirtIoApiCoreV1Probe.md) |  | [optional] 

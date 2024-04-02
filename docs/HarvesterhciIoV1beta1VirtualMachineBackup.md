@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | [**HarvesterhciIoV1beta1VirtualMachineBackupSpec**](HarvesterhciIoV1beta1VirtualMachineBackupSpec.md) |  | 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | [**HarvesterhciIoV1beta1VirtualMachineBackupSpec**](HarvesterhciIoV1beta1VirtualMachineBackupSpec.md) |  | [default to {}]
 **Status** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineBackupStatus**](HarvesterhciIoV1beta1VirtualMachineBackupStatus.md) |  | [optional] 
 
 ## Methods

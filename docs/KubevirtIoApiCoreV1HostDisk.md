@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Capacity** | Pointer to **string** |  | [optional] 
+**Capacity** | Pointer to **string** |  | [optional] [default to "{}"]
 **Path** | **string** |  | [default to ""]
 **Shared** | Pointer to **bool** |  | [optional] 
 **Type** | **string** |  | [default to ""]

@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Error** | Pointer to [**HarvesterhciIoV1beta1Error**](HarvesterhciIoV1beta1Error.md) |  | [optional] 
 **LonghornBackupName** | Pointer to **string** |  | [optional] 
 **Name** | Pointer to **string** |  | [optional] 
-**PersistentVolumeClaim** | [**HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec**](HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec.md) |  | 
+**PersistentVolumeClaim** | [**HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec**](HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec.md) |  | [default to {}]
 **Progress** | Pointer to **int32** |  | [optional] 
 **ReadyToUse** | Pointer to **bool** |  | [optional] 
 **VolumeName** | **string** |  | [default to ""]

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **AccessModes** | Pointer to **[]string** |  | [optional] 
 **DataSource** | Pointer to [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) |  | [optional] 
 **DataSourceRef** | Pointer to [**K8sIoV1TypedObjectReference**](K8sIoV1TypedObjectReference.md) |  | [optional] 
-**Resources** | Pointer to [**K8sIoV1ResourceRequirements**](K8sIoV1ResourceRequirements.md) |  | [optional] 
+**Resources** | Pointer to [**K8sIoV1ResourceRequirements**](K8sIoV1ResourceRequirements.md) |  | [optional] [default to {}]
 **Selector** | Pointer to [**K8sIoV1LabelSelector**](K8sIoV1LabelSelector.md) |  | [optional] 
 **StorageClassName** | Pointer to **string** |  | [optional] 
 **VolumeMode** | Pointer to **string** |  | [optional] 

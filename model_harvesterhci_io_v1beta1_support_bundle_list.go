@@ -47,6 +47,8 @@ func NewHarvesterhciIoV1beta1SupportBundleList(apiVersion string, items []Harves
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1SupportBundleListWithDefaults() *HarvesterhciIoV1beta1SupportBundleList {
 	this := HarvesterhciIoV1beta1SupportBundleList{}
+	var metadata K8sIoV1ListMeta = {}
+	this.Metadata = metadata
 	return &this
 }
 

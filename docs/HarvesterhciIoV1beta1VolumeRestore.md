@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **LonghornEngineName** | Pointer to **string** |  | [optional] 
-**PersistentVolumeClaimSpec** | Pointer to [**HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec**](HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec.md) |  | [optional] 
+**PersistentVolumeClaimSpec** | Pointer to [**HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec**](HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec.md) |  | [optional] [default to {}]
 **Progress** | Pointer to **int32** |  | [optional] 
 **VolumeBackupName** | Pointer to **string** |  | [optional] 
 **VolumeName** | Pointer to **string** |  | [optional] 

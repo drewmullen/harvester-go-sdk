@@ -45,6 +45,8 @@ func NewK8sIoV1HTTPGetAction(port string) *K8sIoV1HTTPGetAction {
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1HTTPGetActionWithDefaults() *K8sIoV1HTTPGetAction {
 	this := K8sIoV1HTTPGetAction{}
+	var port string = "{}"
+	this.Port = port
 	return &this
 }
 

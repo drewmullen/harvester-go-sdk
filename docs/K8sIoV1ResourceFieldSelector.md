@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ContainerName** | Pointer to **string** |  | [optional] 
-**Divisor** | Pointer to **string** |  | [optional] 
+**Divisor** | Pointer to **string** |  | [optional] [default to "{}"]
 **Resource** | **string** |  | [default to ""]
 
 ## Methods

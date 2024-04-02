@@ -38,7 +38,11 @@ func NewHarvesterhciIoV1beta1KeyPair(apiVersion string, kind string, spec Harves
 	this := HarvesterhciIoV1beta1KeyPair{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
 	this.Spec = spec
+	var status HarvesterhciIoV1beta1KeyPairStatus = {}
+	this.Status = &status
 	return &this
 }
 
@@ -47,6 +51,12 @@ func NewHarvesterhciIoV1beta1KeyPair(apiVersion string, kind string, spec Harves
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1KeyPairWithDefaults() *HarvesterhciIoV1beta1KeyPair {
 	this := HarvesterhciIoV1beta1KeyPair{}
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
+	var spec HarvesterhciIoV1beta1KeyPairSpec = {}
+	this.Spec = spec
+	var status HarvesterhciIoV1beta1KeyPairStatus = {}
+	this.Status = &status
 	return &this
 }
 

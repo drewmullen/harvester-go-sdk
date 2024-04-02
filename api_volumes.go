@@ -27,11 +27,11 @@ type ApiCreateNamespacedPersistentVolumeClaimRequest struct {
 	ctx context.Context
 	ApiService *VolumesAPIService
 	namespace string
-	body *K8sIoV1PersistentVolumeClaim
+	k8sIoV1PersistentVolumeClaim *K8sIoV1PersistentVolumeClaim
 }
 
-func (r ApiCreateNamespacedPersistentVolumeClaimRequest) Body(body K8sIoV1PersistentVolumeClaim) ApiCreateNamespacedPersistentVolumeClaimRequest {
-	r.body = &body
+func (r ApiCreateNamespacedPersistentVolumeClaimRequest) K8sIoV1PersistentVolumeClaim(k8sIoV1PersistentVolumeClaim K8sIoV1PersistentVolumeClaim) ApiCreateNamespacedPersistentVolumeClaimRequest {
+	r.k8sIoV1PersistentVolumeClaim = &k8sIoV1PersistentVolumeClaim
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Pers
 }
 
 /*
-CreateNamespacedPersistentVolumeClaim Create a Persistent Volume Claim
+CreateNamespacedPersistentVolumeClaim Create a Namespaced Persistent Volume Claim
 
 Create a PersistentVolumeClaim object.
 
@@ -77,8 +77,8 @@ func (a *VolumesAPIService) CreateNamespacedPersistentVolumeClaimExecute(r ApiCr
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1PersistentVolumeClaim == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1PersistentVolumeClaim is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *VolumesAPIService) CreateNamespacedPersistentVolumeClaimExecute(r ApiCr
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1PersistentVolumeClaim
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedPersistentVolumeClaimRequest struct {
 	ApiService *VolumesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedPersistentVolumeClaimRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedPersistentVolumeClaimRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedPersistentVolumeClaimRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedPersistentVolumeClaimRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Stat
 }
 
 /*
-DeleteNamespacedPersistentVolumeClaim Delete a Persistent Volume Claim
+DeleteNamespacedPersistentVolumeClaim Delete a Namespaced Persistent Volume Claim
 
 Delete a PersistentVolumeClaim object.
 
@@ -226,8 +226,8 @@ func (a *VolumesAPIService) DeleteNamespacedPersistentVolumeClaimExecute(r ApiDe
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *VolumesAPIService) DeleteNamespacedPersistentVolumeClaimExecute(r ApiDe
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Persis
 }
 
 /*
-ListNamespacedPersistentVolumeClaim List Persistent Volume Claims
+ListNamespacedPersistentVolumeClaim List Namespaced Persistent Volume Claims
 
 Get a list of PersistentVolumeClaim objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *VolumesAPIService) ListNamespacedPersistentVolumeClaimExecute(r ApiList
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -633,7 +633,7 @@ func (a *VolumesAPIService) ListPersistentVolumeClaimForAllNamespacesExecute(r A
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Persi
 }
 
 /*
-PatchNamespacedPersistentVolumeClaim Patch a Persistent Volume Claim
+PatchNamespacedPersistentVolumeClaim Patch a Namespaced Persistent Volume Claim
 
 Patch a PersistentVolumeClaim object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Persis
 }
 
 /*
-ReadNamespacedPersistentVolumeClaim Read a Persistent Volume Claim
+ReadNamespacedPersistentVolumeClaim Read a Namespaced Persistent Volume Claim
 
 Get a PersistentVolumeClaim object.
 
@@ -898,7 +898,7 @@ func (a *VolumesAPIService) ReadNamespacedPersistentVolumeClaimExecute(r ApiRead
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedPersistentVolumeClaimRequest struct {
 	ApiService *VolumesAPIService
 	name string
 	namespace string
-	body *K8sIoV1PersistentVolumeClaim
+	k8sIoV1PersistentVolumeClaim *K8sIoV1PersistentVolumeClaim
 }
 
-func (r ApiReplaceNamespacedPersistentVolumeClaimRequest) Body(body K8sIoV1PersistentVolumeClaim) ApiReplaceNamespacedPersistentVolumeClaimRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedPersistentVolumeClaimRequest) K8sIoV1PersistentVolumeClaim(k8sIoV1PersistentVolumeClaim K8sIoV1PersistentVolumeClaim) ApiReplaceNamespacedPersistentVolumeClaimRequest {
+	r.k8sIoV1PersistentVolumeClaim = &k8sIoV1PersistentVolumeClaim
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Per
 }
 
 /*
-ReplaceNamespacedPersistentVolumeClaim Replace a Persistent Volume Claim
+ReplaceNamespacedPersistentVolumeClaim Replace a Namespaced Persistent Volume Claim
 
 Update a PersistentVolumeClaim object.
 
@@ -1010,8 +1010,8 @@ func (a *VolumesAPIService) ReplaceNamespacedPersistentVolumeClaimExecute(r ApiR
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1PersistentVolumeClaim == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1PersistentVolumeClaim is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *VolumesAPIService) ReplaceNamespacedPersistentVolumeClaimExecute(r ApiR
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1PersistentVolumeClaim
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

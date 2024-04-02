@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineTemplateSpec**](HarvesterhciIoV1beta1VirtualMachineTemplateSpec.md) |  | [optional] 
-**Status** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineTemplateStatus**](HarvesterhciIoV1beta1VirtualMachineTemplateStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineTemplateSpec**](HarvesterhciIoV1beta1VirtualMachineTemplateSpec.md) |  | [optional] [default to {}]
+**Status** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineTemplateStatus**](HarvesterhciIoV1beta1VirtualMachineTemplateStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 

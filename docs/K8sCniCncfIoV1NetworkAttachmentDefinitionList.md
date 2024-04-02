@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ApiVersion** | **string** |  | 
 **Items** | [**[]K8sCniCncfIoV1NetworkAttachmentDefinition**](K8sCniCncfIoV1NetworkAttachmentDefinition.md) |  | 
 **Kind** | **string** |  | 
-**Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | 
+**Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [default to {}]
 
 ## Methods
 

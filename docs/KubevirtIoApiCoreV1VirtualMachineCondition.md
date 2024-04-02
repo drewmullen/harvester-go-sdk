@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LastProbeTime** | Pointer to **string** |  | [optional] [default to ""]
-**LastTransitionTime** | Pointer to **string** |  | [optional] [default to ""]
+**LastProbeTime** | Pointer to **string** |  | [optional] [default to "{}"]
+**LastTransitionTime** | Pointer to **string** |  | [optional] [default to "{}"]
 **Message** | Pointer to **string** |  | [optional] 
 **Reason** | Pointer to **string** |  | [optional] 
 **Status** | **string** |  | [default to ""]

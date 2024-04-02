@@ -27,11 +27,11 @@ type ApiCreateNamespacedVirtualMachineInstanceMigrationRequest struct {
 	ctx context.Context
 	ApiService *MigrationsAPIService
 	namespace string
-	body *KubevirtIoApiCoreV1VirtualMachineInstanceMigration
+	kubevirtIoApiCoreV1VirtualMachineInstanceMigration *KubevirtIoApiCoreV1VirtualMachineInstanceMigration
 }
 
-func (r ApiCreateNamespacedVirtualMachineInstanceMigrationRequest) Body(body KubevirtIoApiCoreV1VirtualMachineInstanceMigration) ApiCreateNamespacedVirtualMachineInstanceMigrationRequest {
-	r.body = &body
+func (r ApiCreateNamespacedVirtualMachineInstanceMigrationRequest) KubevirtIoApiCoreV1VirtualMachineInstanceMigration(kubevirtIoApiCoreV1VirtualMachineInstanceMigration KubevirtIoApiCoreV1VirtualMachineInstanceMigration) ApiCreateNamespacedVirtualMachineInstanceMigrationRequest {
+	r.kubevirtIoApiCoreV1VirtualMachineInstanceMigration = &kubevirtIoApiCoreV1VirtualMachineInstanceMigration
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*K
 }
 
 /*
-CreateNamespacedVirtualMachineInstanceMigration Create a Virtual Machine Instance Migration
+CreateNamespacedVirtualMachineInstanceMigration Create a Namespaced Virtual Machine Instance Migration
 
 Create a VirtualMachineInstanceMigration object.
 
@@ -77,8 +77,8 @@ func (a *MigrationsAPIService) CreateNamespacedVirtualMachineInstanceMigrationEx
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.kubevirtIoApiCoreV1VirtualMachineInstanceMigration == nil {
+		return localVarReturnValue, nil, reportError("kubevirtIoApiCoreV1VirtualMachineInstanceMigration is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *MigrationsAPIService) CreateNamespacedVirtualMachineInstanceMigrationEx
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.kubevirtIoApiCoreV1VirtualMachineInstanceMigration
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest struct {
 	ApiService *MigrationsAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*K
 }
 
 /*
-DeleteNamespacedVirtualMachineInstanceMigration Delete a Virtual Machine Instance Migration
+DeleteNamespacedVirtualMachineInstanceMigration Delete a Namespaced Virtual Machine Instance Migration
 
 Delete a VirtualMachineInstanceMigration object.
 
@@ -226,8 +226,8 @@ func (a *MigrationsAPIService) DeleteNamespacedVirtualMachineInstanceMigrationEx
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *MigrationsAPIService) DeleteNamespacedVirtualMachineInstanceMigrationEx
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*Kub
 }
 
 /*
-ListNamespacedVirtualMachineInstanceMigration List Virtual Machine Instance Migrations
+ListNamespacedVirtualMachineInstanceMigration List Namespaced Virtual Machine Instance Migrations
 
 Get a list of VirtualMachineInstanceMigration objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *MigrationsAPIService) ListNamespacedVirtualMachineInstanceMigrationExec
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -633,7 +633,7 @@ func (a *MigrationsAPIService) ListVirtualMachineInstanceMigrationForAllNamespac
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*Ku
 }
 
 /*
-PatchNamespacedVirtualMachineInstanceMigration Patch a Virtual Machine Instance Migration
+PatchNamespacedVirtualMachineInstanceMigration Patch a Namespaced Virtual Machine Instance Migration
 
 Patch a VirtualMachineInstanceMigration object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*Kub
 }
 
 /*
-ReadNamespacedVirtualMachineInstanceMigration Read a Virtual Machine Instance Migration
+ReadNamespacedVirtualMachineInstanceMigration Read a Namespaced Virtual Machine Instance Migration
 
 Get a VirtualMachineInstanceMigration object.
 
@@ -898,7 +898,7 @@ func (a *MigrationsAPIService) ReadNamespacedVirtualMachineInstanceMigrationExec
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedVirtualMachineInstanceMigrationRequest struct {
 	ApiService *MigrationsAPIService
 	name string
 	namespace string
-	body *KubevirtIoApiCoreV1VirtualMachineInstanceMigration
+	kubevirtIoApiCoreV1VirtualMachineInstanceMigration *KubevirtIoApiCoreV1VirtualMachineInstanceMigration
 }
 
-func (r ApiReplaceNamespacedVirtualMachineInstanceMigrationRequest) Body(body KubevirtIoApiCoreV1VirtualMachineInstanceMigration) ApiReplaceNamespacedVirtualMachineInstanceMigrationRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedVirtualMachineInstanceMigrationRequest) KubevirtIoApiCoreV1VirtualMachineInstanceMigration(kubevirtIoApiCoreV1VirtualMachineInstanceMigration KubevirtIoApiCoreV1VirtualMachineInstanceMigration) ApiReplaceNamespacedVirtualMachineInstanceMigrationRequest {
+	r.kubevirtIoApiCoreV1VirtualMachineInstanceMigration = &kubevirtIoApiCoreV1VirtualMachineInstanceMigration
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*
 }
 
 /*
-ReplaceNamespacedVirtualMachineInstanceMigration Replace a Virtual Machine Instance Migration
+ReplaceNamespacedVirtualMachineInstanceMigration Replace a Namespaced Virtual Machine Instance Migration
 
 Update a VirtualMachineInstanceMigration object.
 
@@ -1010,8 +1010,8 @@ func (a *MigrationsAPIService) ReplaceNamespacedVirtualMachineInstanceMigrationE
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.kubevirtIoApiCoreV1VirtualMachineInstanceMigration == nil {
+		return localVarReturnValue, nil, reportError("kubevirtIoApiCoreV1VirtualMachineInstanceMigration is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *MigrationsAPIService) ReplaceNamespacedVirtualMachineInstanceMigrationE
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.kubevirtIoApiCoreV1VirtualMachineInstanceMigration
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PodAffinityTerm** | [**K8sIoV1PodAffinityTerm**](K8sIoV1PodAffinityTerm.md) |  | 
+**PodAffinityTerm** | [**K8sIoV1PodAffinityTerm**](K8sIoV1PodAffinityTerm.md) |  | [default to {}]
 **Weight** | **int32** |  | [default to 0]
 
 ## Methods

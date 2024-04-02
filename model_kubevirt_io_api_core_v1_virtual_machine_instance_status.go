@@ -51,6 +51,8 @@ type KubevirtIoApiCoreV1VirtualMachineInstanceStatus struct {
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceStatus() *KubevirtIoApiCoreV1VirtualMachineInstanceStatus {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceStatus{}
+	var guestOSInfo KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo = {}
+	this.GuestOSInfo = &guestOSInfo
 	var runtimeUser int64 = 0
 	this.RuntimeUser = &runtimeUser
 	return &this
@@ -61,6 +63,8 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceStatus() *KubevirtIoApiCoreV1Vi
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceStatusWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceStatus {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceStatus{}
+	var guestOSInfo KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo = {}
+	this.GuestOSInfo = &guestOSInfo
 	var runtimeUser int64 = 0
 	this.RuntimeUser = &runtimeUser
 	return &this

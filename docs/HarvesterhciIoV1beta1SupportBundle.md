@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | [**HarvesterhciIoV1beta1SupportBundleSpec**](HarvesterhciIoV1beta1SupportBundleSpec.md) |  | 
-**Status** | Pointer to [**HarvesterhciIoV1beta1SupportBundleStatus**](HarvesterhciIoV1beta1SupportBundleStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | [**HarvesterhciIoV1beta1SupportBundleSpec**](HarvesterhciIoV1beta1SupportBundleSpec.md) |  | [default to {}]
+**Status** | Pointer to [**HarvesterhciIoV1beta1SupportBundleStatus**](HarvesterhciIoV1beta1SupportBundleStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 

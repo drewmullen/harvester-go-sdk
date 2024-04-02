@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **DeletionPolicy** | Pointer to **string** |  | [optional] 
 **KeepMacAddress** | Pointer to **bool** |  | [optional] 
 **NewVM** | Pointer to **bool** |  | [optional] 
-**Target** | [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) |  | 
+**Target** | [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) |  | [default to {}]
 **VirtualMachineBackupName** | **string** |  | [default to ""]
 **VirtualMachineBackupNamespace** | **string** |  | [default to ""]
 

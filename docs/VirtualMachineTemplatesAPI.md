@@ -4,28 +4,28 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#CreateNamespacedVirtualMachineTemplate) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates | Create a Virtual Machine Template
-[**CreateNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#CreateNamespacedVirtualMachineTemplateVersion) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions | Create a Virtual Machine Template Version
-[**DeleteNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#DeleteNamespacedVirtualMachineTemplate) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Delete a Virtual Machine Template
-[**DeleteNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#DeleteNamespacedVirtualMachineTemplateVersion) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Delete a Virtual Machine Template Version
-[**ListNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#ListNamespacedVirtualMachineTemplate) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates | List Virtual Machine Templates
-[**ListNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#ListNamespacedVirtualMachineTemplateVersion) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions | List Virtual Machine Template Versions
+[**CreateNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#CreateNamespacedVirtualMachineTemplate) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates | Create a Namespaced Virtual Machine Template
+[**CreateNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#CreateNamespacedVirtualMachineTemplateVersion) | **Post** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions | Create a Namespaced Virtual Machine Template Version
+[**DeleteNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#DeleteNamespacedVirtualMachineTemplate) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Delete a Namespaced Virtual Machine Template
+[**DeleteNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#DeleteNamespacedVirtualMachineTemplateVersion) | **Delete** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Delete a Namespaced Virtual Machine Template Version
+[**ListNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#ListNamespacedVirtualMachineTemplate) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates | List Namespaced Virtual Machine Templates
+[**ListNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#ListNamespacedVirtualMachineTemplateVersion) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions | List Namespaced Virtual Machine Template Versions
 [**ListVirtualMachineTemplateForAllNamespaces**](VirtualMachineTemplatesAPI.md#ListVirtualMachineTemplateForAllNamespaces) | **Get** /apis/harvesterhci.io/v1beta1/virtualmachinetemplates | List Virtual Machine Templates For All Namespaces
 [**ListVirtualMachineTemplateVersionForAllNamespaces**](VirtualMachineTemplatesAPI.md#ListVirtualMachineTemplateVersionForAllNamespaces) | **Get** /apis/harvesterhci.io/v1beta1/virtualmachinetemplateversions | List Virtual Machine Template Versions For All Namespaces
-[**PatchNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#PatchNamespacedVirtualMachineTemplate) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Patch a Virtual Machine Template
-[**PatchNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#PatchNamespacedVirtualMachineTemplateVersion) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Patch a Virtual Machine Template Version
-[**ReadNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#ReadNamespacedVirtualMachineTemplate) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Read a Virtual Machine Template
-[**ReadNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#ReadNamespacedVirtualMachineTemplateVersion) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Read a Virtual Machine Template Version
-[**ReplaceNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#ReplaceNamespacedVirtualMachineTemplate) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Replace a Virtual Machine Template
-[**ReplaceNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#ReplaceNamespacedVirtualMachineTemplateVersion) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Replace a Virtual Machine Template Version
+[**PatchNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#PatchNamespacedVirtualMachineTemplate) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Patch a Namespaced Virtual Machine Template
+[**PatchNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#PatchNamespacedVirtualMachineTemplateVersion) | **Patch** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Patch a Namespaced Virtual Machine Template Version
+[**ReadNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#ReadNamespacedVirtualMachineTemplate) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Read a Namespaced Virtual Machine Template
+[**ReadNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#ReadNamespacedVirtualMachineTemplateVersion) | **Get** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Read a Namespaced Virtual Machine Template Version
+[**ReplaceNamespacedVirtualMachineTemplate**](VirtualMachineTemplatesAPI.md#ReplaceNamespacedVirtualMachineTemplate) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplates/{name} | Replace a Namespaced Virtual Machine Template
+[**ReplaceNamespacedVirtualMachineTemplateVersion**](VirtualMachineTemplatesAPI.md#ReplaceNamespacedVirtualMachineTemplateVersion) | **Put** /apis/harvesterhci.io/v1beta1/namespaces/{namespace}/virtualmachinetemplateversions/{name} | Replace a Namespaced Virtual Machine Template Version
 
 
 
 ## CreateNamespacedVirtualMachineTemplate
 
-> HarvesterhciIoV1beta1VirtualMachineTemplate CreateNamespacedVirtualMachineTemplate(ctx, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineTemplate CreateNamespacedVirtualMachineTemplate(ctx, namespace).HarvesterhciIoV1beta1VirtualMachineTemplate(harvesterhciIoV1beta1VirtualMachineTemplate).Execute()
 
-Create a Virtual Machine Template
+Create a Namespaced Virtual Machine Template
 
 
 
@@ -43,11 +43,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate("ApiVersion_example", "Kind_example") // HarvesterhciIoV1beta1VirtualMachineTemplate | 
+	harvesterhciIoV1beta1VirtualMachineTemplate := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate("ApiVersion_example", "Kind_example") // HarvesterhciIoV1beta1VirtualMachineTemplate | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachineTemplatesAPI.CreateNamespacedVirtualMachineTemplate(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.VirtualMachineTemplatesAPI.CreateNamespacedVirtualMachineTemplate(context.Background(), namespace).HarvesterhciIoV1beta1VirtualMachineTemplate(harvesterhciIoV1beta1VirtualMachineTemplate).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.CreateNamespacedVirtualMachineTemplate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -73,7 +73,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedVirtualMac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineTemplate**](HarvesterhciIoV1beta1VirtualMachineTemplate.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineTemplate** | [**HarvesterhciIoV1beta1VirtualMachineTemplate**](HarvesterhciIoV1beta1VirtualMachineTemplate.md) |  | 
 
 ### Return type
 
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -95,9 +95,9 @@ Name | Type | Description  | Notes
 
 ## CreateNamespacedVirtualMachineTemplateVersion
 
-> HarvesterhciIoV1beta1VirtualMachineTemplateVersion CreateNamespacedVirtualMachineTemplateVersion(ctx, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineTemplateVersion CreateNamespacedVirtualMachineTemplateVersion(ctx, namespace).HarvesterhciIoV1beta1VirtualMachineTemplateVersion(harvesterhciIoV1beta1VirtualMachineTemplateVersion).Execute()
 
-Create a Virtual Machine Template Version
+Create a Namespaced Virtual Machine Template Version
 
 
 
@@ -115,11 +115,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
+	harvesterhciIoV1beta1VirtualMachineTemplateVersion := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachineTemplatesAPI.CreateNamespacedVirtualMachineTemplateVersion(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.VirtualMachineTemplatesAPI.CreateNamespacedVirtualMachineTemplateVersion(context.Background(), namespace).HarvesterhciIoV1beta1VirtualMachineTemplateVersion(harvesterhciIoV1beta1VirtualMachineTemplateVersion).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.CreateNamespacedVirtualMachineTemplateVersion``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -145,7 +145,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedVirtualMac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineTemplateVersion**](HarvesterhciIoV1beta1VirtualMachineTemplateVersion.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineTemplateVersion** | [**HarvesterhciIoV1beta1VirtualMachineTemplateVersion**](HarvesterhciIoV1beta1VirtualMachineTemplateVersion.md) |  | 
 
 ### Return type
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -167,9 +167,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedVirtualMachineTemplate
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineTemplate(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedVirtualMachineTemplate(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Virtual Machine Template
+Delete a Namespaced Virtual Machine Template
 
 
 
@@ -188,14 +188,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplate(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplate(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -234,7 +234,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -248,9 +248,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedVirtualMachineTemplateVersion
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Virtual Machine Template Version
+Delete a Namespaced Virtual Machine Template Version
 
 
 
@@ -269,14 +269,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplateVersion(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplateVersion(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplateVersion``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineTemplateList ListNamespacedVirtualMachineTemplate(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Virtual Machine Templates
+List Namespaced Virtual Machine Templates
 
 
 
@@ -401,12 +401,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineTemplateVersionList ListNamespacedVirtualMachineTemplateVersion(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Virtual Machine Template Versions
+List Namespaced Virtual Machine Template Versions
 
 
 
@@ -487,12 +487,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -567,12 +567,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -647,12 +647,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineTemplate PatchNamespacedVirtualMachineTemplate(ctx, name, namespace).Body(body).Execute()
 
-Patch a Virtual Machine Template
+Patch a Namespaced Virtual Machine Template
 
 
 
@@ -722,7 +722,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -738,7 +738,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineTemplateVersion PatchNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).Body(body).Execute()
 
-Patch a Virtual Machine Template Version
+Patch a Namespaced Virtual Machine Template Version
 
 
 
@@ -797,7 +797,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -813,7 +813,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineTemplate ReadNamespacedVirtualMachineTemplate(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Virtual Machine Template
+Read a Namespaced Virtual Machine Template
 
 
 
@@ -874,12 +874,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -890,7 +890,7 @@ Name | Type | Description  | Notes
 
 > HarvesterhciIoV1beta1VirtualMachineTemplateVersion ReadNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Virtual Machine Template Version
+Read a Namespaced Virtual Machine Template Version
 
 
 
@@ -951,12 +951,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -965,9 +965,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedVirtualMachineTemplate
 
-> HarvesterhciIoV1beta1VirtualMachineTemplate ReplaceNamespacedVirtualMachineTemplate(ctx, name, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineTemplate ReplaceNamespacedVirtualMachineTemplate(ctx, name, namespace).HarvesterhciIoV1beta1VirtualMachineTemplate(harvesterhciIoV1beta1VirtualMachineTemplate).Execute()
 
-Replace a Virtual Machine Template
+Replace a Namespaced Virtual Machine Template
 
 
 
@@ -986,11 +986,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate("ApiVersion_example", "Kind_example") // HarvesterhciIoV1beta1VirtualMachineTemplate | 
+	harvesterhciIoV1beta1VirtualMachineTemplate := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate("ApiVersion_example", "Kind_example") // HarvesterhciIoV1beta1VirtualMachineTemplate | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachineTemplatesAPI.ReplaceNamespacedVirtualMachineTemplate(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.VirtualMachineTemplatesAPI.ReplaceNamespacedVirtualMachineTemplate(context.Background(), name, namespace).HarvesterhciIoV1beta1VirtualMachineTemplate(harvesterhciIoV1beta1VirtualMachineTemplate).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.ReplaceNamespacedVirtualMachineTemplate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1018,7 +1018,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineTemplate**](HarvesterhciIoV1beta1VirtualMachineTemplate.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineTemplate** | [**HarvesterhciIoV1beta1VirtualMachineTemplate**](HarvesterhciIoV1beta1VirtualMachineTemplate.md) |  | 
 
 ### Return type
 
@@ -1026,7 +1026,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -1040,9 +1040,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedVirtualMachineTemplateVersion
 
-> HarvesterhciIoV1beta1VirtualMachineTemplateVersion ReplaceNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).Body(body).Execute()
+> HarvesterhciIoV1beta1VirtualMachineTemplateVersion ReplaceNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).HarvesterhciIoV1beta1VirtualMachineTemplateVersion(harvesterhciIoV1beta1VirtualMachineTemplateVersion).Execute()
 
-Replace a Virtual Machine Template Version
+Replace a Namespaced Virtual Machine Template Version
 
 
 
@@ -1061,11 +1061,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
+	harvesterhciIoV1beta1VirtualMachineTemplateVersion := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachineTemplatesAPI.ReplaceNamespacedVirtualMachineTemplateVersion(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.VirtualMachineTemplatesAPI.ReplaceNamespacedVirtualMachineTemplateVersion(context.Background(), name, namespace).HarvesterhciIoV1beta1VirtualMachineTemplateVersion(harvesterhciIoV1beta1VirtualMachineTemplateVersion).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.ReplaceNamespacedVirtualMachineTemplateVersion``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -1093,7 +1093,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**HarvesterhciIoV1beta1VirtualMachineTemplateVersion**](HarvesterhciIoV1beta1VirtualMachineTemplateVersion.md) |  | 
+ **harvesterhciIoV1beta1VirtualMachineTemplateVersion** | [**HarvesterhciIoV1beta1VirtualMachineTemplateVersion**](HarvesterhciIoV1beta1VirtualMachineTemplateVersion.md) |  | 
 
 ### Return type
 
@@ -1101,7 +1101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

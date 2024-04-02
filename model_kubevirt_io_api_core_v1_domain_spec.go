@@ -43,6 +43,8 @@ type _KubevirtIoApiCoreV1DomainSpec KubevirtIoApiCoreV1DomainSpec
 func NewKubevirtIoApiCoreV1DomainSpec(devices KubevirtIoApiCoreV1Devices) *KubevirtIoApiCoreV1DomainSpec {
 	this := KubevirtIoApiCoreV1DomainSpec{}
 	this.Devices = devices
+	var resources KubevirtIoApiCoreV1ResourceRequirements = {}
+	this.Resources = &resources
 	return &this
 }
 
@@ -51,6 +53,10 @@ func NewKubevirtIoApiCoreV1DomainSpec(devices KubevirtIoApiCoreV1Devices) *Kubev
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1DomainSpecWithDefaults() *KubevirtIoApiCoreV1DomainSpec {
 	this := KubevirtIoApiCoreV1DomainSpec{}
+	var devices KubevirtIoApiCoreV1Devices = {}
+	this.Devices = devices
+	var resources KubevirtIoApiCoreV1ResourceRequirements = {}
+	this.Resources = &resources
 	return &this
 }
 

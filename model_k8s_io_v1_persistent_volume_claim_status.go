@@ -20,8 +20,8 @@ var _ MappedNullable = &K8sIoV1PersistentVolumeClaimStatus{}
 // K8sIoV1PersistentVolumeClaimStatus struct for K8sIoV1PersistentVolumeClaimStatus
 type K8sIoV1PersistentVolumeClaimStatus struct {
 	AccessModes []string `json:"accessModes,omitempty"`
-	AllocatedResources *map[string]string `json:"allocatedResources,omitempty"`
-	Capacity *map[string]string `json:"capacity,omitempty"`
+	AllocatedResources map[string]string `json:"allocatedResources,omitempty"`
+	Capacity map[string]string `json:"capacity,omitempty"`
 	Conditions []K8sIoV1PersistentVolumeClaimCondition `json:"conditions,omitempty"`
 	Phase *string `json:"phase,omitempty"`
 	ResizeStatus *string `json:"resizeStatus,omitempty"`
@@ -82,14 +82,14 @@ func (o *K8sIoV1PersistentVolumeClaimStatus) GetAllocatedResources() map[string]
 		var ret map[string]string
 		return ret
 	}
-	return *o.AllocatedResources
+	return o.AllocatedResources
 }
 
 // GetAllocatedResourcesOk returns a tuple with the AllocatedResources field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *K8sIoV1PersistentVolumeClaimStatus) GetAllocatedResourcesOk() (*map[string]string, bool) {
+func (o *K8sIoV1PersistentVolumeClaimStatus) GetAllocatedResourcesOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.AllocatedResources) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.AllocatedResources, true
 }
@@ -105,7 +105,7 @@ func (o *K8sIoV1PersistentVolumeClaimStatus) HasAllocatedResources() bool {
 
 // SetAllocatedResources gets a reference to the given map[string]string and assigns it to the AllocatedResources field.
 func (o *K8sIoV1PersistentVolumeClaimStatus) SetAllocatedResources(v map[string]string) {
-	o.AllocatedResources = &v
+	o.AllocatedResources = v
 }
 
 // GetCapacity returns the Capacity field value if set, zero value otherwise.
@@ -114,14 +114,14 @@ func (o *K8sIoV1PersistentVolumeClaimStatus) GetCapacity() map[string]string {
 		var ret map[string]string
 		return ret
 	}
-	return *o.Capacity
+	return o.Capacity
 }
 
 // GetCapacityOk returns a tuple with the Capacity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *K8sIoV1PersistentVolumeClaimStatus) GetCapacityOk() (*map[string]string, bool) {
+func (o *K8sIoV1PersistentVolumeClaimStatus) GetCapacityOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Capacity) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Capacity, true
 }
@@ -137,7 +137,7 @@ func (o *K8sIoV1PersistentVolumeClaimStatus) HasCapacity() bool {
 
 // SetCapacity gets a reference to the given map[string]string and assigns it to the Capacity field.
 func (o *K8sIoV1PersistentVolumeClaimStatus) SetCapacity(v map[string]string) {
-	o.Capacity = &v
+	o.Capacity = v
 }
 
 // GetConditions returns the Conditions field value if set, zero value otherwise.

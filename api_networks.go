@@ -27,11 +27,11 @@ type ApiCreateNamespacedClusterNetworkRequest struct {
 	ctx context.Context
 	ApiService *NetworksAPIService
 	namespace string
-	body *NetworkHarvesterhciIoV1beta1ClusterNetwork
+	networkHarvesterhciIoV1beta1ClusterNetwork *NetworkHarvesterhciIoV1beta1ClusterNetwork
 }
 
-func (r ApiCreateNamespacedClusterNetworkRequest) Body(body NetworkHarvesterhciIoV1beta1ClusterNetwork) ApiCreateNamespacedClusterNetworkRequest {
-	r.body = &body
+func (r ApiCreateNamespacedClusterNetworkRequest) NetworkHarvesterhciIoV1beta1ClusterNetwork(networkHarvesterhciIoV1beta1ClusterNetwork NetworkHarvesterhciIoV1beta1ClusterNetwork) ApiCreateNamespacedClusterNetworkRequest {
+	r.networkHarvesterhciIoV1beta1ClusterNetwork = &networkHarvesterhciIoV1beta1ClusterNetwork
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedClusterNetworkRequest) Execute() (*NetworkHarvesterhc
 }
 
 /*
-CreateNamespacedClusterNetwork Create a Cluster Network
+CreateNamespacedClusterNetwork Create a Namespaced Cluster Network
 
 Create a ClusterNetwork object.
 
@@ -77,8 +77,8 @@ func (a *NetworksAPIService) CreateNamespacedClusterNetworkExecute(r ApiCreateNa
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.networkHarvesterhciIoV1beta1ClusterNetwork == nil {
+		return localVarReturnValue, nil, reportError("networkHarvesterhciIoV1beta1ClusterNetwork is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *NetworksAPIService) CreateNamespacedClusterNetworkExecute(r ApiCreateNa
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.networkHarvesterhciIoV1beta1ClusterNetwork
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -151,11 +151,11 @@ type ApiCreateNamespacedNetworkAttachmentDefinitionRequest struct {
 	ctx context.Context
 	ApiService *NetworksAPIService
 	namespace string
-	body *K8sCniCncfIoV1NetworkAttachmentDefinition
+	k8sCniCncfIoV1NetworkAttachmentDefinition *K8sCniCncfIoV1NetworkAttachmentDefinition
 }
 
-func (r ApiCreateNamespacedNetworkAttachmentDefinitionRequest) Body(body K8sCniCncfIoV1NetworkAttachmentDefinition) ApiCreateNamespacedNetworkAttachmentDefinitionRequest {
-	r.body = &body
+func (r ApiCreateNamespacedNetworkAttachmentDefinitionRequest) K8sCniCncfIoV1NetworkAttachmentDefinition(k8sCniCncfIoV1NetworkAttachmentDefinition K8sCniCncfIoV1NetworkAttachmentDefinition) ApiCreateNamespacedNetworkAttachmentDefinitionRequest {
+	r.k8sCniCncfIoV1NetworkAttachmentDefinition = &k8sCniCncfIoV1NetworkAttachmentDefinition
 	return r
 }
 
@@ -164,7 +164,7 @@ func (r ApiCreateNamespacedNetworkAttachmentDefinitionRequest) Execute() (*K8sCn
 }
 
 /*
-CreateNamespacedNetworkAttachmentDefinition Create a Network Attachment Definition
+CreateNamespacedNetworkAttachmentDefinition Create a Namespaced Network Attachment Definition
 
 Create a NetworkAttachmentDefinition object.
 
@@ -201,8 +201,8 @@ func (a *NetworksAPIService) CreateNamespacedNetworkAttachmentDefinitionExecute(
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sCniCncfIoV1NetworkAttachmentDefinition == nil {
+		return localVarReturnValue, nil, reportError("k8sCniCncfIoV1NetworkAttachmentDefinition is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -223,7 +223,7 @@ func (a *NetworksAPIService) CreateNamespacedNetworkAttachmentDefinitionExecute(
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sCniCncfIoV1NetworkAttachmentDefinition
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -275,11 +275,11 @@ type ApiCreateNamespacedNodeNetworkRequest struct {
 	ctx context.Context
 	ApiService *NetworksAPIService
 	namespace string
-	body *NetworkHarvesterhciIoV1beta1NodeNetwork
+	networkHarvesterhciIoV1beta1NodeNetwork *NetworkHarvesterhciIoV1beta1NodeNetwork
 }
 
-func (r ApiCreateNamespacedNodeNetworkRequest) Body(body NetworkHarvesterhciIoV1beta1NodeNetwork) ApiCreateNamespacedNodeNetworkRequest {
-	r.body = &body
+func (r ApiCreateNamespacedNodeNetworkRequest) NetworkHarvesterhciIoV1beta1NodeNetwork(networkHarvesterhciIoV1beta1NodeNetwork NetworkHarvesterhciIoV1beta1NodeNetwork) ApiCreateNamespacedNodeNetworkRequest {
+	r.networkHarvesterhciIoV1beta1NodeNetwork = &networkHarvesterhciIoV1beta1NodeNetwork
 	return r
 }
 
@@ -288,7 +288,7 @@ func (r ApiCreateNamespacedNodeNetworkRequest) Execute() (*NetworkHarvesterhciIo
 }
 
 /*
-CreateNamespacedNodeNetwork Create a Node Network
+CreateNamespacedNodeNetwork Create a Namespaced Node Network
 
 Create a NodeNetwork object.
 
@@ -325,8 +325,8 @@ func (a *NetworksAPIService) CreateNamespacedNodeNetworkExecute(r ApiCreateNames
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.networkHarvesterhciIoV1beta1NodeNetwork == nil {
+		return localVarReturnValue, nil, reportError("networkHarvesterhciIoV1beta1NodeNetwork is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -347,7 +347,7 @@ func (a *NetworksAPIService) CreateNamespacedNodeNetworkExecute(r ApiCreateNames
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.networkHarvesterhciIoV1beta1NodeNetwork
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -400,14 +400,14 @@ type ApiDeleteNamespacedClusterNetworkRequest struct {
 	ApiService *NetworksAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedClusterNetworkRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedClusterNetworkRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedClusterNetworkRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedClusterNetworkRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -434,7 +434,7 @@ func (r ApiDeleteNamespacedClusterNetworkRequest) Execute() (*K8sIoV1Status, *ht
 }
 
 /*
-DeleteNamespacedClusterNetwork Delete a Cluster Network
+DeleteNamespacedClusterNetwork Delete a Namespaced Cluster Network
 
 Delete a ClusterNetwork object.
 
@@ -474,8 +474,8 @@ func (a *NetworksAPIService) DeleteNamespacedClusterNetworkExecute(r ApiDeleteNa
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -505,7 +505,7 @@ func (a *NetworksAPIService) DeleteNamespacedClusterNetworkExecute(r ApiDeleteNa
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -558,14 +558,14 @@ type ApiDeleteNamespacedNetworkAttachmentDefinitionRequest struct {
 	ApiService *NetworksAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedNetworkAttachmentDefinitionRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedNetworkAttachmentDefinitionRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedNetworkAttachmentDefinitionRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedNetworkAttachmentDefinitionRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -592,7 +592,7 @@ func (r ApiDeleteNamespacedNetworkAttachmentDefinitionRequest) Execute() (*K8sIo
 }
 
 /*
-DeleteNamespacedNetworkAttachmentDefinition Delete a Network Attachment Definition
+DeleteNamespacedNetworkAttachmentDefinition Delete a Namespaced Network Attachment Definition
 
 Delete a NetworkAttachmentDefinition object.
 
@@ -632,8 +632,8 @@ func (a *NetworksAPIService) DeleteNamespacedNetworkAttachmentDefinitionExecute(
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -663,7 +663,7 @@ func (a *NetworksAPIService) DeleteNamespacedNetworkAttachmentDefinitionExecute(
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -716,14 +716,14 @@ type ApiDeleteNamespacedNodeNetworkRequest struct {
 	ApiService *NetworksAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedNodeNetworkRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedNodeNetworkRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedNodeNetworkRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedNodeNetworkRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -750,7 +750,7 @@ func (r ApiDeleteNamespacedNodeNetworkRequest) Execute() (*K8sIoV1Status, *http.
 }
 
 /*
-DeleteNamespacedNodeNetwork Delete a Node Network
+DeleteNamespacedNodeNetwork Delete a Namespaced Node Network
 
 Delete a NodeNetwork object.
 
@@ -790,8 +790,8 @@ func (a *NetworksAPIService) DeleteNamespacedNodeNetworkExecute(r ApiDeleteNames
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -821,7 +821,7 @@ func (a *NetworksAPIService) DeleteNamespacedNodeNetworkExecute(r ApiDeleteNames
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -936,7 +936,7 @@ func (r ApiListNamespacedClusterNetworkRequest) Execute() (*NetworkHarvesterhciI
 }
 
 /*
-ListNamespacedClusterNetwork List Cluster Networks
+ListNamespacedClusterNetwork List Namespaced Cluster Networks
 
 Get a list of ClusterNetwork objects in a namespace.
 
@@ -1008,7 +1008,7 @@ func (a *NetworksAPIService) ListNamespacedClusterNetworkExecute(r ApiListNamesp
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1129,7 +1129,7 @@ func (r ApiListNamespacedNetworkAttachmentDefinitionRequest) Execute() (*K8sCniC
 }
 
 /*
-ListNamespacedNetworkAttachmentDefinition List Network Attachment Definitions
+ListNamespacedNetworkAttachmentDefinition List Namespaced Network Attachment Definitions
 
 Get a list of NetworkAttachmentDefinition objects in a namespace.
 
@@ -1201,7 +1201,7 @@ func (a *NetworksAPIService) ListNamespacedNetworkAttachmentDefinitionExecute(r 
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1322,7 +1322,7 @@ func (r ApiListNamespacedNodeNetworkRequest) Execute() (*NetworkHarvesterhciIoV1
 }
 
 /*
-ListNamespacedNodeNetwork List Node Networks
+ListNamespacedNodeNetwork List Namespaced Node Networks
 
 Get a list of NodeNetwork objects in a namespace.
 
@@ -1394,7 +1394,7 @@ func (a *NetworksAPIService) ListNamespacedNodeNetworkExecute(r ApiListNamespace
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1583,7 +1583,7 @@ func (a *NetworksAPIService) ListNetworkAttachmentDefinitionForAllNamespacesExec
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1655,7 +1655,7 @@ func (r ApiPatchNamespacedClusterNetworkRequest) Execute() (*NetworkHarvesterhci
 }
 
 /*
-PatchNamespacedClusterNetwork Patch a Cluster Network
+PatchNamespacedClusterNetwork Patch a Namespaced Cluster Network
 
 Patch a ClusterNetwork object.
 
@@ -1783,7 +1783,7 @@ func (r ApiPatchNamespacedNetworkAttachmentDefinitionRequest) Execute() (*K8sCni
 }
 
 /*
-PatchNamespacedNetworkAttachmentDefinition Patch a Network Attachment Definition
+PatchNamespacedNetworkAttachmentDefinition Patch a Namespaced Network Attachment Definition
 
 Patch a NetworkAttachmentDefinition object.
 
@@ -1911,7 +1911,7 @@ func (r ApiPatchNamespacedNodeNetworkRequest) Execute() (*NetworkHarvesterhciIoV
 }
 
 /*
-PatchNamespacedNodeNetwork Patch a Node Network
+PatchNamespacedNodeNetwork Patch a Namespaced Node Network
 
 Patch a NodeNetwork object.
 
@@ -2047,7 +2047,7 @@ func (r ApiReadNamespacedClusterNetworkRequest) Execute() (*NetworkHarvesterhciI
 }
 
 /*
-ReadNamespacedClusterNetwork Read a Cluster Network
+ReadNamespacedClusterNetwork Read a Namespaced Cluster Network
 
 Get a ClusterNetwork object.
 
@@ -2104,7 +2104,7 @@ func (a *NetworksAPIService) ReadNamespacedClusterNetworkExecute(r ApiReadNamesp
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2184,7 +2184,7 @@ func (r ApiReadNamespacedNetworkAttachmentDefinitionRequest) Execute() (*K8sCniC
 }
 
 /*
-ReadNamespacedNetworkAttachmentDefinition Read a Network Attachment Definition
+ReadNamespacedNetworkAttachmentDefinition Read a Namespaced Network Attachment Definition
 
 Get a NetworkAttachmentDefinition object.
 
@@ -2241,7 +2241,7 @@ func (a *NetworksAPIService) ReadNamespacedNetworkAttachmentDefinitionExecute(r 
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2321,7 +2321,7 @@ func (r ApiReadNamespacedNodeNetworkRequest) Execute() (*NetworkHarvesterhciIoV1
 }
 
 /*
-ReadNamespacedNodeNetwork Read a Node Network
+ReadNamespacedNodeNetwork Read a Namespaced Node Network
 
 Get a NodeNetwork object.
 
@@ -2378,7 +2378,7 @@ func (a *NetworksAPIService) ReadNamespacedNodeNetworkExecute(r ApiReadNamespace
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -2437,11 +2437,11 @@ type ApiReplaceNamespacedClusterNetworkRequest struct {
 	ApiService *NetworksAPIService
 	name string
 	namespace string
-	body *NetworkHarvesterhciIoV1beta1ClusterNetwork
+	networkHarvesterhciIoV1beta1ClusterNetwork *NetworkHarvesterhciIoV1beta1ClusterNetwork
 }
 
-func (r ApiReplaceNamespacedClusterNetworkRequest) Body(body NetworkHarvesterhciIoV1beta1ClusterNetwork) ApiReplaceNamespacedClusterNetworkRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedClusterNetworkRequest) NetworkHarvesterhciIoV1beta1ClusterNetwork(networkHarvesterhciIoV1beta1ClusterNetwork NetworkHarvesterhciIoV1beta1ClusterNetwork) ApiReplaceNamespacedClusterNetworkRequest {
+	r.networkHarvesterhciIoV1beta1ClusterNetwork = &networkHarvesterhciIoV1beta1ClusterNetwork
 	return r
 }
 
@@ -2450,7 +2450,7 @@ func (r ApiReplaceNamespacedClusterNetworkRequest) Execute() (*NetworkHarvesterh
 }
 
 /*
-ReplaceNamespacedClusterNetwork Replace a Cluster Network
+ReplaceNamespacedClusterNetwork Replace a Namespaced Cluster Network
 
 Update a ClusterNetwork object.
 
@@ -2490,8 +2490,8 @@ func (a *NetworksAPIService) ReplaceNamespacedClusterNetworkExecute(r ApiReplace
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.networkHarvesterhciIoV1beta1ClusterNetwork == nil {
+		return localVarReturnValue, nil, reportError("networkHarvesterhciIoV1beta1ClusterNetwork is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -2512,7 +2512,7 @@ func (a *NetworksAPIService) ReplaceNamespacedClusterNetworkExecute(r ApiReplace
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.networkHarvesterhciIoV1beta1ClusterNetwork
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2565,11 +2565,11 @@ type ApiReplaceNamespacedNetworkAttachmentDefinitionRequest struct {
 	ApiService *NetworksAPIService
 	name string
 	namespace string
-	body *K8sCniCncfIoV1NetworkAttachmentDefinition
+	k8sCniCncfIoV1NetworkAttachmentDefinition *K8sCniCncfIoV1NetworkAttachmentDefinition
 }
 
-func (r ApiReplaceNamespacedNetworkAttachmentDefinitionRequest) Body(body K8sCniCncfIoV1NetworkAttachmentDefinition) ApiReplaceNamespacedNetworkAttachmentDefinitionRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedNetworkAttachmentDefinitionRequest) K8sCniCncfIoV1NetworkAttachmentDefinition(k8sCniCncfIoV1NetworkAttachmentDefinition K8sCniCncfIoV1NetworkAttachmentDefinition) ApiReplaceNamespacedNetworkAttachmentDefinitionRequest {
+	r.k8sCniCncfIoV1NetworkAttachmentDefinition = &k8sCniCncfIoV1NetworkAttachmentDefinition
 	return r
 }
 
@@ -2578,7 +2578,7 @@ func (r ApiReplaceNamespacedNetworkAttachmentDefinitionRequest) Execute() (*K8sC
 }
 
 /*
-ReplaceNamespacedNetworkAttachmentDefinition Replace a Network Attachment Definition
+ReplaceNamespacedNetworkAttachmentDefinition Replace a Namespaced Network Attachment Definition
 
 Update a NetworkAttachmentDefinition object.
 
@@ -2618,8 +2618,8 @@ func (a *NetworksAPIService) ReplaceNamespacedNetworkAttachmentDefinitionExecute
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sCniCncfIoV1NetworkAttachmentDefinition == nil {
+		return localVarReturnValue, nil, reportError("k8sCniCncfIoV1NetworkAttachmentDefinition is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -2640,7 +2640,7 @@ func (a *NetworksAPIService) ReplaceNamespacedNetworkAttachmentDefinitionExecute
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sCniCncfIoV1NetworkAttachmentDefinition
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2693,11 +2693,11 @@ type ApiReplaceNamespacedNodeNetworkRequest struct {
 	ApiService *NetworksAPIService
 	name string
 	namespace string
-	body *NetworkHarvesterhciIoV1beta1NodeNetwork
+	networkHarvesterhciIoV1beta1NodeNetwork *NetworkHarvesterhciIoV1beta1NodeNetwork
 }
 
-func (r ApiReplaceNamespacedNodeNetworkRequest) Body(body NetworkHarvesterhciIoV1beta1NodeNetwork) ApiReplaceNamespacedNodeNetworkRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedNodeNetworkRequest) NetworkHarvesterhciIoV1beta1NodeNetwork(networkHarvesterhciIoV1beta1NodeNetwork NetworkHarvesterhciIoV1beta1NodeNetwork) ApiReplaceNamespacedNodeNetworkRequest {
+	r.networkHarvesterhciIoV1beta1NodeNetwork = &networkHarvesterhciIoV1beta1NodeNetwork
 	return r
 }
 
@@ -2706,7 +2706,7 @@ func (r ApiReplaceNamespacedNodeNetworkRequest) Execute() (*NetworkHarvesterhciI
 }
 
 /*
-ReplaceNamespacedNodeNetwork Replace a Node Network
+ReplaceNamespacedNodeNetwork Replace a Namespaced Node Network
 
 Update a NodeNetwork object.
 
@@ -2746,8 +2746,8 @@ func (a *NetworksAPIService) ReplaceNamespacedNodeNetworkExecute(r ApiReplaceNam
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.networkHarvesterhciIoV1beta1NodeNetwork == nil {
+		return localVarReturnValue, nil, reportError("networkHarvesterhciIoV1beta1NodeNetwork is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -2768,7 +2768,7 @@ func (a *NetworksAPIService) ReplaceNamespacedNodeNetworkExecute(r ApiReplaceNam
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.networkHarvesterhciIoV1beta1NodeNetwork
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

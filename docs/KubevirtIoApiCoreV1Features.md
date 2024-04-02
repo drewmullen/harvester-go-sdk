@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Acpi** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
+**Acpi** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] [default to {}]
 **Apic** | Pointer to [**KubevirtIoApiCoreV1FeatureAPIC**](KubevirtIoApiCoreV1FeatureAPIC.md) |  | [optional] 
 **Hyperv** | Pointer to [**KubevirtIoApiCoreV1FeatureHyperv**](KubevirtIoApiCoreV1FeatureHyperv.md) |  | [optional] 
 **Kvm** | Pointer to [**KubevirtIoApiCoreV1FeatureKVM**](KubevirtIoApiCoreV1FeatureKVM.md) |  | [optional] 

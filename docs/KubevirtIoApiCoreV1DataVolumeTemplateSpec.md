@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec.md) |  | 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec.md) |  | [default to {}]
 **Status** | Pointer to **map[string]interface{}** |  | [optional] 
 
 ## Methods

@@ -29,7 +29,7 @@ type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp 
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp() *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp{}
-	var phaseTransitionTimestamp string = ""
+	var phaseTransitionTimestamp string = "{}"
 	this.PhaseTransitionTimestamp = &phaseTransitionTimestamp
 	return &this
 }
@@ -39,7 +39,7 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimesta
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestampWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp{}
-	var phaseTransitionTimestamp string = ""
+	var phaseTransitionTimestamp string = "{}"
 	this.PhaseTransitionTimestamp = &phaseTransitionTimestamp
 	return &this
 }

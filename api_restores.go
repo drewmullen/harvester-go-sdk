@@ -27,11 +27,11 @@ type ApiCreateNamespacedVirtualMachineRestoreRequest struct {
 	ctx context.Context
 	ApiService *RestoresAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineRestore
+	harvesterhciIoV1beta1VirtualMachineRestore *HarvesterhciIoV1beta1VirtualMachineRestore
 }
 
-func (r ApiCreateNamespacedVirtualMachineRestoreRequest) Body(body HarvesterhciIoV1beta1VirtualMachineRestore) ApiCreateNamespacedVirtualMachineRestoreRequest {
-	r.body = &body
+func (r ApiCreateNamespacedVirtualMachineRestoreRequest) HarvesterhciIoV1beta1VirtualMachineRestore(harvesterhciIoV1beta1VirtualMachineRestore HarvesterhciIoV1beta1VirtualMachineRestore) ApiCreateNamespacedVirtualMachineRestoreRequest {
+	r.harvesterhciIoV1beta1VirtualMachineRestore = &harvesterhciIoV1beta1VirtualMachineRestore
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedVirtualMachineRestoreRequest) Execute() (*Harvesterhc
 }
 
 /*
-CreateNamespacedVirtualMachineRestore Create a Virtual Machine Restore
+CreateNamespacedVirtualMachineRestore Create a Namespaced Virtual Machine Restore
 
 Create a VirtualMachineRestore object.
 
@@ -77,8 +77,8 @@ func (a *RestoresAPIService) CreateNamespacedVirtualMachineRestoreExecute(r ApiC
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineRestore == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineRestore is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *RestoresAPIService) CreateNamespacedVirtualMachineRestoreExecute(r ApiC
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineRestore
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedVirtualMachineRestoreRequest struct {
 	ApiService *RestoresAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedVirtualMachineRestoreRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineRestoreRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedVirtualMachineRestoreRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineRestoreRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedVirtualMachineRestoreRequest) Execute() (*K8sIoV1Stat
 }
 
 /*
-DeleteNamespacedVirtualMachineRestore Delete a Virtual Machine Restore
+DeleteNamespacedVirtualMachineRestore Delete a Namespaced Virtual Machine Restore
 
 Delete a VirtualMachineRestore object.
 
@@ -226,8 +226,8 @@ func (a *RestoresAPIService) DeleteNamespacedVirtualMachineRestoreExecute(r ApiD
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *RestoresAPIService) DeleteNamespacedVirtualMachineRestoreExecute(r ApiD
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedVirtualMachineRestoreRequest) Execute() (*HarvesterhciI
 }
 
 /*
-ListNamespacedVirtualMachineRestore List Virtual Machine Restores
+ListNamespacedVirtualMachineRestore List Namespaced Virtual Machine Restores
 
 Get a list of VirtualMachineRestore objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *RestoresAPIService) ListNamespacedVirtualMachineRestoreExecute(r ApiLis
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -633,7 +633,7 @@ func (a *RestoresAPIService) ListVirtualMachineRestoreForAllNamespacesExecute(r 
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedVirtualMachineRestoreRequest) Execute() (*Harvesterhci
 }
 
 /*
-PatchNamespacedVirtualMachineRestore Patch a Virtual Machine Restore
+PatchNamespacedVirtualMachineRestore Patch a Namespaced Virtual Machine Restore
 
 Patch a VirtualMachineRestore object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedVirtualMachineRestoreRequest) Execute() (*HarvesterhciI
 }
 
 /*
-ReadNamespacedVirtualMachineRestore Read a Virtual Machine Restore
+ReadNamespacedVirtualMachineRestore Read a Namespaced Virtual Machine Restore
 
 Get a VirtualMachineRestore object.
 
@@ -898,7 +898,7 @@ func (a *RestoresAPIService) ReadNamespacedVirtualMachineRestoreExecute(r ApiRea
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedVirtualMachineRestoreRequest struct {
 	ApiService *RestoresAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1VirtualMachineRestore
+	harvesterhciIoV1beta1VirtualMachineRestore *HarvesterhciIoV1beta1VirtualMachineRestore
 }
 
-func (r ApiReplaceNamespacedVirtualMachineRestoreRequest) Body(body HarvesterhciIoV1beta1VirtualMachineRestore) ApiReplaceNamespacedVirtualMachineRestoreRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedVirtualMachineRestoreRequest) HarvesterhciIoV1beta1VirtualMachineRestore(harvesterhciIoV1beta1VirtualMachineRestore HarvesterhciIoV1beta1VirtualMachineRestore) ApiReplaceNamespacedVirtualMachineRestoreRequest {
+	r.harvesterhciIoV1beta1VirtualMachineRestore = &harvesterhciIoV1beta1VirtualMachineRestore
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedVirtualMachineRestoreRequest) Execute() (*Harvesterh
 }
 
 /*
-ReplaceNamespacedVirtualMachineRestore Replace a Virtual Machine Restore
+ReplaceNamespacedVirtualMachineRestore Replace a Namespaced Virtual Machine Restore
 
 Update a VirtualMachineRestore object.
 
@@ -1010,8 +1010,8 @@ func (a *RestoresAPIService) ReplaceNamespacedVirtualMachineRestoreExecute(r Api
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1VirtualMachineRestore == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1VirtualMachineRestore is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *RestoresAPIService) ReplaceNamespacedVirtualMachineRestoreExecute(r Api
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1VirtualMachineRestore
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

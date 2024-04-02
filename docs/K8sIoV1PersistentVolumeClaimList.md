@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ApiVersion** | **string** |  | 
 **Items** | [**[]K8sIoV1PersistentVolumeClaim**](K8sIoV1PersistentVolumeClaim.md) |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [optional] [default to {}]
 
 ## Methods
 

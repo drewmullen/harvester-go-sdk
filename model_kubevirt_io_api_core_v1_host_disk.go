@@ -35,6 +35,8 @@ type _KubevirtIoApiCoreV1HostDisk KubevirtIoApiCoreV1HostDisk
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1HostDisk(path string, type_ string) *KubevirtIoApiCoreV1HostDisk {
 	this := KubevirtIoApiCoreV1HostDisk{}
+	var capacity string = "{}"
+	this.Capacity = &capacity
 	this.Path = path
 	this.Type = type_
 	return &this
@@ -45,6 +47,8 @@ func NewKubevirtIoApiCoreV1HostDisk(path string, type_ string) *KubevirtIoApiCor
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1HostDiskWithDefaults() *KubevirtIoApiCoreV1HostDisk {
 	this := KubevirtIoApiCoreV1HostDisk{}
+	var capacity string = "{}"
+	this.Capacity = &capacity
 	var path string = ""
 	this.Path = path
 	var type_ string = ""

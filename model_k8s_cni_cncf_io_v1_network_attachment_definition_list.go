@@ -47,6 +47,8 @@ func NewK8sCniCncfIoV1NetworkAttachmentDefinitionList(apiVersion string, items [
 // but it doesn't guarantee that properties required by API are set
 func NewK8sCniCncfIoV1NetworkAttachmentDefinitionListWithDefaults() *K8sCniCncfIoV1NetworkAttachmentDefinitionList {
 	this := K8sCniCncfIoV1NetworkAttachmentDefinitionList{}
+	var metadata K8sIoV1ListMeta = {}
+	this.Metadata = metadata
 	return &this
 }
 

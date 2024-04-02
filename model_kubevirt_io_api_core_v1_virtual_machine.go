@@ -38,7 +38,11 @@ func NewKubevirtIoApiCoreV1VirtualMachine(apiVersion string, kind string, spec K
 	this := KubevirtIoApiCoreV1VirtualMachine{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
 	this.Spec = spec
+	var status KubevirtIoApiCoreV1VirtualMachineStatus = {}
+	this.Status = &status
 	return &this
 }
 
@@ -47,6 +51,12 @@ func NewKubevirtIoApiCoreV1VirtualMachine(apiVersion string, kind string, spec K
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineWithDefaults() *KubevirtIoApiCoreV1VirtualMachine {
 	this := KubevirtIoApiCoreV1VirtualMachine{}
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
+	var spec KubevirtIoApiCoreV1VirtualMachineSpec = {}
+	this.Spec = spec
+	var status KubevirtIoApiCoreV1VirtualMachineStatus = {}
+	this.Status = &status
 	return &this
 }
 

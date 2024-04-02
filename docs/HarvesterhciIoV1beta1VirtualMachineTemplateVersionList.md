@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ApiVersion** | **string** |  | 
 **Items** | [**[]HarvesterhciIoV1beta1VirtualMachineTemplateVersion**](HarvesterhciIoV1beta1VirtualMachineTemplateVersion.md) |  | 
 **Kind** | **string** |  | 
-**Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | 
+**Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [default to {}]
 
 ## Methods
 

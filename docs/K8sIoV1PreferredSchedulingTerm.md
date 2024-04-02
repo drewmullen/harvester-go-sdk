@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Preference** | [**K8sIoV1NodeSelectorTerm**](K8sIoV1NodeSelectorTerm.md) |  | 
+**Preference** | [**K8sIoV1NodeSelectorTerm**](K8sIoV1NodeSelectorTerm.md) |  | [default to {}]
 **Weight** | **int32** |  | [default to 0]
 
 ## Methods

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Host** | Pointer to **string** |  | [optional] 
-**Port** | **string** |  | 
+**Port** | **string** |  | [default to "{}"]
 
 ## Methods
 

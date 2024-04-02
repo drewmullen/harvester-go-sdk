@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Capacity** | **string** |  | 
+**Capacity** | **string** |  | [default to "{}"]
 
 ## Methods
 

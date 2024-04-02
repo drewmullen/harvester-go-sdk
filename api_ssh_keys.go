@@ -27,11 +27,11 @@ type ApiCreateNamespacedKeyPairRequest struct {
 	ctx context.Context
 	ApiService *SSHKeysAPIService
 	namespace string
-	body *HarvesterhciIoV1beta1KeyPair
+	harvesterhciIoV1beta1KeyPair *HarvesterhciIoV1beta1KeyPair
 }
 
-func (r ApiCreateNamespacedKeyPairRequest) Body(body HarvesterhciIoV1beta1KeyPair) ApiCreateNamespacedKeyPairRequest {
-	r.body = &body
+func (r ApiCreateNamespacedKeyPairRequest) HarvesterhciIoV1beta1KeyPair(harvesterhciIoV1beta1KeyPair HarvesterhciIoV1beta1KeyPair) ApiCreateNamespacedKeyPairRequest {
+	r.harvesterhciIoV1beta1KeyPair = &harvesterhciIoV1beta1KeyPair
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedKeyPairRequest) Execute() (*HarvesterhciIoV1beta1KeyP
 }
 
 /*
-CreateNamespacedKeyPair Create a Key Pair
+CreateNamespacedKeyPair Create a Namespaced Key Pair
 
 Create a KeyPair object.
 
@@ -77,8 +77,8 @@ func (a *SSHKeysAPIService) CreateNamespacedKeyPairExecute(r ApiCreateNamespaced
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1KeyPair == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1KeyPair is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *SSHKeysAPIService) CreateNamespacedKeyPairExecute(r ApiCreateNamespaced
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1KeyPair
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedKeyPairRequest struct {
 	ApiService *SSHKeysAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedKeyPairRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedKeyPairRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedKeyPairRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedKeyPairRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedKeyPairRequest) Execute() (*K8sIoV1Status, *http.Resp
 }
 
 /*
-DeleteNamespacedKeyPair Delete a Key Pair
+DeleteNamespacedKeyPair Delete a Namespaced Key Pair
 
 Delete a KeyPair object.
 
@@ -226,8 +226,8 @@ func (a *SSHKeysAPIService) DeleteNamespacedKeyPairExecute(r ApiDeleteNamespaced
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *SSHKeysAPIService) DeleteNamespacedKeyPairExecute(r ApiDeleteNamespaced
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -440,7 +440,7 @@ func (a *SSHKeysAPIService) ListKeyPairForAllNamespacesExecute(r ApiListKeyPairF
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -561,7 +561,7 @@ func (r ApiListNamespacedKeyPairRequest) Execute() (*HarvesterhciIoV1beta1KeyPai
 }
 
 /*
-ListNamespacedKeyPair List Key Pairs
+ListNamespacedKeyPair List Namespaced Key Pairs
 
 Get a list of KeyPair objects in a namespace.
 
@@ -633,7 +633,7 @@ func (a *SSHKeysAPIService) ListNamespacedKeyPairExecute(r ApiListNamespacedKeyP
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -705,7 +705,7 @@ func (r ApiPatchNamespacedKeyPairRequest) Execute() (*HarvesterhciIoV1beta1KeyPa
 }
 
 /*
-PatchNamespacedKeyPair Patch a Key Pair
+PatchNamespacedKeyPair Patch a Namespaced Key Pair
 
 Patch a KeyPair object.
 
@@ -841,7 +841,7 @@ func (r ApiReadNamespacedKeyPairRequest) Execute() (*HarvesterhciIoV1beta1KeyPai
 }
 
 /*
-ReadNamespacedKeyPair Read a Key Pair
+ReadNamespacedKeyPair Read a Namespaced Key Pair
 
 Get a KeyPair object.
 
@@ -898,7 +898,7 @@ func (a *SSHKeysAPIService) ReadNamespacedKeyPairExecute(r ApiReadNamespacedKeyP
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -957,11 +957,11 @@ type ApiReplaceNamespacedKeyPairRequest struct {
 	ApiService *SSHKeysAPIService
 	name string
 	namespace string
-	body *HarvesterhciIoV1beta1KeyPair
+	harvesterhciIoV1beta1KeyPair *HarvesterhciIoV1beta1KeyPair
 }
 
-func (r ApiReplaceNamespacedKeyPairRequest) Body(body HarvesterhciIoV1beta1KeyPair) ApiReplaceNamespacedKeyPairRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedKeyPairRequest) HarvesterhciIoV1beta1KeyPair(harvesterhciIoV1beta1KeyPair HarvesterhciIoV1beta1KeyPair) ApiReplaceNamespacedKeyPairRequest {
+	r.harvesterhciIoV1beta1KeyPair = &harvesterhciIoV1beta1KeyPair
 	return r
 }
 
@@ -970,7 +970,7 @@ func (r ApiReplaceNamespacedKeyPairRequest) Execute() (*HarvesterhciIoV1beta1Key
 }
 
 /*
-ReplaceNamespacedKeyPair Replace a Key Pair
+ReplaceNamespacedKeyPair Replace a Namespaced Key Pair
 
 Update a KeyPair object.
 
@@ -1010,8 +1010,8 @@ func (a *SSHKeysAPIService) ReplaceNamespacedKeyPairExecute(r ApiReplaceNamespac
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.harvesterhciIoV1beta1KeyPair == nil {
+		return localVarReturnValue, nil, reportError("harvesterhciIoV1beta1KeyPair is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1032,7 +1032,7 @@ func (a *SSHKeysAPIService) ReplaceNamespacedKeyPairExecute(r ApiReplaceNamespac
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.harvesterhciIoV1beta1KeyPair
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

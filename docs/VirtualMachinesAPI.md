@@ -4,24 +4,24 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedVirtualMachine**](VirtualMachinesAPI.md#CreateNamespacedVirtualMachine) | **Post** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | Create a Virtual Machine
-[**DeleteNamespacedVirtualMachine**](VirtualMachinesAPI.md#DeleteNamespacedVirtualMachine) | **Delete** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Delete a Virtual Machine
-[**ListNamespacedVirtualMachine**](VirtualMachinesAPI.md#ListNamespacedVirtualMachine) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | List Virtual Machines
-[**ListNamespacedVirtualMachineInstance**](VirtualMachinesAPI.md#ListNamespacedVirtualMachineInstance) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | List Virtual Machine Instances
+[**CreateNamespacedVirtualMachine**](VirtualMachinesAPI.md#CreateNamespacedVirtualMachine) | **Post** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | Create a Namespaced Virtual Machine
+[**DeleteNamespacedVirtualMachine**](VirtualMachinesAPI.md#DeleteNamespacedVirtualMachine) | **Delete** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Delete a Namespaced Virtual Machine
+[**ListNamespacedVirtualMachine**](VirtualMachinesAPI.md#ListNamespacedVirtualMachine) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines | List Namespaced Virtual Machines
+[**ListNamespacedVirtualMachineInstance**](VirtualMachinesAPI.md#ListNamespacedVirtualMachineInstance) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances | List Namespaced Virtual Machine Instances
 [**ListVirtualMachineForAllNamespaces**](VirtualMachinesAPI.md#ListVirtualMachineForAllNamespaces) | **Get** /apis/kubevirt.io/v1/virtualmachines | List Virtual Machines For All Namespaces
 [**ListVirtualMachineInstanceForAllNamespaces**](VirtualMachinesAPI.md#ListVirtualMachineInstanceForAllNamespaces) | **Get** /apis/kubevirt.io/v1/virtualmachineinstances | List Virtual Machine Instances For All Namespaces
-[**PatchNamespacedVirtualMachine**](VirtualMachinesAPI.md#PatchNamespacedVirtualMachine) | **Patch** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Patch a Virtual Machine
-[**ReadNamespacedVirtualMachine**](VirtualMachinesAPI.md#ReadNamespacedVirtualMachine) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Read a Virtual Machine
-[**ReadNamespacedVirtualMachineInstance**](VirtualMachinesAPI.md#ReadNamespacedVirtualMachineInstance) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | Read a Virtual Machine Instance
-[**ReplaceNamespacedVirtualMachine**](VirtualMachinesAPI.md#ReplaceNamespacedVirtualMachine) | **Put** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Replace a Virtual Machine
+[**PatchNamespacedVirtualMachine**](VirtualMachinesAPI.md#PatchNamespacedVirtualMachine) | **Patch** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Patch a Namespaced Virtual Machine
+[**ReadNamespacedVirtualMachine**](VirtualMachinesAPI.md#ReadNamespacedVirtualMachine) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Read a Namespaced Virtual Machine
+[**ReadNamespacedVirtualMachineInstance**](VirtualMachinesAPI.md#ReadNamespacedVirtualMachineInstance) | **Get** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachineinstances/{name} | Read a Namespaced Virtual Machine Instance
+[**ReplaceNamespacedVirtualMachine**](VirtualMachinesAPI.md#ReplaceNamespacedVirtualMachine) | **Put** /apis/kubevirt.io/v1/namespaces/{namespace}/virtualmachines/{name} | Replace a Namespaced Virtual Machine
 
 
 
 ## CreateNamespacedVirtualMachine
 
-> KubevirtIoApiCoreV1VirtualMachine CreateNamespacedVirtualMachine(ctx, namespace).Body(body).Execute()
+> KubevirtIoApiCoreV1VirtualMachine CreateNamespacedVirtualMachine(ctx, namespace).KubevirtIoApiCoreV1VirtualMachine(kubevirtIoApiCoreV1VirtualMachine).Execute()
 
-Create a Virtual Machine
+Create a Namespaced Virtual Machine
 
 
 
@@ -39,11 +39,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewKubevirtIoApiCoreV1VirtualMachine("ApiVersion_example", "Kind_example", *openapiclient.NewKubevirtIoApiCoreV1VirtualMachineSpec(*openapiclient.NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec())) // KubevirtIoApiCoreV1VirtualMachine | 
+	kubevirtIoApiCoreV1VirtualMachine := *openapiclient.NewKubevirtIoApiCoreV1VirtualMachine("ApiVersion_example", "Kind_example", *openapiclient.NewKubevirtIoApiCoreV1VirtualMachineSpec(*openapiclient.NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec())) // KubevirtIoApiCoreV1VirtualMachine | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachinesAPI.CreateNamespacedVirtualMachine(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.VirtualMachinesAPI.CreateNamespacedVirtualMachine(context.Background(), namespace).KubevirtIoApiCoreV1VirtualMachine(kubevirtIoApiCoreV1VirtualMachine).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachinesAPI.CreateNamespacedVirtualMachine``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -69,7 +69,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedVirtualMac
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**KubevirtIoApiCoreV1VirtualMachine**](KubevirtIoApiCoreV1VirtualMachine.md) |  | 
+ **kubevirtIoApiCoreV1VirtualMachine** | [**KubevirtIoApiCoreV1VirtualMachine**](KubevirtIoApiCoreV1VirtualMachine.md) |  | 
 
 ### Return type
 
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -91,9 +91,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedVirtualMachine
 
-> K8sIoV1Status DeleteNamespacedVirtualMachine(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedVirtualMachine(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Virtual Machine
+Delete a Namespaced Virtual Machine
 
 
 
@@ -112,14 +112,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachinesAPI.DeleteNamespacedVirtualMachine(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.VirtualMachinesAPI.DeleteNamespacedVirtualMachine(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachinesAPI.DeleteNamespacedVirtualMachine``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -147,7 +147,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -174,7 +174,7 @@ Name | Type | Description  | Notes
 
 > KubevirtIoApiCoreV1VirtualMachineList ListNamespacedVirtualMachine(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Virtual Machines
+List Namespaced Virtual Machines
 
 
 
@@ -244,12 +244,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -260,7 +260,7 @@ Name | Type | Description  | Notes
 
 > KubevirtIoApiCoreV1VirtualMachineInstanceList ListNamespacedVirtualMachineInstance(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Virtual Machine Instances
+List Namespaced Virtual Machine Instances
 
 
 
@@ -330,12 +330,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -410,12 +410,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -490,12 +490,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -506,7 +506,7 @@ Name | Type | Description  | Notes
 
 > KubevirtIoApiCoreV1VirtualMachine PatchNamespacedVirtualMachine(ctx, name, namespace).Body(body).Execute()
 
-Patch a Virtual Machine
+Patch a Namespaced Virtual Machine
 
 
 
@@ -565,7 +565,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -581,7 +581,7 @@ Name | Type | Description  | Notes
 
 > KubevirtIoApiCoreV1VirtualMachine ReadNamespacedVirtualMachine(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Virtual Machine
+Read a Namespaced Virtual Machine
 
 
 
@@ -642,12 +642,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
 
 > KubevirtIoApiCoreV1VirtualMachineInstance ReadNamespacedVirtualMachineInstance(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Virtual Machine Instance
+Read a Namespaced Virtual Machine Instance
 
 
 
@@ -719,12 +719,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -733,9 +733,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedVirtualMachine
 
-> KubevirtIoApiCoreV1VirtualMachine ReplaceNamespacedVirtualMachine(ctx, name, namespace).Body(body).Execute()
+> KubevirtIoApiCoreV1VirtualMachine ReplaceNamespacedVirtualMachine(ctx, name, namespace).KubevirtIoApiCoreV1VirtualMachine(kubevirtIoApiCoreV1VirtualMachine).Execute()
 
-Replace a Virtual Machine
+Replace a Namespaced Virtual Machine
 
 
 
@@ -754,11 +754,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewKubevirtIoApiCoreV1VirtualMachine("ApiVersion_example", "Kind_example", *openapiclient.NewKubevirtIoApiCoreV1VirtualMachineSpec(*openapiclient.NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec())) // KubevirtIoApiCoreV1VirtualMachine | 
+	kubevirtIoApiCoreV1VirtualMachine := *openapiclient.NewKubevirtIoApiCoreV1VirtualMachine("ApiVersion_example", "Kind_example", *openapiclient.NewKubevirtIoApiCoreV1VirtualMachineSpec(*openapiclient.NewKubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec())) // KubevirtIoApiCoreV1VirtualMachine | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VirtualMachinesAPI.ReplaceNamespacedVirtualMachine(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.VirtualMachinesAPI.ReplaceNamespacedVirtualMachine(context.Background(), name, namespace).KubevirtIoApiCoreV1VirtualMachine(kubevirtIoApiCoreV1VirtualMachine).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachinesAPI.ReplaceNamespacedVirtualMachine``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -786,7 +786,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**KubevirtIoApiCoreV1VirtualMachine**](KubevirtIoApiCoreV1VirtualMachine.md) |  | 
+ **kubevirtIoApiCoreV1VirtualMachine** | [**KubevirtIoApiCoreV1VirtualMachine**](KubevirtIoApiCoreV1VirtualMachine.md) |  | 
 
 ### Return type
 
@@ -794,7 +794,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

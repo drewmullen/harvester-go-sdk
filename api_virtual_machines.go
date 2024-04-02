@@ -27,11 +27,11 @@ type ApiCreateNamespacedVirtualMachineRequest struct {
 	ctx context.Context
 	ApiService *VirtualMachinesAPIService
 	namespace string
-	body *KubevirtIoApiCoreV1VirtualMachine
+	kubevirtIoApiCoreV1VirtualMachine *KubevirtIoApiCoreV1VirtualMachine
 }
 
-func (r ApiCreateNamespacedVirtualMachineRequest) Body(body KubevirtIoApiCoreV1VirtualMachine) ApiCreateNamespacedVirtualMachineRequest {
-	r.body = &body
+func (r ApiCreateNamespacedVirtualMachineRequest) KubevirtIoApiCoreV1VirtualMachine(kubevirtIoApiCoreV1VirtualMachine KubevirtIoApiCoreV1VirtualMachine) ApiCreateNamespacedVirtualMachineRequest {
+	r.kubevirtIoApiCoreV1VirtualMachine = &kubevirtIoApiCoreV1VirtualMachine
 	return r
 }
 
@@ -40,7 +40,7 @@ func (r ApiCreateNamespacedVirtualMachineRequest) Execute() (*KubevirtIoApiCoreV
 }
 
 /*
-CreateNamespacedVirtualMachine Create a Virtual Machine
+CreateNamespacedVirtualMachine Create a Namespaced Virtual Machine
 
 Create a VirtualMachine object.
 
@@ -77,8 +77,8 @@ func (a *VirtualMachinesAPIService) CreateNamespacedVirtualMachineExecute(r ApiC
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.kubevirtIoApiCoreV1VirtualMachine == nil {
+		return localVarReturnValue, nil, reportError("kubevirtIoApiCoreV1VirtualMachine is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -99,7 +99,7 @@ func (a *VirtualMachinesAPIService) CreateNamespacedVirtualMachineExecute(r ApiC
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.kubevirtIoApiCoreV1VirtualMachine
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -152,14 +152,14 @@ type ApiDeleteNamespacedVirtualMachineRequest struct {
 	ApiService *VirtualMachinesAPIService
 	name string
 	namespace string
-	body *K8sIoV1DeleteOptions
+	k8sIoV1DeleteOptions *K8sIoV1DeleteOptions
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
 }
 
-func (r ApiDeleteNamespacedVirtualMachineRequest) Body(body K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineRequest {
-	r.body = &body
+func (r ApiDeleteNamespacedVirtualMachineRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineRequest {
+	r.k8sIoV1DeleteOptions = &k8sIoV1DeleteOptions
 	return r
 }
 
@@ -186,7 +186,7 @@ func (r ApiDeleteNamespacedVirtualMachineRequest) Execute() (*K8sIoV1Status, *ht
 }
 
 /*
-DeleteNamespacedVirtualMachine Delete a Virtual Machine
+DeleteNamespacedVirtualMachine Delete a Namespaced Virtual Machine
 
 Delete a VirtualMachine object.
 
@@ -226,8 +226,8 @@ func (a *VirtualMachinesAPIService) DeleteNamespacedVirtualMachineExecute(r ApiD
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.k8sIoV1DeleteOptions == nil {
+		return localVarReturnValue, nil, reportError("k8sIoV1DeleteOptions is required and must be specified")
 	}
 
 	if r.gracePeriodSeconds != nil {
@@ -257,7 +257,7 @@ func (a *VirtualMachinesAPIService) DeleteNamespacedVirtualMachineExecute(r ApiD
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.k8sIoV1DeleteOptions
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -372,7 +372,7 @@ func (r ApiListNamespacedVirtualMachineRequest) Execute() (*KubevirtIoApiCoreV1V
 }
 
 /*
-ListNamespacedVirtualMachine List Virtual Machines
+ListNamespacedVirtualMachine List Namespaced Virtual Machines
 
 Get a list of VirtualMachine objects in a namespace.
 
@@ -444,7 +444,7 @@ func (a *VirtualMachinesAPIService) ListNamespacedVirtualMachineExecute(r ApiLis
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -565,7 +565,7 @@ func (r ApiListNamespacedVirtualMachineInstanceRequest) Execute() (*KubevirtIoAp
 }
 
 /*
-ListNamespacedVirtualMachineInstance List Virtual Machine Instances
+ListNamespacedVirtualMachineInstance List Namespaced Virtual Machine Instances
 
 Get a list of VirtualMachineInstance objects in a namespace.
 
@@ -637,7 +637,7 @@ func (a *VirtualMachinesAPIService) ListNamespacedVirtualMachineInstanceExecute(
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -826,7 +826,7 @@ func (a *VirtualMachinesAPIService) ListVirtualMachineForAllNamespacesExecute(r 
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1015,7 +1015,7 @@ func (a *VirtualMachinesAPIService) ListVirtualMachineInstanceForAllNamespacesEx
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1087,7 +1087,7 @@ func (r ApiPatchNamespacedVirtualMachineRequest) Execute() (*KubevirtIoApiCoreV1
 }
 
 /*
-PatchNamespacedVirtualMachine Patch a Virtual Machine
+PatchNamespacedVirtualMachine Patch a Namespaced Virtual Machine
 
 Patch a VirtualMachine object.
 
@@ -1223,7 +1223,7 @@ func (r ApiReadNamespacedVirtualMachineRequest) Execute() (*KubevirtIoApiCoreV1V
 }
 
 /*
-ReadNamespacedVirtualMachine Read a Virtual Machine
+ReadNamespacedVirtualMachine Read a Namespaced Virtual Machine
 
 Get a VirtualMachine object.
 
@@ -1280,7 +1280,7 @@ func (a *VirtualMachinesAPIService) ReadNamespacedVirtualMachineExecute(r ApiRea
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1360,7 +1360,7 @@ func (r ApiReadNamespacedVirtualMachineInstanceRequest) Execute() (*KubevirtIoAp
 }
 
 /*
-ReadNamespacedVirtualMachineInstance Read a Virtual Machine Instance
+ReadNamespacedVirtualMachineInstance Read a Namespaced Virtual Machine Instance
 
 Get a VirtualMachineInstance object.
 
@@ -1417,7 +1417,7 @@ func (a *VirtualMachinesAPIService) ReadNamespacedVirtualMachineInstanceExecute(
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"application/json", "application/yaml", "application/json;stream=watch"}
+	localVarHTTPHeaderAccepts := []string{"application/json", "application/json;stream=watch", "application/yaml"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
@@ -1476,11 +1476,11 @@ type ApiReplaceNamespacedVirtualMachineRequest struct {
 	ApiService *VirtualMachinesAPIService
 	name string
 	namespace string
-	body *KubevirtIoApiCoreV1VirtualMachine
+	kubevirtIoApiCoreV1VirtualMachine *KubevirtIoApiCoreV1VirtualMachine
 }
 
-func (r ApiReplaceNamespacedVirtualMachineRequest) Body(body KubevirtIoApiCoreV1VirtualMachine) ApiReplaceNamespacedVirtualMachineRequest {
-	r.body = &body
+func (r ApiReplaceNamespacedVirtualMachineRequest) KubevirtIoApiCoreV1VirtualMachine(kubevirtIoApiCoreV1VirtualMachine KubevirtIoApiCoreV1VirtualMachine) ApiReplaceNamespacedVirtualMachineRequest {
+	r.kubevirtIoApiCoreV1VirtualMachine = &kubevirtIoApiCoreV1VirtualMachine
 	return r
 }
 
@@ -1489,7 +1489,7 @@ func (r ApiReplaceNamespacedVirtualMachineRequest) Execute() (*KubevirtIoApiCore
 }
 
 /*
-ReplaceNamespacedVirtualMachine Replace a Virtual Machine
+ReplaceNamespacedVirtualMachine Replace a Namespaced Virtual Machine
 
 Update a VirtualMachine object.
 
@@ -1529,8 +1529,8 @@ func (a *VirtualMachinesAPIService) ReplaceNamespacedVirtualMachineExecute(r Api
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
-	if r.body == nil {
-		return localVarReturnValue, nil, reportError("body is required and must be specified")
+	if r.kubevirtIoApiCoreV1VirtualMachine == nil {
+		return localVarReturnValue, nil, reportError("kubevirtIoApiCoreV1VirtualMachine is required and must be specified")
 	}
 
 	// to determine the Content-Type header
@@ -1551,7 +1551,7 @@ func (a *VirtualMachinesAPIService) ReplaceNamespacedVirtualMachineExecute(r Api
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
 	// body params
-	localVarPostBody = r.body
+	localVarPostBody = r.kubevirtIoApiCoreV1VirtualMachine
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err

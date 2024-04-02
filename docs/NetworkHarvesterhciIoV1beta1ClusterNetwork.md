@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Status** | Pointer to [**NetworkHarvesterhciIoV1beta1ClusterNetworkStatus**](NetworkHarvesterhciIoV1beta1ClusterNetworkStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Status** | Pointer to [**NetworkHarvesterhciIoV1beta1ClusterNetworkStatus**](NetworkHarvesterhciIoV1beta1ClusterNetworkStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 

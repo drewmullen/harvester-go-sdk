@@ -34,6 +34,8 @@ type _K8sIoV1ResourceFieldSelector K8sIoV1ResourceFieldSelector
 // will change when the set of required properties is changed
 func NewK8sIoV1ResourceFieldSelector(resource string) *K8sIoV1ResourceFieldSelector {
 	this := K8sIoV1ResourceFieldSelector{}
+	var divisor string = "{}"
+	this.Divisor = &divisor
 	this.Resource = resource
 	return &this
 }
@@ -43,6 +45,8 @@ func NewK8sIoV1ResourceFieldSelector(resource string) *K8sIoV1ResourceFieldSelec
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1ResourceFieldSelectorWithDefaults() *K8sIoV1ResourceFieldSelector {
 	this := K8sIoV1ResourceFieldSelector{}
+	var divisor string = "{}"
+	this.Divisor = &divisor
 	var resource string = ""
 	this.Resource = resource
 	return &this

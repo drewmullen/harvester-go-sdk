@@ -38,7 +38,11 @@ func NewHarvesterhciIoV1beta1SupportBundle(apiVersion string, kind string, spec 
 	this := HarvesterhciIoV1beta1SupportBundle{}
 	this.ApiVersion = apiVersion
 	this.Kind = kind
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
 	this.Spec = spec
+	var status HarvesterhciIoV1beta1SupportBundleStatus = {}
+	this.Status = &status
 	return &this
 }
 
@@ -47,6 +51,12 @@ func NewHarvesterhciIoV1beta1SupportBundle(apiVersion string, kind string, spec 
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1SupportBundleWithDefaults() *HarvesterhciIoV1beta1SupportBundle {
 	this := HarvesterhciIoV1beta1SupportBundle{}
+	var metadata K8sIoV1ObjectMeta = {}
+	this.Metadata = &metadata
+	var spec HarvesterhciIoV1beta1SupportBundleSpec = {}
+	this.Spec = spec
+	var status HarvesterhciIoV1beta1SupportBundleStatus = {}
+	this.Status = &status
 	return &this
 }
 

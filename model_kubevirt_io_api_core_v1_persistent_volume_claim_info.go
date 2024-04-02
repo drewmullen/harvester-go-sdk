@@ -20,10 +20,10 @@ var _ MappedNullable = &KubevirtIoApiCoreV1PersistentVolumeClaimInfo{}
 // KubevirtIoApiCoreV1PersistentVolumeClaimInfo struct for KubevirtIoApiCoreV1PersistentVolumeClaimInfo
 type KubevirtIoApiCoreV1PersistentVolumeClaimInfo struct {
 	AccessModes []string `json:"accessModes,omitempty"`
-	Capacity *map[string]string `json:"capacity,omitempty"`
+	Capacity map[string]string `json:"capacity,omitempty"`
 	FilesystemOverhead *string `json:"filesystemOverhead,omitempty"`
 	Preallocated *bool `json:"preallocated,omitempty"`
-	Requests *map[string]string `json:"requests,omitempty"`
+	Requests map[string]string `json:"requests,omitempty"`
 	VolumeMode *string `json:"volumeMode,omitempty"`
 }
 
@@ -82,14 +82,14 @@ func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) GetCapacity() map[string]
 		var ret map[string]string
 		return ret
 	}
-	return *o.Capacity
+	return o.Capacity
 }
 
 // GetCapacityOk returns a tuple with the Capacity field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) GetCapacityOk() (*map[string]string, bool) {
+func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) GetCapacityOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Capacity) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Capacity, true
 }
@@ -105,7 +105,7 @@ func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) HasCapacity() bool {
 
 // SetCapacity gets a reference to the given map[string]string and assigns it to the Capacity field.
 func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) SetCapacity(v map[string]string) {
-	o.Capacity = &v
+	o.Capacity = v
 }
 
 // GetFilesystemOverhead returns the FilesystemOverhead field value if set, zero value otherwise.
@@ -178,14 +178,14 @@ func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) GetRequests() map[string]
 		var ret map[string]string
 		return ret
 	}
-	return *o.Requests
+	return o.Requests
 }
 
 // GetRequestsOk returns a tuple with the Requests field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) GetRequestsOk() (*map[string]string, bool) {
+func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) GetRequestsOk() (map[string]string, bool) {
 	if o == nil || IsNil(o.Requests) {
-		return nil, false
+		return map[string]string{}, false
 	}
 	return o.Requests, true
 }
@@ -201,7 +201,7 @@ func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) HasRequests() bool {
 
 // SetRequests gets a reference to the given map[string]string and assigns it to the Requests field.
 func (o *KubevirtIoApiCoreV1PersistentVolumeClaimInfo) SetRequests(v map[string]string) {
-	o.Requests = &v
+	o.Requests = v
 }
 
 // GetVolumeMode returns the VolumeMode field value if set, zero value otherwise.

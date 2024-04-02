@@ -4,21 +4,21 @@ All URIs are relative to *http://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateNamespacedPersistentVolumeClaim**](VolumesAPI.md#CreateNamespacedPersistentVolumeClaim) | **Post** /api/v1/namespaces/{namespace}/persistentvolumeclaims | Create a Persistent Volume Claim
-[**DeleteNamespacedPersistentVolumeClaim**](VolumesAPI.md#DeleteNamespacedPersistentVolumeClaim) | **Delete** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Delete a Persistent Volume Claim
-[**ListNamespacedPersistentVolumeClaim**](VolumesAPI.md#ListNamespacedPersistentVolumeClaim) | **Get** /api/v1/namespaces/{namespace}/persistentvolumeclaims | List Persistent Volume Claims
+[**CreateNamespacedPersistentVolumeClaim**](VolumesAPI.md#CreateNamespacedPersistentVolumeClaim) | **Post** /api/v1/namespaces/{namespace}/persistentvolumeclaims | Create a Namespaced Persistent Volume Claim
+[**DeleteNamespacedPersistentVolumeClaim**](VolumesAPI.md#DeleteNamespacedPersistentVolumeClaim) | **Delete** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Delete a Namespaced Persistent Volume Claim
+[**ListNamespacedPersistentVolumeClaim**](VolumesAPI.md#ListNamespacedPersistentVolumeClaim) | **Get** /api/v1/namespaces/{namespace}/persistentvolumeclaims | List Namespaced Persistent Volume Claims
 [**ListPersistentVolumeClaimForAllNamespaces**](VolumesAPI.md#ListPersistentVolumeClaimForAllNamespaces) | **Get** /api/v1/persistentvolumeclaims | List Persistent Volume Claims For All Namespaces
-[**PatchNamespacedPersistentVolumeClaim**](VolumesAPI.md#PatchNamespacedPersistentVolumeClaim) | **Patch** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Patch a Persistent Volume Claim
-[**ReadNamespacedPersistentVolumeClaim**](VolumesAPI.md#ReadNamespacedPersistentVolumeClaim) | **Get** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Read a Persistent Volume Claim
-[**ReplaceNamespacedPersistentVolumeClaim**](VolumesAPI.md#ReplaceNamespacedPersistentVolumeClaim) | **Put** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Replace a Persistent Volume Claim
+[**PatchNamespacedPersistentVolumeClaim**](VolumesAPI.md#PatchNamespacedPersistentVolumeClaim) | **Patch** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Patch a Namespaced Persistent Volume Claim
+[**ReadNamespacedPersistentVolumeClaim**](VolumesAPI.md#ReadNamespacedPersistentVolumeClaim) | **Get** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Read a Namespaced Persistent Volume Claim
+[**ReplaceNamespacedPersistentVolumeClaim**](VolumesAPI.md#ReplaceNamespacedPersistentVolumeClaim) | **Put** /api/v1/namespaces/{namespace}/persistentvolumeclaims/{name} | Replace a Namespaced Persistent Volume Claim
 
 
 
 ## CreateNamespacedPersistentVolumeClaim
 
-> K8sIoV1PersistentVolumeClaim CreateNamespacedPersistentVolumeClaim(ctx, namespace).Body(body).Execute()
+> K8sIoV1PersistentVolumeClaim CreateNamespacedPersistentVolumeClaim(ctx, namespace).K8sIoV1PersistentVolumeClaim(k8sIoV1PersistentVolumeClaim).Execute()
 
-Create a Persistent Volume Claim
+Create a Namespaced Persistent Volume Claim
 
 
 
@@ -36,11 +36,11 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1PersistentVolumeClaim("ApiVersion_example", "Kind_example") // K8sIoV1PersistentVolumeClaim | 
+	k8sIoV1PersistentVolumeClaim := *openapiclient.NewK8sIoV1PersistentVolumeClaim("ApiVersion_example", "Kind_example") // K8sIoV1PersistentVolumeClaim | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VolumesAPI.CreateNamespacedPersistentVolumeClaim(context.Background(), namespace).Body(body).Execute()
+	resp, r, err := apiClient.VolumesAPI.CreateNamespacedPersistentVolumeClaim(context.Background(), namespace).K8sIoV1PersistentVolumeClaim(k8sIoV1PersistentVolumeClaim).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VolumesAPI.CreateNamespacedPersistentVolumeClaim``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -66,7 +66,7 @@ Other parameters are passed through a pointer to a apiCreateNamespacedPersistent
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **body** | [**K8sIoV1PersistentVolumeClaim**](K8sIoV1PersistentVolumeClaim.md) |  | 
+ **k8sIoV1PersistentVolumeClaim** | [**K8sIoV1PersistentVolumeClaim**](K8sIoV1PersistentVolumeClaim.md) |  | 
 
 ### Return type
 
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -88,9 +88,9 @@ Name | Type | Description  | Notes
 
 ## DeleteNamespacedPersistentVolumeClaim
 
-> K8sIoV1Status DeleteNamespacedPersistentVolumeClaim(ctx, name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1Status DeleteNamespacedPersistentVolumeClaim(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
-Delete a Persistent Volume Claim
+Delete a Namespaced Persistent Volume Claim
 
 
 
@@ -109,14 +109,14 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VolumesAPI.DeleteNamespacedPersistentVolumeClaim(context.Background(), name, namespace).Body(body).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+	resp, r, err := apiClient.VolumesAPI.DeleteNamespacedPersistentVolumeClaim(context.Background(), name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VolumesAPI.DeleteNamespacedPersistentVolumeClaim``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
+ **k8sIoV1DeleteOptions** | [**K8sIoV1DeleteOptions**](K8sIoV1DeleteOptions.md) |  | 
  **gracePeriodSeconds** | **int32** | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. | 
  **orphanDependents** | **bool** | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \&quot;orphan\&quot; finalizer will be added to/removed from the object&#39;s finalizers list. Either this field or PropagationPolicy may be set, but not both. | 
  **propagationPolicy** | **string** | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground. | 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 
 > K8sIoV1PersistentVolumeClaimList ListNamespacedPersistentVolumeClaim(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
-List Persistent Volume Claims
+List Namespaced Persistent Volume Claims
 
 
 
@@ -241,12 +241,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -321,12 +321,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -337,7 +337,7 @@ Name | Type | Description  | Notes
 
 > K8sIoV1PersistentVolumeClaim PatchNamespacedPersistentVolumeClaim(ctx, name, namespace).Body(body).Execute()
 
-Patch a Persistent Volume Claim
+Patch a Namespaced Persistent Volume Claim
 
 
 
@@ -396,7 +396,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 
 > K8sIoV1PersistentVolumeClaim ReadNamespacedPersistentVolumeClaim(ctx, name, namespace).Exact(exact).Export(export).Execute()
 
-Read a Persistent Volume Claim
+Read a Namespaced Persistent Volume Claim
 
 
 
@@ -473,12 +473,12 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json, application/yaml, application/json;stream=watch
+- **Accept**: application/json, application/json;stream=watch, application/yaml
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
 [[Back to Model list]](../README.md#documentation-for-models)
@@ -487,9 +487,9 @@ Name | Type | Description  | Notes
 
 ## ReplaceNamespacedPersistentVolumeClaim
 
-> K8sIoV1PersistentVolumeClaim ReplaceNamespacedPersistentVolumeClaim(ctx, name, namespace).Body(body).Execute()
+> K8sIoV1PersistentVolumeClaim ReplaceNamespacedPersistentVolumeClaim(ctx, name, namespace).K8sIoV1PersistentVolumeClaim(k8sIoV1PersistentVolumeClaim).Execute()
 
-Replace a Persistent Volume Claim
+Replace a Namespaced Persistent Volume Claim
 
 
 
@@ -508,11 +508,11 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	body := *openapiclient.NewK8sIoV1PersistentVolumeClaim("ApiVersion_example", "Kind_example") // K8sIoV1PersistentVolumeClaim | 
+	k8sIoV1PersistentVolumeClaim := *openapiclient.NewK8sIoV1PersistentVolumeClaim("ApiVersion_example", "Kind_example") // K8sIoV1PersistentVolumeClaim | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.VolumesAPI.ReplaceNamespacedPersistentVolumeClaim(context.Background(), name, namespace).Body(body).Execute()
+	resp, r, err := apiClient.VolumesAPI.ReplaceNamespacedPersistentVolumeClaim(context.Background(), name, namespace).K8sIoV1PersistentVolumeClaim(k8sIoV1PersistentVolumeClaim).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `VolumesAPI.ReplaceNamespacedPersistentVolumeClaim``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
 
- **body** | [**K8sIoV1PersistentVolumeClaim**](K8sIoV1PersistentVolumeClaim.md) |  | 
+ **k8sIoV1PersistentVolumeClaim** | [**K8sIoV1PersistentVolumeClaim**](K8sIoV1PersistentVolumeClaim.md) |  | 
 
 ### Return type
 
@@ -548,7 +548,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[Basic](../README.md#Basic)
+No authorization required
 
 ### HTTP request headers
 

@@ -41,6 +41,8 @@ func NewKubevirtIoApiCoreV1EmptyDiskSource(capacity string) *KubevirtIoApiCoreV1
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1EmptyDiskSourceWithDefaults() *KubevirtIoApiCoreV1EmptyDiskSource {
 	this := KubevirtIoApiCoreV1EmptyDiskSource{}
+	var capacity string = "{}"
+	this.Capacity = capacity
 	return &this
 }
 

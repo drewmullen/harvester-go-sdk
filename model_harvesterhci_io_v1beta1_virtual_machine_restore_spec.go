@@ -48,6 +48,8 @@ func NewHarvesterhciIoV1beta1VirtualMachineRestoreSpec(target K8sIoV1TypedLocalO
 // but it doesn't guarantee that properties required by API are set
 func NewHarvesterhciIoV1beta1VirtualMachineRestoreSpecWithDefaults() *HarvesterhciIoV1beta1VirtualMachineRestoreSpec {
 	this := HarvesterhciIoV1beta1VirtualMachineRestoreSpec{}
+	var target K8sIoV1TypedLocalObjectReference = {}
+	this.Target = target
 	var virtualMachineBackupName string = ""
 	this.VirtualMachineBackupName = virtualMachineBackupName
 	var virtualMachineBackupNamespace string = ""

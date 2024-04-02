@@ -38,6 +38,8 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceList(apiVersion string, items [
 	this.ApiVersion = apiVersion
 	this.Items = items
 	this.Kind = kind
+	var metadata K8sIoV1ListMeta = {}
+	this.Metadata = &metadata
 	return &this
 }
 
@@ -46,6 +48,8 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceList(apiVersion string, items [
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceListWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceList {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceList{}
+	var metadata K8sIoV1ListMeta = {}
+	this.Metadata = &metadata
 	return &this
 }
 

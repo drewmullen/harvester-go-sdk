@@ -42,6 +42,8 @@ func NewK8sIoV1TCPSocketAction(port string) *K8sIoV1TCPSocketAction {
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1TCPSocketActionWithDefaults() *K8sIoV1TCPSocketAction {
 	this := K8sIoV1TCPSocketAction{}
+	var port string = "{}"
+	this.Port = port
 	return &this
 }
 

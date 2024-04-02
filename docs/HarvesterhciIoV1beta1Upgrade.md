@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ApiVersion** | **string** |  | 
 **Kind** | **string** |  | 
-**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] 
-**Spec** | [**HarvesterhciIoV1beta1UpgradeSpec**](HarvesterhciIoV1beta1UpgradeSpec.md) |  | 
-**Status** | Pointer to [**HarvesterhciIoV1beta1UpgradeStatus**](HarvesterhciIoV1beta1UpgradeStatus.md) |  | [optional] 
+**Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
+**Spec** | [**HarvesterhciIoV1beta1UpgradeSpec**](HarvesterhciIoV1beta1UpgradeSpec.md) |  | [default to {}]
+**Status** | Pointer to [**HarvesterhciIoV1beta1UpgradeStatus**](HarvesterhciIoV1beta1UpgradeStatus.md) |  | [optional] [default to {}]
 
 ## Methods
 
