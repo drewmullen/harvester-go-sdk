@@ -12,8 +12,6 @@ package harvester
 
 import (
 	"encoding/json"
-	"bytes"
-	"fmt"
 )
 
 // checks if the K8sIoV1ObjectMeta type satisfies the MappedNullable interface at compile time
@@ -30,7 +28,7 @@ type K8sIoV1ObjectMeta struct {
 	Generation *int64 `json:"generation,omitempty"`
 	Labels *map[string]string `json:"labels,omitempty"`
 	ManagedFields []K8sIoV1ManagedFieldsEntry `json:"managedFields,omitempty"`
-	Name string `json:"name"`
+	Name *string `json:"name,omitempty"`
 	Namespace *string `json:"namespace,omitempty"`
 	OwnerReferences []K8sIoV1OwnerReference `json:"ownerReferences,omitempty"`
 	ResourceVersion *string `json:"resourceVersion,omitempty"`
@@ -38,19 +36,16 @@ type K8sIoV1ObjectMeta struct {
 	Uid *string `json:"uid,omitempty"`
 }
 
-type _K8sIoV1ObjectMeta K8sIoV1ObjectMeta
-
 // NewK8sIoV1ObjectMeta instantiates a new K8sIoV1ObjectMeta object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewK8sIoV1ObjectMeta(name string) *K8sIoV1ObjectMeta {
+func NewK8sIoV1ObjectMeta() *K8sIoV1ObjectMeta {
 	this := K8sIoV1ObjectMeta{}
 	var creationTimestamp string = "{}"
 	this.CreationTimestamp = &creationTimestamp
 	var deletionTimestamp string = ""
 	this.DeletionTimestamp = &deletionTimestamp
-	this.Name = name
 	return &this
 }
 
@@ -354,28 +349,36 @@ func (o *K8sIoV1ObjectMeta) SetManagedFields(v []K8sIoV1ManagedFieldsEntry) {
 	o.ManagedFields = v
 }
 
-// GetName returns the Name field value
+// GetName returns the Name field value if set, zero value otherwise.
 func (o *K8sIoV1ObjectMeta) GetName() string {
-	if o == nil {
+	if o == nil || IsNil(o.Name) {
 		var ret string
 		return ret
 	}
-
-	return o.Name
+	return *o.Name
 }
 
-// GetNameOk returns a tuple with the Name field value
+// GetNameOk returns a tuple with the Name field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *K8sIoV1ObjectMeta) GetNameOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Name) {
 		return nil, false
 	}
-	return &o.Name, true
+	return o.Name, true
 }
 
-// SetName sets field value
+// HasName returns a boolean if a field has been set.
+func (o *K8sIoV1ObjectMeta) HasName() bool {
+	if o != nil && !IsNil(o.Name) {
+		return true
+	}
+
+	return false
+}
+
+// SetName gets a reference to the given string and assigns it to the Name field.
 func (o *K8sIoV1ObjectMeta) SetName(v string) {
-	o.Name = v
+	o.Name = &v
 }
 
 // GetNamespace returns the Namespace field value if set, zero value otherwise.
@@ -575,7 +578,9 @@ func (o K8sIoV1ObjectMeta) ToMap() (map[string]interface{}, error) {
 	if !IsNil(o.ManagedFields) {
 		toSerialize["managedFields"] = o.ManagedFields
 	}
-	toSerialize["name"] = o.Name
+	if !IsNil(o.Name) {
+		toSerialize["name"] = o.Name
+	}
 	if !IsNil(o.Namespace) {
 		toSerialize["namespace"] = o.Namespace
 	}
@@ -592,43 +597,6 @@ func (o K8sIoV1ObjectMeta) ToMap() (map[string]interface{}, error) {
 		toSerialize["uid"] = o.Uid
 	}
 	return toSerialize, nil
-}
-
-func (o *K8sIoV1ObjectMeta) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"name",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err;
-	}
-
-	for _, requiredProperty := range(requiredProperties) {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varK8sIoV1ObjectMeta := _K8sIoV1ObjectMeta{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varK8sIoV1ObjectMeta)
-
-	if err != nil {
-		return err
-	}
-
-	*o = K8sIoV1ObjectMeta(varK8sIoV1ObjectMeta)
-
-	return err
 }
 
 type NullableK8sIoV1ObjectMeta struct {

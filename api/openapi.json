@@ -10541,9 +10541,6 @@
       },
       "k8s.io.v1.ObjectMeta": {
         "type": "object",
-        "required": [
-          "name"
-        ],
         "properties": {
           "annotations": {
             "type": "object",

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **Generation** | Pointer to **int64** |  | [optional] 
 **Labels** | Pointer to **map[string]string** |  | [optional] 
 **ManagedFields** | Pointer to [**[]K8sIoV1ManagedFieldsEntry**](K8sIoV1ManagedFieldsEntry.md) |  | [optional] 
-**Name** | **string** |  | 
+**Name** | Pointer to **string** |  | [optional] 
 **Namespace** | Pointer to **string** |  | [optional] 
 **OwnerReferences** | Pointer to [**[]K8sIoV1OwnerReference**](K8sIoV1OwnerReference.md) |  | [optional] 
 **ResourceVersion** | Pointer to **string** |  | [optional] 
@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 
 ### NewK8sIoV1ObjectMeta
 
-`func NewK8sIoV1ObjectMeta(name string, ) *K8sIoV1ObjectMeta`
+`func NewK8sIoV1ObjectMeta() *K8sIoV1ObjectMeta`
 
 NewK8sIoV1ObjectMeta instantiates a new K8sIoV1ObjectMeta object
 This constructor will assign default values to properties that have it defined,
@@ -283,6 +283,11 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
+
+`func (o *K8sIoV1ObjectMeta) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetNamespace
 

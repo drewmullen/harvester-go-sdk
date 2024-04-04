@@ -9420,8 +9420,6 @@ components:
           type: string
         uid:
           type: string
-      required:
-      - name
       type: object
     k8s.io.v1.OwnerReference:
       properties:
