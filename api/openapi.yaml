@@ -9365,9 +9365,60 @@ components:
       x-kubernetes-map-type: atomic
     k8s.io.v1.ObjectMeta:
       properties:
+        annotations:
+          additionalProperties:
+            default: ""
+            type: string
+          type: object
+        creationTimestamp:
+          allOf:
+          - $ref: '#/components/schemas/k8s.io.v1.Time'
+          default: {}
+        deletionGracePeriodSeconds:
+          format: int64
+          type: integer
+        deletionTimestamp:
+          default: ""
+          type: string
+        finalizers:
+          items:
+            default: ""
+            type: string
+          type: array
+          x-kubernetes-patch-strategy: merge
+        generateName:
+          type: string
+        generation:
+          format: int64
+          type: integer
+        labels:
+          additionalProperties:
+            default: ""
+            type: string
+          type: object
+        managedFields:
+          items:
+            allOf:
+            - $ref: '#/components/schemas/k8s.io.v1.ManagedFieldsEntry'
+            default: {}
+          type: array
         name:
           type: string
         namespace:
+          type: string
+        ownerReferences:
+          items:
+            allOf:
+            - $ref: '#/components/schemas/k8s.io.v1.OwnerReference'
+            default: {}
+          type: array
+          x-kubernetes-patch-merge-key: uid
+          x-kubernetes-patch-strategy: merge
+        resourceVersion:
+          type: string
+        selfLink:
+          type: string
+        uid:
           type: string
       required:
       - name

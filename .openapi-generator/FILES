@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -507,15 +506,4 @@ model_network_harvesterhci_io_v1beta1_node_network_list.go
 model_network_harvesterhci_io_v1beta1_node_network_spec.go
 model_network_harvesterhci_io_v1beta1_node_network_status.go
 response.go
-test/api_backups_test.go
-test/api_images_test.go
-test/api_migrations_test.go
-test/api_networks_test.go
-test/api_restores_test.go
-test/api_ssh_keys_test.go
-test/api_support_bundles_test.go
-test/api_upgrades_test.go
-test/api_virtual_machine_templates_test.go
-test/api_virtual_machines_test.go
-test/api_volumes_test.go
 utils.go
