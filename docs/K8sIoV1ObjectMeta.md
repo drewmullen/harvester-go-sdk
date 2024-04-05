@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Annotations** | Pointer to **map[string]string** |  | [optional] 
-**CreationTimestamp** | Pointer to **string** |  | [optional] [default to "{}"]
+**CreationTimestamp** | Pointer to **string** |  | [optional] [readonly] [default to "{}"]
 **DeletionGracePeriodSeconds** | Pointer to **int64** |  | [optional] 
 **DeletionTimestamp** | Pointer to **string** |  | [optional] [default to ""]
 **Finalizers** | Pointer to **[]string** |  | [optional] 
