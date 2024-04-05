@@ -10551,6 +10551,7 @@
           },
           "creationTimestamp": {
             "default": {},
+            "readOnly": true,
             "allOf": [
               {
                 "$ref": "#/components/schemas/k8s.io.v1.Time"
