@@ -12,8 +12,6 @@ package harvester
 
 import (
 	"encoding/json"
-	"bytes"
-	"fmt"
 )
 
 // checks if the HarvesterhciIoV1beta1VirtualMachineTemplate type satisfies the MappedNullable interface at compile time
@@ -21,23 +19,19 @@ var _ MappedNullable = &HarvesterhciIoV1beta1VirtualMachineTemplate{}
 
 // HarvesterhciIoV1beta1VirtualMachineTemplate struct for HarvesterhciIoV1beta1VirtualMachineTemplate
 type HarvesterhciIoV1beta1VirtualMachineTemplate struct {
-	ApiVersion string `json:"apiVersion"`
-	Kind string `json:"kind"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
+	Kind *string `json:"kind,omitempty"`
 	Metadata *K8sIoV1ObjectMeta `json:"metadata,omitempty"`
 	Spec *HarvesterhciIoV1beta1VirtualMachineTemplateSpec `json:"spec,omitempty"`
 	Status *HarvesterhciIoV1beta1VirtualMachineTemplateStatus `json:"status,omitempty"`
 }
 
-type _HarvesterhciIoV1beta1VirtualMachineTemplate HarvesterhciIoV1beta1VirtualMachineTemplate
-
 // NewHarvesterhciIoV1beta1VirtualMachineTemplate instantiates a new HarvesterhciIoV1beta1VirtualMachineTemplate object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewHarvesterhciIoV1beta1VirtualMachineTemplate(apiVersion string, kind string) *HarvesterhciIoV1beta1VirtualMachineTemplate {
+func NewHarvesterhciIoV1beta1VirtualMachineTemplate() *HarvesterhciIoV1beta1VirtualMachineTemplate {
 	this := HarvesterhciIoV1beta1VirtualMachineTemplate{}
-	this.ApiVersion = apiVersion
-	this.Kind = kind
 	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
 	var spec HarvesterhciIoV1beta1VirtualMachineTemplateSpec
@@ -61,52 +55,68 @@ func NewHarvesterhciIoV1beta1VirtualMachineTemplateWithDefaults() *HarvesterhciI
 	return &this
 }
 
-// GetApiVersion returns the ApiVersion field value
+// GetApiVersion returns the ApiVersion field value if set, zero value otherwise.
 func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) GetApiVersion() string {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		var ret string
 		return ret
 	}
-
-	return o.ApiVersion
+	return *o.ApiVersion
 }
 
-// GetApiVersionOk returns a tuple with the ApiVersion field value
+// GetApiVersionOk returns a tuple with the ApiVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) GetApiVersionOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		return nil, false
 	}
-	return &o.ApiVersion, true
+	return o.ApiVersion, true
 }
 
-// SetApiVersion sets field value
+// HasApiVersion returns a boolean if a field has been set.
+func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) HasApiVersion() bool {
+	if o != nil && !IsNil(o.ApiVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetApiVersion gets a reference to the given string and assigns it to the ApiVersion field.
 func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) SetApiVersion(v string) {
-	o.ApiVersion = v
+	o.ApiVersion = &v
 }
 
-// GetKind returns the Kind field value
+// GetKind returns the Kind field value if set, zero value otherwise.
 func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) GetKind() string {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		var ret string
 		return ret
 	}
-
-	return o.Kind
+	return *o.Kind
 }
 
-// GetKindOk returns a tuple with the Kind field value
+// GetKindOk returns a tuple with the Kind field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) GetKindOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		return nil, false
 	}
-	return &o.Kind, true
+	return o.Kind, true
 }
 
-// SetKind sets field value
+// HasKind returns a boolean if a field has been set.
+func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) HasKind() bool {
+	if o != nil && !IsNil(o.Kind) {
+		return true
+	}
+
+	return false
+}
+
+// SetKind gets a reference to the given string and assigns it to the Kind field.
 func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) SetKind(v string) {
-	o.Kind = v
+	o.Kind = &v
 }
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
@@ -215,8 +225,12 @@ func (o HarvesterhciIoV1beta1VirtualMachineTemplate) MarshalJSON() ([]byte, erro
 
 func (o HarvesterhciIoV1beta1VirtualMachineTemplate) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["apiVersion"] = o.ApiVersion
-	toSerialize["kind"] = o.Kind
+	if !IsNil(o.ApiVersion) {
+		toSerialize["apiVersion"] = o.ApiVersion
+	}
+	if !IsNil(o.Kind) {
+		toSerialize["kind"] = o.Kind
+	}
 	if !IsNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
@@ -227,44 +241,6 @@ func (o HarvesterhciIoV1beta1VirtualMachineTemplate) ToMap() (map[string]interfa
 		toSerialize["status"] = o.Status
 	}
 	return toSerialize, nil
-}
-
-func (o *HarvesterhciIoV1beta1VirtualMachineTemplate) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"apiVersion",
-		"kind",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err;
-	}
-
-	for _, requiredProperty := range(requiredProperties) {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varHarvesterhciIoV1beta1VirtualMachineTemplate := _HarvesterhciIoV1beta1VirtualMachineTemplate{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varHarvesterhciIoV1beta1VirtualMachineTemplate)
-
-	if err != nil {
-		return err
-	}
-
-	*o = HarvesterhciIoV1beta1VirtualMachineTemplate(varHarvesterhciIoV1beta1VirtualMachineTemplate)
-
-	return err
 }
 
 type NullableHarvesterhciIoV1beta1VirtualMachineTemplate struct {

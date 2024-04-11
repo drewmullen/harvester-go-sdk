@@ -413,12 +413,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/k8s.io.v1.Status"
+                  "$ref": "#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine"
                 }
               },
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/k8s.io.v1.Status"
+                  "$ref": "#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine"
                 }
               }
             }
@@ -7344,12 +7344,12 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/k8s.io.v1.Status"
+                  "$ref": "#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine"
                 }
               },
               "application/yaml": {
                 "schema": {
-                  "$ref": "#/components/schemas/k8s.io.v1.Status"
+                  "$ref": "#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine"
                 }
               }
             }
@@ -7840,16 +7840,6 @@
             "description": "limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.\n\nThe server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.",
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "namespace",
-            "in": "path",
-            "description": "Object name and auth scope, such as for teams and projects",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "pattern": "[a-z0-9][a-z0-9\\-]*"
             }
           },
           {
@@ -8353,16 +8343,6 @@
             "description": "limit is a maximum number of responses to return for a list call. If more items exist, the server will set the `continue` field on the list metadata to a value that can be used with the same initial query to retrieve the next set of results. Setting a limit may return fewer than the requested amount of items (up to zero items) in the event all requested objects are filtered out and clients should only use the presence of the continue field to determine whether more results are available. Servers may choose not to support the limit argument and will return all of the available results. If limit is specified and the continue field is empty, clients may assume that no more results are available. This field is not supported if watch is true.\n\nThe server guarantees that the objects returned when using continue will be identical to issuing a single list call without a limit - that is, no objects created, modified, or deleted after the first request is issued will be included in any subsequent continued requests. This is sometimes referred to as a consistent snapshot, and ensures that a client that is using limit to receive smaller chunks of a very large result can ensure they see all possible objects. If objects are updated during a chunked list the version of the object that was present at the time the first list result was calculated is returned.",
             "schema": {
               "type": "integer"
-            }
-          },
-          {
-            "name": "namespace",
-            "in": "path",
-            "description": "Object name and auth scope, such as for teams and projects",
-            "required": true,
-            "schema": {
-              "type": "string",
-              "pattern": "[a-z0-9][a-z0-9\\-]*"
             }
           },
           {
@@ -8879,8 +8859,6 @@
       "harvesterhci.io.v1beta1.KeyPair": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -8919,9 +8897,7 @@
       "harvesterhci.io.v1beta1.KeyPairList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9036,8 +9012,6 @@
       "harvesterhci.io.v1beta1.SupportBundle": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -9076,9 +9050,7 @@
       "harvesterhci.io.v1beta1.SupportBundleList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9158,8 +9130,6 @@
       "harvesterhci.io.v1beta1.Upgrade": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -9198,9 +9168,7 @@
       "harvesterhci.io.v1beta1.UpgradeList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9293,8 +9261,6 @@
       "harvesterhci.io.v1beta1.VirtualMachineBackup": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -9328,9 +9294,7 @@
       "harvesterhci.io.v1beta1.VirtualMachineBackupList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9450,8 +9414,6 @@
       "harvesterhci.io.v1beta1.VirtualMachineImage": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -9490,9 +9452,7 @@
       "harvesterhci.io.v1beta1.VirtualMachineImageList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9612,8 +9572,6 @@
       "harvesterhci.io.v1beta1.VirtualMachineRestore": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -9647,9 +9605,7 @@
       "harvesterhci.io.v1beta1.VirtualMachineRestoreList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9785,10 +9741,6 @@
       },
       "harvesterhci.io.v1beta1.VirtualMachineTemplate": {
         "type": "object",
-        "required": [
-          "apiVersion",
-          "kind"
-        ],
         "properties": {
           "apiVersion": {
             "type": "string"
@@ -9825,9 +9777,7 @@
       "harvesterhci.io.v1beta1.VirtualMachineTemplateList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -9886,8 +9836,6 @@
       "harvesterhci.io.v1beta1.VirtualMachineTemplateVersion": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -9926,9 +9874,7 @@
       "harvesterhci.io.v1beta1.VirtualMachineTemplateVersionList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -10094,8 +10040,6 @@
       "k8s.cni.cncf.io.v1.NetworkAttachmentDefinition": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -10126,9 +10070,7 @@
       "k8s.cni.cncf.io.v1.NetworkAttachmentDefinitionList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -10194,10 +10136,6 @@
       },
       "k8s.io.v1.DeleteOptions": {
         "type": "object",
-        "required": [
-          "apiVersion",
-          "kind"
-        ],
         "properties": {
           "apiVersion": {
             "type": "string"
@@ -10551,7 +10489,6 @@
           },
           "creationTimestamp": {
             "default": {},
-            "readOnly": true,
             "allOf": [
               {
                 "$ref": "#/components/schemas/k8s.io.v1.Time"
@@ -10667,10 +10604,6 @@
       },
       "k8s.io.v1.PersistentVolumeClaim": {
         "type": "object",
-        "required": [
-          "apiVersion",
-          "kind"
-        ],
         "properties": {
           "apiVersion": {
             "type": "string"
@@ -10746,9 +10679,7 @@
       "k8s.io.v1.PersistentVolumeClaimList": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "items",
-          "kind"
+          "items"
         ],
         "properties": {
           "apiVersion": {
@@ -11122,10 +11053,6 @@
       },
       "k8s.io.v1.Status": {
         "type": "object",
-        "required": [
-          "apiVersion",
-          "kind"
-        ],
         "properties": {
           "apiVersion": {
             "type": "string"
@@ -11768,8 +11695,6 @@
       "kubevirt.io.api.core.v1.DataVolumeTemplateSpec": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -13287,8 +13212,6 @@
       "kubevirt.io.api.core.v1.VirtualMachine": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -13366,8 +13289,6 @@
       "kubevirt.io.api.core.v1.VirtualMachineInstance": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -13474,9 +13395,7 @@
       "kubevirt.io.api.core.v1.VirtualMachineInstanceList": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "items",
-          "kind"
+          "items"
         ],
         "properties": {
           "apiVersion": {
@@ -13509,8 +13428,6 @@
       "kubevirt.io.api.core.v1.VirtualMachineInstanceMigration": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "kind",
           "spec"
         ],
         "properties": {
@@ -13588,9 +13505,7 @@
       "kubevirt.io.api.core.v1.VirtualMachineInstanceMigrationList": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "items",
-          "kind"
+          "items"
         ],
         "properties": {
           "apiVersion": {
@@ -14080,9 +13995,7 @@
       "kubevirt.io.api.core.v1.VirtualMachineList": {
         "type": "object",
         "required": [
-          "apiVersion",
-          "items",
-          "kind"
+          "items"
         ],
         "properties": {
           "apiVersion": {
@@ -14762,10 +14675,6 @@
       },
       "network.harvesterhci.io.v1beta1.ClusterNetwork": {
         "type": "object",
-        "required": [
-          "apiVersion",
-          "kind"
-        ],
         "properties": {
           "apiVersion": {
             "type": "string"
@@ -14794,9 +14703,7 @@
       "network.harvesterhci.io.v1beta1.ClusterNetworkList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {
@@ -14944,10 +14851,6 @@
       },
       "network.harvesterhci.io.v1beta1.NodeNetwork": {
         "type": "object",
-        "required": [
-          "apiVersion",
-          "kind"
-        ],
         "properties": {
           "apiVersion": {
             "type": "string"
@@ -14984,9 +14887,7 @@
       "network.harvesterhci.io.v1beta1.NodeNetworkList": {
         "type": "object",
         "required": [
-          "apiVersion",
           "items",
-          "kind",
           "metadata"
         ],
         "properties": {

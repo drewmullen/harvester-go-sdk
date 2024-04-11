@@ -42,6 +42,8 @@ type K8sIoV1ObjectMeta struct {
 // will change when the set of required properties is changed
 func NewK8sIoV1ObjectMeta() *K8sIoV1ObjectMeta {
 	this := K8sIoV1ObjectMeta{}
+	var creationTimestamp string = "{}"
+	this.CreationTimestamp = &creationTimestamp
 	var deletionTimestamp string = ""
 	this.DeletionTimestamp = &deletionTimestamp
 	return &this
@@ -52,6 +54,8 @@ func NewK8sIoV1ObjectMeta() *K8sIoV1ObjectMeta {
 // but it doesn't guarantee that properties required by API are set
 func NewK8sIoV1ObjectMetaWithDefaults() *K8sIoV1ObjectMeta {
 	this := K8sIoV1ObjectMeta{}
+	var creationTimestamp string = "{}"
+	this.CreationTimestamp = &creationTimestamp
 	var deletionTimestamp string = ""
 	this.DeletionTimestamp = &deletionTimestamp
 	return &this

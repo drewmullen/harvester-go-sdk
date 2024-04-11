@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
 **Items** | [**[]HarvesterhciIoV1beta1KeyPair**](HarvesterhciIoV1beta1KeyPair.md) |  | 
-**Kind** | **string** |  | 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [default to {}]
 
 ## Methods
 
 ### NewHarvesterhciIoV1beta1KeyPairList
 
-`func NewHarvesterhciIoV1beta1KeyPairList(apiVersion string, items []HarvesterhciIoV1beta1KeyPair, kind string, metadata K8sIoV1ListMeta, ) *HarvesterhciIoV1beta1KeyPairList`
+`func NewHarvesterhciIoV1beta1KeyPairList(items []HarvesterhciIoV1beta1KeyPair, metadata K8sIoV1ListMeta, ) *HarvesterhciIoV1beta1KeyPairList`
 
 NewHarvesterhciIoV1beta1KeyPairList instantiates a new HarvesterhciIoV1beta1KeyPairList object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *HarvesterhciIoV1beta1KeyPairList) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetItems
 
@@ -87,6 +92,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *HarvesterhciIoV1beta1KeyPairList) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

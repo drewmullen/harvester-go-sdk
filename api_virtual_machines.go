@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedVirtualMachineRequest) PropagationPolicy(propagationP
 	return r
 }
 
-func (r ApiDeleteNamespacedVirtualMachineRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedVirtualMachineRequest) Execute() (*KubevirtIoApiCoreV1VirtualMachine, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedVirtualMachineExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *VirtualMachinesAPIService) DeleteNamespacedVirtualMachine(ctx context.C
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *VirtualMachinesAPIService) DeleteNamespacedVirtualMachineExecute(r ApiDeleteNamespacedVirtualMachineRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return KubevirtIoApiCoreV1VirtualMachine
+func (a *VirtualMachinesAPIService) DeleteNamespacedVirtualMachineExecute(r ApiDeleteNamespacedVirtualMachineRequest) (*KubevirtIoApiCoreV1VirtualMachine, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *KubevirtIoApiCoreV1VirtualMachine
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VirtualMachinesAPIService.DeleteNamespacedVirtualMachine")

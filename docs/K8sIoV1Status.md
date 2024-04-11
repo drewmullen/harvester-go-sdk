@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
 **Code** | Pointer to **int32** |  | [optional] 
 **Details** | Pointer to [**K8sIoV1StatusDetails**](K8sIoV1StatusDetails.md) |  | [optional] 
-**Kind** | **string** |  | 
+**Kind** | Pointer to **string** |  | [optional] 
 **Message** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [optional] [default to {}]
 **Reason** | Pointer to **string** |  | [optional] 
@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 
 ### NewK8sIoV1Status
 
-`func NewK8sIoV1Status(apiVersion string, kind string, ) *K8sIoV1Status`
+`func NewK8sIoV1Status() *K8sIoV1Status`
 
 NewK8sIoV1Status instantiates a new K8sIoV1Status object
 This constructor will assign default values to properties that have it defined,
@@ -51,6 +51,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *K8sIoV1Status) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetCode
 
@@ -121,6 +126,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *K8sIoV1Status) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMessage
 

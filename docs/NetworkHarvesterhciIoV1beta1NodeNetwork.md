@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
-**Kind** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
 **Spec** | Pointer to [**NetworkHarvesterhciIoV1beta1NodeNetworkSpec**](NetworkHarvesterhciIoV1beta1NodeNetworkSpec.md) |  | [optional] [default to {}]
 **Status** | Pointer to [**NetworkHarvesterhciIoV1beta1NodeNetworkStatus**](NetworkHarvesterhciIoV1beta1NodeNetworkStatus.md) |  | [optional] [default to {}]
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewNetworkHarvesterhciIoV1beta1NodeNetwork
 
-`func NewNetworkHarvesterhciIoV1beta1NodeNetwork(apiVersion string, kind string, ) *NetworkHarvesterhciIoV1beta1NodeNetwork`
+`func NewNetworkHarvesterhciIoV1beta1NodeNetwork() *NetworkHarvesterhciIoV1beta1NodeNetwork`
 
 NewNetworkHarvesterhciIoV1beta1NodeNetwork instantiates a new NetworkHarvesterhciIoV1beta1NodeNetwork object
 This constructor will assign default values to properties that have it defined,
@@ -48,6 +48,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *NetworkHarvesterhciIoV1beta1NodeNetwork) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetKind
 
@@ -68,6 +73,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *NetworkHarvesterhciIoV1beta1NodeNetwork) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

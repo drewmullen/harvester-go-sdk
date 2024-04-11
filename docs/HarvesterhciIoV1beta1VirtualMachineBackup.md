@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
-**Kind** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
 **Spec** | [**HarvesterhciIoV1beta1VirtualMachineBackupSpec**](HarvesterhciIoV1beta1VirtualMachineBackupSpec.md) |  | [default to {}]
 **Status** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineBackupStatus**](HarvesterhciIoV1beta1VirtualMachineBackupStatus.md) |  | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewHarvesterhciIoV1beta1VirtualMachineBackup
 
-`func NewHarvesterhciIoV1beta1VirtualMachineBackup(apiVersion string, kind string, spec HarvesterhciIoV1beta1VirtualMachineBackupSpec, ) *HarvesterhciIoV1beta1VirtualMachineBackup`
+`func NewHarvesterhciIoV1beta1VirtualMachineBackup(spec HarvesterhciIoV1beta1VirtualMachineBackupSpec, ) *HarvesterhciIoV1beta1VirtualMachineBackup`
 
 NewHarvesterhciIoV1beta1VirtualMachineBackup instantiates a new HarvesterhciIoV1beta1VirtualMachineBackup object
 This constructor will assign default values to properties that have it defined,
@@ -48,6 +48,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *HarvesterhciIoV1beta1VirtualMachineBackup) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetKind
 
@@ -68,6 +73,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *HarvesterhciIoV1beta1VirtualMachineBackup) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

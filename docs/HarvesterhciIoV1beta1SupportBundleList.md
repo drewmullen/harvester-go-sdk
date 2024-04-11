@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
 **Items** | [**[]HarvesterhciIoV1beta1SupportBundle**](HarvesterhciIoV1beta1SupportBundle.md) |  | 
-**Kind** | **string** |  | 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [default to {}]
 
 ## Methods
 
 ### NewHarvesterhciIoV1beta1SupportBundleList
 
-`func NewHarvesterhciIoV1beta1SupportBundleList(apiVersion string, items []HarvesterhciIoV1beta1SupportBundle, kind string, metadata K8sIoV1ListMeta, ) *HarvesterhciIoV1beta1SupportBundleList`
+`func NewHarvesterhciIoV1beta1SupportBundleList(items []HarvesterhciIoV1beta1SupportBundle, metadata K8sIoV1ListMeta, ) *HarvesterhciIoV1beta1SupportBundleList`
 
 NewHarvesterhciIoV1beta1SupportBundleList instantiates a new HarvesterhciIoV1beta1SupportBundleList object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *HarvesterhciIoV1beta1SupportBundleList) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetItems
 
@@ -87,6 +92,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *HarvesterhciIoV1beta1SupportBundleList) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

@@ -48,7 +48,7 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	networkHarvesterhciIoV1beta1ClusterNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
+	networkHarvesterhciIoV1beta1ClusterNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork() // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -120,7 +120,7 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sCniCncfIoV1NetworkAttachmentDefinition := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition("ApiVersion_example", "Kind_example", *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
+	k8sCniCncfIoV1NetworkAttachmentDefinition := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition(*openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -192,7 +192,7 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	networkHarvesterhciIoV1beta1NodeNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1NodeNetwork | 
+	networkHarvesterhciIoV1beta1NodeNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork() // NetworkHarvesterhciIoV1beta1NodeNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -265,7 +265,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions() // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -346,7 +346,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions() // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -427,7 +427,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions() // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -487,7 +487,7 @@ No authorization required
 
 ## ListNamespacedClusterNetwork
 
-> NetworkHarvesterhciIoV1beta1ClusterNetworkList ListNamespacedClusterNetwork(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+> NetworkHarvesterhciIoV1beta1ClusterNetworkList ListNamespacedClusterNetwork(ctx).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
 List Namespaced Cluster Networks
 
@@ -506,7 +506,6 @@ import (
 )
 
 func main() {
-	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
 	continue_ := "continue__example" // string | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
 	fieldSelector := "fieldSelector_example" // string | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
 	includeUninitialized := true // bool | If true, partially initialized resources are included in the response. (optional)
@@ -518,7 +517,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ListNamespacedClusterNetwork(context.Background(), namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+	resp, r, err := apiClient.NetworksAPI.ListNamespacedClusterNetwork(context.Background()).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ListNamespacedClusterNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -531,10 +530,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**namespace** | **string** | Object name and auth scope, such as for teams and projects | 
 
 ### Other Parameters
 
@@ -543,7 +538,6 @@ Other parameters are passed through a pointer to a apiListNamespacedClusterNetwo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **continue_** | **string** | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | 
  **fieldSelector** | **string** | A selector to restrict the list of returned objects by their fields. Defaults to everything. | 
  **includeUninitialized** | **bool** | If true, partially initialized resources are included in the response. | 
@@ -659,7 +653,7 @@ No authorization required
 
 ## ListNamespacedNodeNetwork
 
-> NetworkHarvesterhciIoV1beta1NodeNetworkList ListNamespacedNodeNetwork(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+> NetworkHarvesterhciIoV1beta1NodeNetworkList ListNamespacedNodeNetwork(ctx).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
 List Namespaced Node Networks
 
@@ -678,7 +672,6 @@ import (
 )
 
 func main() {
-	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
 	continue_ := "continue__example" // string | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
 	fieldSelector := "fieldSelector_example" // string | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
 	includeUninitialized := true // bool | If true, partially initialized resources are included in the response. (optional)
@@ -690,7 +683,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ListNamespacedNodeNetwork(context.Background(), namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+	resp, r, err := apiClient.NetworksAPI.ListNamespacedNodeNetwork(context.Background()).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ListNamespacedNodeNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -703,10 +696,6 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**namespace** | **string** | Object name and auth scope, such as for teams and projects | 
 
 ### Other Parameters
 
@@ -715,7 +704,6 @@ Other parameters are passed through a pointer to a apiListNamespacedNodeNetworkR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
-
  **continue_** | **string** | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | 
  **fieldSelector** | **string** | A selector to restrict the list of returned objects by their fields. Defaults to everything. | 
  **includeUninitialized** | **bool** | If true, partially initialized resources are included in the response. | 
@@ -1302,7 +1290,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	networkHarvesterhciIoV1beta1ClusterNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
+	networkHarvesterhciIoV1beta1ClusterNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1ClusterNetwork() // NetworkHarvesterhciIoV1beta1ClusterNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1377,7 +1365,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sCniCncfIoV1NetworkAttachmentDefinition := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition("ApiVersion_example", "Kind_example", *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
+	k8sCniCncfIoV1NetworkAttachmentDefinition := *openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinition(*openapiclient.NewK8sCniCncfIoV1NetworkAttachmentDefinitionSpec("Config_example")) // K8sCniCncfIoV1NetworkAttachmentDefinition | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1452,7 +1440,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	networkHarvesterhciIoV1beta1NodeNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork("ApiVersion_example", "Kind_example") // NetworkHarvesterhciIoV1beta1NodeNetwork | 
+	networkHarvesterhciIoV1beta1NodeNetwork := *openapiclient.NewNetworkHarvesterhciIoV1beta1NodeNetwork() // NetworkHarvesterhciIoV1beta1NodeNetwork | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

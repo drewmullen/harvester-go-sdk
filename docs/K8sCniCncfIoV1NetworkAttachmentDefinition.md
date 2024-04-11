@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
-**Kind** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
 **Spec** | [**K8sCniCncfIoV1NetworkAttachmentDefinitionSpec**](K8sCniCncfIoV1NetworkAttachmentDefinitionSpec.md) |  | [default to {}]
 
@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 
 ### NewK8sCniCncfIoV1NetworkAttachmentDefinition
 
-`func NewK8sCniCncfIoV1NetworkAttachmentDefinition(apiVersion string, kind string, spec K8sCniCncfIoV1NetworkAttachmentDefinitionSpec, ) *K8sCniCncfIoV1NetworkAttachmentDefinition`
+`func NewK8sCniCncfIoV1NetworkAttachmentDefinition(spec K8sCniCncfIoV1NetworkAttachmentDefinitionSpec, ) *K8sCniCncfIoV1NetworkAttachmentDefinition`
 
 NewK8sCniCncfIoV1NetworkAttachmentDefinition instantiates a new K8sCniCncfIoV1NetworkAttachmentDefinition object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *K8sCniCncfIoV1NetworkAttachmentDefinition) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetKind
 
@@ -67,6 +72,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *K8sCniCncfIoV1NetworkAttachmentDefinition) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

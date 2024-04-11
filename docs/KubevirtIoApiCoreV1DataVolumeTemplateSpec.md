@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
-**Kind** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
 **Spec** | [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec.md) |  | [default to {}]
 **Status** | Pointer to **map[string]interface{}** |  | [optional] 
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewKubevirtIoApiCoreV1DataVolumeTemplateSpec
 
-`func NewKubevirtIoApiCoreV1DataVolumeTemplateSpec(apiVersion string, kind string, spec KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec, ) *KubevirtIoApiCoreV1DataVolumeTemplateSpec`
+`func NewKubevirtIoApiCoreV1DataVolumeTemplateSpec(spec KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec, ) *KubevirtIoApiCoreV1DataVolumeTemplateSpec`
 
 NewKubevirtIoApiCoreV1DataVolumeTemplateSpec instantiates a new KubevirtIoApiCoreV1DataVolumeTemplateSpec object
 This constructor will assign default values to properties that have it defined,
@@ -48,6 +48,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *KubevirtIoApiCoreV1DataVolumeTemplateSpec) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetKind
 
@@ -68,6 +73,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *KubevirtIoApiCoreV1DataVolumeTemplateSpec) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

@@ -43,7 +43,7 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	harvesterhciIoV1beta1VirtualMachineTemplate := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate("ApiVersion_example", "Kind_example") // HarvesterhciIoV1beta1VirtualMachineTemplate | 
+	harvesterhciIoV1beta1VirtualMachineTemplate := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate() // HarvesterhciIoV1beta1VirtualMachineTemplate | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -115,7 +115,7 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	harvesterhciIoV1beta1VirtualMachineTemplateVersion := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
+	harvesterhciIoV1beta1VirtualMachineTemplateVersion := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion(*openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -188,7 +188,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions() // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -269,7 +269,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions() // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -986,7 +986,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	harvesterhciIoV1beta1VirtualMachineTemplate := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate("ApiVersion_example", "Kind_example") // HarvesterhciIoV1beta1VirtualMachineTemplate | 
+	harvesterhciIoV1beta1VirtualMachineTemplate := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplate() // HarvesterhciIoV1beta1VirtualMachineTemplate | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -1061,7 +1061,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	harvesterhciIoV1beta1VirtualMachineTemplateVersion := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion("ApiVersion_example", "Kind_example", *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
+	harvesterhciIoV1beta1VirtualMachineTemplateVersion := *openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersion(*openapiclient.NewHarvesterhciIoV1beta1VirtualMachineTemplateVersionSpec("TemplateId_example")) // HarvesterhciIoV1beta1VirtualMachineTemplateVersion | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

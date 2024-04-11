@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
 **Items** | [**[]KubevirtIoApiCoreV1VirtualMachineInstanceMigration**](KubevirtIoApiCoreV1VirtualMachineInstanceMigration.md) |  | 
-**Kind** | **string** |  | 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [optional] [default to {}]
 
 ## Methods
 
 ### NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationList
 
-`func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationList(apiVersion string, items []KubevirtIoApiCoreV1VirtualMachineInstanceMigration, kind string, ) *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList`
+`func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationList(items []KubevirtIoApiCoreV1VirtualMachineInstanceMigration, ) *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList`
 
 NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationList instantiates a new KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetItems
 
@@ -87,6 +92,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationList) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

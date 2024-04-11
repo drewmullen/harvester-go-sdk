@@ -21,8 +21,8 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstance{}
 
 // KubevirtIoApiCoreV1VirtualMachineInstance struct for KubevirtIoApiCoreV1VirtualMachineInstance
 type KubevirtIoApiCoreV1VirtualMachineInstance struct {
-	ApiVersion string `json:"apiVersion"`
-	Kind string `json:"kind"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
+	Kind *string `json:"kind,omitempty"`
 	Metadata *K8sIoV1ObjectMeta `json:"metadata,omitempty"`
 	Spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec `json:"spec"`
 	Status *KubevirtIoApiCoreV1VirtualMachineInstanceStatus `json:"status,omitempty"`
@@ -34,10 +34,8 @@ type _KubevirtIoApiCoreV1VirtualMachineInstance KubevirtIoApiCoreV1VirtualMachin
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewKubevirtIoApiCoreV1VirtualMachineInstance(apiVersion string, kind string, spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec) *KubevirtIoApiCoreV1VirtualMachineInstance {
+func NewKubevirtIoApiCoreV1VirtualMachineInstance(spec KubevirtIoApiCoreV1VirtualMachineInstanceSpec) *KubevirtIoApiCoreV1VirtualMachineInstance {
 	this := KubevirtIoApiCoreV1VirtualMachineInstance{}
-	this.ApiVersion = apiVersion
-	this.Kind = kind
 	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
 	this.Spec = spec
@@ -60,52 +58,68 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceWithDefaults() *KubevirtIoApiCo
 	return &this
 }
 
-// GetApiVersion returns the ApiVersion field value
+// GetApiVersion returns the ApiVersion field value if set, zero value otherwise.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstance) GetApiVersion() string {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		var ret string
 		return ret
 	}
-
-	return o.ApiVersion
+	return *o.ApiVersion
 }
 
-// GetApiVersionOk returns a tuple with the ApiVersion field value
+// GetApiVersionOk returns a tuple with the ApiVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstance) GetApiVersionOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		return nil, false
 	}
-	return &o.ApiVersion, true
+	return o.ApiVersion, true
 }
 
-// SetApiVersion sets field value
+// HasApiVersion returns a boolean if a field has been set.
+func (o *KubevirtIoApiCoreV1VirtualMachineInstance) HasApiVersion() bool {
+	if o != nil && !IsNil(o.ApiVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetApiVersion gets a reference to the given string and assigns it to the ApiVersion field.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstance) SetApiVersion(v string) {
-	o.ApiVersion = v
+	o.ApiVersion = &v
 }
 
-// GetKind returns the Kind field value
+// GetKind returns the Kind field value if set, zero value otherwise.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstance) GetKind() string {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		var ret string
 		return ret
 	}
-
-	return o.Kind
+	return *o.Kind
 }
 
-// GetKindOk returns a tuple with the Kind field value
+// GetKindOk returns a tuple with the Kind field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstance) GetKindOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		return nil, false
 	}
-	return &o.Kind, true
+	return o.Kind, true
 }
 
-// SetKind sets field value
+// HasKind returns a boolean if a field has been set.
+func (o *KubevirtIoApiCoreV1VirtualMachineInstance) HasKind() bool {
+	if o != nil && !IsNil(o.Kind) {
+		return true
+	}
+
+	return false
+}
+
+// SetKind gets a reference to the given string and assigns it to the Kind field.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstance) SetKind(v string) {
-	o.Kind = v
+	o.Kind = &v
 }
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
@@ -206,8 +220,12 @@ func (o KubevirtIoApiCoreV1VirtualMachineInstance) MarshalJSON() ([]byte, error)
 
 func (o KubevirtIoApiCoreV1VirtualMachineInstance) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["apiVersion"] = o.ApiVersion
-	toSerialize["kind"] = o.Kind
+	if !IsNil(o.ApiVersion) {
+		toSerialize["apiVersion"] = o.ApiVersion
+	}
+	if !IsNil(o.Kind) {
+		toSerialize["kind"] = o.Kind
+	}
 	if !IsNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
@@ -223,8 +241,6 @@ func (o *KubevirtIoApiCoreV1VirtualMachineInstance) UnmarshalJSON(data []byte) (
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"apiVersion",
-		"kind",
 		"spec",
 	}
 

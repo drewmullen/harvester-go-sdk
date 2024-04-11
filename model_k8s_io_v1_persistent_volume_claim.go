@@ -12,8 +12,6 @@ package harvester
 
 import (
 	"encoding/json"
-	"bytes"
-	"fmt"
 )
 
 // checks if the K8sIoV1PersistentVolumeClaim type satisfies the MappedNullable interface at compile time
@@ -21,23 +19,19 @@ var _ MappedNullable = &K8sIoV1PersistentVolumeClaim{}
 
 // K8sIoV1PersistentVolumeClaim struct for K8sIoV1PersistentVolumeClaim
 type K8sIoV1PersistentVolumeClaim struct {
-	ApiVersion string `json:"apiVersion"`
-	Kind string `json:"kind"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
+	Kind *string `json:"kind,omitempty"`
 	Metadata *K8sIoV1ObjectMeta `json:"metadata,omitempty"`
 	Spec *K8sIoV1PersistentVolumeClaimSpec `json:"spec,omitempty"`
 	Status *K8sIoV1PersistentVolumeClaimStatus `json:"status,omitempty"`
 }
 
-type _K8sIoV1PersistentVolumeClaim K8sIoV1PersistentVolumeClaim
-
 // NewK8sIoV1PersistentVolumeClaim instantiates a new K8sIoV1PersistentVolumeClaim object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewK8sIoV1PersistentVolumeClaim(apiVersion string, kind string) *K8sIoV1PersistentVolumeClaim {
+func NewK8sIoV1PersistentVolumeClaim() *K8sIoV1PersistentVolumeClaim {
 	this := K8sIoV1PersistentVolumeClaim{}
-	this.ApiVersion = apiVersion
-	this.Kind = kind
 	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
 	var spec K8sIoV1PersistentVolumeClaimSpec
@@ -61,52 +55,68 @@ func NewK8sIoV1PersistentVolumeClaimWithDefaults() *K8sIoV1PersistentVolumeClaim
 	return &this
 }
 
-// GetApiVersion returns the ApiVersion field value
+// GetApiVersion returns the ApiVersion field value if set, zero value otherwise.
 func (o *K8sIoV1PersistentVolumeClaim) GetApiVersion() string {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		var ret string
 		return ret
 	}
-
-	return o.ApiVersion
+	return *o.ApiVersion
 }
 
-// GetApiVersionOk returns a tuple with the ApiVersion field value
+// GetApiVersionOk returns a tuple with the ApiVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *K8sIoV1PersistentVolumeClaim) GetApiVersionOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		return nil, false
 	}
-	return &o.ApiVersion, true
+	return o.ApiVersion, true
 }
 
-// SetApiVersion sets field value
+// HasApiVersion returns a boolean if a field has been set.
+func (o *K8sIoV1PersistentVolumeClaim) HasApiVersion() bool {
+	if o != nil && !IsNil(o.ApiVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetApiVersion gets a reference to the given string and assigns it to the ApiVersion field.
 func (o *K8sIoV1PersistentVolumeClaim) SetApiVersion(v string) {
-	o.ApiVersion = v
+	o.ApiVersion = &v
 }
 
-// GetKind returns the Kind field value
+// GetKind returns the Kind field value if set, zero value otherwise.
 func (o *K8sIoV1PersistentVolumeClaim) GetKind() string {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		var ret string
 		return ret
 	}
-
-	return o.Kind
+	return *o.Kind
 }
 
-// GetKindOk returns a tuple with the Kind field value
+// GetKindOk returns a tuple with the Kind field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *K8sIoV1PersistentVolumeClaim) GetKindOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		return nil, false
 	}
-	return &o.Kind, true
+	return o.Kind, true
 }
 
-// SetKind sets field value
+// HasKind returns a boolean if a field has been set.
+func (o *K8sIoV1PersistentVolumeClaim) HasKind() bool {
+	if o != nil && !IsNil(o.Kind) {
+		return true
+	}
+
+	return false
+}
+
+// SetKind gets a reference to the given string and assigns it to the Kind field.
 func (o *K8sIoV1PersistentVolumeClaim) SetKind(v string) {
-	o.Kind = v
+	o.Kind = &v
 }
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
@@ -215,8 +225,12 @@ func (o K8sIoV1PersistentVolumeClaim) MarshalJSON() ([]byte, error) {
 
 func (o K8sIoV1PersistentVolumeClaim) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["apiVersion"] = o.ApiVersion
-	toSerialize["kind"] = o.Kind
+	if !IsNil(o.ApiVersion) {
+		toSerialize["apiVersion"] = o.ApiVersion
+	}
+	if !IsNil(o.Kind) {
+		toSerialize["kind"] = o.Kind
+	}
 	if !IsNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
@@ -227,44 +241,6 @@ func (o K8sIoV1PersistentVolumeClaim) ToMap() (map[string]interface{}, error) {
 		toSerialize["status"] = o.Status
 	}
 	return toSerialize, nil
-}
-
-func (o *K8sIoV1PersistentVolumeClaim) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"apiVersion",
-		"kind",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err;
-	}
-
-	for _, requiredProperty := range(requiredProperties) {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varK8sIoV1PersistentVolumeClaim := _K8sIoV1PersistentVolumeClaim{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varK8sIoV1PersistentVolumeClaim)
-
-	if err != nil {
-		return err
-	}
-
-	*o = K8sIoV1PersistentVolumeClaim(varK8sIoV1PersistentVolumeClaim)
-
-	return err
 }
 
 type NullableK8sIoV1PersistentVolumeClaim struct {

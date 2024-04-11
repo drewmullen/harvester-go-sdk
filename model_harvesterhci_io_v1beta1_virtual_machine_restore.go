@@ -21,8 +21,8 @@ var _ MappedNullable = &HarvesterhciIoV1beta1VirtualMachineRestore{}
 
 // HarvesterhciIoV1beta1VirtualMachineRestore struct for HarvesterhciIoV1beta1VirtualMachineRestore
 type HarvesterhciIoV1beta1VirtualMachineRestore struct {
-	ApiVersion string `json:"apiVersion"`
-	Kind string `json:"kind"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
+	Kind *string `json:"kind,omitempty"`
 	Metadata *K8sIoV1ObjectMeta `json:"metadata,omitempty"`
 	Spec HarvesterhciIoV1beta1VirtualMachineRestoreSpec `json:"spec"`
 	Status *HarvesterhciIoV1beta1VirtualMachineRestoreStatus `json:"status,omitempty"`
@@ -34,10 +34,8 @@ type _HarvesterhciIoV1beta1VirtualMachineRestore HarvesterhciIoV1beta1VirtualMac
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewHarvesterhciIoV1beta1VirtualMachineRestore(apiVersion string, kind string, spec HarvesterhciIoV1beta1VirtualMachineRestoreSpec) *HarvesterhciIoV1beta1VirtualMachineRestore {
+func NewHarvesterhciIoV1beta1VirtualMachineRestore(spec HarvesterhciIoV1beta1VirtualMachineRestoreSpec) *HarvesterhciIoV1beta1VirtualMachineRestore {
 	this := HarvesterhciIoV1beta1VirtualMachineRestore{}
-	this.ApiVersion = apiVersion
-	this.Kind = kind
 	var metadata K8sIoV1ObjectMeta
 	this.Metadata = &metadata
 	this.Spec = spec
@@ -56,52 +54,68 @@ func NewHarvesterhciIoV1beta1VirtualMachineRestoreWithDefaults() *HarvesterhciIo
 	return &this
 }
 
-// GetApiVersion returns the ApiVersion field value
+// GetApiVersion returns the ApiVersion field value if set, zero value otherwise.
 func (o *HarvesterhciIoV1beta1VirtualMachineRestore) GetApiVersion() string {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		var ret string
 		return ret
 	}
-
-	return o.ApiVersion
+	return *o.ApiVersion
 }
 
-// GetApiVersionOk returns a tuple with the ApiVersion field value
+// GetApiVersionOk returns a tuple with the ApiVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HarvesterhciIoV1beta1VirtualMachineRestore) GetApiVersionOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		return nil, false
 	}
-	return &o.ApiVersion, true
+	return o.ApiVersion, true
 }
 
-// SetApiVersion sets field value
+// HasApiVersion returns a boolean if a field has been set.
+func (o *HarvesterhciIoV1beta1VirtualMachineRestore) HasApiVersion() bool {
+	if o != nil && !IsNil(o.ApiVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetApiVersion gets a reference to the given string and assigns it to the ApiVersion field.
 func (o *HarvesterhciIoV1beta1VirtualMachineRestore) SetApiVersion(v string) {
-	o.ApiVersion = v
+	o.ApiVersion = &v
 }
 
-// GetKind returns the Kind field value
+// GetKind returns the Kind field value if set, zero value otherwise.
 func (o *HarvesterhciIoV1beta1VirtualMachineRestore) GetKind() string {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		var ret string
 		return ret
 	}
-
-	return o.Kind
+	return *o.Kind
 }
 
-// GetKindOk returns a tuple with the Kind field value
+// GetKindOk returns a tuple with the Kind field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *HarvesterhciIoV1beta1VirtualMachineRestore) GetKindOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		return nil, false
 	}
-	return &o.Kind, true
+	return o.Kind, true
 }
 
-// SetKind sets field value
+// HasKind returns a boolean if a field has been set.
+func (o *HarvesterhciIoV1beta1VirtualMachineRestore) HasKind() bool {
+	if o != nil && !IsNil(o.Kind) {
+		return true
+	}
+
+	return false
+}
+
+// SetKind gets a reference to the given string and assigns it to the Kind field.
 func (o *HarvesterhciIoV1beta1VirtualMachineRestore) SetKind(v string) {
-	o.Kind = v
+	o.Kind = &v
 }
 
 // GetMetadata returns the Metadata field value if set, zero value otherwise.
@@ -202,8 +216,12 @@ func (o HarvesterhciIoV1beta1VirtualMachineRestore) MarshalJSON() ([]byte, error
 
 func (o HarvesterhciIoV1beta1VirtualMachineRestore) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["apiVersion"] = o.ApiVersion
-	toSerialize["kind"] = o.Kind
+	if !IsNil(o.ApiVersion) {
+		toSerialize["apiVersion"] = o.ApiVersion
+	}
+	if !IsNil(o.Kind) {
+		toSerialize["kind"] = o.Kind
+	}
 	if !IsNil(o.Metadata) {
 		toSerialize["metadata"] = o.Metadata
 	}
@@ -219,8 +237,6 @@ func (o *HarvesterhciIoV1beta1VirtualMachineRestore) UnmarshalJSON(data []byte) 
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
-		"apiVersion",
-		"kind",
 		"spec",
 	}
 

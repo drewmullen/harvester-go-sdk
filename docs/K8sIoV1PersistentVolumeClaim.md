@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
-**Kind** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
 **Spec** | Pointer to [**K8sIoV1PersistentVolumeClaimSpec**](K8sIoV1PersistentVolumeClaimSpec.md) |  | [optional] [default to {}]
 **Status** | Pointer to [**K8sIoV1PersistentVolumeClaimStatus**](K8sIoV1PersistentVolumeClaimStatus.md) |  | [optional] [default to {}]
@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 
 ### NewK8sIoV1PersistentVolumeClaim
 
-`func NewK8sIoV1PersistentVolumeClaim(apiVersion string, kind string, ) *K8sIoV1PersistentVolumeClaim`
+`func NewK8sIoV1PersistentVolumeClaim() *K8sIoV1PersistentVolumeClaim`
 
 NewK8sIoV1PersistentVolumeClaim instantiates a new K8sIoV1PersistentVolumeClaim object
 This constructor will assign default values to properties that have it defined,
@@ -48,6 +48,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *K8sIoV1PersistentVolumeClaim) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetKind
 
@@ -68,6 +73,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *K8sIoV1PersistentVolumeClaim) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

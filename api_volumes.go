@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedPersistentVolumeClaimRequest) PropagationPolicy(propa
 	return r
 }
 
-func (r ApiDeleteNamespacedPersistentVolumeClaimRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedPersistentVolumeClaimRequest) Execute() (*KubevirtIoApiCoreV1VirtualMachine, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedPersistentVolumeClaimExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *VolumesAPIService) DeleteNamespacedPersistentVolumeClaim(ctx context.Co
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *VolumesAPIService) DeleteNamespacedPersistentVolumeClaimExecute(r ApiDeleteNamespacedPersistentVolumeClaimRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return KubevirtIoApiCoreV1VirtualMachine
+func (a *VolumesAPIService) DeleteNamespacedPersistentVolumeClaimExecute(r ApiDeleteNamespacedPersistentVolumeClaimRequest) (*KubevirtIoApiCoreV1VirtualMachine, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *KubevirtIoApiCoreV1VirtualMachine
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VolumesAPIService.DeleteNamespacedPersistentVolumeClaim")

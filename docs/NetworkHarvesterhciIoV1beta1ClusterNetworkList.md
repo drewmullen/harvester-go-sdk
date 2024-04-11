@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
 **Items** | [**[]NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md) |  | 
-**Kind** | **string** |  | 
+**Kind** | Pointer to **string** |  | [optional] 
 **Metadata** | [**K8sIoV1ListMeta**](K8sIoV1ListMeta.md) |  | [default to {}]
 
 ## Methods
 
 ### NewNetworkHarvesterhciIoV1beta1ClusterNetworkList
 
-`func NewNetworkHarvesterhciIoV1beta1ClusterNetworkList(apiVersion string, items []NetworkHarvesterhciIoV1beta1ClusterNetwork, kind string, metadata K8sIoV1ListMeta, ) *NetworkHarvesterhciIoV1beta1ClusterNetworkList`
+`func NewNetworkHarvesterhciIoV1beta1ClusterNetworkList(items []NetworkHarvesterhciIoV1beta1ClusterNetwork, metadata K8sIoV1ListMeta, ) *NetworkHarvesterhciIoV1beta1ClusterNetworkList`
 
 NewNetworkHarvesterhciIoV1beta1ClusterNetworkList instantiates a new NetworkHarvesterhciIoV1beta1ClusterNetworkList object
 This constructor will assign default values to properties that have it defined,
@@ -47,6 +47,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *NetworkHarvesterhciIoV1beta1ClusterNetworkList) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetItems
 
@@ -87,6 +92,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *NetworkHarvesterhciIoV1beta1ClusterNetworkList) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetMetadata
 

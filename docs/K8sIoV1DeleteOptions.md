@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | **string** |  | 
+**ApiVersion** | Pointer to **string** |  | [optional] 
 **DryRun** | Pointer to **[]string** |  | [optional] 
 **GracePeriodSeconds** | Pointer to **int64** |  | [optional] 
-**Kind** | **string** |  | 
+**Kind** | Pointer to **string** |  | [optional] 
 **OrphanDependents** | Pointer to **bool** |  | [optional] 
 **Preconditions** | Pointer to [**K8sIoV1Preconditions**](K8sIoV1Preconditions.md) |  | [optional] 
 **PropagationPolicy** | Pointer to **string** |  | [optional] 
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 
 ### NewK8sIoV1DeleteOptions
 
-`func NewK8sIoV1DeleteOptions(apiVersion string, kind string, ) *K8sIoV1DeleteOptions`
+`func NewK8sIoV1DeleteOptions() *K8sIoV1DeleteOptions`
 
 NewK8sIoV1DeleteOptions instantiates a new K8sIoV1DeleteOptions object
 This constructor will assign default values to properties that have it defined,
@@ -50,6 +50,11 @@ and a boolean to check if the value has been set.
 
 SetApiVersion sets ApiVersion field to given value.
 
+### HasApiVersion
+
+`func (o *K8sIoV1DeleteOptions) HasApiVersion() bool`
+
+HasApiVersion returns a boolean if a field has been set.
 
 ### GetDryRun
 
@@ -120,6 +125,11 @@ and a boolean to check if the value has been set.
 
 SetKind sets Kind field to given value.
 
+### HasKind
+
+`func (o *K8sIoV1DeleteOptions) HasKind() bool`
+
+HasKind returns a boolean if a field has been set.
 
 ### GetOrphanDependents
 

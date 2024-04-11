@@ -36,7 +36,7 @@ import (
 
 func main() {
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1PersistentVolumeClaim := *openapiclient.NewK8sIoV1PersistentVolumeClaim("ApiVersion_example", "Kind_example") // K8sIoV1PersistentVolumeClaim | 
+	k8sIoV1PersistentVolumeClaim := *openapiclient.NewK8sIoV1PersistentVolumeClaim() // K8sIoV1PersistentVolumeClaim | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedPersistentVolumeClaim
 
-> K8sIoV1Status DeleteNamespacedPersistentVolumeClaim(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> KubevirtIoApiCoreV1VirtualMachine DeleteNamespacedPersistentVolumeClaim(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Persistent Volume Claim
 
@@ -109,7 +109,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions("ApiVersion_example", "Kind_example") // K8sIoV1DeleteOptions | 
+	k8sIoV1DeleteOptions := *openapiclient.NewK8sIoV1DeleteOptions() // K8sIoV1DeleteOptions | 
 	gracePeriodSeconds := int32(56) // int32 | The duration in seconds before the object should be deleted. Value must be non-negative integer. The value zero indicates delete immediately. If this value is nil, the default grace period for the specified type will be used. Defaults to a per object value if not specified. zero means delete immediately. (optional)
 	orphanDependents := true // bool | Deprecated: please use the PropagationPolicy, this field will be deprecated in 1.7. Should the dependent objects be orphaned. If true/false, the \"orphan\" finalizer will be added to/removed from the object's finalizers list. Either this field or PropagationPolicy may be set, but not both. (optional)
 	propagationPolicy := "propagationPolicy_example" // string | Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: 'Orphan' - orphan the dependents; 'Background' - allow the garbage collector to delete the dependents in the background; 'Foreground' - a cascading policy that deletes all dependents in the foreground. (optional)
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `VolumesAPI.DeleteNamespacedPersistentVolumeClaim``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedPersistentVolumeClaim`: K8sIoV1Status
+	// response from `DeleteNamespacedPersistentVolumeClaim`: KubevirtIoApiCoreV1VirtualMachine
 	fmt.Fprintf(os.Stdout, "Response from `VolumesAPI.DeleteNamespacedPersistentVolumeClaim`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**KubevirtIoApiCoreV1VirtualMachine**](KubevirtIoApiCoreV1VirtualMachine.md)
 
 ### Authorization
 
@@ -508,7 +508,7 @@ import (
 func main() {
 	name := "name_example" // string | Name of the resource
 	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
-	k8sIoV1PersistentVolumeClaim := *openapiclient.NewK8sIoV1PersistentVolumeClaim("ApiVersion_example", "Kind_example") // K8sIoV1PersistentVolumeClaim | 
+	k8sIoV1PersistentVolumeClaim := *openapiclient.NewK8sIoV1PersistentVolumeClaim() // K8sIoV1PersistentVolumeClaim | 
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)

@@ -872,7 +872,6 @@ func (a *NetworksAPIService) DeleteNamespacedNodeNetworkExecute(r ApiDeleteNames
 type ApiListNamespacedClusterNetworkRequest struct {
 	ctx context.Context
 	ApiService *NetworksAPIService
-	namespace string
 	continue_ *string
 	fieldSelector *string
 	includeUninitialized *bool
@@ -941,14 +940,12 @@ ListNamespacedClusterNetwork List Namespaced Cluster Networks
 Get a list of ClusterNetwork objects in a namespace.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param namespace Object name and auth scope, such as for teams and projects
  @return ApiListNamespacedClusterNetworkRequest
 */
-func (a *NetworksAPIService) ListNamespacedClusterNetwork(ctx context.Context, namespace string) ApiListNamespacedClusterNetworkRequest {
+func (a *NetworksAPIService) ListNamespacedClusterNetwork(ctx context.Context) ApiListNamespacedClusterNetworkRequest {
 	return ApiListNamespacedClusterNetworkRequest{
 		ApiService: a,
 		ctx: ctx,
-		namespace: namespace,
 	}
 }
 
@@ -968,7 +965,6 @@ func (a *NetworksAPIService) ListNamespacedClusterNetworkExecute(r ApiListNamesp
 	}
 
 	localVarPath := localBasePath + "/apis/network.harvesterhci.io/v1beta1/clusternetworks"
-	localVarPath = strings.Replace(localVarPath, "{"+"namespace"+"}", url.PathEscape(parameterValueToString(r.namespace, "namespace")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1258,7 +1254,6 @@ func (a *NetworksAPIService) ListNamespacedNetworkAttachmentDefinitionExecute(r 
 type ApiListNamespacedNodeNetworkRequest struct {
 	ctx context.Context
 	ApiService *NetworksAPIService
-	namespace string
 	continue_ *string
 	fieldSelector *string
 	includeUninitialized *bool
@@ -1327,14 +1322,12 @@ ListNamespacedNodeNetwork List Namespaced Node Networks
 Get a list of NodeNetwork objects in a namespace.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @param namespace Object name and auth scope, such as for teams and projects
  @return ApiListNamespacedNodeNetworkRequest
 */
-func (a *NetworksAPIService) ListNamespacedNodeNetwork(ctx context.Context, namespace string) ApiListNamespacedNodeNetworkRequest {
+func (a *NetworksAPIService) ListNamespacedNodeNetwork(ctx context.Context) ApiListNamespacedNodeNetworkRequest {
 	return ApiListNamespacedNodeNetworkRequest{
 		ApiService: a,
 		ctx: ctx,
-		namespace: namespace,
 	}
 }
 
@@ -1354,7 +1347,6 @@ func (a *NetworksAPIService) ListNamespacedNodeNetworkExecute(r ApiListNamespace
 	}
 
 	localVarPath := localBasePath + "/apis/network.harvesterhci.io/v1beta1/nodenetworks"
-	localVarPath = strings.Replace(localVarPath, "{"+"namespace"+"}", url.PathEscape(parameterValueToString(r.namespace, "namespace")), -1)
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

@@ -266,10 +266,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/k8s.io.v1.Status'
+                $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine'
             application/yaml:
               schema:
-                $ref: '#/components/schemas/k8s.io.v1.Status'
+                $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine'
           description: OK
         "401":
           content:
@@ -6625,10 +6625,10 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/k8s.io.v1.Status'
+                $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine'
             application/yaml:
               schema:
-                $ref: '#/components/schemas/k8s.io.v1.Status'
+                $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachine'
           description: OK
         "401":
           content:
@@ -7228,15 +7228,6 @@ paths:
         schema:
           type: integer
         style: form
-      - description: "Object name and auth scope, such as for teams and projects"
-        explode: false
-        in: path
-        name: namespace
-        required: true
-        schema:
-          pattern: "[a-z0-9][a-z0-9\\-]*"
-          type: string
-        style: simple
       - description: "When specified with a watch call, shows changes that occur after\
           \ that particular version of a resource. Defaults to changes from the beginning\
           \ of history."
@@ -7683,15 +7674,6 @@ paths:
         schema:
           type: integer
         style: form
-      - description: "Object name and auth scope, such as for teams and projects"
-        explode: false
-        in: path
-        name: namespace
-        required: true
-        schema:
-          pattern: "[a-z0-9][a-z0-9\\-]*"
-          type: string
-        style: simple
       - description: "When specified with a watch call, shows changes that occur after\
           \ that particular version of a resource. Defaults to changes from the beginning\
           \ of history."
@@ -8148,8 +8130,6 @@ components:
           - $ref: '#/components/schemas/harvesterhci.io.v1beta1.KeyPairStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.KeyPairList:
@@ -8176,9 +8156,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.KeyPairSpec:
@@ -8255,8 +8233,6 @@ components:
           - $ref: '#/components/schemas/harvesterhci.io.v1beta1.SupportBundleStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.SupportBundleList:
@@ -8283,9 +8259,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.SupportBundleSpec:
@@ -8343,8 +8317,6 @@ components:
           - $ref: '#/components/schemas/harvesterhci.io.v1beta1.UpgradeStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.UpgradeList:
@@ -8371,9 +8343,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.UpgradeSpec:
@@ -8461,8 +8431,6 @@ components:
         status:
           $ref: '#/components/schemas/harvesterhci.io.v1beta1.VirtualMachineBackupStatus'
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.VirtualMachineBackupList:
@@ -8489,9 +8457,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.VirtualMachineBackupSpec:
@@ -8598,8 +8564,6 @@ components:
           - $ref: '#/components/schemas/harvesterhci.io.v1beta1.VirtualMachineImageStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.VirtualMachineImageList:
@@ -8626,9 +8590,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.VirtualMachineImageSpec:
@@ -8727,8 +8689,6 @@ components:
         status:
           $ref: '#/components/schemas/harvesterhci.io.v1beta1.VirtualMachineRestoreStatus'
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.VirtualMachineRestoreList:
@@ -8755,9 +8715,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.VirtualMachineRestoreSpec:
@@ -8865,9 +8823,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/harvesterhci.io.v1beta1.VirtualMachineTemplateStatus'
           default: {}
-      required:
-      - apiVersion
-      - kind
       type: object
     harvesterhci.io.v1beta1.VirtualMachineTemplateList:
       example:
@@ -8893,9 +8848,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.VirtualMachineTemplateSpec:
@@ -8940,8 +8893,6 @@ components:
           - $ref: '#/components/schemas/harvesterhci.io.v1beta1.VirtualMachineTemplateVersionStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     harvesterhci.io.v1beta1.VirtualMachineTemplateVersionList:
@@ -8968,9 +8919,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     harvesterhci.io.v1beta1.VirtualMachineTemplateVersionSpec:
@@ -9079,8 +9028,6 @@ components:
           - $ref: '#/components/schemas/k8s.cni.cncf.io.v1.NetworkAttachmentDefinitionSpec'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     k8s.cni.cncf.io.v1.NetworkAttachmentDefinitionList:
@@ -9107,9 +9054,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     k8s.cni.cncf.io.v1.NetworkAttachmentDefinitionSpec:
@@ -9154,9 +9099,6 @@ components:
           $ref: '#/components/schemas/k8s.io.v1.Preconditions'
         propagationPolicy:
           type: string
-      required:
-      - apiVersion
-      - kind
       type: object
     k8s.io.v1.DownwardAPIVolumeFile:
       properties:
@@ -9374,7 +9316,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/k8s.io.v1.Time'
           default: {}
-          readOnly: true
         deletionGracePeriodSeconds:
           format: int64
           type: integer
@@ -9473,9 +9414,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/k8s.io.v1.PersistentVolumeClaimStatus'
           default: {}
-      required:
-      - apiVersion
-      - kind
       type: object
     k8s.io.v1.PersistentVolumeClaimCondition:
       properties:
@@ -9525,9 +9463,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       type: object
     k8s.io.v1.PersistentVolumeClaimSpec:
       properties:
@@ -9778,9 +9714,6 @@ components:
           type: string
         status:
           type: string
-      required:
-      - apiVersion
-      - kind
       type: object
     k8s.io.v1.StatusCause:
       properties:
@@ -10214,8 +10147,6 @@ components:
         status:
           type: object
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     kubevirt.io.api.core.v1.Devices:
@@ -11199,8 +11130,6 @@ components:
           - $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachineStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     kubevirt.io.api.core.v1.VirtualMachineCondition:
@@ -11252,8 +11181,6 @@ components:
           - $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachineInstanceStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     kubevirt.io.api.core.v1.VirtualMachineInstanceCondition:
@@ -11323,9 +11250,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       type: object
     kubevirt.io.api.core.v1.VirtualMachineInstanceMigration:
       example:
@@ -11352,8 +11277,6 @@ components:
           - $ref: '#/components/schemas/kubevirt.io.api.core.v1.VirtualMachineInstanceMigrationStatus'
           default: {}
       required:
-      - apiVersion
-      - kind
       - spec
       type: object
     kubevirt.io.api.core.v1.VirtualMachineInstanceMigrationCondition:
@@ -11404,9 +11327,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       type: object
     kubevirt.io.api.core.v1.VirtualMachineInstanceMigrationPhaseTransitionTimestamp:
       properties:
@@ -11722,9 +11643,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       type: object
     kubevirt.io.api.core.v1.VirtualMachineMemoryDumpRequest:
       properties:
@@ -12176,9 +12095,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/network.harvesterhci.io.v1beta1.ClusterNetworkStatus'
           default: {}
-      required:
-      - apiVersion
-      - kind
       type: object
     network.harvesterhci.io.v1beta1.ClusterNetworkList:
       example:
@@ -12204,9 +12120,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     network.harvesterhci.io.v1beta1.ClusterNetworkStatus:
@@ -12312,9 +12226,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/network.harvesterhci.io.v1beta1.NodeNetworkStatus'
           default: {}
-      required:
-      - apiVersion
-      - kind
       type: object
     network.harvesterhci.io.v1beta1.NodeNetworkList:
       example:
@@ -12340,9 +12251,7 @@ components:
           - $ref: '#/components/schemas/k8s.io.v1.ListMeta'
           default: {}
       required:
-      - apiVersion
       - items
-      - kind
       - metadata
       type: object
     network.harvesterhci.io.v1beta1.NodeNetworkSpec:

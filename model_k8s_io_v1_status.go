@@ -12,8 +12,6 @@ package harvester
 
 import (
 	"encoding/json"
-	"bytes"
-	"fmt"
 )
 
 // checks if the K8sIoV1Status type satisfies the MappedNullable interface at compile time
@@ -21,26 +19,22 @@ var _ MappedNullable = &K8sIoV1Status{}
 
 // K8sIoV1Status struct for K8sIoV1Status
 type K8sIoV1Status struct {
-	ApiVersion string `json:"apiVersion"`
+	ApiVersion *string `json:"apiVersion,omitempty"`
 	Code *int32 `json:"code,omitempty"`
 	Details *K8sIoV1StatusDetails `json:"details,omitempty"`
-	Kind string `json:"kind"`
+	Kind *string `json:"kind,omitempty"`
 	Message *string `json:"message,omitempty"`
 	Metadata *K8sIoV1ListMeta `json:"metadata,omitempty"`
 	Reason *string `json:"reason,omitempty"`
 	Status *string `json:"status,omitempty"`
 }
 
-type _K8sIoV1Status K8sIoV1Status
-
 // NewK8sIoV1Status instantiates a new K8sIoV1Status object
 // This constructor will assign default values to properties that have it defined,
 // and makes sure properties required by API are set, but the set of arguments
 // will change when the set of required properties is changed
-func NewK8sIoV1Status(apiVersion string, kind string) *K8sIoV1Status {
+func NewK8sIoV1Status() *K8sIoV1Status {
 	this := K8sIoV1Status{}
-	this.ApiVersion = apiVersion
-	this.Kind = kind
 	var metadata K8sIoV1ListMeta
 	this.Metadata = &metadata
 	return &this
@@ -56,28 +50,36 @@ func NewK8sIoV1StatusWithDefaults() *K8sIoV1Status {
 	return &this
 }
 
-// GetApiVersion returns the ApiVersion field value
+// GetApiVersion returns the ApiVersion field value if set, zero value otherwise.
 func (o *K8sIoV1Status) GetApiVersion() string {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		var ret string
 		return ret
 	}
-
-	return o.ApiVersion
+	return *o.ApiVersion
 }
 
-// GetApiVersionOk returns a tuple with the ApiVersion field value
+// GetApiVersionOk returns a tuple with the ApiVersion field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *K8sIoV1Status) GetApiVersionOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.ApiVersion) {
 		return nil, false
 	}
-	return &o.ApiVersion, true
+	return o.ApiVersion, true
 }
 
-// SetApiVersion sets field value
+// HasApiVersion returns a boolean if a field has been set.
+func (o *K8sIoV1Status) HasApiVersion() bool {
+	if o != nil && !IsNil(o.ApiVersion) {
+		return true
+	}
+
+	return false
+}
+
+// SetApiVersion gets a reference to the given string and assigns it to the ApiVersion field.
 func (o *K8sIoV1Status) SetApiVersion(v string) {
-	o.ApiVersion = v
+	o.ApiVersion = &v
 }
 
 // GetCode returns the Code field value if set, zero value otherwise.
@@ -144,28 +146,36 @@ func (o *K8sIoV1Status) SetDetails(v K8sIoV1StatusDetails) {
 	o.Details = &v
 }
 
-// GetKind returns the Kind field value
+// GetKind returns the Kind field value if set, zero value otherwise.
 func (o *K8sIoV1Status) GetKind() string {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		var ret string
 		return ret
 	}
-
-	return o.Kind
+	return *o.Kind
 }
 
-// GetKindOk returns a tuple with the Kind field value
+// GetKindOk returns a tuple with the Kind field value if set, nil otherwise
 // and a boolean to check if the value has been set.
 func (o *K8sIoV1Status) GetKindOk() (*string, bool) {
-	if o == nil {
+	if o == nil || IsNil(o.Kind) {
 		return nil, false
 	}
-	return &o.Kind, true
+	return o.Kind, true
 }
 
-// SetKind sets field value
+// HasKind returns a boolean if a field has been set.
+func (o *K8sIoV1Status) HasKind() bool {
+	if o != nil && !IsNil(o.Kind) {
+		return true
+	}
+
+	return false
+}
+
+// SetKind gets a reference to the given string and assigns it to the Kind field.
 func (o *K8sIoV1Status) SetKind(v string) {
-	o.Kind = v
+	o.Kind = &v
 }
 
 // GetMessage returns the Message field value if set, zero value otherwise.
@@ -306,14 +316,18 @@ func (o K8sIoV1Status) MarshalJSON() ([]byte, error) {
 
 func (o K8sIoV1Status) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	toSerialize["apiVersion"] = o.ApiVersion
+	if !IsNil(o.ApiVersion) {
+		toSerialize["apiVersion"] = o.ApiVersion
+	}
 	if !IsNil(o.Code) {
 		toSerialize["code"] = o.Code
 	}
 	if !IsNil(o.Details) {
 		toSerialize["details"] = o.Details
 	}
-	toSerialize["kind"] = o.Kind
+	if !IsNil(o.Kind) {
+		toSerialize["kind"] = o.Kind
+	}
 	if !IsNil(o.Message) {
 		toSerialize["message"] = o.Message
 	}
@@ -327,44 +341,6 @@ func (o K8sIoV1Status) ToMap() (map[string]interface{}, error) {
 		toSerialize["status"] = o.Status
 	}
 	return toSerialize, nil
-}
-
-func (o *K8sIoV1Status) UnmarshalJSON(data []byte) (err error) {
-	// This validates that all required properties are included in the JSON object
-	// by unmarshalling the object into a generic map with string keys and checking
-	// that every required field exists as a key in the generic map.
-	requiredProperties := []string{
-		"apiVersion",
-		"kind",
-	}
-
-	allProperties := make(map[string]interface{})
-
-	err = json.Unmarshal(data, &allProperties)
-
-	if err != nil {
-		return err;
-	}
-
-	for _, requiredProperty := range(requiredProperties) {
-		if _, exists := allProperties[requiredProperty]; !exists {
-			return fmt.Errorf("no value given for required property %v", requiredProperty)
-		}
-	}
-
-	varK8sIoV1Status := _K8sIoV1Status{}
-
-	decoder := json.NewDecoder(bytes.NewReader(data))
-	decoder.DisallowUnknownFields()
-	err = decoder.Decode(&varK8sIoV1Status)
-
-	if err != nil {
-		return err
-	}
-
-	*o = K8sIoV1Status(varK8sIoV1Status)
-
-	return err
 }
 
 type NullableK8sIoV1Status struct {
