@@ -156,7 +156,6 @@ type ApiDeleteNamespacedVirtualMachineRequest struct {
 	gracePeriodSeconds *int32
 	orphanDependents *bool
 	propagationPolicy *string
-	removedDisks *string
 }
 
 func (r ApiDeleteNamespacedVirtualMachineRequest) K8sIoV1DeleteOptions(k8sIoV1DeleteOptions K8sIoV1DeleteOptions) ApiDeleteNamespacedVirtualMachineRequest {
@@ -179,12 +178,6 @@ func (r ApiDeleteNamespacedVirtualMachineRequest) OrphanDependents(orphanDepende
 // Whether and how garbage collection will be performed. Either this field or OrphanDependents may be set, but not both. The default policy is decided by the existing finalizer set in the metadata.finalizers and the resource-specific default policy. Acceptable values are: &#39;Orphan&#39; - orphan the dependents; &#39;Background&#39; - allow the garbage collector to delete the dependents in the background; &#39;Foreground&#39; - a cascading policy that deletes all dependents in the foreground.
 func (r ApiDeleteNamespacedVirtualMachineRequest) PropagationPolicy(propagationPolicy string) ApiDeleteNamespacedVirtualMachineRequest {
 	r.propagationPolicy = &propagationPolicy
-	return r
-}
-
-// The disks that should be removed when deleting a virtual machine instance.
-func (r ApiDeleteNamespacedVirtualMachineRequest) RemovedDisks(removedDisks string) ApiDeleteNamespacedVirtualMachineRequest {
-	r.removedDisks = &removedDisks
 	return r
 }
 
@@ -245,9 +238,6 @@ func (a *VirtualMachinesAPIService) DeleteNamespacedVirtualMachineExecute(r ApiD
 	}
 	if r.propagationPolicy != nil {
 		parameterAddToHeaderOrQuery(localVarQueryParams, "propagationPolicy", r.propagationPolicy, "")
-	}
-	if r.removedDisks != nil {
-		parameterAddToHeaderOrQuery(localVarQueryParams, "removedDisks", r.removedDisks, "")
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{"application/json", "application/yaml"}
