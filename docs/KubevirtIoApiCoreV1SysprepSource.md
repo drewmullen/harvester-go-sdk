@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigMap** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) |  | [optional] 
-**Secret** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) |  | [optional] 
+**ConfigMap** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) | ConfigMap references a ConfigMap that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type. | [optional] 
+**Secret** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) | Secret references a k8s Secret that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type. | [optional] 
 
 ## Methods
 

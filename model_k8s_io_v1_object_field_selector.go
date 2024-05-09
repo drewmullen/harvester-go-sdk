@@ -19,9 +19,11 @@ import (
 // checks if the K8sIoV1ObjectFieldSelector type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1ObjectFieldSelector{}
 
-// K8sIoV1ObjectFieldSelector struct for K8sIoV1ObjectFieldSelector
+// K8sIoV1ObjectFieldSelector ObjectFieldSelector selects an APIVersioned field of an object.
 type K8sIoV1ObjectFieldSelector struct {
+	// Version of the schema the FieldPath is written in terms of, defaults to \"v1\".
 	ApiVersion *string `json:"apiVersion,omitempty"`
+	// Path of the field to select in the specified API version.
 	FieldPath string `json:"fieldPath"`
 }
 

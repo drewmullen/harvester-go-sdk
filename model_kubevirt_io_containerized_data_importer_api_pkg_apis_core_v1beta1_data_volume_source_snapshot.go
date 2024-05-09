@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot DataVolumeSourceSnapshot provides the parameters to create a Data Volume from an existing VolumeSnapshot
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot struct {
+	// The name of the source VolumeSnapshot
 	Name string `json:"name"`
+	// The namespace of the source VolumeSnapshot
 	Namespace string `json:"namespace"`
 }
 

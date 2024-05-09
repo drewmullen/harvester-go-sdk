@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EncryptedState** | Pointer to **bool** |  | [optional] 
+**EncryptedState** | Pointer to **bool** | SEV-ES is required. Defaults to false. | [optional] 
 
 ## Methods
 

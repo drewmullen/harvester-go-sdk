@@ -4,15 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**HotplugVolume** | Pointer to [**KubevirtIoApiCoreV1HotplugVolumeStatus**](KubevirtIoApiCoreV1HotplugVolumeStatus.md) |  | [optional] 
-**MemoryDumpVolume** | Pointer to [**KubevirtIoApiCoreV1DomainMemoryDumpInfo**](KubevirtIoApiCoreV1DomainMemoryDumpInfo.md) |  | [optional] 
-**Message** | Pointer to **string** |  | [optional] 
-**Name** | **string** |  | [default to ""]
-**PersistentVolumeClaimInfo** | Pointer to [**KubevirtIoApiCoreV1PersistentVolumeClaimInfo**](KubevirtIoApiCoreV1PersistentVolumeClaimInfo.md) |  | [optional] 
-**Phase** | Pointer to **string** |  | [optional] 
-**Reason** | Pointer to **string** |  | [optional] 
-**Size** | Pointer to **int64** |  | [optional] 
-**Target** | **string** |  | [default to ""]
+**ContainerDiskVolume** | Pointer to [**KubevirtIoApiCoreV1ContainerDiskInfo**](KubevirtIoApiCoreV1ContainerDiskInfo.md) | ContainerDiskVolume shows info about the containerdisk, if the volume is a containerdisk | [optional] 
+**HotplugVolume** | Pointer to [**KubevirtIoApiCoreV1HotplugVolumeStatus**](KubevirtIoApiCoreV1HotplugVolumeStatus.md) | If the volume is hotplug, this will contain the hotplug status. | [optional] 
+**MemoryDumpVolume** | Pointer to [**KubevirtIoApiCoreV1DomainMemoryDumpInfo**](KubevirtIoApiCoreV1DomainMemoryDumpInfo.md) | If the volume is memorydump volume, this will contain the memorydump info. | [optional] 
+**Message** | Pointer to **string** | Message is a detailed message about the current hotplug volume phase | [optional] 
+**Name** | **string** | Name is the name of the volume | [default to ""]
+**PersistentVolumeClaimInfo** | Pointer to [**KubevirtIoApiCoreV1PersistentVolumeClaimInfo**](KubevirtIoApiCoreV1PersistentVolumeClaimInfo.md) | PersistentVolumeClaimInfo is information about the PVC that handler requires during start flow | [optional] 
+**Phase** | Pointer to **string** | Phase is the phase | [optional] 
+**Reason** | Pointer to **string** | Reason is a brief description of why we are in the current hotplug volume phase | [optional] 
+**Size** | Pointer to **int64** | Represents the size of the volume | [optional] 
+**Target** | **string** | Target is the target name used when adding the volume to the VM, eg: vda | [default to ""]
 
 ## Methods
 
@@ -32,6 +33,31 @@ will change when the set of required properties is changed
 NewKubevirtIoApiCoreV1VolumeStatusWithDefaults instantiates a new KubevirtIoApiCoreV1VolumeStatus object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetContainerDiskVolume
+
+`func (o *KubevirtIoApiCoreV1VolumeStatus) GetContainerDiskVolume() KubevirtIoApiCoreV1ContainerDiskInfo`
+
+GetContainerDiskVolume returns the ContainerDiskVolume field if non-nil, zero value otherwise.
+
+### GetContainerDiskVolumeOk
+
+`func (o *KubevirtIoApiCoreV1VolumeStatus) GetContainerDiskVolumeOk() (*KubevirtIoApiCoreV1ContainerDiskInfo, bool)`
+
+GetContainerDiskVolumeOk returns a tuple with the ContainerDiskVolume field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetContainerDiskVolume
+
+`func (o *KubevirtIoApiCoreV1VolumeStatus) SetContainerDiskVolume(v KubevirtIoApiCoreV1ContainerDiskInfo)`
+
+SetContainerDiskVolume sets ContainerDiskVolume field to given value.
+
+### HasContainerDiskVolume
+
+`func (o *KubevirtIoApiCoreV1VolumeStatus) HasContainerDiskVolume() bool`
+
+HasContainerDiskVolume returns a boolean if a field has been set.
 
 ### GetHotplugVolume
 

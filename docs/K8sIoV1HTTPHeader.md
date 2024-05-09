@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [default to ""]
-**Value** | **string** |  | [default to ""]
+**Name** | **string** | The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header. | [default to ""]
+**Value** | **string** | The header field value | [default to ""]
 
 ## Methods
 

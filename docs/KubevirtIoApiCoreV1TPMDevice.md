@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Persistent** | Pointer to **bool** |  | [optional] 
+**Persistent** | Pointer to **bool** | Persistent indicates the state of the TPM device should be kept accross reboots Defaults to false | [optional] 
 
 ## Methods
 

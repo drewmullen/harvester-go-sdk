@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1SEVPolicy{}
 
 // KubevirtIoApiCoreV1SEVPolicy struct for KubevirtIoApiCoreV1SEVPolicy
 type KubevirtIoApiCoreV1SEVPolicy struct {
+	// SEV-ES is required. Defaults to false.
 	EncryptedState *bool `json:"encryptedState,omitempty"`
 }
 

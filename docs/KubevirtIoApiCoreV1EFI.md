@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Persistent** | Pointer to **bool** |  | [optional] 
-**SecureBoot** | Pointer to **bool** |  | [optional] 
+**Persistent** | Pointer to **bool** | If set to true, Persistent will persist the EFI NVRAM across reboots. Defaults to false | [optional] 
+**SecureBoot** | Pointer to **bool** | If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true | [optional] 
 
 ## Methods
 

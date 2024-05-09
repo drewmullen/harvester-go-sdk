@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1SSHPublicKeyAccessCredential type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1SSHPublicKeyAccessCredential{}
 
-// KubevirtIoApiCoreV1SSHPublicKeyAccessCredential struct for KubevirtIoApiCoreV1SSHPublicKeyAccessCredential
+// KubevirtIoApiCoreV1SSHPublicKeyAccessCredential SSHPublicKeyAccessCredential represents a source and propagation method for injecting ssh public keys into a vm guest
 type KubevirtIoApiCoreV1SSHPublicKeyAccessCredential struct {
+	// PropagationMethod represents how the public key is injected into the vm guest.
 	PropagationMethod KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod `json:"propagationMethod"`
+	// Source represents where the public keys are pulled from
 	Source KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource `json:"source"`
 }
 

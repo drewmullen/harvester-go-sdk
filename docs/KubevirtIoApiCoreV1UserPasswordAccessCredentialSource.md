@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Secret** | Pointer to [**KubevirtIoApiCoreV1AccessCredentialSecretSource**](KubevirtIoApiCoreV1AccessCredentialSecretSource.md) |  | [optional] 
+**Secret** | Pointer to [**KubevirtIoApiCoreV1AccessCredentialSecretSource**](KubevirtIoApiCoreV1AccessCredentialSecretSource.md) | Secret means that the access credential is pulled from a kubernetes secret | [optional] 
 
 ## Methods
 

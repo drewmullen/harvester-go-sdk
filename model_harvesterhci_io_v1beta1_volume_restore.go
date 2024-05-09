@@ -17,7 +17,7 @@ import (
 // checks if the HarvesterhciIoV1beta1VolumeRestore type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1VolumeRestore{}
 
-// HarvesterhciIoV1beta1VolumeRestore struct for HarvesterhciIoV1beta1VolumeRestore
+// HarvesterhciIoV1beta1VolumeRestore VolumeRestore contains the volume data need to restore a PVC
 type HarvesterhciIoV1beta1VolumeRestore struct {
 	LonghornEngineName *string `json:"longhornEngineName,omitempty"`
 	PersistentVolumeClaimSpec *HarvesterhciIoV1beta1PersistentVolumeClaimSourceSpec `json:"persistentVolumeClaimSpec,omitempty"`

@@ -17,7 +17,7 @@ import (
 // checks if the HarvesterhciIoV1beta1BackupTarget type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1BackupTarget{}
 
-// HarvesterhciIoV1beta1BackupTarget struct for HarvesterhciIoV1beta1BackupTarget
+// HarvesterhciIoV1beta1BackupTarget BackupTarget is where VM Backup stores
 type HarvesterhciIoV1beta1BackupTarget struct {
 	BucketName *string `json:"bucketName,omitempty"`
 	BucketRegion *string `json:"bucketRegion,omitempty"`

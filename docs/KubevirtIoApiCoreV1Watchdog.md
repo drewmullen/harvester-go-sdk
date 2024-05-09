@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**I6300esb** | Pointer to [**KubevirtIoApiCoreV1I6300ESBWatchdog**](KubevirtIoApiCoreV1I6300ESBWatchdog.md) |  | [optional] 
-**Name** | **string** |  | [default to ""]
+**I6300esb** | Pointer to [**KubevirtIoApiCoreV1I6300ESBWatchdog**](KubevirtIoApiCoreV1I6300ESBWatchdog.md) | i6300esb watchdog device. | [optional] 
+**Name** | **string** | Name of the watchdog. | [default to ""]
 
 ## Methods
 

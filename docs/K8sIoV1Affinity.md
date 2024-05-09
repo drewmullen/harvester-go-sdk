@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NodeAffinity** | Pointer to [**K8sIoV1NodeAffinity**](K8sIoV1NodeAffinity.md) |  | [optional] 
-**PodAffinity** | Pointer to [**K8sIoV1PodAffinity**](K8sIoV1PodAffinity.md) |  | [optional] 
-**PodAntiAffinity** | Pointer to [**K8sIoV1PodAntiAffinity**](K8sIoV1PodAntiAffinity.md) |  | [optional] 
+**NodeAffinity** | Pointer to [**K8sIoV1NodeAffinity**](K8sIoV1NodeAffinity.md) | Describes node affinity scheduling rules for the pod. | [optional] 
+**PodAffinity** | Pointer to [**K8sIoV1PodAffinity**](K8sIoV1PodAffinity.md) | Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)). | [optional] 
+**PodAntiAffinity** | Pointer to [**K8sIoV1PodAntiAffinity**](K8sIoV1PodAntiAffinity.md) | Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)). | [optional] 
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PropagationMethod** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod.md) |  | [default to {}]
-**Source** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource.md) |  | [default to {}]
+**PropagationMethod** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod.md) | PropagationMethod represents how the public key is injected into the vm guest. | [default to {}]
+**Source** | [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialSource.md) | Source represents where the public keys are pulled from | [default to {}]
 
 ## Methods
 

@@ -17,10 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1Clock type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Clock{}
 
-// KubevirtIoApiCoreV1Clock struct for KubevirtIoApiCoreV1Clock
+// KubevirtIoApiCoreV1Clock Represents the clock and timers of a vmi.
 type KubevirtIoApiCoreV1Clock struct {
+	// Timer specifies whih timers are attached to the vmi.
 	Timer *KubevirtIoApiCoreV1Timer `json:"timer,omitempty"`
+	// Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. 'America/New_York').
 	Timezone *string `json:"timezone,omitempty"`
+	// UTC sets the guest clock to UTC on each boot. If an offset is specified, guest changes to the clock will be kept during reboots and are not reset.
 	Utc *KubevirtIoApiCoreV1ClockOffsetUTC `json:"utc,omitempty"`
 }
 

@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1Bootloader type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Bootloader{}
 
-// KubevirtIoApiCoreV1Bootloader struct for KubevirtIoApiCoreV1Bootloader
+// KubevirtIoApiCoreV1Bootloader Represents the firmware blob used to assist in the domain creation process. Used for setting the QEMU BIOS file path for the libvirt domain.
 type KubevirtIoApiCoreV1Bootloader struct {
+	// If set (default), BIOS will be used.
 	Bios *KubevirtIoApiCoreV1BIOS `json:"bios,omitempty"`
+	// If set, EFI will be used instead of BIOS.
 	Efi *KubevirtIoApiCoreV1EFI `json:"efi,omitempty"`
 }
 

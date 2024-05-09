@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Kind** | **string** |  | [default to ""]
-**Name** | **string** |  | [default to ""]
-**Namespace** | Pointer to **string** |  | [optional] 
+**Kind** | **string** | The kind of the source reference, currently only \&quot;DataSource\&quot; is supported | [default to ""]
+**Name** | **string** | The name of the source reference | [default to ""]
+**Namespace** | Pointer to **string** | The namespace of the source reference, defaults to the DataVolume namespace | [optional] 
 
 ## Methods
 

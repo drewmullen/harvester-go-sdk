@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1UserPasswordAccessCredential type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1UserPasswordAccessCredential{}
 
-// KubevirtIoApiCoreV1UserPasswordAccessCredential struct for KubevirtIoApiCoreV1UserPasswordAccessCredential
+// KubevirtIoApiCoreV1UserPasswordAccessCredential UserPasswordAccessCredential represents a source and propagation method for injecting user passwords into a vm guest Only one of its members may be specified.
 type KubevirtIoApiCoreV1UserPasswordAccessCredential struct {
+	// propagationMethod represents how the user passwords are injected into the vm guest.
 	PropagationMethod KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod `json:"propagationMethod"`
+	// Source represents where the user passwords are pulled from
 	Source KubevirtIoApiCoreV1UserPasswordAccessCredentialSource `json:"source"`
 }
 

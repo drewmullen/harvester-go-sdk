@@ -17,10 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1ConfigMapVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1ConfigMapVolumeSource{}
 
-// KubevirtIoApiCoreV1ConfigMapVolumeSource struct for KubevirtIoApiCoreV1ConfigMapVolumeSource
+// KubevirtIoApiCoreV1ConfigMapVolumeSource ConfigMapVolumeSource adapts a ConfigMap into a volume. More info: https://kubernetes.io/docs/concepts/storage/volumes/#configmap
 type KubevirtIoApiCoreV1ConfigMapVolumeSource struct {
+	// Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 	Name *string `json:"name,omitempty"`
+	// Specify whether the ConfigMap or it's keys must be defined
 	Optional *bool `json:"optional,omitempty"`
+	// The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 	VolumeLabel *string `json:"volumeLabel,omitempty"`
 }
 

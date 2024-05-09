@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1KernelBoot type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1KernelBoot{}
 
-// KubevirtIoApiCoreV1KernelBoot struct for KubevirtIoApiCoreV1KernelBoot
+// KubevirtIoApiCoreV1KernelBoot Represents the firmware blob used to assist in the kernel boot process. Used for setting the kernel, initrd and command line arguments
 type KubevirtIoApiCoreV1KernelBoot struct {
+	// Container defines the container that containes kernel artifacts
 	Container *KubevirtIoApiCoreV1KernelBootContainer `json:"container,omitempty"`
+	// Arguments to be passed to the kernel at boot time
 	KernelArgs *string `json:"kernelArgs,omitempty"`
 }
 

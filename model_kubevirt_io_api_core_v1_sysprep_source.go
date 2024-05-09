@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1SysprepSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1SysprepSource{}
 
-// KubevirtIoApiCoreV1SysprepSource struct for KubevirtIoApiCoreV1SysprepSource
+// KubevirtIoApiCoreV1SysprepSource Represents a Sysprep volume source.
 type KubevirtIoApiCoreV1SysprepSource struct {
+	// ConfigMap references a ConfigMap that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type.
 	ConfigMap *K8sIoV1LocalObjectReference `json:"configMap,omitempty"`
+	// Secret references a k8s Secret that contains Sysprep answer file named autounattend.xml that should be attached as disk of CDROM type.
 	Secret *K8sIoV1LocalObjectReference `json:"secret,omitempty"`
 }
 

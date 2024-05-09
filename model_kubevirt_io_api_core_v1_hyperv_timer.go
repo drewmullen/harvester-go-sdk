@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1HypervTimer{}
 
 // KubevirtIoApiCoreV1HypervTimer struct for KubevirtIoApiCoreV1HypervTimer
 type KubevirtIoApiCoreV1HypervTimer struct {
+	// Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 	Present *bool `json:"present,omitempty"`
 }
 

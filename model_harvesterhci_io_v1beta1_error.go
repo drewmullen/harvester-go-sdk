@@ -17,9 +17,10 @@ import (
 // checks if the HarvesterhciIoV1beta1Error type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1Error{}
 
-// HarvesterhciIoV1beta1Error struct for HarvesterhciIoV1beta1Error
+// HarvesterhciIoV1beta1Error Error is the last error encountered during the snapshot/restore
 type HarvesterhciIoV1beta1Error struct {
 	Message *string `json:"message,omitempty"`
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	Time *string `json:"time,omitempty"`
 }
 

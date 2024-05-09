@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1I6300ESBWatchdog type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1I6300ESBWatchdog{}
 
-// KubevirtIoApiCoreV1I6300ESBWatchdog struct for KubevirtIoApiCoreV1I6300ESBWatchdog
+// KubevirtIoApiCoreV1I6300ESBWatchdog i6300esb watchdog device.
 type KubevirtIoApiCoreV1I6300ESBWatchdog struct {
+	// The action to take. Valid values are poweroff, reset, shutdown. Defaults to reset.
 	Action *string `json:"action,omitempty"`
 }
 

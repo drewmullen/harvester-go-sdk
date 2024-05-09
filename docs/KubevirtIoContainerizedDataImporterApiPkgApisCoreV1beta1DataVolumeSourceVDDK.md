@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BackingFile** | Pointer to **string** |  | [optional] 
-**InitImageURL** | Pointer to **string** |  | [optional] 
-**SecretRef** | Pointer to **string** |  | [optional] 
-**Thumbprint** | Pointer to **string** |  | [optional] 
-**Url** | Pointer to **string** |  | [optional] 
-**Uuid** | Pointer to **string** |  | [optional] 
+**BackingFile** | Pointer to **string** | BackingFile is the path to the virtual hard disk to migrate from vCenter/ESXi | [optional] 
+**InitImageURL** | Pointer to **string** | InitImageURL is an optional URL to an image containing an extracted VDDK library, overrides v2v-vmware config map | [optional] 
+**SecretRef** | Pointer to **string** | SecretRef provides a reference to a secret containing the username and password needed to access the vCenter or ESXi host | [optional] 
+**Thumbprint** | Pointer to **string** | Thumbprint is the certificate thumbprint of the vCenter or ESXi host | [optional] 
+**Url** | Pointer to **string** | URL is the URL of the vCenter or ESXi host with the VM to migrate | [optional] 
+**Uuid** | Pointer to **string** | UUID is the UUID of the virtual machine that the backing file is attached to in vCenter/ESXi | [optional] 
 
 ## Methods
 

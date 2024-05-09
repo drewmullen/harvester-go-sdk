@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | Pointer to **string** |  | [optional] 
-**FieldPath** | **string** |  | [default to ""]
+**ApiVersion** | Pointer to **string** | Version of the schema the FieldPath is written in terms of, defaults to \&quot;v1\&quot;. | [optional] 
+**FieldPath** | **string** | Path of the field to select in the specified API version. | [default to ""]
 
 ## Methods
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MaxSockets** | Pointer to **int64** |  | [optional] 
+**MaxSockets** | Pointer to **int64** | The maximum amount of sockets that can be hot-plugged to the Virtual Machine | [optional] 
 
 ## Methods
 

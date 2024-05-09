@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ConfigDrive** | Pointer to **map[string]interface{}** |  | [optional] 
-**NoCloud** | Pointer to **map[string]interface{}** |  | [optional] 
-**QemuGuestAgent** | Pointer to [**KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation**](KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation.md) |  | [optional] 
+**ConfigDrive** | Pointer to **map[string]interface{}** | ConfigDrivePropagation means that the ssh public keys are injected into the VM using metadata using the configDrive cloud-init provider | [optional] 
+**NoCloud** | Pointer to **map[string]interface{}** | NoCloudPropagation means that the ssh public keys are injected into the VM using metadata using the noCloud cloud-init provider | [optional] 
+**QemuGuestAgent** | Pointer to [**KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation**](KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation.md) | QemuGuestAgentAccessCredentailPropagation means ssh public keys are dynamically injected into the vm at runtime via the qemu guest agent. This feature requires the qemu guest agent to be running within the guest. | [optional] 
 
 ## Methods
 

@@ -17,8 +17,9 @@ import (
 // checks if the K8sIoV1LocalObjectReference type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1LocalObjectReference{}
 
-// K8sIoV1LocalObjectReference struct for K8sIoV1LocalObjectReference
+// K8sIoV1LocalObjectReference LocalObjectReference contains enough information to let you locate the referenced object inside the same namespace.
 type K8sIoV1LocalObjectReference struct {
+	// Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 	Name *string `json:"name,omitempty"`
 }
 

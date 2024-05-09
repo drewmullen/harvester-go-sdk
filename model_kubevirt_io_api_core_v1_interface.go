@@ -21,22 +21,39 @@ var _ MappedNullable = &KubevirtIoApiCoreV1Interface{}
 
 // KubevirtIoApiCoreV1Interface struct for KubevirtIoApiCoreV1Interface
 type KubevirtIoApiCoreV1Interface struct {
+	// If specified, the ACPI index is used to provide network interface device naming, that is stable across changes in PCI addresses assigned to the device. This value is required to be unique across all devices and be between 1 and (16*1024-1).
 	AcpiIndex *int32 `json:"acpiIndex,omitempty"`
+	// Binding specifies the binding plugin that will be used to connect the interface to the guest. It provides an alternative to InterfaceBindingMethod. version: 1alphav1
 	Binding *KubevirtIoApiCoreV1PluginBinding `json:"binding,omitempty"`
+	// BootOrder is an integer value > 0, used to determine ordering of boot devices. Lower values take precedence. Each interface or disk that has a boot order must have a unique value. Interfaces without a boot order are not tried.
 	BootOrder *int32 `json:"bootOrder,omitempty"`
+	// InterfaceBridge connects to a given network via a linux bridge.
 	Bridge map[string]interface{} `json:"bridge,omitempty"`
+	// If specified the network interface will pass additional DHCP options to the VMI
 	DhcpOptions *KubevirtIoApiCoreV1DHCPOptions `json:"dhcpOptions,omitempty"`
+	// Interface MAC address. For example: de:ad:00:00:be:af or DE-AD-00-00-BE-AF.
 	MacAddress *string `json:"macAddress,omitempty"`
+	// InterfaceMacvtap connects to a given network by extending the Kubernetes node's L2 networks via a macvtap interface.
 	Macvtap map[string]interface{} `json:"macvtap,omitempty"`
+	// InterfaceMasquerade connects to a given network using netfilter rules to nat the traffic.
 	Masquerade map[string]interface{} `json:"masquerade,omitempty"`
+	// Interface model. One of: e1000, e1000e, ne2k_pci, pcnet, rtl8139, virtio. Defaults to virtio.
 	Model *string `json:"model,omitempty"`
+	// Logical name of the interface as well as a reference to the associated networks. Must match the Name of a Network.
 	Name string `json:"name"`
+	// InterfacePasst connects to a given network.
 	Passt map[string]interface{} `json:"passt,omitempty"`
+	// If specified, the virtual network interface will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10
 	PciAddress *string `json:"pciAddress,omitempty"`
+	// List of ports to be forwarded to the virtual machine.
 	Ports []KubevirtIoApiCoreV1Port `json:"ports,omitempty"`
+	// InterfaceSlirp connects to a given network using QEMU user networking mode.
 	Slirp map[string]interface{} `json:"slirp,omitempty"`
+	// InterfaceSRIOV connects to a given network by passing-through an SR-IOV PCI device via vfio.
 	Sriov map[string]interface{} `json:"sriov,omitempty"`
+	// State represents the requested operational state of the interface. The (only) value supported is `absent`, expressing a request to remove the interface.
 	State *string `json:"state,omitempty"`
+	// If specified, the virtual network interface address and its tag will be provided to the guest via config drive
 	Tag *string `json:"tag,omitempty"`
 }
 

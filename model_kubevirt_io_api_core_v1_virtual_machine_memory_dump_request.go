@@ -19,14 +19,21 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest{}
 
-// KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest struct for KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest
+// KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest VirtualMachineMemoryDumpRequest represent the memory dump request phase and info
 type KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest struct {
+	// ClaimName is the name of the pvc that will contain the memory dump
 	ClaimName string `json:"claimName"`
+	// EndTimestamp represents the time the memory dump was completed
 	EndTimestamp *string `json:"endTimestamp,omitempty"`
+	// FileName represents the name of the output file
 	FileName *string `json:"fileName,omitempty"`
+	// Message is a detailed message about failure of the memory dump
 	Message *string `json:"message,omitempty"`
+	// Phase represents the memory dump phase
 	Phase string `json:"phase"`
+	// Remove represents request of dissociating the memory dump pvc
 	Remove *bool `json:"remove,omitempty"`
+	// StartTimestamp represents the time the memory dump started
 	StartTimestamp *string `json:"startTimestamp,omitempty"`
 }
 
@@ -39,11 +46,7 @@ type _KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest KubevirtIoApiCoreV1Virt
 func NewKubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest(claimName string, phase string) *KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest {
 	this := KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest{}
 	this.ClaimName = claimName
-	var endTimestamp string = ""
-	this.EndTimestamp = &endTimestamp
 	this.Phase = phase
-	var startTimestamp string = ""
-	this.StartTimestamp = &startTimestamp
 	return &this
 }
 
@@ -54,12 +57,8 @@ func NewKubevirtIoApiCoreV1VirtualMachineMemoryDumpRequestWithDefaults() *Kubevi
 	this := KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest{}
 	var claimName string = ""
 	this.ClaimName = claimName
-	var endTimestamp string = ""
-	this.EndTimestamp = &endTimestamp
 	var phase string = ""
 	this.Phase = phase
-	var startTimestamp string = ""
-	this.StartTimestamp = &startTimestamp
 	return &this
 }
 

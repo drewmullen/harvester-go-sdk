@@ -17,13 +17,19 @@ import (
 // checks if the KubevirtIoApiCoreV1CloudInitNoCloudSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1CloudInitNoCloudSource{}
 
-// KubevirtIoApiCoreV1CloudInitNoCloudSource struct for KubevirtIoApiCoreV1CloudInitNoCloudSource
+// KubevirtIoApiCoreV1CloudInitNoCloudSource Represents a cloud-init nocloud user data source. More info: http://cloudinit.readthedocs.io/en/latest/topics/datasources/nocloud.html
 type KubevirtIoApiCoreV1CloudInitNoCloudSource struct {
+	// NetworkData contains NoCloud inline cloud-init networkdata.
 	NetworkData *string `json:"networkData,omitempty"`
+	// NetworkDataBase64 contains NoCloud cloud-init networkdata as a base64 encoded string.
 	NetworkDataBase64 *string `json:"networkDataBase64,omitempty"`
+	// NetworkDataSecretRef references a k8s secret that contains NoCloud networkdata.
 	NetworkDataSecretRef *K8sIoV1LocalObjectReference `json:"networkDataSecretRef,omitempty"`
+	// UserDataSecretRef references a k8s secret that contains NoCloud userdata.
 	SecretRef *K8sIoV1LocalObjectReference `json:"secretRef,omitempty"`
+	// UserData contains NoCloud inline cloud-init userdata.
 	UserData *string `json:"userData,omitempty"`
+	// UserDataBase64 contains NoCloud cloud-init userdata as a base64 encoded string.
 	UserDataBase64 *string `json:"userDataBase64,omitempty"`
 }
 

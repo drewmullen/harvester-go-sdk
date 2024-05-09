@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Bus** | Pointer to **string** |  | [optional] 
-**Readonly** | Pointer to **bool** |  | [optional] 
-**Tray** | Pointer to **string** |  | [optional] 
+**Bus** | Pointer to **string** | Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi. | [optional] 
+**Readonly** | Pointer to **bool** | ReadOnly. Defaults to true. | [optional] 
+**Tray** | Pointer to **string** | Tray indicates if the tray of the device is open or closed. Allowed values are \&quot;open\&quot; and \&quot;closed\&quot;. Defaults to closed. | [optional] 
 
 ## Methods
 

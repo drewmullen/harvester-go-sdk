@@ -17,10 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1Memory type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Memory{}
 
-// KubevirtIoApiCoreV1Memory struct for KubevirtIoApiCoreV1Memory
+// KubevirtIoApiCoreV1Memory Memory allows specifying the VirtualMachineInstance memory features.
 type KubevirtIoApiCoreV1Memory struct {
+	// Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified.
 	Guest *string `json:"guest,omitempty"`
+	// Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory.
 	Hugepages *KubevirtIoApiCoreV1Hugepages `json:"hugepages,omitempty"`
+	// MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged.
 	MaxGuest *string `json:"maxGuest,omitempty"`
 }
 

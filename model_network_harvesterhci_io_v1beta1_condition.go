@@ -21,11 +21,17 @@ var _ MappedNullable = &NetworkHarvesterhciIoV1beta1Condition{}
 
 // NetworkHarvesterhciIoV1beta1Condition struct for NetworkHarvesterhciIoV1beta1Condition
 type NetworkHarvesterhciIoV1beta1Condition struct {
+	// Last time the condition transitioned from one status to another.
 	LastTransitionTime *string `json:"lastTransitionTime,omitempty"`
+	// The last time this condition was updated.
 	LastUpdateTime *string `json:"lastUpdateTime,omitempty"`
+	// Human-readable message indicating details about last transition
 	Message *string `json:"message,omitempty"`
+	// The reason for the condition's last transition.
 	Reason *string `json:"reason,omitempty"`
+	// Status of the condition, one of True, False, Unknown.
 	Status string `json:"status"`
+	// Type of the condition.
 	Type string `json:"type"`
 }
 

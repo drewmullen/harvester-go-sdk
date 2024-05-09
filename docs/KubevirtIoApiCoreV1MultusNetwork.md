@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Default** | Pointer to **bool** |  | [optional] 
-**NetworkName** | **string** |  | [default to ""]
+**Default** | Pointer to **bool** | Select the default network and add it to the multus-cni.io/default-network annotation. | [optional] 
+**NetworkName** | **string** | References to a NetworkAttachmentDefinition CRD object. Format: &lt;networkName&gt;, &lt;namespace&gt;/&lt;networkName&gt;. If namespace is not specified, VMI namespace is assumed. | [default to ""]
 
 ## Methods
 

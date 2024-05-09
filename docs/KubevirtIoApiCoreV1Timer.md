@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hpet** | Pointer to [**KubevirtIoApiCoreV1HPETTimer**](KubevirtIoApiCoreV1HPETTimer.md) |  | [optional] 
-**Hyperv** | Pointer to [**KubevirtIoApiCoreV1HypervTimer**](KubevirtIoApiCoreV1HypervTimer.md) |  | [optional] 
-**Kvm** | Pointer to [**KubevirtIoApiCoreV1KVMTimer**](KubevirtIoApiCoreV1KVMTimer.md) |  | [optional] 
-**Pit** | Pointer to [**KubevirtIoApiCoreV1PITTimer**](KubevirtIoApiCoreV1PITTimer.md) |  | [optional] 
-**Rtc** | Pointer to [**KubevirtIoApiCoreV1RTCTimer**](KubevirtIoApiCoreV1RTCTimer.md) |  | [optional] 
+**Hpet** | Pointer to [**KubevirtIoApiCoreV1HPETTimer**](KubevirtIoApiCoreV1HPETTimer.md) | HPET (High Precision Event Timer) - multiple timers with periodic interrupts. | [optional] 
+**Hyperv** | Pointer to [**KubevirtIoApiCoreV1HypervTimer**](KubevirtIoApiCoreV1HypervTimer.md) | Hyperv (Hypervclock) - lets guests read the host’s wall clock time (paravirtualized). For windows guests. | [optional] 
+**Kvm** | Pointer to [**KubevirtIoApiCoreV1KVMTimer**](KubevirtIoApiCoreV1KVMTimer.md) | KVM  (KVM clock) - lets guests read the host’s wall clock time (paravirtualized). For linux guests. | [optional] 
+**Pit** | Pointer to [**KubevirtIoApiCoreV1PITTimer**](KubevirtIoApiCoreV1PITTimer.md) | PIT (Programmable Interval Timer) - a timer with periodic interrupts. | [optional] 
+**Rtc** | Pointer to [**KubevirtIoApiCoreV1RTCTimer**](KubevirtIoApiCoreV1RTCTimer.md) | RTC (Real Time Clock) - a continuously running timer with periodic interrupts. | [optional] 
 
 ## Methods
 

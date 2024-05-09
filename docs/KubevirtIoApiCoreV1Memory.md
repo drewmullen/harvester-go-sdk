@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Guest** | Pointer to **string** |  | [optional] 
-**Hugepages** | Pointer to [**KubevirtIoApiCoreV1Hugepages**](KubevirtIoApiCoreV1Hugepages.md) |  | [optional] 
-**MaxGuest** | Pointer to **string** |  | [optional] 
+**Guest** | Pointer to **string** | Guest allows to specifying the amount of memory which is visible inside the Guest OS. The Guest must lie between Requests and Limits from the resources section. Defaults to the requested memory in the resources section if not specified. | [optional] 
+**Hugepages** | Pointer to [**KubevirtIoApiCoreV1Hugepages**](KubevirtIoApiCoreV1Hugepages.md) | Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory. | [optional] 
+**MaxGuest** | Pointer to **string** | MaxGuest allows to specify the maximum amount of memory which is visible inside the Guest OS. The delta between MaxGuest and Guest is the amount of memory that can be hot(un)plugged. | [optional] 
 
 ## Methods
 

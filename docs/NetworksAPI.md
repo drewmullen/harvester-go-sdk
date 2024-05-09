@@ -244,7 +244,7 @@ No authorization required
 
 ## DeleteNamespacedClusterNetwork
 
-> K8sIoV1Status DeleteNamespacedClusterNetwork(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> NetworkHarvesterhciIoV1beta1ClusterNetwork DeleteNamespacedClusterNetwork(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Cluster Network
 
@@ -277,7 +277,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.DeleteNamespacedClusterNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedClusterNetwork`: K8sIoV1Status
+	// response from `DeleteNamespacedClusterNetwork`: NetworkHarvesterhciIoV1beta1ClusterNetwork
 	fmt.Fprintf(os.Stdout, "Response from `NetworksAPI.DeleteNamespacedClusterNetwork`: %v\n", resp)
 }
 ```
@@ -307,7 +307,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**NetworkHarvesterhciIoV1beta1ClusterNetwork**](NetworkHarvesterhciIoV1beta1ClusterNetwork.md)
 
 ### Authorization
 
@@ -325,7 +325,7 @@ No authorization required
 
 ## DeleteNamespacedNetworkAttachmentDefinition
 
-> K8sIoV1Status DeleteNamespacedNetworkAttachmentDefinition(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sCniCncfIoV1NetworkAttachmentDefinition DeleteNamespacedNetworkAttachmentDefinition(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Network Attachment Definition
 
@@ -358,7 +358,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.DeleteNamespacedNetworkAttachmentDefinition``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedNetworkAttachmentDefinition`: K8sIoV1Status
+	// response from `DeleteNamespacedNetworkAttachmentDefinition`: K8sCniCncfIoV1NetworkAttachmentDefinition
 	fmt.Fprintf(os.Stdout, "Response from `NetworksAPI.DeleteNamespacedNetworkAttachmentDefinition`: %v\n", resp)
 }
 ```
@@ -388,7 +388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**K8sCniCncfIoV1NetworkAttachmentDefinition**](K8sCniCncfIoV1NetworkAttachmentDefinition.md)
 
 ### Authorization
 
@@ -406,7 +406,7 @@ No authorization required
 
 ## DeleteNamespacedNodeNetwork
 
-> K8sIoV1Status DeleteNamespacedNodeNetwork(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> NetworkHarvesterhciIoV1beta1NodeNetwork DeleteNamespacedNodeNetwork(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Node Network
 
@@ -439,7 +439,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.DeleteNamespacedNodeNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedNodeNetwork`: K8sIoV1Status
+	// response from `DeleteNamespacedNodeNetwork`: NetworkHarvesterhciIoV1beta1NodeNetwork
 	fmt.Fprintf(os.Stdout, "Response from `NetworksAPI.DeleteNamespacedNodeNetwork`: %v\n", resp)
 }
 ```
@@ -469,7 +469,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**NetworkHarvesterhciIoV1beta1NodeNetwork**](NetworkHarvesterhciIoV1beta1NodeNetwork.md)
 
 ### Authorization
 
@@ -487,7 +487,7 @@ No authorization required
 
 ## ListNamespacedClusterNetwork
 
-> NetworkHarvesterhciIoV1beta1ClusterNetworkList ListNamespacedClusterNetwork(ctx).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+> NetworkHarvesterhciIoV1beta1ClusterNetworkList ListNamespacedClusterNetwork(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
 List Namespaced Cluster Networks
 
@@ -506,6 +506,7 @@ import (
 )
 
 func main() {
+	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
 	continue_ := "continue__example" // string | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
 	fieldSelector := "fieldSelector_example" // string | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
 	includeUninitialized := true // bool | If true, partially initialized resources are included in the response. (optional)
@@ -517,7 +518,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ListNamespacedClusterNetwork(context.Background()).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+	resp, r, err := apiClient.NetworksAPI.ListNamespacedClusterNetwork(context.Background(), namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ListNamespacedClusterNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -530,6 +531,10 @@ func main() {
 ### Path Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**namespace** | **string** | Object name and auth scope, such as for teams and projects | 
 
 ### Other Parameters
 
@@ -538,6 +543,7 @@ Other parameters are passed through a pointer to a apiListNamespacedClusterNetwo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+
  **continue_** | **string** | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | 
  **fieldSelector** | **string** | A selector to restrict the list of returned objects by their fields. Defaults to everything. | 
  **includeUninitialized** | **bool** | If true, partially initialized resources are included in the response. | 
@@ -653,7 +659,7 @@ No authorization required
 
 ## ListNamespacedNodeNetwork
 
-> NetworkHarvesterhciIoV1beta1NodeNetworkList ListNamespacedNodeNetwork(ctx).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+> NetworkHarvesterhciIoV1beta1NodeNetworkList ListNamespacedNodeNetwork(ctx, namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 
 List Namespaced Node Networks
 
@@ -672,6 +678,7 @@ import (
 )
 
 func main() {
+	namespace := "namespace_example" // string | Object name and auth scope, such as for teams and projects
 	continue_ := "continue__example" // string | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. (optional)
 	fieldSelector := "fieldSelector_example" // string | A selector to restrict the list of returned objects by their fields. Defaults to everything. (optional)
 	includeUninitialized := true // bool | If true, partially initialized resources are included in the response. (optional)
@@ -683,7 +690,7 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.NetworksAPI.ListNamespacedNodeNetwork(context.Background()).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
+	resp, r, err := apiClient.NetworksAPI.ListNamespacedNodeNetwork(context.Background(), namespace).Continue_(continue_).FieldSelector(fieldSelector).IncludeUninitialized(includeUninitialized).LabelSelector(labelSelector).Limit(limit).ResourceVersion(resourceVersion).TimeoutSeconds(timeoutSeconds).Watch(watch).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `NetworksAPI.ListNamespacedNodeNetwork``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -696,6 +703,10 @@ func main() {
 ### Path Parameters
 
 
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+**namespace** | **string** | Object name and auth scope, such as for teams and projects | 
 
 ### Other Parameters
 
@@ -704,6 +715,7 @@ Other parameters are passed through a pointer to a apiListNamespacedNodeNetworkR
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+
  **continue_** | **string** | The continue option should be set when retrieving more results from the server. Since this value is server defined, clients may only use the continue value from a previous query result with identical query parameters (except for the value of continue) and the server may reject a continue value it does not recognize. If the specified continue value is no longer valid whether due to expiration (generally five to fifteen minutes) or a configuration change on the server the server will respond with a 410 ResourceExpired error indicating the client must restart their list without the continue field. This field is not supported when watch is true. Clients may start a watch from the last resourceVersion value returned by the server and not miss any modifications. | 
  **fieldSelector** | **string** | A selector to restrict the list of returned objects by their fields. Defaults to everything. | 
  **includeUninitialized** | **bool** | If true, partially initialized resources are included in the response. | 

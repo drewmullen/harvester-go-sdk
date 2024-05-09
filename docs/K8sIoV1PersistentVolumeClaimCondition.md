@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LastProbeTime** | Pointer to **string** |  | [optional] [default to "{}"]
-**LastTransitionTime** | Pointer to **string** |  | [optional] [default to "{}"]
-**Message** | Pointer to **string** |  | [optional] 
-**Reason** | Pointer to **string** |  | [optional] 
+**LastProbeTime** | Pointer to **string** | lastProbeTime is the time we probed the condition. | [optional] [default to "{}"]
+**LastTransitionTime** | Pointer to **string** | lastTransitionTime is the time the condition transitioned from one status to another. | [optional] [default to "{}"]
+**Message** | Pointer to **string** | message is the human-readable message indicating details about last transition. | [optional] 
+**Reason** | Pointer to **string** | reason is a unique, this should be a short, machine understandable string that gives the reason for condition&#39;s last transition. If it reports \&quot;ResizeStarted\&quot; that means the underlying persistent volume is being resized. | [optional] 
 **Status** | **string** |  | [default to ""]
 **Type** | **string** |  | [default to ""]
 

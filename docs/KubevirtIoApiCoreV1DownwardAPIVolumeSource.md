@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Fields** | Pointer to [**[]K8sIoV1DownwardAPIVolumeFile**](K8sIoV1DownwardAPIVolumeFile.md) |  | [optional] 
-**VolumeLabel** | Pointer to **string** |  | [optional] 
+**Fields** | Pointer to [**[]K8sIoV1DownwardAPIVolumeFile**](K8sIoV1DownwardAPIVolumeFile.md) | Fields is a list of downward API volume file | [optional] 
+**VolumeLabel** | Pointer to **string** | The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \&quot;cidata\&quot; (cloud-init), \&quot;config-2\&quot; (cloud-init) or \&quot;OEMDRV\&quot; (kickstart). | [optional] 
 
 ## Methods
 

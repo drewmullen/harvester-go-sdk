@@ -22,7 +22,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1GPU{}
 // KubevirtIoApiCoreV1GPU struct for KubevirtIoApiCoreV1GPU
 type KubevirtIoApiCoreV1GPU struct {
 	DeviceName string `json:"deviceName"`
+	// Name of the GPU device as exposed by a device plugin
 	Name string `json:"name"`
+	// If specified, the virtual network interface address and its tag will be provided to the guest via config drive
 	Tag *string `json:"tag,omitempty"`
 	VirtualGPUOptions *KubevirtIoApiCoreV1VGPUOptions `json:"virtualGPUOptions,omitempty"`
 }

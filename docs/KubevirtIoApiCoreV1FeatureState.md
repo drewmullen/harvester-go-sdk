@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** |  | [optional] 
+**Enabled** | Pointer to **bool** | Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. | [optional] 
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [default to ""]
-**Virtiofs** | **map[string]interface{}** |  | 
+**Name** | **string** | Name is the device name | [default to ""]
+**Virtiofs** | **map[string]interface{}** | Virtiofs is supported | 
 
 ## Methods
 

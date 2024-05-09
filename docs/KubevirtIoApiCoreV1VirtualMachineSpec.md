@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DataVolumeTemplates** | Pointer to [**[]KubevirtIoApiCoreV1DataVolumeTemplateSpec**](KubevirtIoApiCoreV1DataVolumeTemplateSpec.md) |  | [optional] 
-**Instancetype** | Pointer to [**KubevirtIoApiCoreV1InstancetypeMatcher**](KubevirtIoApiCoreV1InstancetypeMatcher.md) |  | [optional] 
-**LiveUpdateFeatures** | Pointer to [**KubevirtIoApiCoreV1LiveUpdateFeatures**](KubevirtIoApiCoreV1LiveUpdateFeatures.md) |  | [optional] 
-**Preference** | Pointer to [**KubevirtIoApiCoreV1PreferenceMatcher**](KubevirtIoApiCoreV1PreferenceMatcher.md) |  | [optional] 
-**RunStrategy** | Pointer to **string** |  | [optional] 
-**Running** | Pointer to **bool** |  | [optional] 
-**Template** | [**KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec**](KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec.md) |  | 
+**DataVolumeTemplates** | Pointer to [**[]KubevirtIoApiCoreV1DataVolumeTemplateSpec**](KubevirtIoApiCoreV1DataVolumeTemplateSpec.md) | dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine&#39;s life-cycle. | [optional] 
+**Instancetype** | Pointer to [**KubevirtIoApiCoreV1InstancetypeMatcher**](KubevirtIoApiCoreV1InstancetypeMatcher.md) | InstancetypeMatcher references a instancetype that is used to fill fields in Template | [optional] 
+**LiveUpdateFeatures** | Pointer to [**KubevirtIoApiCoreV1LiveUpdateFeatures**](KubevirtIoApiCoreV1LiveUpdateFeatures.md) | LiveUpdateFeatures references a configuration of hotpluggable resources | [optional] 
+**Preference** | Pointer to [**KubevirtIoApiCoreV1PreferenceMatcher**](KubevirtIoApiCoreV1PreferenceMatcher.md) | PreferenceMatcher references a set of preference that is used to fill fields in Template | [optional] 
+**RunStrategy** | Pointer to **string** | Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running | [optional] 
+**Running** | Pointer to **bool** | Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy | [optional] 
+**Template** | [**KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec**](KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec.md) | Template is the direct specification of VirtualMachineInstance | 
 
 ## Methods
 

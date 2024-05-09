@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertConfigMap** | Pointer to **string** |  | [optional] 
-**ImageStream** | Pointer to **string** |  | [optional] 
-**PullMethod** | Pointer to **string** |  | [optional] 
-**SecretRef** | Pointer to **string** |  | [optional] 
-**Url** | Pointer to **string** |  | [optional] 
+**CertConfigMap** | Pointer to **string** | CertConfigMap provides a reference to the Registry certs | [optional] 
+**ImageStream** | Pointer to **string** | ImageStream is the name of image stream for import | [optional] 
+**PullMethod** | Pointer to **string** | PullMethod can be either \&quot;pod\&quot; (default import), or \&quot;node\&quot; (node docker cache based import) | [optional] 
+**SecretRef** | Pointer to **string** | SecretRef provides the secret reference needed to access the Registry source | [optional] 
+**Url** | Pointer to **string** | URL is the url of the registry source (starting with the scheme: docker, oci-archive) | [optional] 
 
 ## Methods
 

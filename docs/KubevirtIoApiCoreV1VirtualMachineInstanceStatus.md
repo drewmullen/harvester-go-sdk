@@ -4,30 +4,31 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VSOCKCID** | Pointer to **int64** |  | [optional] 
-**ActivePods** | Pointer to **map[string]string** |  | [optional] 
-**Conditions** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceCondition**](KubevirtIoApiCoreV1VirtualMachineInstanceCondition.md) |  | [optional] 
-**CurrentCPUTopology** | Pointer to [**KubevirtIoApiCoreV1CPUTopology**](KubevirtIoApiCoreV1CPUTopology.md) |  | [optional] 
-**EvacuationNodeName** | Pointer to **string** |  | [optional] 
-**FsFreezeStatus** | Pointer to **string** |  | [optional] 
-**GuestOSInfo** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo**](KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo.md) |  | [optional] [default to {}]
-**Interfaces** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface**](KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface.md) |  | [optional] 
-**LauncherContainerImageVersion** | Pointer to **string** |  | [optional] 
-**Machine** | Pointer to [**KubevirtIoApiCoreV1Machine**](KubevirtIoApiCoreV1Machine.md) |  | [optional] 
-**Memory** | Pointer to [**KubevirtIoApiCoreV1MemoryStatus**](KubevirtIoApiCoreV1MemoryStatus.md) |  | [optional] 
-**MigrationMethod** | Pointer to **string** |  | [optional] 
-**MigrationState** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState.md) |  | [optional] 
-**MigrationTransport** | Pointer to **string** |  | [optional] 
-**NodeName** | Pointer to **string** |  | [optional] 
-**Phase** | Pointer to **string** |  | [optional] 
-**PhaseTransitionTimestamps** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstancePhaseTransitionTimestamp**](KubevirtIoApiCoreV1VirtualMachineInstancePhaseTransitionTimestamp.md) |  | [optional] 
-**QosClass** | Pointer to **string** |  | [optional] 
-**Reason** | Pointer to **string** |  | [optional] 
-**RuntimeUser** | Pointer to **int64** |  | [optional] [default to 0]
-**SelinuxContext** | Pointer to **string** |  | [optional] 
+**VSOCKCID** | Pointer to **int64** | VSOCKCID is used to track the allocated VSOCK CID in the VM. | [optional] 
+**ActivePods** | Pointer to **map[string]string** | ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration. | [optional] 
+**Conditions** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceCondition**](KubevirtIoApiCoreV1VirtualMachineInstanceCondition.md) | Conditions are specific points in VirtualMachineInstance&#39;s pod runtime. | [optional] 
+**CurrentCPUTopology** | Pointer to [**KubevirtIoApiCoreV1CPUTopology**](KubevirtIoApiCoreV1CPUTopology.md) | CurrentCPUTopology specifies the current CPU topology used by the VM workload. Current topology may differ from the desired topology in the spec while CPU hotplug takes place. | [optional] 
+**EvacuationNodeName** | Pointer to **string** | EvacuationNodeName is used to track the eviction process of a VMI. It stores the name of the node that we want to evacuate. It is meant to be used by KubeVirt core components only and can&#39;t be set or modified by users. | [optional] 
+**FsFreezeStatus** | Pointer to **string** | FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed | [optional] 
+**GuestOSInfo** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo**](KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo.md) | Guest OS Information | [optional] [default to {}]
+**Interfaces** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface**](KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface.md) | Interfaces represent the details of available network interfaces. | [optional] 
+**KernelBootStatus** | Pointer to [**KubevirtIoApiCoreV1KernelBootStatus**](KubevirtIoApiCoreV1KernelBootStatus.md) | KernelBootStatus contains info about the kernelBootContainer | [optional] 
+**LauncherContainerImageVersion** | Pointer to **string** | LauncherContainerImageVersion indicates what container image is currently active for the vmi. | [optional] 
+**Machine** | Pointer to [**KubevirtIoApiCoreV1Machine**](KubevirtIoApiCoreV1Machine.md) | Machine shows the final resulting qemu machine type. This can be different than the machine type selected in the spec, due to qemus machine type alias mechanism. | [optional] 
+**Memory** | Pointer to [**KubevirtIoApiCoreV1MemoryStatus**](KubevirtIoApiCoreV1MemoryStatus.md) | Memory shows various informations about the VirtualMachine memory. | [optional] 
+**MigrationMethod** | Pointer to **string** | Represents the method using which the vmi can be migrated: live migration or block migration | [optional] 
+**MigrationState** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState.md) | Represents the status of a live migration | [optional] 
+**MigrationTransport** | Pointer to **string** | This represents the migration transport | [optional] 
+**NodeName** | Pointer to **string** | NodeName is the name where the VirtualMachineInstance is currently running. | [optional] 
+**Phase** | Pointer to **string** | Phase is the status of the VirtualMachineInstance in kubernetes world. It is not the VirtualMachineInstance status, but partially correlates to it. | [optional] 
+**PhaseTransitionTimestamps** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstancePhaseTransitionTimestamp**](KubevirtIoApiCoreV1VirtualMachineInstancePhaseTransitionTimestamp.md) | PhaseTransitionTimestamp is the timestamp of when the last phase change occurred | [optional] 
+**QosClass** | Pointer to **string** | The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md | [optional] 
+**Reason** | Pointer to **string** | A brief CamelCase message indicating details about why the VMI is in this state. e.g. &#39;NodeUnresponsive&#39; | [optional] 
+**RuntimeUser** | Pointer to **int64** | RuntimeUser is used to determine what user will be used in launcher | [optional] [default to 0]
+**SelinuxContext** | Pointer to **string** | SELinuxContext is the actual SELinux context of the virt-launcher pod | [optional] 
 **TopologyHints** | Pointer to [**KubevirtIoApiCoreV1TopologyHints**](KubevirtIoApiCoreV1TopologyHints.md) |  | [optional] 
-**VirtualMachineRevisionName** | Pointer to **string** |  | [optional] 
-**VolumeStatus** | Pointer to [**[]KubevirtIoApiCoreV1VolumeStatus**](KubevirtIoApiCoreV1VolumeStatus.md) |  | [optional] 
+**VirtualMachineRevisionName** | Pointer to **string** | VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot | [optional] 
+**VolumeStatus** | Pointer to [**[]KubevirtIoApiCoreV1VolumeStatus**](KubevirtIoApiCoreV1VolumeStatus.md) | VolumeStatus contains the statuses of all the volumes | [optional] 
 
 ## Methods
 
@@ -247,6 +248,31 @@ SetInterfaces sets Interfaces field to given value.
 `func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) HasInterfaces() bool`
 
 HasInterfaces returns a boolean if a field has been set.
+
+### GetKernelBootStatus
+
+`func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) GetKernelBootStatus() KubevirtIoApiCoreV1KernelBootStatus`
+
+GetKernelBootStatus returns the KernelBootStatus field if non-nil, zero value otherwise.
+
+### GetKernelBootStatusOk
+
+`func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) GetKernelBootStatusOk() (*KubevirtIoApiCoreV1KernelBootStatus, bool)`
+
+GetKernelBootStatusOk returns a tuple with the KernelBootStatus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKernelBootStatus
+
+`func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) SetKernelBootStatus(v KubevirtIoApiCoreV1KernelBootStatus)`
+
+SetKernelBootStatus sets KernelBootStatus field to given value.
+
+### HasKernelBootStatus
+
+`func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) HasKernelBootStatus() bool`
+
+HasKernelBootStatus returns a boolean if a field has been set.
 
 ### GetLauncherContainerImageVersion
 

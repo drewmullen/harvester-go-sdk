@@ -19,10 +19,13 @@ import (
 // checks if the KubevirtIoApiCoreV1Port type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Port{}
 
-// KubevirtIoApiCoreV1Port struct for KubevirtIoApiCoreV1Port
+// KubevirtIoApiCoreV1Port Port represents a port to expose from the virtual machine. Default protocol TCP. The port field is mandatory
 type KubevirtIoApiCoreV1Port struct {
+	// If specified, this must be an IANA_SVC_NAME and unique within the pod. Each named port in a pod must have a unique name. Name for the port that can be referred to by services.
 	Name *string `json:"name,omitempty"`
+	// Number of port to expose for the virtual machine. This must be a valid port number, 0 < x < 65536.
 	Port int32 `json:"port"`
+	// Protocol for port. Must be UDP or TCP. Defaults to \"TCP\".
 	Protocol *string `json:"protocol,omitempty"`
 }
 

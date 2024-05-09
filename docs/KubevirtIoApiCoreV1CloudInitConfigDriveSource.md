@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NetworkData** | Pointer to **string** |  | [optional] 
-**NetworkDataBase64** | Pointer to **string** |  | [optional] 
-**NetworkDataSecretRef** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) |  | [optional] 
-**SecretRef** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) |  | [optional] 
-**UserData** | Pointer to **string** |  | [optional] 
-**UserDataBase64** | Pointer to **string** |  | [optional] 
+**NetworkData** | Pointer to **string** | NetworkData contains config drive inline cloud-init networkdata. | [optional] 
+**NetworkDataBase64** | Pointer to **string** | NetworkDataBase64 contains config drive cloud-init networkdata as a base64 encoded string. | [optional] 
+**NetworkDataSecretRef** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) | NetworkDataSecretRef references a k8s secret that contains config drive networkdata. | [optional] 
+**SecretRef** | Pointer to [**K8sIoV1LocalObjectReference**](K8sIoV1LocalObjectReference.md) | UserDataSecretRef references a k8s secret that contains config drive userdata. | [optional] 
+**UserData** | Pointer to **string** | UserData contains config drive inline cloud-init userdata. | [optional] 
+**UserDataBase64** | Pointer to **string** | UserDataBase64 contains config drive cloud-init userdata as a base64 encoded string. | [optional] 
 
 ## Methods
 

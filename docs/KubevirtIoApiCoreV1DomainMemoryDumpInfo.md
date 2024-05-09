@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimName** | Pointer to **string** |  | [optional] 
-**EndTimestamp** | Pointer to **string** |  | [optional] [default to ""]
-**StartTimestamp** | Pointer to **string** |  | [optional] [default to ""]
-**TargetFileName** | Pointer to **string** |  | [optional] 
+**ClaimName** | Pointer to **string** | ClaimName is the name of the pvc the memory was dumped to | [optional] 
+**EndTimestamp** | Pointer to **string** | EndTimestamp is the time when the memory dump completed | [optional] 
+**StartTimestamp** | Pointer to **string** | StartTimestamp is the time when the memory dump started | [optional] 
+**TargetFileName** | Pointer to **string** | TargetFileName is the name of the memory dump output | [optional] 
 
 ## Methods
 

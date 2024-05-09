@@ -17,11 +17,15 @@ import (
 // checks if the KubevirtIoApiCoreV1DHCPOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1DHCPOptions{}
 
-// KubevirtIoApiCoreV1DHCPOptions struct for KubevirtIoApiCoreV1DHCPOptions
+// KubevirtIoApiCoreV1DHCPOptions Extra DHCP options to use in the interface.
 type KubevirtIoApiCoreV1DHCPOptions struct {
+	// If specified will pass option 67 to interface's DHCP server
 	BootFileName *string `json:"bootFileName,omitempty"`
+	// If specified will pass the configured NTP server to the VM via DHCP option 042.
 	NtpServers []string `json:"ntpServers,omitempty"`
+	// If specified will pass extra DHCP options for private use, range: 224-254
 	PrivateOptions []KubevirtIoApiCoreV1DHCPPrivateOptions `json:"privateOptions,omitempty"`
+	// If specified will pass option 66 to interface's DHCP server
 	TftpServerName *string `json:"tftpServerName,omitempty"`
 }
 

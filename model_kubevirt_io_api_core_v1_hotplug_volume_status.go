@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1HotplugVolumeStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1HotplugVolumeStatus{}
 
-// KubevirtIoApiCoreV1HotplugVolumeStatus struct for KubevirtIoApiCoreV1HotplugVolumeStatus
+// KubevirtIoApiCoreV1HotplugVolumeStatus HotplugVolumeStatus represents the hotplug status of the volume
 type KubevirtIoApiCoreV1HotplugVolumeStatus struct {
+	// AttachPodName is the name of the pod used to attach the volume to the node.
 	AttachPodName *string `json:"attachPodName,omitempty"`
+	// AttachPodUID is the UID of the pod used to attach the volume to the node.
 	AttachPodUID *string `json:"attachPodUID,omitempty"`
 }
 

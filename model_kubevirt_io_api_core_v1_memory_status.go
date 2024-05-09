@@ -19,8 +19,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1MemoryStatus{}
 
 // KubevirtIoApiCoreV1MemoryStatus struct for KubevirtIoApiCoreV1MemoryStatus
 type KubevirtIoApiCoreV1MemoryStatus struct {
+	// GuestAtBoot specifies with how much memory the VirtualMachine intiallly booted with.
 	GuestAtBoot *string `json:"guestAtBoot,omitempty"`
+	// GuestCurrent specifies how much memory is currently available for the VirtualMachine.
 	GuestCurrent *string `json:"guestCurrent,omitempty"`
+	// GuestRequested specifies how much memory was requested (hotplug) for the VirtualMachine.
 	GuestRequested *string `json:"guestRequested,omitempty"`
 }
 

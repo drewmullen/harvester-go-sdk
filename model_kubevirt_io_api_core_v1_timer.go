@@ -17,12 +17,17 @@ import (
 // checks if the KubevirtIoApiCoreV1Timer type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Timer{}
 
-// KubevirtIoApiCoreV1Timer struct for KubevirtIoApiCoreV1Timer
+// KubevirtIoApiCoreV1Timer Represents all available timers in a vmi.
 type KubevirtIoApiCoreV1Timer struct {
+	// HPET (High Precision Event Timer) - multiple timers with periodic interrupts.
 	Hpet *KubevirtIoApiCoreV1HPETTimer `json:"hpet,omitempty"`
+	// Hyperv (Hypervclock) - lets guests read the host’s wall clock time (paravirtualized). For windows guests.
 	Hyperv *KubevirtIoApiCoreV1HypervTimer `json:"hyperv,omitempty"`
+	// KVM  (KVM clock) - lets guests read the host’s wall clock time (paravirtualized). For linux guests.
 	Kvm *KubevirtIoApiCoreV1KVMTimer `json:"kvm,omitempty"`
+	// PIT (Programmable Interval Timer) - a timer with periodic interrupts.
 	Pit *KubevirtIoApiCoreV1PITTimer `json:"pit,omitempty"`
+	// RTC (Real Time Clock) - a continuously running timer with periodic interrupts.
 	Rtc *KubevirtIoApiCoreV1RTCTimer `json:"rtc,omitempty"`
 }
 

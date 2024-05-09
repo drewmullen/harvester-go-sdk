@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BootFileName** | Pointer to **string** |  | [optional] 
-**NtpServers** | Pointer to **[]string** |  | [optional] 
-**PrivateOptions** | Pointer to [**[]KubevirtIoApiCoreV1DHCPPrivateOptions**](KubevirtIoApiCoreV1DHCPPrivateOptions.md) |  | [optional] 
-**TftpServerName** | Pointer to **string** |  | [optional] 
+**BootFileName** | Pointer to **string** | If specified will pass option 67 to interface&#39;s DHCP server | [optional] 
+**NtpServers** | Pointer to **[]string** | If specified will pass the configured NTP server to the VM via DHCP option 042. | [optional] 
+**PrivateOptions** | Pointer to [**[]KubevirtIoApiCoreV1DHCPPrivateOptions**](KubevirtIoApiCoreV1DHCPPrivateOptions.md) | If specified will pass extra DHCP options for private use, range: 224-254 | [optional] 
+**TftpServerName** | Pointer to **string** | If specified will pass option 66 to interface&#39;s DHCP server | [optional] 
 
 ## Methods
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertConfigMap** | Pointer to **string** |  | [optional] 
-**SecretRef** | Pointer to **string** |  | [optional] 
-**Url** | **string** |  | [default to ""]
+**CertConfigMap** | Pointer to **string** | CertConfigMap is a configmap reference, containing a Certificate Authority(CA) public key, and a base64 encoded pem certificate | [optional] 
+**SecretRef** | Pointer to **string** | SecretRef provides the secret reference needed to access the S3 source | [optional] 
+**Url** | **string** | URL is the url of the S3 source | [default to ""]
 
 ## Methods
 

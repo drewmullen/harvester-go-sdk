@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1MultusNetwork type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1MultusNetwork{}
 
-// KubevirtIoApiCoreV1MultusNetwork struct for KubevirtIoApiCoreV1MultusNetwork
+// KubevirtIoApiCoreV1MultusNetwork Represents the multus cni network.
 type KubevirtIoApiCoreV1MultusNetwork struct {
+	// Select the default network and add it to the multus-cni.io/default-network annotation.
 	Default *bool `json:"default,omitempty"`
+	// References to a NetworkAttachmentDefinition CRD object. Format: <networkName>, <namespace>/<networkName>. If namespace is not specified, VMI namespace is assumed.
 	NetworkName string `json:"networkName"`
 }
 

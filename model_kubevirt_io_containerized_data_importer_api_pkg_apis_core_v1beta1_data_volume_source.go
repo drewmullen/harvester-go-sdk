@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource DataVolumeSource represents the source for our Data Volume, this can be HTTP, Imageio, S3, GCS, Registry or an existing PVC
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource struct {
+	// DataVolumeBlankImage provides the parameters to create a new raw blank image for the PVC
 	Blank map[string]interface{} `json:"blank,omitempty"`
 	Gcs *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS `json:"gcs,omitempty"`
 	Http *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceHTTP `json:"http,omitempty"`
@@ -27,6 +28,7 @@ type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource st
 	Registry *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry `json:"registry,omitempty"`
 	S3 *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3 `json:"s3,omitempty"`
 	Snapshot *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot `json:"snapshot,omitempty"`
+	// DataVolumeSourceUpload provides the parameters to create a Data Volume by uploading the source
 	Upload map[string]interface{} `json:"upload,omitempty"`
 	Vddk *KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK `json:"vddk,omitempty"`
 }

@@ -19,8 +19,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1CDRomTarget{}
 
 // KubevirtIoApiCoreV1CDRomTarget struct for KubevirtIoApiCoreV1CDRomTarget
 type KubevirtIoApiCoreV1CDRomTarget struct {
+	// Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi.
 	Bus *string `json:"bus,omitempty"`
+	// ReadOnly. Defaults to true.
 	Readonly *bool `json:"readonly,omitempty"`
+	// Tray indicates if the tray of the device is open or closed. Allowed values are \"open\" and \"closed\". Defaults to closed.
 	Tray *string `json:"tray,omitempty"`
 }
 

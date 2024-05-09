@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [default to ""]
-**Namespace** | **string** |  | [default to ""]
+**Name** | **string** | The name of the source PVC | [default to ""]
+**Namespace** | **string** | The namespace of the source PVC | [default to ""]
 
 ## Methods
 

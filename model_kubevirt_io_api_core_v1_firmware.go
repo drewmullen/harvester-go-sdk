@@ -19,9 +19,13 @@ var _ MappedNullable = &KubevirtIoApiCoreV1Firmware{}
 
 // KubevirtIoApiCoreV1Firmware struct for KubevirtIoApiCoreV1Firmware
 type KubevirtIoApiCoreV1Firmware struct {
+	// Settings to control the bootloader that is used.
 	Bootloader *KubevirtIoApiCoreV1Bootloader `json:"bootloader,omitempty"`
+	// Settings to set the kernel for booting.
 	KernelBoot *KubevirtIoApiCoreV1KernelBoot `json:"kernelBoot,omitempty"`
+	// The system-serial-number in SMBIOS
 	Serial *string `json:"serial,omitempty"`
+	// UUID reported by the vmi bios. Defaults to a random generated uid.
 	Uuid *string `json:"uuid,omitempty"`
 }
 

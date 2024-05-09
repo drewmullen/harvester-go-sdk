@@ -19,9 +19,10 @@ import (
 // checks if the KubevirtIoApiCoreV1Network type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Network{}
 
-// KubevirtIoApiCoreV1Network struct for KubevirtIoApiCoreV1Network
+// KubevirtIoApiCoreV1Network Network represents a network type and a resource that should be connected to the vm.
 type KubevirtIoApiCoreV1Network struct {
 	Multus *KubevirtIoApiCoreV1MultusNetwork `json:"multus,omitempty"`
+	// Network name. Must be a DNS_LABEL and unique within the vm. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
 	Name string `json:"name"`
 	Pod *KubevirtIoApiCoreV1PodNetwork `json:"pod,omitempty"`
 }

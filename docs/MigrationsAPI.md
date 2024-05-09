@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedVirtualMachineInstanceMigration
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineInstanceMigration(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> KubevirtIoApiCoreV1VirtualMachineInstanceMigration DeleteNamespacedVirtualMachineInstanceMigration(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Virtual Machine Instance Migration
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `MigrationsAPI.DeleteNamespacedVirtualMachineInstanceMigration``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedVirtualMachineInstanceMigration`: K8sIoV1Status
+	// response from `DeleteNamespacedVirtualMachineInstanceMigration`: KubevirtIoApiCoreV1VirtualMachineInstanceMigration
 	fmt.Fprintf(os.Stdout, "Response from `MigrationsAPI.DeleteNamespacedVirtualMachineInstanceMigration`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**KubevirtIoApiCoreV1VirtualMachineInstanceMigration**](KubevirtIoApiCoreV1VirtualMachineInstanceMigration.md)
 
 ### Authorization
 

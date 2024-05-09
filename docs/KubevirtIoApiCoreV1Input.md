@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Bus** | Pointer to **string** |  | [optional] 
-**Name** | **string** |  | [default to ""]
-**Type** | **string** |  | [default to ""]
+**Bus** | Pointer to **string** | Bus indicates the bus of input device to emulate. Supported values: virtio, usb. | [optional] 
+**Name** | **string** | Name is the device name | [default to ""]
+**Type** | **string** | Type indicated the type of input device. Supported values: tablet. | [default to ""]
 
 ## Methods
 

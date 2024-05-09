@@ -19,11 +19,15 @@ import (
 // checks if the K8sIoV1PersistentVolumeClaimCondition type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1PersistentVolumeClaimCondition{}
 
-// K8sIoV1PersistentVolumeClaimCondition struct for K8sIoV1PersistentVolumeClaimCondition
+// K8sIoV1PersistentVolumeClaimCondition PersistentVolumeClaimCondition contails details about state of pvc
 type K8sIoV1PersistentVolumeClaimCondition struct {
+	// lastProbeTime is the time we probed the condition.
 	LastProbeTime *string `json:"lastProbeTime,omitempty"`
+	// lastTransitionTime is the time the condition transitioned from one status to another.
 	LastTransitionTime *string `json:"lastTransitionTime,omitempty"`
+	// message is the human-readable message indicating details about last transition.
 	Message *string `json:"message,omitempty"`
+	// reason is a unique, this should be a short, machine understandable string that gives the reason for condition's last transition. If it reports \"ResizeStarted\" that means the underlying persistent volume is being resized.
 	Reason *string `json:"reason,omitempty"`
 	Status string `json:"status"`
 	Type string `json:"type"`

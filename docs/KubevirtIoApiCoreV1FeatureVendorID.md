@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** |  | [optional] 
-**Vendorid** | Pointer to **string** |  | [optional] 
+**Enabled** | Pointer to **bool** | Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true. | [optional] 
+**Vendorid** | Pointer to **string** | VendorID sets the hypervisor vendor id, visible to the vmi. String up to twelve characters. | [optional] 
 
 ## Methods
 

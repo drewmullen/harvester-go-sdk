@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Current** | **string** |  | [default to ""]
-**Previous** | **string** |  | [default to ""]
+**Current** | **string** | Current is the identifier of the snapshot created for this checkpoint. | [default to ""]
+**Previous** | **string** | Previous is the identifier of the snapshot from the previous checkpoint. | [default to ""]
 
 ## Methods
 

@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1TPMDevice{}
 
 // KubevirtIoApiCoreV1TPMDevice struct for KubevirtIoApiCoreV1TPMDevice
 type KubevirtIoApiCoreV1TPMDevice struct {
+	// Persistent indicates the state of the TPM device should be kept accross reboots Defaults to false
 	Persistent *bool `json:"persistent,omitempty"`
 }
 

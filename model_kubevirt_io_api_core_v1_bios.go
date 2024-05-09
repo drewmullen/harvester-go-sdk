@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1BIOS type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1BIOS{}
 
-// KubevirtIoApiCoreV1BIOS struct for KubevirtIoApiCoreV1BIOS
+// KubevirtIoApiCoreV1BIOS If set (default), BIOS will be used.
 type KubevirtIoApiCoreV1BIOS struct {
+	// If set, the BIOS output will be transmitted over serial
 	UseSerial *bool `json:"useSerial,omitempty"`
 }
 

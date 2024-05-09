@@ -4,16 +4,16 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Cores** | Pointer to **int64** |  | [optional] 
-**DedicatedCpuPlacement** | Pointer to **bool** |  | [optional] 
-**Features** | Pointer to [**[]KubevirtIoApiCoreV1CPUFeature**](KubevirtIoApiCoreV1CPUFeature.md) |  | [optional] 
-**IsolateEmulatorThread** | Pointer to **bool** |  | [optional] 
-**MaxSockets** | Pointer to **int64** |  | [optional] 
-**Model** | Pointer to **string** |  | [optional] 
-**Numa** | Pointer to [**KubevirtIoApiCoreV1NUMA**](KubevirtIoApiCoreV1NUMA.md) |  | [optional] 
-**Realtime** | Pointer to [**KubevirtIoApiCoreV1Realtime**](KubevirtIoApiCoreV1Realtime.md) |  | [optional] 
-**Sockets** | Pointer to **int64** |  | [optional] 
-**Threads** | Pointer to **int64** |  | [optional] 
+**Cores** | Pointer to **int64** | Cores specifies the number of cores inside the vmi. Must be a value greater or equal 1. | [optional] 
+**DedicatedCpuPlacement** | Pointer to **bool** | DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it. | [optional] 
+**Features** | Pointer to [**[]KubevirtIoApiCoreV1CPUFeature**](KubevirtIoApiCoreV1CPUFeature.md) | Features specifies the CPU features list inside the VMI. | [optional] 
+**IsolateEmulatorThread** | Pointer to **bool** | IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it. | [optional] 
+**MaxSockets** | Pointer to **int64** | MaxSockets specifies the maximum amount of sockets that can be hotplugged | [optional] 
+**Model** | Pointer to **string** | Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/tree/master/src/cpu_map. It is possible to specify special cases like \&quot;host-passthrough\&quot; to get the same CPU as the node and \&quot;host-model\&quot; to get CPU closest to the node one. Defaults to host-model. | [optional] 
+**Numa** | Pointer to [**KubevirtIoApiCoreV1NUMA**](KubevirtIoApiCoreV1NUMA.md) | NUMA allows specifying settings for the guest NUMA topology | [optional] 
+**Realtime** | Pointer to [**KubevirtIoApiCoreV1Realtime**](KubevirtIoApiCoreV1Realtime.md) | Realtime instructs the virt-launcher to tune the VMI for lower latency, optional for real time workloads | [optional] 
+**Sockets** | Pointer to **int64** | Sockets specifies the number of sockets inside the vmi. Must be a value greater or equal 1. | [optional] 
+**Threads** | Pointer to **int64** | Threads specifies the number of threads inside the vmi. Must be a value greater or equal 1. | [optional] 
 
 ## Methods
 

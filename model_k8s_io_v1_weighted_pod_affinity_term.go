@@ -19,9 +19,11 @@ import (
 // checks if the K8sIoV1WeightedPodAffinityTerm type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1WeightedPodAffinityTerm{}
 
-// K8sIoV1WeightedPodAffinityTerm struct for K8sIoV1WeightedPodAffinityTerm
+// K8sIoV1WeightedPodAffinityTerm The weights of all of the matched WeightedPodAffinityTerm fields are added per-node to find the most preferred node(s)
 type K8sIoV1WeightedPodAffinityTerm struct {
+	// Required. A pod affinity term, associated with the corresponding weight.
 	PodAffinityTerm K8sIoV1PodAffinityTerm `json:"podAffinityTerm"`
+	// weight associated with matching the corresponding podAffinityTerm, in the range 1-100.
 	Weight int32 `json:"weight"`
 }
 

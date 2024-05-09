@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Capacity** | **string** |  | [default to "{}"]
+**Capacity** | **string** | Capacity of the sparse disk. | [default to "{}"]
 
 ## Methods
 

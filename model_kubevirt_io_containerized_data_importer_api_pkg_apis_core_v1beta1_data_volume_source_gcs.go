@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS DataVolumeSourceGCS provides the parameters to create a Data Volume from an GCS source
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS struct {
+	// SecretRef provides the secret reference needed to access the GCS source
 	SecretRef *string `json:"secretRef,omitempty"`
+	// URL is the url of the GCS source
 	Url string `json:"url"`
 }
 

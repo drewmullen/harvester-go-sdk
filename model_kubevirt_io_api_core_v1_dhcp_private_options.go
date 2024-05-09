@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1DHCPPrivateOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1DHCPPrivateOptions{}
 
-// KubevirtIoApiCoreV1DHCPPrivateOptions struct for KubevirtIoApiCoreV1DHCPPrivateOptions
+// KubevirtIoApiCoreV1DHCPPrivateOptions DHCPExtraOptions defines Extra DHCP options for a VM.
 type KubevirtIoApiCoreV1DHCPPrivateOptions struct {
+	// Option is an Integer value from 224-254 Required.
 	Option int32 `json:"option"`
+	// Value is a String value for the Option provided Required.
 	Value string `json:"value"`
 }
 

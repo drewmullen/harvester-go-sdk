@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Exec** | Pointer to [**K8sIoV1ExecAction**](K8sIoV1ExecAction.md) |  | [optional] 
-**FailureThreshold** | Pointer to **int32** |  | [optional] 
-**GuestAgentPing** | Pointer to **map[string]interface{}** |  | [optional] 
-**HttpGet** | Pointer to [**K8sIoV1HTTPGetAction**](K8sIoV1HTTPGetAction.md) |  | [optional] 
-**InitialDelaySeconds** | Pointer to **int32** |  | [optional] 
-**PeriodSeconds** | Pointer to **int32** |  | [optional] 
-**SuccessThreshold** | Pointer to **int32** |  | [optional] 
-**TcpSocket** | Pointer to [**K8sIoV1TCPSocketAction**](K8sIoV1TCPSocketAction.md) |  | [optional] 
-**TimeoutSeconds** | Pointer to **int32** |  | [optional] 
+**Exec** | Pointer to [**K8sIoV1ExecAction**](K8sIoV1ExecAction.md) | One and only one of the following should be specified. Exec specifies the action to take, it will be executed on the guest through the qemu-guest-agent. If the guest agent is not available, this probe will fail. | [optional] 
+**FailureThreshold** | Pointer to **int32** | Minimum consecutive failures for the probe to be considered failed after having succeeded. Defaults to 3. Minimum value is 1. | [optional] 
+**GuestAgentPing** | Pointer to **map[string]interface{}** | GuestAgentPing contacts the qemu-guest-agent for availability checks. | [optional] 
+**HttpGet** | Pointer to [**K8sIoV1HTTPGetAction**](K8sIoV1HTTPGetAction.md) | HTTPGet specifies the http request to perform. | [optional] 
+**InitialDelaySeconds** | Pointer to **int32** | Number of seconds after the VirtualMachineInstance has started before liveness probes are initiated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes | [optional] 
+**PeriodSeconds** | Pointer to **int32** | How often (in seconds) to perform the probe. Default to 10 seconds. Minimum value is 1. | [optional] 
+**SuccessThreshold** | Pointer to **int32** | Minimum consecutive successes for the probe to be considered successful after having failed. Defaults to 1. Must be 1 for liveness. Minimum value is 1. | [optional] 
+**TcpSocket** | Pointer to [**K8sIoV1TCPSocketAction**](K8sIoV1TCPSocketAction.md) | TCPSocket specifies an action involving a TCP port. TCP hooks not yet supported | [optional] 
+**TimeoutSeconds** | Pointer to **int32** | Number of seconds after which the probe times out. For exec probes the timeout fails the probe but does not terminate the command running on the guest. This means a blocking command can result in an increasing load on the guest. A small buffer will be added to the resulting workload exec probe to compensate for delays caused by the qemu guest exec mechanism. Defaults to 1 second. Minimum value is 1. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes | [optional] 
 
 ## Methods
 

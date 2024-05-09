@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1EphemeralVolumeSource{}
 
 // KubevirtIoApiCoreV1EphemeralVolumeSource struct for KubevirtIoApiCoreV1EphemeralVolumeSource
 type KubevirtIoApiCoreV1EphemeralVolumeSource struct {
+	// PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 	PersistentVolumeClaim *K8sIoV1PersistentVolumeClaimVolumeSource `json:"persistentVolumeClaim,omitempty"`
 }
 

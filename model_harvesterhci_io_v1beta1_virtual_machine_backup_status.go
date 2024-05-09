@@ -17,16 +17,18 @@ import (
 // checks if the HarvesterhciIoV1beta1VirtualMachineBackupStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1VirtualMachineBackupStatus{}
 
-// HarvesterhciIoV1beta1VirtualMachineBackupStatus struct for HarvesterhciIoV1beta1VirtualMachineBackupStatus
+// HarvesterhciIoV1beta1VirtualMachineBackupStatus VirtualMachineBackupStatus is the status for a VirtualMachineBackup resource
 type HarvesterhciIoV1beta1VirtualMachineBackupStatus struct {
 	BackupTarget *HarvesterhciIoV1beta1BackupTarget `json:"backupTarget,omitempty"`
 	Conditions []HarvesterhciIoV1beta1Condition `json:"conditions,omitempty"`
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	CreationTime *string `json:"creationTime,omitempty"`
 	CsiDriverVolumeSnapshotClassNames *map[string]string `json:"csiDriverVolumeSnapshotClassNames,omitempty"`
 	Error *HarvesterhciIoV1beta1Error `json:"error,omitempty"`
 	Progress *int32 `json:"progress,omitempty"`
 	ReadyToUse *bool `json:"readyToUse,omitempty"`
 	SecretBackups []HarvesterhciIoV1beta1SecretBackup `json:"secretBackups,omitempty"`
+	// SourceSpec contains the vm spec source of the backup target
 	Source *HarvesterhciIoV1beta1VirtualMachineSourceSpec `json:"source,omitempty"`
 	SourceUID *string `json:"sourceUID,omitempty"`
 	VolumeBackups []HarvesterhciIoV1beta1VolumeBackup `json:"volumeBackups,omitempty"`

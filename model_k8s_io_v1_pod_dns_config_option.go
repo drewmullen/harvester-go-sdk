@@ -17,8 +17,9 @@ import (
 // checks if the K8sIoV1PodDNSConfigOption type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1PodDNSConfigOption{}
 
-// K8sIoV1PodDNSConfigOption struct for K8sIoV1PodDNSConfigOption
+// K8sIoV1PodDNSConfigOption PodDNSConfigOption defines DNS resolver options of a pod.
 type K8sIoV1PodDNSConfigOption struct {
+	// Required.
 	Name *string `json:"name,omitempty"`
 	Value *string `json:"value,omitempty"`
 }

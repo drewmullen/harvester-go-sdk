@@ -19,25 +19,45 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState{
 
 // KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState struct for KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState
 type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState struct {
+	// Indicates that the migration has been requested to abort
 	AbortRequested *bool `json:"abortRequested,omitempty"`
+	// Indicates the final status of the live migration abortion
 	AbortStatus *string `json:"abortStatus,omitempty"`
+	// Indicates the migration completed
 	Completed *bool `json:"completed,omitempty"`
+	// The time the migration action ended
 	EndTimestamp *string `json:"endTimestamp,omitempty"`
+	// Indicates that the migration failed
 	Failed *bool `json:"failed,omitempty"`
+	// Migration configurations to apply
 	MigrationConfiguration *KubevirtIoApiCoreV1MigrationConfiguration `json:"migrationConfiguration,omitempty"`
+	// Name of the migration policy. If string is empty, no policy is matched
 	MigrationPolicyName *string `json:"migrationPolicyName,omitempty"`
+	// The VirtualMachineInstanceMigration object associated with this migration
 	MigrationUid *string `json:"migrationUid,omitempty"`
+	// Lets us know if the vmi is currently running pre or post copy migration
 	Mode *string `json:"mode,omitempty"`
+	// The source node that the VMI originated on
 	SourceNode *string `json:"sourceNode,omitempty"`
+	// The time the migration action began
 	StartTimestamp *string `json:"startTimestamp,omitempty"`
+	// The UID of the target attachment pod for hotplug volumes
 	TargetAttachmentPodUID *string `json:"targetAttachmentPodUID,omitempty"`
+	// If the VMI requires dedicated CPUs, this field will hold the dedicated CPU set on the target node
 	TargetCPUSet []int32 `json:"targetCPUSet,omitempty"`
+	// The list of ports opened for live migration on the destination node
 	TargetDirectMigrationNodePorts *map[string]int32 `json:"targetDirectMigrationNodePorts,omitempty"`
+	// The target node that the VMI is moving to
 	TargetNode *string `json:"targetNode,omitempty"`
+	// The address of the target node to use for the migration
 	TargetNodeAddress *string `json:"targetNodeAddress,omitempty"`
+	// The Target Node has seen the Domain Start Event
 	TargetNodeDomainDetected *bool `json:"targetNodeDomainDetected,omitempty"`
+	// The timestamp at which the target node detects the domain is active
 	TargetNodeDomainReadyTimestamp *string `json:"targetNodeDomainReadyTimestamp,omitempty"`
+	// If the VMI requires dedicated CPUs, this field will hold the numa topology on the target node
 	TargetNodeTopology *string `json:"targetNodeTopology,omitempty"`
+	// The target pod that the VMI is moving to
 	TargetPod *string `json:"targetPod,omitempty"`
 }
 
@@ -47,12 +67,6 @@ type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState struct {
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationState() *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState{}
-	var endTimestamp string = ""
-	this.EndTimestamp = &endTimestamp
-	var startTimestamp string = ""
-	this.StartTimestamp = &startTimestamp
-	var targetNodeDomainReadyTimestamp string = ""
-	this.TargetNodeDomainReadyTimestamp = &targetNodeDomainReadyTimestamp
 	return &this
 }
 
@@ -61,12 +75,6 @@ func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationState() *KubevirtIoApi
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1VirtualMachineInstanceMigrationStateWithDefaults() *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState {
 	this := KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState{}
-	var endTimestamp string = ""
-	this.EndTimestamp = &endTimestamp
-	var startTimestamp string = ""
-	this.StartTimestamp = &startTimestamp
-	var targetNodeDomainReadyTimestamp string = ""
-	this.TargetNodeDomainReadyTimestamp = &targetNodeDomainReadyTimestamp
 	return &this
 }
 

@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1HotplugVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1HotplugVolumeSource{}
 
-// KubevirtIoApiCoreV1HotplugVolumeSource struct for KubevirtIoApiCoreV1HotplugVolumeSource
+// KubevirtIoApiCoreV1HotplugVolumeSource HotplugVolumeSource Represents the source of a volume to mount which are capable of being hotplugged on a live running VMI. Only one of its members may be specified.
 type KubevirtIoApiCoreV1HotplugVolumeSource struct {
+	// DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image.
 	DataVolume *KubevirtIoApiCoreV1DataVolumeSource `json:"dataVolume,omitempty"`
+	// PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 	PersistentVolumeClaim *KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource `json:"persistentVolumeClaim,omitempty"`
 }
 

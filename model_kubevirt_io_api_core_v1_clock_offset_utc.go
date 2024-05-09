@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1ClockOffsetUTC type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1ClockOffsetUTC{}
 
-// KubevirtIoApiCoreV1ClockOffsetUTC struct for KubevirtIoApiCoreV1ClockOffsetUTC
+// KubevirtIoApiCoreV1ClockOffsetUTC UTC sets the guest clock to UTC on each boot.
 type KubevirtIoApiCoreV1ClockOffsetUTC struct {
+	// OffsetSeconds specifies an offset in seconds, relative to UTC. If set, guest changes to the clock will be kept during reboots and not reset.
 	OffsetSeconds *int32 `json:"offsetSeconds,omitempty"`
 }
 

@@ -19,9 +19,11 @@ import (
 // checks if the K8sIoV1TCPSocketAction type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1TCPSocketAction{}
 
-// K8sIoV1TCPSocketAction struct for K8sIoV1TCPSocketAction
+// K8sIoV1TCPSocketAction TCPSocketAction describes an action based on opening a socket
 type K8sIoV1TCPSocketAction struct {
+	// Optional: Host name to connect to, defaults to the pod IP.
 	Host *string `json:"host,omitempty"`
+	// Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME.
 	Port string `json:"port"`
 }
 

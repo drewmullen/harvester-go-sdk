@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1EFI type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1EFI{}
 
-// KubevirtIoApiCoreV1EFI struct for KubevirtIoApiCoreV1EFI
+// KubevirtIoApiCoreV1EFI If set, EFI will be used instead of BIOS.
 type KubevirtIoApiCoreV1EFI struct {
+	// If set to true, Persistent will persist the EFI NVRAM across reboots. Defaults to false
 	Persistent *bool `json:"persistent,omitempty"`
+	// If set, SecureBoot will be enabled and the OVMF roms will be swapped for SecureBoot-enabled ones. Requires SMM to be enabled. Defaults to true
 	SecureBoot *bool `json:"secureBoot,omitempty"`
 }
 

@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedUpgrade
 
-> K8sIoV1Status DeleteNamespacedUpgrade(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1Upgrade DeleteNamespacedUpgrade(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Upgrade
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `UpgradesAPI.DeleteNamespacedUpgrade``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedUpgrade`: K8sIoV1Status
+	// response from `DeleteNamespacedUpgrade`: HarvesterhciIoV1beta1Upgrade
 	fmt.Fprintf(os.Stdout, "Response from `UpgradesAPI.DeleteNamespacedUpgrade`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1Upgrade**](HarvesterhciIoV1beta1Upgrade.md)
 
 ### Authorization
 

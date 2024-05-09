@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Affinity** | Pointer to **map[string]interface{}** |  | [optional] 
-**Cpu** | Pointer to [**KubevirtIoApiCoreV1LiveUpdateCPU**](KubevirtIoApiCoreV1LiveUpdateCPU.md) |  | [optional] 
-**Memory** | Pointer to [**KubevirtIoApiCoreV1LiveUpdateMemory**](KubevirtIoApiCoreV1LiveUpdateMemory.md) |  | [optional] 
+**Affinity** | Pointer to **map[string]interface{}** | Affinity allows live updating the virtual machines node affinity | [optional] 
+**Cpu** | Pointer to [**KubevirtIoApiCoreV1LiveUpdateCPU**](KubevirtIoApiCoreV1LiveUpdateCPU.md) | LiveUpdateCPU holds hotplug configuration for the CPU resource. Empty struct indicates that default will be used for maxSockets. Default is specified on cluster level. Absence of the struct means opt-out from CPU hotplug functionality. | [optional] 
+**Memory** | Pointer to [**KubevirtIoApiCoreV1LiveUpdateMemory**](KubevirtIoApiCoreV1LiveUpdateMemory.md) | MemoryLiveUpdateConfiguration defines the live update memory features for the VirtualMachine | [optional] 
 
 ## Methods
 

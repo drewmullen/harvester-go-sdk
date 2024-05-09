@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VmiName** | Pointer to **string** |  | [optional] 
+**VmiName** | Pointer to **string** | The name of the VMI to perform the migration on. VMI must exist in the migration objects namespace | [optional] 
 
 ## Methods
 

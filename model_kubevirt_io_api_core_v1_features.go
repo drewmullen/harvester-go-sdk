@@ -19,11 +19,17 @@ var _ MappedNullable = &KubevirtIoApiCoreV1Features{}
 
 // KubevirtIoApiCoreV1Features struct for KubevirtIoApiCoreV1Features
 type KubevirtIoApiCoreV1Features struct {
+	// ACPI enables/disables ACPI inside the guest. Defaults to enabled.
 	Acpi *KubevirtIoApiCoreV1FeatureState `json:"acpi,omitempty"`
+	// Defaults to the machine type setting.
 	Apic *KubevirtIoApiCoreV1FeatureAPIC `json:"apic,omitempty"`
+	// Defaults to the machine type setting.
 	Hyperv *KubevirtIoApiCoreV1FeatureHyperv `json:"hyperv,omitempty"`
+	// Configure how KVM presence is exposed to the guest.
 	Kvm *KubevirtIoApiCoreV1FeatureKVM `json:"kvm,omitempty"`
+	// Notify the guest that the host supports paravirtual spinlocks. For older kernels this feature should be explicitly disabled.
 	Pvspinlock *KubevirtIoApiCoreV1FeatureState `json:"pvspinlock,omitempty"`
+	// SMM enables/disables System Management Mode. TSEG not yet implemented.
 	Smm *KubevirtIoApiCoreV1FeatureState `json:"smm,omitempty"`
 }
 

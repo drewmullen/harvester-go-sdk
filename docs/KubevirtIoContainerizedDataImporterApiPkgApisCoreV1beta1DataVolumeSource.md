@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Blank** | Pointer to **map[string]interface{}** |  | [optional] 
+**Blank** | Pointer to **map[string]interface{}** | DataVolumeBlankImage provides the parameters to create a new raw blank image for the PVC | [optional] 
 **Gcs** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceGCS.md) |  | [optional] 
 **Http** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceHTTP**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceHTTP.md) |  | [optional] 
 **Imageio** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO.md) |  | [optional] 
@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Registry** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry.md) |  | [optional] 
 **S3** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3.md) |  | [optional] 
 **Snapshot** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceSnapshot.md) |  | [optional] 
-**Upload** | Pointer to **map[string]interface{}** |  | [optional] 
+**Upload** | Pointer to **map[string]interface{}** | DataVolumeSourceUpload provides the parameters to create a Data Volume by uploading the source | [optional] 
 **Vddk** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK.md) |  | [optional] 
 
 ## Methods

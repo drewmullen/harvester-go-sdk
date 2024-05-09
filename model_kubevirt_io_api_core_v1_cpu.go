@@ -17,17 +17,27 @@ import (
 // checks if the KubevirtIoApiCoreV1CPU type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1CPU{}
 
-// KubevirtIoApiCoreV1CPU struct for KubevirtIoApiCoreV1CPU
+// KubevirtIoApiCoreV1CPU CPU allows specifying the CPU topology.
 type KubevirtIoApiCoreV1CPU struct {
+	// Cores specifies the number of cores inside the vmi. Must be a value greater or equal 1.
 	Cores *int64 `json:"cores,omitempty"`
+	// DedicatedCPUPlacement requests the scheduler to place the VirtualMachineInstance on a node with enough dedicated pCPUs and pin the vCPUs to it.
 	DedicatedCpuPlacement *bool `json:"dedicatedCpuPlacement,omitempty"`
+	// Features specifies the CPU features list inside the VMI.
 	Features []KubevirtIoApiCoreV1CPUFeature `json:"features,omitempty"`
+	// IsolateEmulatorThread requests one more dedicated pCPU to be allocated for the VMI to place the emulator thread on it.
 	IsolateEmulatorThread *bool `json:"isolateEmulatorThread,omitempty"`
+	// MaxSockets specifies the maximum amount of sockets that can be hotplugged
 	MaxSockets *int64 `json:"maxSockets,omitempty"`
+	// Model specifies the CPU model inside the VMI. List of available models https://github.com/libvirt/libvirt/tree/master/src/cpu_map. It is possible to specify special cases like \"host-passthrough\" to get the same CPU as the node and \"host-model\" to get CPU closest to the node one. Defaults to host-model.
 	Model *string `json:"model,omitempty"`
+	// NUMA allows specifying settings for the guest NUMA topology
 	Numa *KubevirtIoApiCoreV1NUMA `json:"numa,omitempty"`
+	// Realtime instructs the virt-launcher to tune the VMI for lower latency, optional for real time workloads
 	Realtime *KubevirtIoApiCoreV1Realtime `json:"realtime,omitempty"`
+	// Sockets specifies the number of sockets inside the vmi. Must be a value greater or equal 1.
 	Sockets *int64 `json:"sockets,omitempty"`
+	// Threads specifies the number of threads inside the vmi. Must be a value greater or equal 1.
 	Threads *int64 `json:"threads,omitempty"`
 }
 

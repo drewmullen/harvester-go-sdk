@@ -19,11 +19,15 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO DataVolumeSourceImageIO provides the parameters to create a Data Volume from an imageio source
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceImageIO struct {
+	// CertConfigMap provides a reference to the CA cert
 	CertConfigMap *string `json:"certConfigMap,omitempty"`
+	// DiskID provides id of a disk to be imported
 	DiskId string `json:"diskId"`
+	// SecretRef provides the secret reference needed to access the ovirt-engine
 	SecretRef *string `json:"secretRef,omitempty"`
+	// URL is the URL of the ovirt-engine
 	Url string `json:"url"`
 }
 

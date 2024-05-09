@@ -19,12 +19,17 @@ import (
 // checks if the KubevirtIoApiCoreV1KernelBootContainer type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1KernelBootContainer{}
 
-// KubevirtIoApiCoreV1KernelBootContainer struct for KubevirtIoApiCoreV1KernelBootContainer
+// KubevirtIoApiCoreV1KernelBootContainer If set, the VM will be booted from the defined kernel / initrd.
 type KubevirtIoApiCoreV1KernelBootContainer struct {
+	// Image that contains initrd / kernel files.
 	Image string `json:"image"`
+	// Image pull policy. One of Always, Never, IfNotPresent. Defaults to Always if :latest tag is specified, or IfNotPresent otherwise. Cannot be updated. More info: https://kubernetes.io/docs/concepts/containers/images#updating-images  Possible enum values:  - `\"Always\"` means that kubelet always attempts to pull the latest image. Container will fail If the pull fails.  - `\"IfNotPresent\"` means that kubelet pulls if the image isn't present on disk. Container will fail if the image isn't present and the pull fails.  - `\"Never\"` means that kubelet never pulls an image, but only uses a local image. Container will fail if the image isn't present
 	ImagePullPolicy *string `json:"imagePullPolicy,omitempty"`
+	// ImagePullSecret is the name of the Docker registry secret required to pull the image. The secret must already exist.
 	ImagePullSecret *string `json:"imagePullSecret,omitempty"`
+	// the fully-qualified path to the ramdisk image in the host OS
 	InitrdPath *string `json:"initrdPath,omitempty"`
+	// The fully-qualified path to the kernel image in the host OS
 	KernelPath *string `json:"kernelPath,omitempty"`
 }
 

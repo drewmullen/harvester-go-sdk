@@ -19,7 +19,7 @@ import (
 // checks if the KubevirtIoApiCoreV1CustomBlockSize type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1CustomBlockSize{}
 
-// KubevirtIoApiCoreV1CustomBlockSize struct for KubevirtIoApiCoreV1CustomBlockSize
+// KubevirtIoApiCoreV1CustomBlockSize CustomBlockSize represents the desired logical and physical block size for a VM disk.
 type KubevirtIoApiCoreV1CustomBlockSize struct {
 	Logical int32 `json:"logical"`
 	Physical int32 `json:"physical"`

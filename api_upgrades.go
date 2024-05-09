@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedUpgradeRequest) PropagationPolicy(propagationPolicy s
 	return r
 }
 
-func (r ApiDeleteNamespacedUpgradeRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedUpgradeRequest) Execute() (*HarvesterhciIoV1beta1Upgrade, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedUpgradeExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *UpgradesAPIService) DeleteNamespacedUpgrade(ctx context.Context, name s
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *UpgradesAPIService) DeleteNamespacedUpgradeExecute(r ApiDeleteNamespacedUpgradeRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return HarvesterhciIoV1beta1Upgrade
+func (a *UpgradesAPIService) DeleteNamespacedUpgradeExecute(r ApiDeleteNamespacedUpgradeRequest) (*HarvesterhciIoV1beta1Upgrade, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *HarvesterhciIoV1beta1Upgrade
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UpgradesAPIService.DeleteNamespacedUpgrade")

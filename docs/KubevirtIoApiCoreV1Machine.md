@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Type** | Pointer to **string** |  | [optional] [default to ""]
+**Type** | Pointer to **string** | QEMU machine type is the actual chipset of the VirtualMachineInstance. | [optional] [default to ""]
 
 ## Methods
 

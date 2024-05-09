@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1KVMTimer{}
 
 // KubevirtIoApiCoreV1KVMTimer struct for KubevirtIoApiCoreV1KVMTimer
 type KubevirtIoApiCoreV1KVMTimer struct {
+	// Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 	Present *bool `json:"present,omitempty"`
 }
 

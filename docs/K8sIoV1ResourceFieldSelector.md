@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ContainerName** | Pointer to **string** |  | [optional] 
-**Divisor** | Pointer to **string** |  | [optional] [default to "{}"]
-**Resource** | **string** |  | [default to ""]
+**ContainerName** | Pointer to **string** | Container name: required for volumes, optional for env vars | [optional] 
+**Divisor** | Pointer to **string** | Specifies the output format of the exposed resources, defaults to \&quot;1\&quot; | [optional] [default to "{}"]
+**Resource** | **string** | Required: resource to select | [default to ""]
 
 ## Methods
 

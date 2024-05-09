@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Conditions** | Pointer to [**[]HarvesterhciIoV1beta1Condition**](HarvesterhciIoV1beta1Condition.md) |  | [optional] 
 **DeletedVolumes** | Pointer to **[]string** |  | [optional] 
 **Progress** | Pointer to **int32** |  | [optional] 
-**RestoreTime** | Pointer to **string** |  | [optional] [default to ""]
+**RestoreTime** | Pointer to **string** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] [default to ""]
 **Restores** | Pointer to [**[]HarvesterhciIoV1beta1VolumeRestore**](HarvesterhciIoV1beta1VolumeRestore.md) |  | [optional] 
 **TargetUID** | Pointer to **string** |  | [optional] 
 

@@ -17,9 +17,11 @@ import (
 // checks if the K8sIoV1NodeSelectorTerm type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1NodeSelectorTerm{}
 
-// K8sIoV1NodeSelectorTerm struct for K8sIoV1NodeSelectorTerm
+// K8sIoV1NodeSelectorTerm A null or empty node selector term matches no objects. The requirements of them are ANDed. The TopologySelectorTerm type implements a subset of the NodeSelectorTerm.
 type K8sIoV1NodeSelectorTerm struct {
+	// A list of node selector requirements by node's labels.
 	MatchExpressions []K8sIoV1NodeSelectorRequirement `json:"matchExpressions,omitempty"`
+	// A list of node selector requirements by node's fields.
 	MatchFields []K8sIoV1NodeSelectorRequirement `json:"matchFields,omitempty"`
 }
 

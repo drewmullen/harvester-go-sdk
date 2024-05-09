@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedKeyPair
 
-> K8sIoV1Status DeleteNamespacedKeyPair(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1KeyPair DeleteNamespacedKeyPair(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Key Pair
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `SSHKeysAPI.DeleteNamespacedKeyPair``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedKeyPair`: K8sIoV1Status
+	// response from `DeleteNamespacedKeyPair`: HarvesterhciIoV1beta1KeyPair
 	fmt.Fprintf(os.Stdout, "Response from `SSHKeysAPI.DeleteNamespacedKeyPair`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1KeyPair**](HarvesterhciIoV1beta1KeyPair.md)
 
 ### Authorization
 

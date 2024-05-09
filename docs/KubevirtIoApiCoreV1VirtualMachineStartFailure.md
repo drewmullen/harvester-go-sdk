@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ConsecutiveFailCount** | Pointer to **int32** |  | [optional] 
 **LastFailedVMIUID** | Pointer to **string** |  | [optional] 
-**RetryAfterTimestamp** | Pointer to **string** |  | [optional] [default to ""]
+**RetryAfterTimestamp** | Pointer to **string** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] [default to ""]
 
 ## Methods
 

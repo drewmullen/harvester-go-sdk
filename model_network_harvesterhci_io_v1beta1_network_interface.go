@@ -21,12 +21,19 @@ var _ MappedNullable = &NetworkHarvesterhciIoV1beta1NetworkInterface{}
 
 // NetworkHarvesterhciIoV1beta1NetworkInterface struct for NetworkHarvesterhciIoV1beta1NetworkInterface
 type NetworkHarvesterhciIoV1beta1NetworkInterface struct {
+	// Index of the NIC
 	Index int32 `json:"index"`
+	// Index of the NIC's master
 	MasterIndex *int32 `json:"masterIndex,omitempty"`
+	// Name of the NIC
 	Name string `json:"name"`
+	// State of the NIC, up/down/unknown
 	State string `json:"state"`
+	// Interface type of the NIC
 	Type string `json:"type"`
+	// Specify whether used by management network or not
 	UsedByManagementNetwork *bool `json:"usedByManagementNetwork,omitempty"`
+	// Specify whether used by VLAN network or not
 	UsedByVlanNetwork *bool `json:"usedByVlanNetwork,omitempty"`
 }
 

@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod{}
 
-// KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod struct for KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod
+// KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod UserPasswordAccessCredentialPropagationMethod represents the method used to inject a user passwords into the vm guest. Only one of its members may be specified.
 type KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod struct {
+	// QemuGuestAgentAccessCredentailPropagation means passwords are dynamically injected into the vm at runtime via the qemu guest agent. This feature requires the qemu guest agent to be running within the guest.
 	QemuGuestAgent map[string]interface{} `json:"qemuGuestAgent,omitempty"`
 }
 

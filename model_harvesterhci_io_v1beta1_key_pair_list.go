@@ -19,10 +19,12 @@ import (
 // checks if the HarvesterhciIoV1beta1KeyPairList type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1KeyPairList{}
 
-// HarvesterhciIoV1beta1KeyPairList struct for HarvesterhciIoV1beta1KeyPairList
+// HarvesterhciIoV1beta1KeyPairList KeyPairList is a list of KeyPair resources
 type HarvesterhciIoV1beta1KeyPairList struct {
+	// APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 	ApiVersion *string `json:"apiVersion,omitempty"`
 	Items []HarvesterhciIoV1beta1KeyPair `json:"items"`
+	// Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	Kind *string `json:"kind,omitempty"`
 	Metadata K8sIoV1ListMeta `json:"metadata"`
 }

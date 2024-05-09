@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DeviceName** | **string** |  | [default to ""]
+**DeviceName** | **string** | DeviceName is the resource name of the host device exposed by a device plugin | [default to ""]
 **Name** | **string** |  | [default to ""]
-**Tag** | Pointer to **string** |  | [optional] 
+**Tag** | Pointer to **string** | If specified, the virtual network interface address and its tag will be provided to the guest via config drive | [optional] 
 
 ## Methods
 

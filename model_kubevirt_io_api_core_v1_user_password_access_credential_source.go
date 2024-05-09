@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1UserPasswordAccessCredentialSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1UserPasswordAccessCredentialSource{}
 
-// KubevirtIoApiCoreV1UserPasswordAccessCredentialSource struct for KubevirtIoApiCoreV1UserPasswordAccessCredentialSource
+// KubevirtIoApiCoreV1UserPasswordAccessCredentialSource UserPasswordAccessCredentialSource represents where to retrieve the user password credentials Only one of its members may be specified.
 type KubevirtIoApiCoreV1UserPasswordAccessCredentialSource struct {
+	// Secret means that the access credential is pulled from a kubernetes secret
 	Secret *KubevirtIoApiCoreV1AccessCredentialSecretSource `json:"secret,omitempty"`
 }
 

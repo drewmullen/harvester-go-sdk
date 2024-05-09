@@ -19,16 +19,27 @@ import (
 // checks if the KubevirtIoApiCoreV1VolumeStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VolumeStatus{}
 
-// KubevirtIoApiCoreV1VolumeStatus struct for KubevirtIoApiCoreV1VolumeStatus
+// KubevirtIoApiCoreV1VolumeStatus VolumeStatus represents information about the status of volumes attached to the VirtualMachineInstance.
 type KubevirtIoApiCoreV1VolumeStatus struct {
+	// ContainerDiskVolume shows info about the containerdisk, if the volume is a containerdisk
+	ContainerDiskVolume *KubevirtIoApiCoreV1ContainerDiskInfo `json:"containerDiskVolume,omitempty"`
+	// If the volume is hotplug, this will contain the hotplug status.
 	HotplugVolume *KubevirtIoApiCoreV1HotplugVolumeStatus `json:"hotplugVolume,omitempty"`
+	// If the volume is memorydump volume, this will contain the memorydump info.
 	MemoryDumpVolume *KubevirtIoApiCoreV1DomainMemoryDumpInfo `json:"memoryDumpVolume,omitempty"`
+	// Message is a detailed message about the current hotplug volume phase
 	Message *string `json:"message,omitempty"`
+	// Name is the name of the volume
 	Name string `json:"name"`
+	// PersistentVolumeClaimInfo is information about the PVC that handler requires during start flow
 	PersistentVolumeClaimInfo *KubevirtIoApiCoreV1PersistentVolumeClaimInfo `json:"persistentVolumeClaimInfo,omitempty"`
+	// Phase is the phase
 	Phase *string `json:"phase,omitempty"`
+	// Reason is a brief description of why we are in the current hotplug volume phase
 	Reason *string `json:"reason,omitempty"`
+	// Represents the size of the volume
 	Size *int64 `json:"size,omitempty"`
+	// Target is the target name used when adding the volume to the VM, eg: vda
 	Target string `json:"target"`
 }
 
@@ -55,6 +66,38 @@ func NewKubevirtIoApiCoreV1VolumeStatusWithDefaults() *KubevirtIoApiCoreV1Volume
 	var target string = ""
 	this.Target = target
 	return &this
+}
+
+// GetContainerDiskVolume returns the ContainerDiskVolume field value if set, zero value otherwise.
+func (o *KubevirtIoApiCoreV1VolumeStatus) GetContainerDiskVolume() KubevirtIoApiCoreV1ContainerDiskInfo {
+	if o == nil || IsNil(o.ContainerDiskVolume) {
+		var ret KubevirtIoApiCoreV1ContainerDiskInfo
+		return ret
+	}
+	return *o.ContainerDiskVolume
+}
+
+// GetContainerDiskVolumeOk returns a tuple with the ContainerDiskVolume field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *KubevirtIoApiCoreV1VolumeStatus) GetContainerDiskVolumeOk() (*KubevirtIoApiCoreV1ContainerDiskInfo, bool) {
+	if o == nil || IsNil(o.ContainerDiskVolume) {
+		return nil, false
+	}
+	return o.ContainerDiskVolume, true
+}
+
+// HasContainerDiskVolume returns a boolean if a field has been set.
+func (o *KubevirtIoApiCoreV1VolumeStatus) HasContainerDiskVolume() bool {
+	if o != nil && !IsNil(o.ContainerDiskVolume) {
+		return true
+	}
+
+	return false
+}
+
+// SetContainerDiskVolume gets a reference to the given KubevirtIoApiCoreV1ContainerDiskInfo and assigns it to the ContainerDiskVolume field.
+func (o *KubevirtIoApiCoreV1VolumeStatus) SetContainerDiskVolume(v KubevirtIoApiCoreV1ContainerDiskInfo) {
+	o.ContainerDiskVolume = &v
 }
 
 // GetHotplugVolume returns the HotplugVolume field value if set, zero value otherwise.
@@ -339,6 +382,9 @@ func (o KubevirtIoApiCoreV1VolumeStatus) MarshalJSON() ([]byte, error) {
 
 func (o KubevirtIoApiCoreV1VolumeStatus) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
+	if !IsNil(o.ContainerDiskVolume) {
+		toSerialize["containerDiskVolume"] = o.ContainerDiskVolume
+	}
 	if !IsNil(o.HotplugVolume) {
 		toSerialize["hotplugVolume"] = o.HotplugVolume
 	}

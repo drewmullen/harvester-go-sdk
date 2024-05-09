@@ -19,10 +19,13 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef DataVolumeSourceRef defines an indirect reference to the source of data for the DataVolume
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef struct {
+	// The kind of the source reference, currently only \"DataSource\" is supported
 	Kind string `json:"kind"`
+	// The name of the source reference
 	Name string `json:"name"`
+	// The namespace of the source reference, defaults to the DataVolume namespace
 	Namespace *string `json:"namespace,omitempty"`
 }
 

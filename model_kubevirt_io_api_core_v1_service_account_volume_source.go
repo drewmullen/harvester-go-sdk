@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1ServiceAccountVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1ServiceAccountVolumeSource{}
 
-// KubevirtIoApiCoreV1ServiceAccountVolumeSource struct for KubevirtIoApiCoreV1ServiceAccountVolumeSource
+// KubevirtIoApiCoreV1ServiceAccountVolumeSource ServiceAccountVolumeSource adapts a ServiceAccount into a volume.
 type KubevirtIoApiCoreV1ServiceAccountVolumeSource struct {
+	// Name of the service account in the pod's namespace to use. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 	ServiceAccountName *string `json:"serviceAccountName,omitempty"`
 }
 

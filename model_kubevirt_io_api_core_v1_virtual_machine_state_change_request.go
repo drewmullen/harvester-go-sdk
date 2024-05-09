@@ -21,8 +21,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineStateChangeRequest{}
 
 // KubevirtIoApiCoreV1VirtualMachineStateChangeRequest struct for KubevirtIoApiCoreV1VirtualMachineStateChangeRequest
 type KubevirtIoApiCoreV1VirtualMachineStateChangeRequest struct {
+	// Indicates the type of action that is requested. e.g. Start or Stop
 	Action string `json:"action"`
+	// Provides additional data in order to perform the Action
 	Data *map[string]string `json:"data,omitempty"`
+	// Indicates the UUID of an existing Virtual Machine Instance that this change request applies to -- if applicable
 	Uid *string `json:"uid,omitempty"`
 }
 

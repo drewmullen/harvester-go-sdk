@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | Pointer to **string** |  | [optional] 
+**Action** | Pointer to **string** | The action to take. Valid values are poweroff, reset, shutdown. Defaults to reset. | [optional] 
 
 ## Methods
 

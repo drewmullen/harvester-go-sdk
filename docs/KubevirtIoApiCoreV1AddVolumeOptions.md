@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Disk** | [**KubevirtIoApiCoreV1Disk**](KubevirtIoApiCoreV1Disk.md) |  | 
-**DryRun** | Pointer to **[]string** |  | [optional] 
-**Name** | **string** |  | [default to ""]
-**VolumeSource** | [**KubevirtIoApiCoreV1HotplugVolumeSource**](KubevirtIoApiCoreV1HotplugVolumeSource.md) |  | 
+**Disk** | [**KubevirtIoApiCoreV1Disk**](KubevirtIoApiCoreV1Disk.md) | Disk represents the hotplug disk that will be plugged into the running VMI | 
+**DryRun** | Pointer to **[]string** | When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed | [optional] 
+**Name** | **string** | Name represents the name that will be used to map the disk to the corresponding volume. This overrides any name set inside the Disk struct itself. | [default to ""]
+**VolumeSource** | [**KubevirtIoApiCoreV1HotplugVolumeSource**](KubevirtIoApiCoreV1HotplugVolumeSource.md) | VolumeSource represents the source of the volume to map to the disk. | 
 
 ## Methods
 

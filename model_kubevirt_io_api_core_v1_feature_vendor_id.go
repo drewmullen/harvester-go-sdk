@@ -19,7 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1FeatureVendorID{}
 
 // KubevirtIoApiCoreV1FeatureVendorID struct for KubevirtIoApiCoreV1FeatureVendorID
 type KubevirtIoApiCoreV1FeatureVendorID struct {
+	// Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true.
 	Enabled *bool `json:"enabled,omitempty"`
+	// VendorID sets the hypervisor vendor id, visible to the vmi. String up to twelve characters.
 	Vendorid *string `json:"vendorid,omitempty"`
 }
 

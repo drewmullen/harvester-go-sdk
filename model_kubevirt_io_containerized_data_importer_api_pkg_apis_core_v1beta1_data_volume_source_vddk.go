@@ -17,13 +17,19 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK DataVolumeSourceVDDK provides the parameters to create a Data Volume from a Vmware source
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceVDDK struct {
+	// BackingFile is the path to the virtual hard disk to migrate from vCenter/ESXi
 	BackingFile *string `json:"backingFile,omitempty"`
+	// InitImageURL is an optional URL to an image containing an extracted VDDK library, overrides v2v-vmware config map
 	InitImageURL *string `json:"initImageURL,omitempty"`
+	// SecretRef provides a reference to a secret containing the username and password needed to access the vCenter or ESXi host
 	SecretRef *string `json:"secretRef,omitempty"`
+	// Thumbprint is the certificate thumbprint of the vCenter or ESXi host
 	Thumbprint *string `json:"thumbprint,omitempty"`
+	// URL is the URL of the vCenter or ESXi host with the VM to migrate
 	Url *string `json:"url,omitempty"`
+	// UUID is the UUID of the virtual machine that the backing file is attached to in vCenter/ESXi
 	Uuid *string `json:"uuid,omitempty"`
 }
 

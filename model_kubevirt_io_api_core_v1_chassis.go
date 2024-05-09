@@ -17,7 +17,7 @@ import (
 // checks if the KubevirtIoApiCoreV1Chassis type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Chassis{}
 
-// KubevirtIoApiCoreV1Chassis struct for KubevirtIoApiCoreV1Chassis
+// KubevirtIoApiCoreV1Chassis Chassis specifies the chassis info passed to the domain.
 type KubevirtIoApiCoreV1Chassis struct {
 	Asset *string `json:"asset,omitempty"`
 	Manufacturer *string `json:"manufacturer,omitempty"`

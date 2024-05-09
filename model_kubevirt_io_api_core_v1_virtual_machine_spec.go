@@ -19,14 +19,21 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineSpec type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineSpec{}
 
-// KubevirtIoApiCoreV1VirtualMachineSpec struct for KubevirtIoApiCoreV1VirtualMachineSpec
+// KubevirtIoApiCoreV1VirtualMachineSpec VirtualMachineSpec describes how the proper VirtualMachine should look like
 type KubevirtIoApiCoreV1VirtualMachineSpec struct {
+	// dataVolumeTemplates is a list of dataVolumes that the VirtualMachineInstance template can reference. DataVolumes in this list are dynamically created for the VirtualMachine and are tied to the VirtualMachine's life-cycle.
 	DataVolumeTemplates []KubevirtIoApiCoreV1DataVolumeTemplateSpec `json:"dataVolumeTemplates,omitempty"`
+	// InstancetypeMatcher references a instancetype that is used to fill fields in Template
 	Instancetype *KubevirtIoApiCoreV1InstancetypeMatcher `json:"instancetype,omitempty"`
+	// LiveUpdateFeatures references a configuration of hotpluggable resources
 	LiveUpdateFeatures *KubevirtIoApiCoreV1LiveUpdateFeatures `json:"liveUpdateFeatures,omitempty"`
+	// PreferenceMatcher references a set of preference that is used to fill fields in Template
 	Preference *KubevirtIoApiCoreV1PreferenceMatcher `json:"preference,omitempty"`
+	// Running state indicates the requested running state of the VirtualMachineInstance mutually exclusive with Running
 	RunStrategy *string `json:"runStrategy,omitempty"`
+	// Running controls whether the associatied VirtualMachineInstance is created or not Mutually exclusive with RunStrategy
 	Running *bool `json:"running,omitempty"`
+	// Template is the direct specification of VirtualMachineInstance
 	Template KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec `json:"template"`
 }
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Bootloader** | Pointer to [**KubevirtIoApiCoreV1Bootloader**](KubevirtIoApiCoreV1Bootloader.md) |  | [optional] 
-**KernelBoot** | Pointer to [**KubevirtIoApiCoreV1KernelBoot**](KubevirtIoApiCoreV1KernelBoot.md) |  | [optional] 
-**Serial** | Pointer to **string** |  | [optional] 
-**Uuid** | Pointer to **string** |  | [optional] 
+**Bootloader** | Pointer to [**KubevirtIoApiCoreV1Bootloader**](KubevirtIoApiCoreV1Bootloader.md) | Settings to control the bootloader that is used. | [optional] 
+**KernelBoot** | Pointer to [**KubevirtIoApiCoreV1KernelBoot**](KubevirtIoApiCoreV1KernelBoot.md) | Settings to set the kernel for booting. | [optional] 
+**Serial** | Pointer to **string** | The system-serial-number in SMBIOS | [optional] 
+**Uuid** | Pointer to **string** | UUID reported by the vmi bios. Defaults to a random generated uid. | [optional] 
 
 ## Methods
 

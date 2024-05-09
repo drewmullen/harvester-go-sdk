@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1Realtime type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Realtime{}
 
-// KubevirtIoApiCoreV1Realtime struct for KubevirtIoApiCoreV1Realtime
+// KubevirtIoApiCoreV1Realtime Realtime holds the tuning knobs specific for realtime workloads.
 type KubevirtIoApiCoreV1Realtime struct {
+	// Mask defines the vcpu mask expression that defines which vcpus are used for realtime. Format matches libvirt's expressions. Example: \"0-3,^1\",\"0,2,3\",\"2-3\"
 	Mask *string `json:"mask,omitempty"`
 }
 

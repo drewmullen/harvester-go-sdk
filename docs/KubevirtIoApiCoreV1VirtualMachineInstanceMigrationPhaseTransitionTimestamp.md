@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Phase** | Pointer to **string** |  | [optional] 
-**PhaseTransitionTimestamp** | Pointer to **string** |  | [optional] [default to "{}"]
+**Phase** | Pointer to **string** | Phase is the status of the VirtualMachineInstanceMigrationPhase in kubernetes world. It is not the VirtualMachineInstanceMigrationPhase status, but partially correlates to it. | [optional] 
+**PhaseTransitionTimestamp** | Pointer to **string** | PhaseTransitionTimestamp is the timestamp of when the phase change occurred | [optional] [default to "{}"]
 
 ## Methods
 

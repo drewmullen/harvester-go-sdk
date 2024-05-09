@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClaimName** | **string** |  | [default to ""]
-**EndTimestamp** | Pointer to **string** |  | [optional] [default to ""]
-**FileName** | Pointer to **string** |  | [optional] 
-**Message** | Pointer to **string** |  | [optional] 
-**Phase** | **string** |  | [default to ""]
-**Remove** | Pointer to **bool** |  | [optional] 
-**StartTimestamp** | Pointer to **string** |  | [optional] [default to ""]
+**ClaimName** | **string** | ClaimName is the name of the pvc that will contain the memory dump | [default to ""]
+**EndTimestamp** | Pointer to **string** | EndTimestamp represents the time the memory dump was completed | [optional] 
+**FileName** | Pointer to **string** | FileName represents the name of the output file | [optional] 
+**Message** | Pointer to **string** | Message is a detailed message about failure of the memory dump | [optional] 
+**Phase** | **string** | Phase represents the memory dump phase | [default to ""]
+**Remove** | Pointer to **bool** | Remove represents request of dissociating the memory dump pvc | [optional] 
+**StartTimestamp** | Pointer to **string** | StartTimestamp represents the time the memory dump started | [optional] 
 
 ## Methods
 

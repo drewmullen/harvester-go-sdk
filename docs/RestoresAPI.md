@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedVirtualMachineRestore
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineRestore(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1VirtualMachineRestore DeleteNamespacedVirtualMachineRestore(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Virtual Machine Restore
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `RestoresAPI.DeleteNamespacedVirtualMachineRestore``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedVirtualMachineRestore`: K8sIoV1Status
+	// response from `DeleteNamespacedVirtualMachineRestore`: HarvesterhciIoV1beta1VirtualMachineRestore
 	fmt.Fprintf(os.Stdout, "Response from `RestoresAPI.DeleteNamespacedVirtualMachineRestore`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1VirtualMachineRestore**](HarvesterhciIoV1beta1VirtualMachineRestore.md)
 
 ### Authorization
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SecretName** | **string** |  | [default to ""]
+**SecretName** | **string** | SecretName represents the name of the secret in the VMI&#39;s namespace | [default to ""]
 
 ## Methods
 

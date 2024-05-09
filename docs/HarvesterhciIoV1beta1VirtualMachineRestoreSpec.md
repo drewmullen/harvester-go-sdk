@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeletionPolicy** | Pointer to **string** |  | [optional] 
-**KeepMacAddress** | Pointer to **bool** |  | [optional] 
+**KeepMacAddress** | Pointer to **bool** | KeepMacAddress only works when NewVM is true. For replacing original VM, the macaddress will be the same. | [optional] 
 **NewVM** | Pointer to **bool** |  | [optional] 
-**Target** | [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) |  | [default to {}]
+**Target** | [**K8sIoV1TypedLocalObjectReference**](K8sIoV1TypedLocalObjectReference.md) | initially only VirtualMachine type supported | [default to {}]
 **VirtualMachineBackupName** | **string** |  | [default to ""]
 **VirtualMachineBackupNamespace** | **string** |  | [default to ""]
 

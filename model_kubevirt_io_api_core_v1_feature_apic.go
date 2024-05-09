@@ -19,7 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1FeatureAPIC{}
 
 // KubevirtIoApiCoreV1FeatureAPIC struct for KubevirtIoApiCoreV1FeatureAPIC
 type KubevirtIoApiCoreV1FeatureAPIC struct {
+	// Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true.
 	Enabled *bool `json:"enabled,omitempty"`
+	// EndOfInterrupt enables the end of interrupt notification in the guest. Defaults to false.
 	EndOfInterrupt *bool `json:"endOfInterrupt,omitempty"`
 }
 

@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1Watchdog type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Watchdog{}
 
-// KubevirtIoApiCoreV1Watchdog struct for KubevirtIoApiCoreV1Watchdog
+// KubevirtIoApiCoreV1Watchdog Named watchdog device.
 type KubevirtIoApiCoreV1Watchdog struct {
+	// i6300esb watchdog device.
 	I6300esb *KubevirtIoApiCoreV1I6300ESBWatchdog `json:"i6300esb,omitempty"`
+	// Name of the watchdog.
 	Name string `json:"name"`
 }
 

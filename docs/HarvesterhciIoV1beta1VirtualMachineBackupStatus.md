@@ -6,13 +6,13 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **BackupTarget** | Pointer to [**HarvesterhciIoV1beta1BackupTarget**](HarvesterhciIoV1beta1BackupTarget.md) |  | [optional] 
 **Conditions** | Pointer to [**[]HarvesterhciIoV1beta1Condition**](HarvesterhciIoV1beta1Condition.md) |  | [optional] 
-**CreationTime** | Pointer to **string** |  | [optional] [default to ""]
+**CreationTime** | Pointer to **string** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] [default to ""]
 **CsiDriverVolumeSnapshotClassNames** | Pointer to **map[string]string** |  | [optional] 
 **Error** | Pointer to [**HarvesterhciIoV1beta1Error**](HarvesterhciIoV1beta1Error.md) |  | [optional] 
 **Progress** | Pointer to **int32** |  | [optional] 
 **ReadyToUse** | Pointer to **bool** |  | [optional] 
 **SecretBackups** | Pointer to [**[]HarvesterhciIoV1beta1SecretBackup**](HarvesterhciIoV1beta1SecretBackup.md) |  | [optional] 
-**Source** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineSourceSpec**](HarvesterhciIoV1beta1VirtualMachineSourceSpec.md) |  | [optional] 
+**Source** | Pointer to [**HarvesterhciIoV1beta1VirtualMachineSourceSpec**](HarvesterhciIoV1beta1VirtualMachineSourceSpec.md) | SourceSpec contains the vm spec source of the backup target | [optional] 
 **SourceUID** | Pointer to **string** |  | [optional] 
 **VolumeBackups** | Pointer to [**[]HarvesterhciIoV1beta1VolumeBackup**](HarvesterhciIoV1beta1VolumeBackup.md) |  | [optional] 
 

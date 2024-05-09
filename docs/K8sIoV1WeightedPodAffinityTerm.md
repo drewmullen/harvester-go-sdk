@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PodAffinityTerm** | [**K8sIoV1PodAffinityTerm**](K8sIoV1PodAffinityTerm.md) |  | [default to {}]
-**Weight** | **int32** |  | [default to 0]
+**PodAffinityTerm** | [**K8sIoV1PodAffinityTerm**](K8sIoV1PodAffinityTerm.md) | Required. A pod affinity term, associated with the corresponding weight. | [default to {}]
+**Weight** | **int32** | weight associated with matching the corresponding podAffinityTerm, in the range 1-100. | [default to 0]
 
 ## Methods
 

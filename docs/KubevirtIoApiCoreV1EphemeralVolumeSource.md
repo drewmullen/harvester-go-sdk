@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PersistentVolumeClaim** | Pointer to [**K8sIoV1PersistentVolumeClaimVolumeSource**](K8sIoV1PersistentVolumeClaimVolumeSource.md) |  | [optional] 
+**PersistentVolumeClaim** | Pointer to [**K8sIoV1PersistentVolumeClaimVolumeSource**](K8sIoV1PersistentVolumeClaimVolumeSource.md) | PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims | [optional] 
 
 ## Methods
 

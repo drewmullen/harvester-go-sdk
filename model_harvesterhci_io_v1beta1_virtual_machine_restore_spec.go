@@ -19,11 +19,13 @@ import (
 // checks if the HarvesterhciIoV1beta1VirtualMachineRestoreSpec type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1VirtualMachineRestoreSpec{}
 
-// HarvesterhciIoV1beta1VirtualMachineRestoreSpec struct for HarvesterhciIoV1beta1VirtualMachineRestoreSpec
+// HarvesterhciIoV1beta1VirtualMachineRestoreSpec VirtualMachineRestoreSpec is the spec for a VirtualMachineRestore resource
 type HarvesterhciIoV1beta1VirtualMachineRestoreSpec struct {
 	DeletionPolicy *string `json:"deletionPolicy,omitempty"`
+	// KeepMacAddress only works when NewVM is true. For replacing original VM, the macaddress will be the same.
 	KeepMacAddress *bool `json:"keepMacAddress,omitempty"`
 	NewVM *bool `json:"newVM,omitempty"`
+	// initially only VirtualMachine type supported
 	Target K8sIoV1TypedLocalObjectReference `json:"target"`
 	VirtualMachineBackupName string `json:"virtualMachineBackupName"`
 	VirtualMachineBackupNamespace string `json:"virtualMachineBackupNamespace"`

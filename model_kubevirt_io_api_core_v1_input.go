@@ -21,8 +21,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1Input{}
 
 // KubevirtIoApiCoreV1Input struct for KubevirtIoApiCoreV1Input
 type KubevirtIoApiCoreV1Input struct {
+	// Bus indicates the bus of input device to emulate. Supported values: virtio, usb.
 	Bus *string `json:"bus,omitempty"`
+	// Name is the device name
 	Name string `json:"name"`
+	// Type indicated the type of input device. Supported values: tablet.
 	Type string `json:"type"`
 }
 

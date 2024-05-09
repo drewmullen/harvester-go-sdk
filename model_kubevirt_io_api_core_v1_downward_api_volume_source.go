@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1DownwardAPIVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1DownwardAPIVolumeSource{}
 
-// KubevirtIoApiCoreV1DownwardAPIVolumeSource struct for KubevirtIoApiCoreV1DownwardAPIVolumeSource
+// KubevirtIoApiCoreV1DownwardAPIVolumeSource DownwardAPIVolumeSource represents a volume containing downward API info.
 type KubevirtIoApiCoreV1DownwardAPIVolumeSource struct {
+	// Fields is a list of downward API volume file
 	Fields []K8sIoV1DownwardAPIVolumeFile `json:"fields,omitempty"`
+	// The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 	VolumeLabel *string `json:"volumeLabel,omitempty"`
 }
 

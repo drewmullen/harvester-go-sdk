@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1RemoveVolumeOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1RemoveVolumeOptions{}
 
-// KubevirtIoApiCoreV1RemoveVolumeOptions struct for KubevirtIoApiCoreV1RemoveVolumeOptions
+// KubevirtIoApiCoreV1RemoveVolumeOptions RemoveVolumeOptions is provided when dynamically hot unplugging volume and disk
 type KubevirtIoApiCoreV1RemoveVolumeOptions struct {
+	// When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
 	DryRun []string `json:"dryRun,omitempty"`
+	// Name represents the name that maps to both the disk and volume that should be removed
 	Name string `json:"name"`
 }
 

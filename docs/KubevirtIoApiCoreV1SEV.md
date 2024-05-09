@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Attestation** | Pointer to **map[string]interface{}** |  | [optional] 
-**DhCert** | Pointer to **string** |  | [optional] 
-**Policy** | Pointer to [**KubevirtIoApiCoreV1SEVPolicy**](KubevirtIoApiCoreV1SEVPolicy.md) |  | [optional] 
-**Session** | Pointer to **string** |  | [optional] 
+**Attestation** | Pointer to **map[string]interface{}** | If specified, run the attestation process for a vmi. | [optional] 
+**DhCert** | Pointer to **string** | Base64 encoded guest owner&#39;s Diffie-Hellman key. | [optional] 
+**Policy** | Pointer to [**KubevirtIoApiCoreV1SEVPolicy**](KubevirtIoApiCoreV1SEVPolicy.md) | Guest policy flags as defined in AMD SEV API specification. Note: due to security reasons it is not allowed to enable guest debugging. Therefore NoDebug flag is not exposed to users and is always true. | [optional] 
+**Session** | Pointer to **string** | Base64 encoded session blob. | [optional] 
 
 ## Methods
 

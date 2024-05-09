@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Capacity** | Pointer to **string** |  | [optional] [default to "{}"]
-**Path** | **string** |  | [default to ""]
-**Shared** | Pointer to **bool** |  | [optional] 
-**Type** | **string** |  | [default to ""]
+**Capacity** | Pointer to **string** | Capacity of the sparse disk | [optional] [default to "{}"]
+**Path** | **string** | The path to HostDisk image located on the cluster | [default to ""]
+**Shared** | Pointer to **bool** | Shared indicate whether the path is shared between nodes | [optional] 
+**Type** | **string** | Contains information if disk.img exists or should be created allowed options are &#39;Disk&#39; and &#39;DiskOrCreate&#39; | [default to ""]
 
 ## Methods
 

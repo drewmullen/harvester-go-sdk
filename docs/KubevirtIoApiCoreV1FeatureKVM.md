@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Hidden** | Pointer to **bool** |  | [optional] 
+**Hidden** | Pointer to **bool** | Hide the KVM hypervisor from standard MSR based discovery. Defaults to false | [optional] 
 
 ## Methods
 

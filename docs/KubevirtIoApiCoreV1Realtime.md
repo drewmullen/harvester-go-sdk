@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Mask** | Pointer to **string** |  | [optional] 
+**Mask** | Pointer to **string** | Mask defines the vcpu mask expression that defines which vcpus are used for realtime. Format matches libvirt&#39;s expressions. Example: \&quot;0-3,^1\&quot;,\&quot;0,2,3\&quot;,\&quot;2-3\&quot; | [optional] 
 
 ## Methods
 

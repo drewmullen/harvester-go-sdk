@@ -20,6 +20,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec{}
 // KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec struct for KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec
 type KubevirtIoApiCoreV1VirtualMachineInstanceTemplateSpec struct {
 	Metadata *K8sIoV1ObjectMeta `json:"metadata,omitempty"`
+	// VirtualMachineInstance Spec contains the VirtualMachineInstance specification.
 	Spec *KubevirtIoApiCoreV1VirtualMachineInstanceSpec `json:"spec,omitempty"`
 }
 

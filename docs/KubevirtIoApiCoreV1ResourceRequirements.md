@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Limits** | Pointer to **map[string]string** |  | [optional] 
-**OvercommitGuestOverhead** | Pointer to **bool** |  | [optional] 
-**Requests** | Pointer to **map[string]string** |  | [optional] 
+**Limits** | Pointer to **map[string]string** | Limits describes the maximum amount of compute resources allowed. Valid resource keys are \&quot;memory\&quot; and \&quot;cpu\&quot;. | [optional] 
+**OvercommitGuestOverhead** | Pointer to **bool** | Don&#39;t ask the scheduler to take the guest-management overhead into account. Instead put the overhead only into the container&#39;s memory limit. This can lead to crashes if all memory is in use on a node. Defaults to false. | [optional] 
+**Requests** | Pointer to **map[string]string** | Requests is a description of the initial vmi resources. Valid resource keys are \&quot;memory\&quot; and \&quot;cpu\&quot;. | [optional] 
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Container** | Pointer to [**KubevirtIoApiCoreV1KernelBootContainer**](KubevirtIoApiCoreV1KernelBootContainer.md) |  | [optional] 
-**KernelArgs** | Pointer to **string** |  | [optional] 
+**Container** | Pointer to [**KubevirtIoApiCoreV1KernelBootContainer**](KubevirtIoApiCoreV1KernelBootContainer.md) | Container defines the container that containes kernel artifacts | [optional] 
+**KernelArgs** | Pointer to **string** | Arguments to be passed to the kernel at boot time | [optional] 
 
 ## Methods
 

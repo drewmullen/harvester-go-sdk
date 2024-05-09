@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SecretRef** | Pointer to **string** |  | [optional] 
-**Url** | **string** |  | [default to ""]
+**SecretRef** | Pointer to **string** | SecretRef provides the secret reference needed to access the GCS source | [optional] 
+**Url** | **string** | URL is the url of the GCS source | [default to ""]
 
 ## Methods
 

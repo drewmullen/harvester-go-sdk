@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1FeatureKVM{}
 
 // KubevirtIoApiCoreV1FeatureKVM struct for KubevirtIoApiCoreV1FeatureKVM
 type KubevirtIoApiCoreV1FeatureKVM struct {
+	// Hide the KVM hypervisor from standard MSR based discovery. Defaults to false
 	Hidden *bool `json:"hidden,omitempty"`
 }
 

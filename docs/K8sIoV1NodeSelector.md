@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**NodeSelectorTerms** | [**[]K8sIoV1NodeSelectorTerm**](K8sIoV1NodeSelectorTerm.md) |  | 
+**NodeSelectorTerms** | [**[]K8sIoV1NodeSelectorTerm**](K8sIoV1NodeSelectorTerm.md) | Required. A list of node selector terms. The terms are ORed. | 
 
 ## Methods
 

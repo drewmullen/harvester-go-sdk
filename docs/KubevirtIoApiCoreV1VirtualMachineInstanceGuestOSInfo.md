@@ -4,14 +4,14 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**KernelRelease** | Pointer to **string** |  | [optional] 
-**KernelVersion** | Pointer to **string** |  | [optional] 
-**Machine** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**PrettyName** | Pointer to **string** |  | [optional] 
-**Version** | Pointer to **string** |  | [optional] 
-**VersionId** | Pointer to **string** |  | [optional] 
+**Id** | Pointer to **string** | Guest OS Id | [optional] 
+**KernelRelease** | Pointer to **string** | Guest OS Kernel Release | [optional] 
+**KernelVersion** | Pointer to **string** | Kernel version of the Guest OS | [optional] 
+**Machine** | Pointer to **string** | Machine type of the Guest OS | [optional] 
+**Name** | Pointer to **string** | Name of the Guest OS | [optional] 
+**PrettyName** | Pointer to **string** | Guest OS Pretty Name | [optional] 
+**Version** | Pointer to **string** | Guest OS Version | [optional] 
+**VersionId** | Pointer to **string** | Version ID of the Guest OS | [optional] 
 
 ## Methods
 

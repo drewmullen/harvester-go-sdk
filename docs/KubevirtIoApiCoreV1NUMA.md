@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GuestMappingPassthrough** | Pointer to **map[string]interface{}** |  | [optional] 
+**GuestMappingPassthrough** | Pointer to **map[string]interface{}** | GuestMappingPassthrough will create an efficient guest topology based on host CPUs exclusively assigned to a pod. The created topology ensures that memory and CPUs on the virtual numa nodes never cross boundaries of host numa nodes. | [optional] 
 
 ## Methods
 

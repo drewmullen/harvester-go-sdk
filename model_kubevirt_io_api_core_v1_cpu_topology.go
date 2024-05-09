@@ -17,10 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1CPUTopology type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1CPUTopology{}
 
-// KubevirtIoApiCoreV1CPUTopology struct for KubevirtIoApiCoreV1CPUTopology
+// KubevirtIoApiCoreV1CPUTopology CPUTopology allows specifying the amount of cores, sockets and threads.
 type KubevirtIoApiCoreV1CPUTopology struct {
+	// Cores specifies the number of cores inside the vmi. Must be a value greater or equal 1.
 	Cores *int64 `json:"cores,omitempty"`
+	// Sockets specifies the number of sockets inside the vmi. Must be a value greater or equal 1.
 	Sockets *int64 `json:"sockets,omitempty"`
+	// Threads specifies the number of threads inside the vmi. Must be a value greater or equal 1.
 	Threads *int64 `json:"threads,omitempty"`
 }
 

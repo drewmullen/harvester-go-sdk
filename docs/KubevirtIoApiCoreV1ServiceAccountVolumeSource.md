@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ServiceAccountName** | Pointer to **string** |  | [optional] 
+**ServiceAccountName** | Pointer to **string** | Name of the service account in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/ | [optional] 
 
 ## Methods
 

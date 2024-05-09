@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CreationTime** | Pointer to **string** |  | [optional] [default to ""]
+**CreationTime** | Pointer to **string** | Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers. | [optional] [default to ""]
 **CsiDriverName** | **string** |  | [default to ""]
 **Error** | Pointer to [**HarvesterhciIoV1beta1Error**](HarvesterhciIoV1beta1Error.md) |  | [optional] 
 **LonghornBackupName** | Pointer to **string** |  | [optional] 

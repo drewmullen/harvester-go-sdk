@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Users** | **[]string** |  | 
+**Users** | **[]string** | Users represents a list of guest users that should have the ssh public keys added to their authorized_keys file. | 
 
 ## Methods
 

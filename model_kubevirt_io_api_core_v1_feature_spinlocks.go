@@ -19,7 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1FeatureSpinlocks{}
 
 // KubevirtIoApiCoreV1FeatureSpinlocks struct for KubevirtIoApiCoreV1FeatureSpinlocks
 type KubevirtIoApiCoreV1FeatureSpinlocks struct {
+	// Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true.
 	Enabled *bool `json:"enabled,omitempty"`
+	// Retries indicates the number of retries. Must be a value greater or equal 4096. Defaults to 4096.
 	Spinlocks *int64 `json:"spinlocks,omitempty"`
 }
 

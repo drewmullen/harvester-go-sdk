@@ -19,13 +19,21 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo{}
 
 // KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo struct for KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo
 type KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo struct {
+	// Guest OS Id
 	Id *string `json:"id,omitempty"`
+	// Guest OS Kernel Release
 	KernelRelease *string `json:"kernelRelease,omitempty"`
+	// Kernel version of the Guest OS
 	KernelVersion *string `json:"kernelVersion,omitempty"`
+	// Machine type of the Guest OS
 	Machine *string `json:"machine,omitempty"`
+	// Name of the Guest OS
 	Name *string `json:"name,omitempty"`
+	// Guest OS Pretty Name
 	PrettyName *string `json:"prettyName,omitempty"`
+	// Guest OS Version
 	Version *string `json:"version,omitempty"`
+	// Version ID of the Guest OS
 	VersionId *string `json:"versionId,omitempty"`
 }
 

@@ -21,7 +21,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1Filesystem{}
 
 // KubevirtIoApiCoreV1Filesystem struct for KubevirtIoApiCoreV1Filesystem
 type KubevirtIoApiCoreV1Filesystem struct {
+	// Name is the device name
 	Name string `json:"name"`
+	// Virtiofs is supported
 	Virtiofs map[string]interface{} `json:"virtiofs"`
 }
 

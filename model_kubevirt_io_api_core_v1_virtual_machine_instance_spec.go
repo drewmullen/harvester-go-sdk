@@ -19,27 +19,47 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineInstanceSpec type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceSpec{}
 
-// KubevirtIoApiCoreV1VirtualMachineInstanceSpec struct for KubevirtIoApiCoreV1VirtualMachineInstanceSpec
+// KubevirtIoApiCoreV1VirtualMachineInstanceSpec VirtualMachineInstanceSpec is a description of a VirtualMachineInstance.
 type KubevirtIoApiCoreV1VirtualMachineInstanceSpec struct {
+	// Specifies a set of public keys to inject into the vm guest
 	AccessCredentials []KubevirtIoApiCoreV1AccessCredential `json:"accessCredentials,omitempty"`
+	// If affinity is specifies, obey all the affinity rules
 	Affinity *K8sIoV1Affinity `json:"affinity,omitempty"`
+	// Specifies the architecture of the vm guest you are attempting to run. Defaults to the compiled architecture of the KubeVirt components
 	Architecture *string `json:"architecture,omitempty"`
+	// Specifies the DNS parameters of a pod. Parameters specified here will be merged to the generated DNS configuration based on DNSPolicy.
 	DnsConfig *K8sIoV1PodDNSConfig `json:"dnsConfig,omitempty"`
+	// Set DNS policy for the pod. Defaults to \"ClusterFirst\". Valid values are 'ClusterFirstWithHostNet', 'ClusterFirst', 'Default' or 'None'. DNS parameters given in DNSConfig will be merged with the policy selected with DNSPolicy. To have DNS options set along with hostNetwork, you have to specify DNS policy explicitly to 'ClusterFirstWithHostNet'.  Possible enum values:  - `\"ClusterFirst\"` indicates that the pod should use cluster DNS first unless hostNetwork is true, if it is available, then fall back on the default (as determined by kubelet) DNS settings.  - `\"ClusterFirstWithHostNet\"` indicates that the pod should use cluster DNS first, if it is available, then fall back on the default (as determined by kubelet) DNS settings.  - `\"Default\"` indicates that the pod should use the default (as determined by kubelet) DNS settings.  - `\"None\"` indicates that the pod should use empty DNS settings. DNS parameters such as nameservers and search paths should be defined via DNSConfig.
 	DnsPolicy *string `json:"dnsPolicy,omitempty"`
+	// Specification of the desired behavior of the VirtualMachineInstance on the host.
 	Domain KubevirtIoApiCoreV1DomainSpec `json:"domain"`
+	// EvictionStrategy can be set to \"LiveMigrate\" if the VirtualMachineInstance should be migrated instead of shut-off in case of a node drain.
 	EvictionStrategy *string `json:"evictionStrategy,omitempty"`
+	// Specifies the hostname of the vmi If not specified, the hostname will be set to the name of the vmi, if dhcp or cloud-init is configured properly.
 	Hostname *string `json:"hostname,omitempty"`
+	// Periodic probe of VirtualMachineInstance liveness. VirtualmachineInstances will be stopped if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 	LivenessProbe *KubevirtIoApiCoreV1Probe `json:"livenessProbe,omitempty"`
+	// List of networks that can be attached to a vm's virtual interface.
 	Networks []KubevirtIoApiCoreV1Network `json:"networks,omitempty"`
+	// NodeSelector is a selector which must be true for the vmi to fit on a node. Selector which must match a node's labels for the vmi to be scheduled on that node. More info: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/
 	NodeSelector *map[string]string `json:"nodeSelector,omitempty"`
+	// If specified, indicates the pod's priority. If not specified, the pod priority will be default or zero if there is no default.
 	PriorityClassName *string `json:"priorityClassName,omitempty"`
+	// Periodic probe of VirtualMachineInstance service readiness. VirtualmachineInstances will be removed from service endpoints if the probe fails. Cannot be updated. More info: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle#container-probes
 	ReadinessProbe *KubevirtIoApiCoreV1Probe `json:"readinessProbe,omitempty"`
+	// If specified, the VMI will be dispatched by specified scheduler. If not specified, the VMI will be dispatched by default scheduler.
 	SchedulerName *string `json:"schedulerName,omitempty"`
+	// StartStrategy can be set to \"Paused\" if Virtual Machine should be started in paused state.
 	StartStrategy *string `json:"startStrategy,omitempty"`
+	// If specified, the fully qualified vmi hostname will be \"<hostname>.<subdomain>.<pod namespace>.svc.<cluster domain>\". If not specified, the vmi will not have a domainname at all. The DNS entry will resolve to the vmi, no matter if the vmi itself can pick up a hostname.
 	Subdomain *string `json:"subdomain,omitempty"`
+	// Grace period observed after signalling a VirtualMachineInstance to stop after which the VirtualMachineInstance is force terminated.
 	TerminationGracePeriodSeconds *int64 `json:"terminationGracePeriodSeconds,omitempty"`
+	// If toleration is specified, obey all the toleration rules.
 	Tolerations []K8sIoV1Toleration `json:"tolerations,omitempty"`
+	// TopologySpreadConstraints describes how a group of VMIs will be spread across a given topology domains. K8s scheduler will schedule VMI pods in a way which abides by the constraints.
 	TopologySpreadConstraints []K8sIoV1TopologySpreadConstraint `json:"topologySpreadConstraints,omitempty"`
+	// List of volumes that can be mounted by disks belonging to the vmi.
 	Volumes []KubevirtIoApiCoreV1Volume `json:"volumes,omitempty"`
 }
 

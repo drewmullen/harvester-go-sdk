@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PropagationMethod** | [**KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod**](KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod.md) |  | [default to {}]
-**Source** | [**KubevirtIoApiCoreV1UserPasswordAccessCredentialSource**](KubevirtIoApiCoreV1UserPasswordAccessCredentialSource.md) |  | [default to {}]
+**PropagationMethod** | [**KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod**](KubevirtIoApiCoreV1UserPasswordAccessCredentialPropagationMethod.md) | propagationMethod represents how the user passwords are injected into the vm guest. | [default to {}]
+**Source** | [**KubevirtIoApiCoreV1UserPasswordAccessCredentialSource**](KubevirtIoApiCoreV1UserPasswordAccessCredentialSource.md) | Source represents where the user passwords are pulled from | [default to {}]
 
 ## Methods
 

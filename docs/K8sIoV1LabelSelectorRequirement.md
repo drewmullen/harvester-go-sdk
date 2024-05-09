@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Key** | **string** |  | [default to ""]
-**Operator** | **string** |  | [default to ""]
-**Values** | Pointer to **[]string** |  | [optional] 
+**Key** | **string** | key is the label key that the selector applies to. | [default to ""]
+**Operator** | **string** | operator represents a key&#39;s relationship to a set of values. Valid operators are In, NotIn, Exists and DoesNotExist. | [default to ""]
+**Values** | Pointer to **[]string** | values is an array of string values. If the operator is In or NotIn, the values array must be non-empty. If the operator is Exists or DoesNotExist, the values array must be empty. This array is replaced during a strategic merge patch. | [optional] 
 
 ## Methods
 

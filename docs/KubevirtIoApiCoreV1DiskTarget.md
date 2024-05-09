@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Bus** | Pointer to **string** |  | [optional] 
-**PciAddress** | Pointer to **string** |  | [optional] 
-**Readonly** | Pointer to **bool** |  | [optional] 
+**Bus** | Pointer to **string** | Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, usb. | [optional] 
+**PciAddress** | Pointer to **string** | If specified, the virtual disk will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10 | [optional] 
+**Readonly** | Pointer to **bool** | ReadOnly. Defaults to false. | [optional] 
 
 ## Methods
 

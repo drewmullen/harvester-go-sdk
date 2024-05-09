@@ -19,8 +19,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1LunTarget{}
 
 // KubevirtIoApiCoreV1LunTarget struct for KubevirtIoApiCoreV1LunTarget
 type KubevirtIoApiCoreV1LunTarget struct {
+	// Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi.
 	Bus *string `json:"bus,omitempty"`
+	// ReadOnly. Defaults to false.
 	Readonly *bool `json:"readonly,omitempty"`
+	// Reservation indicates if the disk needs to support the persistent reservation for the SCSI disk
 	Reservation *bool `json:"reservation,omitempty"`
 }
 

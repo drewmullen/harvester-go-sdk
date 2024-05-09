@@ -17,10 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineStartFailure type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineStartFailure{}
 
-// KubevirtIoApiCoreV1VirtualMachineStartFailure struct for KubevirtIoApiCoreV1VirtualMachineStartFailure
+// KubevirtIoApiCoreV1VirtualMachineStartFailure VirtualMachineStartFailure tracks VMIs which failed to transition successfully to running using the VM status
 type KubevirtIoApiCoreV1VirtualMachineStartFailure struct {
 	ConsecutiveFailCount *int32 `json:"consecutiveFailCount,omitempty"`
 	LastFailedVMIUID *string `json:"lastFailedVMIUID,omitempty"`
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	RetryAfterTimestamp *string `json:"retryAfterTimestamp,omitempty"`
 }
 

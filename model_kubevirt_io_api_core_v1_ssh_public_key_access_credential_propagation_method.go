@@ -17,10 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod{}
 
-// KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod struct for KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod
+// KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod SSHPublicKeyAccessCredentialPropagationMethod represents the method used to inject a ssh public key into the vm guest. Only one of its members may be specified.
 type KubevirtIoApiCoreV1SSHPublicKeyAccessCredentialPropagationMethod struct {
+	// ConfigDrivePropagation means that the ssh public keys are injected into the VM using metadata using the configDrive cloud-init provider
 	ConfigDrive map[string]interface{} `json:"configDrive,omitempty"`
+	// NoCloudPropagation means that the ssh public keys are injected into the VM using metadata using the noCloud cloud-init provider
 	NoCloud map[string]interface{} `json:"noCloud,omitempty"`
+	// QemuGuestAgentAccessCredentailPropagation means ssh public keys are dynamically injected into the vm at runtime via the qemu guest agent. This feature requires the qemu guest agent to be running within the guest.
 	QemuGuestAgent *KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation `json:"qemuGuestAgent,omitempty"`
 }
 

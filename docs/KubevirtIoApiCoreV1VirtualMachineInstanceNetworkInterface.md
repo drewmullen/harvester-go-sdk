@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**InfoSource** | Pointer to **string** |  | [optional] 
-**InterfaceName** | Pointer to **string** |  | [optional] 
-**IpAddress** | Pointer to **string** |  | [optional] 
-**IpAddresses** | Pointer to **[]string** |  | [optional] 
-**Mac** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**QueueCount** | Pointer to **int32** |  | [optional] 
+**InfoSource** | Pointer to **string** | Specifies the origin of the interface data collected. values: domain, guest-agent, multus-status. | [optional] 
+**InterfaceName** | Pointer to **string** | The interface name inside the Virtual Machine | [optional] 
+**IpAddress** | Pointer to **string** | IP address of a Virtual Machine interface. It is always the first item of IPs | [optional] 
+**IpAddresses** | Pointer to **[]string** | List of all IP addresses of a Virtual Machine interface | [optional] 
+**Mac** | Pointer to **string** | Hardware address of a Virtual Machine interface | [optional] 
+**Name** | Pointer to **string** | Name of the interface, corresponds to name of the network assigned to the interface | [optional] 
+**QueueCount** | Pointer to **int32** | Specifies how many queues are allocated by MultiQueue | [optional] 
 
 ## Methods
 

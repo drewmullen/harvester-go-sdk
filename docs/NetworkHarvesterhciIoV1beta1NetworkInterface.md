@@ -4,13 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Index** | **int32** |  | [default to 0]
-**MasterIndex** | Pointer to **int32** |  | [optional] 
-**Name** | **string** |  | [default to ""]
-**State** | **string** |  | [default to ""]
-**Type** | **string** |  | [default to ""]
-**UsedByManagementNetwork** | Pointer to **bool** |  | [optional] 
-**UsedByVlanNetwork** | Pointer to **bool** |  | [optional] 
+**Index** | **int32** | Index of the NIC | [default to 0]
+**MasterIndex** | Pointer to **int32** | Index of the NIC&#39;s master | [optional] 
+**Name** | **string** | Name of the NIC | [default to ""]
+**State** | **string** | State of the NIC, up/down/unknown | [default to ""]
+**Type** | **string** | Interface type of the NIC | [default to ""]
+**UsedByManagementNetwork** | Pointer to **bool** | Specify whether used by management network or not | [optional] 
+**UsedByVlanNetwork** | Pointer to **bool** | Specify whether used by VLAN network or not | [optional] 
 
 ## Methods
 

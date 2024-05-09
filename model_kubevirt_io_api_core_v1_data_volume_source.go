@@ -21,7 +21,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1DataVolumeSource{}
 
 // KubevirtIoApiCoreV1DataVolumeSource struct for KubevirtIoApiCoreV1DataVolumeSource
 type KubevirtIoApiCoreV1DataVolumeSource struct {
+	// Hotpluggable indicates whether the volume can be hotplugged and hotunplugged.
 	Hotpluggable *bool `json:"hotpluggable,omitempty"`
+	// Name of both the DataVolume and the PVC in the same namespace. After PVC population the DataVolume is garbage collected by default.
 	Name string `json:"name"`
 }
 

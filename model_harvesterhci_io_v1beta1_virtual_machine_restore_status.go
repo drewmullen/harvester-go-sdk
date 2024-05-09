@@ -17,12 +17,13 @@ import (
 // checks if the HarvesterhciIoV1beta1VirtualMachineRestoreStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1VirtualMachineRestoreStatus{}
 
-// HarvesterhciIoV1beta1VirtualMachineRestoreStatus struct for HarvesterhciIoV1beta1VirtualMachineRestoreStatus
+// HarvesterhciIoV1beta1VirtualMachineRestoreStatus VirtualMachineRestoreStatus is the spec for a VirtualMachineRestore resource
 type HarvesterhciIoV1beta1VirtualMachineRestoreStatus struct {
 	Complete *bool `json:"complete,omitempty"`
 	Conditions []HarvesterhciIoV1beta1Condition `json:"conditions,omitempty"`
 	DeletedVolumes []string `json:"deletedVolumes,omitempty"`
 	Progress *int32 `json:"progress,omitempty"`
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	RestoreTime *string `json:"restoreTime,omitempty"`
 	Restores []HarvesterhciIoV1beta1VolumeRestore `json:"restores,omitempty"`
 	TargetUID *string `json:"targetUID,omitempty"`

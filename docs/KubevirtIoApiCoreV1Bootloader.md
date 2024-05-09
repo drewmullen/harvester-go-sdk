@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Bios** | Pointer to [**KubevirtIoApiCoreV1BIOS**](KubevirtIoApiCoreV1BIOS.md) |  | [optional] 
-**Efi** | Pointer to [**KubevirtIoApiCoreV1EFI**](KubevirtIoApiCoreV1EFI.md) |  | [optional] 
+**Bios** | Pointer to [**KubevirtIoApiCoreV1BIOS**](KubevirtIoApiCoreV1BIOS.md) | If set (default), BIOS will be used. | [optional] 
+**Efi** | Pointer to [**KubevirtIoApiCoreV1EFI**](KubevirtIoApiCoreV1EFI.md) | If set, EFI will be used instead of BIOS. | [optional] 
 
 ## Methods
 

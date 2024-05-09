@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Present** | Pointer to **bool** |  | [optional] 
+**Present** | Pointer to **bool** | Enabled set to false makes sure that the machine type or a preset can&#39;t add the timer. Defaults to true. | [optional] 
 
 ## Methods
 

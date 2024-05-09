@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1Machine{}
 
 // KubevirtIoApiCoreV1Machine struct for KubevirtIoApiCoreV1Machine
 type KubevirtIoApiCoreV1Machine struct {
+	// QEMU machine type is the actual chipset of the VirtualMachineInstance.
 	Type *string `json:"type,omitempty"`
 }
 

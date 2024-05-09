@@ -19,7 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1HPETTimer{}
 
 // KubevirtIoApiCoreV1HPETTimer struct for KubevirtIoApiCoreV1HPETTimer
 type KubevirtIoApiCoreV1HPETTimer struct {
+	// Enabled set to false makes sure that the machine type or a preset can't add the timer. Defaults to true.
 	Present *bool `json:"present,omitempty"`
+	// TickPolicy determines what happens when QEMU misses a deadline for injecting a tick to the guest. One of \"delay\", \"catchup\", \"merge\", \"discard\".
 	TickPolicy *string `json:"tickPolicy,omitempty"`
 }
 

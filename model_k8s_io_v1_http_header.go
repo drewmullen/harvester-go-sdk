@@ -19,9 +19,11 @@ import (
 // checks if the K8sIoV1HTTPHeader type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1HTTPHeader{}
 
-// K8sIoV1HTTPHeader struct for K8sIoV1HTTPHeader
+// K8sIoV1HTTPHeader HTTPHeader describes a custom header to be used in HTTP probes
 type K8sIoV1HTTPHeader struct {
+	// The header field name. This will be canonicalized upon output, so case-variant names will be understood as the same header.
 	Name string `json:"name"`
+	// The header field value
 	Value string `json:"value"`
 }
 

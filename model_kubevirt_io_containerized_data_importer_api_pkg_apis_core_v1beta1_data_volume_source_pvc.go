@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourcePVC type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourcePVC{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourcePVC struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourcePVC
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourcePVC DataVolumeSourcePVC provides the parameters to create a Data Volume from an existing PVC
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourcePVC struct {
+	// The name of the source PVC
 	Name string `json:"name"`
+	// The namespace of the source PVC
 	Namespace string `json:"namespace"`
 }
 

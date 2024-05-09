@@ -21,6 +21,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCrede
 
 // KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation struct for KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation
 type KubevirtIoApiCoreV1QemuGuestAgentSSHPublicKeyAccessCredentialPropagation struct {
+	// Users represents a list of guest users that should have the ssh public keys added to their authorized_keys file.
 	Users []string `json:"users"`
 }
 

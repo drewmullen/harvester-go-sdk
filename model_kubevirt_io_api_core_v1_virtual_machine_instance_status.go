@@ -17,31 +17,56 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineInstanceStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceStatus{}
 
-// KubevirtIoApiCoreV1VirtualMachineInstanceStatus struct for KubevirtIoApiCoreV1VirtualMachineInstanceStatus
+// KubevirtIoApiCoreV1VirtualMachineInstanceStatus VirtualMachineInstanceStatus represents information about the status of a VirtualMachineInstance. Status may trail the actual state of a system.
 type KubevirtIoApiCoreV1VirtualMachineInstanceStatus struct {
+	// VSOCKCID is used to track the allocated VSOCK CID in the VM.
 	VSOCKCID *int64 `json:"VSOCKCID,omitempty"`
+	// ActivePods is a mapping of pod UID to node name. It is possible for multiple pods to be running for a single VMI during migration.
 	ActivePods *map[string]string `json:"activePods,omitempty"`
+	// Conditions are specific points in VirtualMachineInstance's pod runtime.
 	Conditions []KubevirtIoApiCoreV1VirtualMachineInstanceCondition `json:"conditions,omitempty"`
+	// CurrentCPUTopology specifies the current CPU topology used by the VM workload. Current topology may differ from the desired topology in the spec while CPU hotplug takes place.
 	CurrentCPUTopology *KubevirtIoApiCoreV1CPUTopology `json:"currentCPUTopology,omitempty"`
+	// EvacuationNodeName is used to track the eviction process of a VMI. It stores the name of the node that we want to evacuate. It is meant to be used by KubeVirt core components only and can't be set or modified by users.
 	EvacuationNodeName *string `json:"evacuationNodeName,omitempty"`
+	// FSFreezeStatus is the state of the fs of the guest it can be either frozen or thawed
 	FsFreezeStatus *string `json:"fsFreezeStatus,omitempty"`
+	// Guest OS Information
 	GuestOSInfo *KubevirtIoApiCoreV1VirtualMachineInstanceGuestOSInfo `json:"guestOSInfo,omitempty"`
+	// Interfaces represent the details of available network interfaces.
 	Interfaces []KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface `json:"interfaces,omitempty"`
+	// KernelBootStatus contains info about the kernelBootContainer
+	KernelBootStatus *KubevirtIoApiCoreV1KernelBootStatus `json:"kernelBootStatus,omitempty"`
+	// LauncherContainerImageVersion indicates what container image is currently active for the vmi.
 	LauncherContainerImageVersion *string `json:"launcherContainerImageVersion,omitempty"`
+	// Machine shows the final resulting qemu machine type. This can be different than the machine type selected in the spec, due to qemus machine type alias mechanism.
 	Machine *KubevirtIoApiCoreV1Machine `json:"machine,omitempty"`
+	// Memory shows various informations about the VirtualMachine memory.
 	Memory *KubevirtIoApiCoreV1MemoryStatus `json:"memory,omitempty"`
+	// Represents the method using which the vmi can be migrated: live migration or block migration
 	MigrationMethod *string `json:"migrationMethod,omitempty"`
+	// Represents the status of a live migration
 	MigrationState *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState `json:"migrationState,omitempty"`
+	// This represents the migration transport
 	MigrationTransport *string `json:"migrationTransport,omitempty"`
+	// NodeName is the name where the VirtualMachineInstance is currently running.
 	NodeName *string `json:"nodeName,omitempty"`
+	// Phase is the status of the VirtualMachineInstance in kubernetes world. It is not the VirtualMachineInstance status, but partially correlates to it.
 	Phase *string `json:"phase,omitempty"`
+	// PhaseTransitionTimestamp is the timestamp of when the last phase change occurred
 	PhaseTransitionTimestamps []KubevirtIoApiCoreV1VirtualMachineInstancePhaseTransitionTimestamp `json:"phaseTransitionTimestamps,omitempty"`
+	// The Quality of Service (QOS) classification assigned to the virtual machine instance based on resource requirements See PodQOSClass type for available QOS classes More info: https://git.k8s.io/community/contributors/design-proposals/node/resource-qos.md
 	QosClass *string `json:"qosClass,omitempty"`
+	// A brief CamelCase message indicating details about why the VMI is in this state. e.g. 'NodeUnresponsive'
 	Reason *string `json:"reason,omitempty"`
+	// RuntimeUser is used to determine what user will be used in launcher
 	RuntimeUser *int64 `json:"runtimeUser,omitempty"`
+	// SELinuxContext is the actual SELinux context of the virt-launcher pod
 	SelinuxContext *string `json:"selinuxContext,omitempty"`
 	TopologyHints *KubevirtIoApiCoreV1TopologyHints `json:"topologyHints,omitempty"`
+	// VirtualMachineRevisionName is used to get the vm revision of the vmi when doing an online vm snapshot
 	VirtualMachineRevisionName *string `json:"virtualMachineRevisionName,omitempty"`
+	// VolumeStatus contains the statuses of all the volumes
 	VolumeStatus []KubevirtIoApiCoreV1VolumeStatus `json:"volumeStatus,omitempty"`
 }
 
@@ -324,6 +349,38 @@ func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) HasInterfaces() bool {
 // SetInterfaces gets a reference to the given []KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface and assigns it to the Interfaces field.
 func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) SetInterfaces(v []KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface) {
 	o.Interfaces = v
+}
+
+// GetKernelBootStatus returns the KernelBootStatus field value if set, zero value otherwise.
+func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) GetKernelBootStatus() KubevirtIoApiCoreV1KernelBootStatus {
+	if o == nil || IsNil(o.KernelBootStatus) {
+		var ret KubevirtIoApiCoreV1KernelBootStatus
+		return ret
+	}
+	return *o.KernelBootStatus
+}
+
+// GetKernelBootStatusOk returns a tuple with the KernelBootStatus field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) GetKernelBootStatusOk() (*KubevirtIoApiCoreV1KernelBootStatus, bool) {
+	if o == nil || IsNil(o.KernelBootStatus) {
+		return nil, false
+	}
+	return o.KernelBootStatus, true
+}
+
+// HasKernelBootStatus returns a boolean if a field has been set.
+func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) HasKernelBootStatus() bool {
+	if o != nil && !IsNil(o.KernelBootStatus) {
+		return true
+	}
+
+	return false
+}
+
+// SetKernelBootStatus gets a reference to the given KubevirtIoApiCoreV1KernelBootStatus and assigns it to the KernelBootStatus field.
+func (o *KubevirtIoApiCoreV1VirtualMachineInstanceStatus) SetKernelBootStatus(v KubevirtIoApiCoreV1KernelBootStatus) {
+	o.KernelBootStatus = &v
 }
 
 // GetLauncherContainerImageVersion returns the LauncherContainerImageVersion field value if set, zero value otherwise.
@@ -871,6 +928,9 @@ func (o KubevirtIoApiCoreV1VirtualMachineInstanceStatus) ToMap() (map[string]int
 	}
 	if !IsNil(o.Interfaces) {
 		toSerialize["interfaces"] = o.Interfaces
+	}
+	if !IsNil(o.KernelBootStatus) {
+		toSerialize["kernelBootStatus"] = o.KernelBootStatus
 	}
 	if !IsNil(o.LauncherContainerImageVersion) {
 		toSerialize["launcherContainerImageVersion"] = o.LauncherContainerImageVersion

@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Checkpoints** | Pointer to [**[]KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint.md) |  | [optional] 
-**ContentType** | Pointer to **string** |  | [optional] 
-**FinalCheckpoint** | Pointer to **bool** |  | [optional] 
-**Preallocation** | Pointer to **bool** |  | [optional] 
-**PriorityClassName** | Pointer to **string** |  | [optional] 
-**Pvc** | Pointer to [**K8sIoV1PersistentVolumeClaimSpec**](K8sIoV1PersistentVolumeClaimSpec.md) |  | [optional] 
-**Source** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource.md) |  | [optional] 
-**SourceRef** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef.md) |  | [optional] 
-**Storage** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec.md) |  | [optional] 
+**Checkpoints** | Pointer to [**[]KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint.md) | Checkpoints is a list of DataVolumeCheckpoints, representing stages in a multistage import. | [optional] 
+**ContentType** | Pointer to **string** | DataVolumeContentType options: \&quot;kubevirt\&quot;, \&quot;archive\&quot; | [optional] 
+**FinalCheckpoint** | Pointer to **bool** | FinalCheckpoint indicates whether the current DataVolumeCheckpoint is the final checkpoint. | [optional] 
+**Preallocation** | Pointer to **bool** | Preallocation controls whether storage for DataVolumes should be allocated in advance. | [optional] 
+**PriorityClassName** | Pointer to **string** | PriorityClassName for Importer, Cloner and Uploader pod | [optional] 
+**Pvc** | Pointer to [**K8sIoV1PersistentVolumeClaimSpec**](K8sIoV1PersistentVolumeClaimSpec.md) | PVC is the PVC specification | [optional] 
+**Source** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSource.md) | Source is the src of the data for the requested DataVolume | [optional] 
+**SourceRef** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRef.md) | SourceRef is an indirect reference to the source of data for the requested DataVolume | [optional] 
+**Storage** | Pointer to [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1StorageSpec.md) | Storage is the requested storage specification | [optional] 
 
 ## Methods
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**SshPublicKey** | Pointer to [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredential**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredential.md) |  | [optional] 
-**UserPassword** | Pointer to [**KubevirtIoApiCoreV1UserPasswordAccessCredential**](KubevirtIoApiCoreV1UserPasswordAccessCredential.md) |  | [optional] 
+**SshPublicKey** | Pointer to [**KubevirtIoApiCoreV1SSHPublicKeyAccessCredential**](KubevirtIoApiCoreV1SSHPublicKeyAccessCredential.md) | SSHPublicKey represents the source and method of applying a ssh public key into a guest virtual machine. | [optional] 
+**UserPassword** | Pointer to [**KubevirtIoApiCoreV1UserPasswordAccessCredential**](KubevirtIoApiCoreV1UserPasswordAccessCredential.md) | UserPassword represents the source and method for applying a guest user&#39;s password | [optional] 
 
 ## Methods
 

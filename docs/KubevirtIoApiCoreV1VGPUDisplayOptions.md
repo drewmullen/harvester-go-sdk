@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | Pointer to **bool** |  | [optional] 
-**RamFB** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
+**Enabled** | Pointer to **bool** | Enabled determines if a display addapter backed by a vGPU should be enabled or disabled on the guest. Defaults to true. | [optional] 
+**RamFB** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | Enables a boot framebuffer, until the guest OS loads a real GPU driver Defaults to true. | [optional] 
 
 ## Methods
 

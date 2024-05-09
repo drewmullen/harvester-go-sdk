@@ -19,11 +19,15 @@ import (
 // checks if the KubevirtIoApiCoreV1HostDisk type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1HostDisk{}
 
-// KubevirtIoApiCoreV1HostDisk struct for KubevirtIoApiCoreV1HostDisk
+// KubevirtIoApiCoreV1HostDisk Represents a disk created on the cluster level
 type KubevirtIoApiCoreV1HostDisk struct {
+	// Capacity of the sparse disk
 	Capacity *string `json:"capacity,omitempty"`
+	// The path to HostDisk image located on the cluster
 	Path string `json:"path"`
+	// Shared indicate whether the path is shared between nodes
 	Shared *bool `json:"shared,omitempty"`
+	// Contains information if disk.img exists or should be created allowed options are 'Disk' and 'DiskOrCreate'
 	Type string `json:"type"`
 }
 

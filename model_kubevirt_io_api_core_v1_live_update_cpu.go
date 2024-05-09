@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1LiveUpdateCPU{}
 
 // KubevirtIoApiCoreV1LiveUpdateCPU struct for KubevirtIoApiCoreV1LiveUpdateCPU
 type KubevirtIoApiCoreV1LiveUpdateCPU struct {
+	// The maximum amount of sockets that can be hot-plugged to the Virtual Machine
 	MaxSockets *int64 `json:"maxSockets,omitempty"`
 }
 

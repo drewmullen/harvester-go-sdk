@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GuestAtBoot** | Pointer to **string** |  | [optional] 
-**GuestCurrent** | Pointer to **string** |  | [optional] 
-**GuestRequested** | Pointer to **string** |  | [optional] 
+**GuestAtBoot** | Pointer to **string** | GuestAtBoot specifies with how much memory the VirtualMachine intiallly booted with. | [optional] 
+**GuestCurrent** | Pointer to **string** | GuestCurrent specifies how much memory is currently available for the VirtualMachine. | [optional] 
+**GuestRequested** | Pointer to **string** | GuestRequested specifies how much memory was requested (hotplug) for the VirtualMachine. | [optional] 
 
 ## Methods
 

@@ -19,8 +19,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1LiveUpdateFeatures{}
 
 // KubevirtIoApiCoreV1LiveUpdateFeatures struct for KubevirtIoApiCoreV1LiveUpdateFeatures
 type KubevirtIoApiCoreV1LiveUpdateFeatures struct {
+	// Affinity allows live updating the virtual machines node affinity
 	Affinity map[string]interface{} `json:"affinity,omitempty"`
+	// LiveUpdateCPU holds hotplug configuration for the CPU resource. Empty struct indicates that default will be used for maxSockets. Default is specified on cluster level. Absence of the struct means opt-out from CPU hotplug functionality.
 	Cpu *KubevirtIoApiCoreV1LiveUpdateCPU `json:"cpu,omitempty"`
+	// MemoryLiveUpdateConfiguration defines the live update memory features for the VirtualMachine
 	Memory *KubevirtIoApiCoreV1LiveUpdateMemory `json:"memory,omitempty"`
 }
 

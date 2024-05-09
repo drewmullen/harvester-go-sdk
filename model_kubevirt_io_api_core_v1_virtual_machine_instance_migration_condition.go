@@ -21,7 +21,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondit
 
 // KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition struct for KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition
 type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition struct {
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	LastProbeTime *string `json:"lastProbeTime,omitempty"`
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	LastTransitionTime *string `json:"lastTransitionTime,omitempty"`
 	Message *string `json:"message,omitempty"`
 	Reason *string `json:"reason,omitempty"`

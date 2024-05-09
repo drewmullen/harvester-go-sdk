@@ -17,20 +17,33 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineStatus{}
 
-// KubevirtIoApiCoreV1VirtualMachineStatus struct for KubevirtIoApiCoreV1VirtualMachineStatus
+// KubevirtIoApiCoreV1VirtualMachineStatus VirtualMachineStatus represents the status returned by the controller to describe how the VirtualMachine is doing
 type KubevirtIoApiCoreV1VirtualMachineStatus struct {
+	// Hold the state information of the VirtualMachine and its VirtualMachineInstance
 	Conditions []KubevirtIoApiCoreV1VirtualMachineCondition `json:"conditions,omitempty"`
+	// Created indicates if the virtual machine is created in the cluster
 	Created *bool `json:"created,omitempty"`
+	// DesiredGeneration is the generation which is desired for the VMI. This will be used in comparisons with ObservedGeneration to understand when the VMI is out of sync. This will be changed at the same time as ObservedGeneration to remove errors which could occur if Generation is updated through an Update() before ObservedGeneration in Status.
 	DesiredGeneration *int64 `json:"desiredGeneration,omitempty"`
+	// MemoryDumpRequest tracks memory dump request phase and info of getting a memory dump to the given pvc
 	MemoryDumpRequest *KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest `json:"memoryDumpRequest,omitempty"`
+	// ObservedGeneration is the generation observed by the vmi when started.
 	ObservedGeneration *int64 `json:"observedGeneration,omitempty"`
+	// PrintableStatus is a human readable, high-level representation of the status of the virtual machine
 	PrintableStatus *string `json:"printableStatus,omitempty"`
+	// Ready indicates if the virtual machine is running and ready
 	Ready *bool `json:"ready,omitempty"`
+	// RestoreInProgress is the name of the VirtualMachineRestore currently executing
 	RestoreInProgress *string `json:"restoreInProgress,omitempty"`
+	// SnapshotInProgress is the name of the VirtualMachineSnapshot currently executing
 	SnapshotInProgress *string `json:"snapshotInProgress,omitempty"`
+	// StartFailure tracks consecutive VMI startup failures for the purposes of crash loop backoffs
 	StartFailure *KubevirtIoApiCoreV1VirtualMachineStartFailure `json:"startFailure,omitempty"`
+	// StateChangeRequests indicates a list of actions that should be taken on a VMI e.g. stop a specific VMI then start a new one.
 	StateChangeRequests []KubevirtIoApiCoreV1VirtualMachineStateChangeRequest `json:"stateChangeRequests,omitempty"`
+	// VolumeRequests indicates a list of volumes add or remove from the VMI template and hotplug on an active running VMI.
 	VolumeRequests []KubevirtIoApiCoreV1VirtualMachineVolumeRequest `json:"volumeRequests,omitempty"`
+	// VolumeSnapshotStatuses indicates a list of statuses whether snapshotting is supported by each volume.
 	VolumeSnapshotStatuses []KubevirtIoApiCoreV1VolumeSnapshotStatus `json:"volumeSnapshotStatuses,omitempty"`
 }
 

@@ -17,10 +17,13 @@ import (
 // checks if the K8sIoV1ResourceRequirements type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1ResourceRequirements{}
 
-// K8sIoV1ResourceRequirements struct for K8sIoV1ResourceRequirements
+// K8sIoV1ResourceRequirements ResourceRequirements describes the compute resource requirements.
 type K8sIoV1ResourceRequirements struct {
+	// Claims lists the names of resources, defined in spec.resourceClaims, that are used by this container.  This is an alpha field and requires enabling the DynamicResourceAllocation feature gate.  This field is immutable. It can only be set for containers.
 	Claims []K8sIoV1ResourceClaim `json:"claims,omitempty"`
+	// Limits describes the maximum amount of compute resources allowed. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 	Limits map[string]string `json:"limits,omitempty"`
+	// Requests describes the minimum amount of compute resources required. If Requests is omitted for a container, it defaults to Limits if that is explicitly specified, otherwise to an implementation-defined value. More info: https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/
 	Requests map[string]string `json:"requests,omitempty"`
 }
 

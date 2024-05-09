@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ResourceVersion** | Pointer to **string** |  | [optional] 
-**Uid** | Pointer to **string** |  | [optional] 
+**ResourceVersion** | Pointer to **string** | Specifies the target ResourceVersion | [optional] 
+**Uid** | Pointer to **string** | Specifies the target UID. | [optional] 
 
 ## Methods
 

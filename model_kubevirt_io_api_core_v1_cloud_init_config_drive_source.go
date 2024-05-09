@@ -17,13 +17,19 @@ import (
 // checks if the KubevirtIoApiCoreV1CloudInitConfigDriveSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1CloudInitConfigDriveSource{}
 
-// KubevirtIoApiCoreV1CloudInitConfigDriveSource struct for KubevirtIoApiCoreV1CloudInitConfigDriveSource
+// KubevirtIoApiCoreV1CloudInitConfigDriveSource Represents a cloud-init config drive user data source. More info: https://cloudinit.readthedocs.io/en/latest/topics/datasources/configdrive.html
 type KubevirtIoApiCoreV1CloudInitConfigDriveSource struct {
+	// NetworkData contains config drive inline cloud-init networkdata.
 	NetworkData *string `json:"networkData,omitempty"`
+	// NetworkDataBase64 contains config drive cloud-init networkdata as a base64 encoded string.
 	NetworkDataBase64 *string `json:"networkDataBase64,omitempty"`
+	// NetworkDataSecretRef references a k8s secret that contains config drive networkdata.
 	NetworkDataSecretRef *K8sIoV1LocalObjectReference `json:"networkDataSecretRef,omitempty"`
+	// UserDataSecretRef references a k8s secret that contains config drive userdata.
 	SecretRef *K8sIoV1LocalObjectReference `json:"secretRef,omitempty"`
+	// UserData contains config drive inline cloud-init userdata.
 	UserData *string `json:"userData,omitempty"`
+	// UserDataBase64 contains config drive cloud-init userdata as a base64 encoded string.
 	UserDataBase64 *string `json:"userDataBase64,omitempty"`
 }
 

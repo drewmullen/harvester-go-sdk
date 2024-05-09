@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Cores** | Pointer to **int64** |  | [optional] 
-**Sockets** | Pointer to **int64** |  | [optional] 
-**Threads** | Pointer to **int64** |  | [optional] 
+**Cores** | Pointer to **int64** | Cores specifies the number of cores inside the vmi. Must be a value greater or equal 1. | [optional] 
+**Sockets** | Pointer to **int64** | Sockets specifies the number of sockets inside the vmi. Must be a value greater or equal 1. | [optional] 
+**Threads** | Pointer to **int64** | Threads specifies the number of threads inside the vmi. Must be a value greater or equal 1. | [optional] 
 
 ## Methods
 

@@ -4,10 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertConfigMap** | Pointer to **string** |  | [optional] 
-**DiskId** | **string** |  | [default to ""]
-**SecretRef** | Pointer to **string** |  | [optional] 
-**Url** | **string** |  | [default to ""]
+**CertConfigMap** | Pointer to **string** | CertConfigMap provides a reference to the CA cert | [optional] 
+**DiskId** | **string** | DiskID provides id of a disk to be imported | [default to ""]
+**SecretRef** | Pointer to **string** | SecretRef provides the secret reference needed to access the ovirt-engine | [optional] 
+**Url** | **string** | URL is the URL of the ovirt-engine | [default to ""]
 
 ## Methods
 

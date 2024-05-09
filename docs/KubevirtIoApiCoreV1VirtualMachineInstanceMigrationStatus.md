@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Conditions** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition.md) |  | [optional] 
-**MigrationState** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState.md) |  | [optional] 
+**MigrationState** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState.md) | Represents the status of a live migration | [optional] 
 **Phase** | Pointer to **string** |  | [optional] 
-**PhaseTransitionTimestamps** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp.md) |  | [optional] 
+**PhaseTransitionTimestamps** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp**](KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp.md) | PhaseTransitionTimestamp is the timestamp of when the last phase change occurred | [optional] 
 
 ## Methods
 

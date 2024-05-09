@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1PodNetwork type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1PodNetwork{}
 
-// KubevirtIoApiCoreV1PodNetwork struct for KubevirtIoApiCoreV1PodNetwork
+// KubevirtIoApiCoreV1PodNetwork Represents the stock pod network interface.
 type KubevirtIoApiCoreV1PodNetwork struct {
+	// IPv6 CIDR for the vm network. Defaults to fd10:0:2::/120 if not specified.
 	VmIPv6NetworkCIDR *string `json:"vmIPv6NetworkCIDR,omitempty"`
+	// CIDR for vm network. Default 10.0.2.0/24 if not specified.
 	VmNetworkCIDR *string `json:"vmNetworkCIDR,omitempty"`
 }
 

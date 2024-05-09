@@ -17,10 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1SecretVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1SecretVolumeSource{}
 
-// KubevirtIoApiCoreV1SecretVolumeSource struct for KubevirtIoApiCoreV1SecretVolumeSource
+// KubevirtIoApiCoreV1SecretVolumeSource SecretVolumeSource adapts a Secret into a volume.
 type KubevirtIoApiCoreV1SecretVolumeSource struct {
+	// Specify whether the Secret or it's keys must be defined
 	Optional *bool `json:"optional,omitempty"`
+	// Name of the secret in the pod's namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret
 	SecretName *string `json:"secretName,omitempty"`
+	// The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \"cidata\" (cloud-init), \"config-2\" (cloud-init) or \"OEMDRV\" (kickstart).
 	VolumeLabel *string `json:"volumeLabel,omitempty"`
 }
 

@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Host** | Pointer to **string** |  | [optional] 
-**HttpHeaders** | Pointer to [**[]K8sIoV1HTTPHeader**](K8sIoV1HTTPHeader.md) |  | [optional] 
-**Path** | Pointer to **string** |  | [optional] 
-**Port** | **string** |  | [default to "{}"]
-**Scheme** | Pointer to **string** |  | [optional] 
+**Host** | Pointer to **string** | Host name to connect to, defaults to the pod IP. You probably want to set \&quot;Host\&quot; in httpHeaders instead. | [optional] 
+**HttpHeaders** | Pointer to [**[]K8sIoV1HTTPHeader**](K8sIoV1HTTPHeader.md) | Custom headers to set in the request. HTTP allows repeated headers. | [optional] 
+**Path** | Pointer to **string** | Path to access on the HTTP server. | [optional] 
+**Port** | **string** | Name or number of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. | [default to "{}"]
+**Scheme** | Pointer to **string** | Scheme to use for connecting to the host. Defaults to HTTP.  Possible enum values:  - &#x60;\&quot;HTTP\&quot;&#x60; means that the scheme used will be http://  - &#x60;\&quot;HTTPS\&quot;&#x60; means that the scheme used will be https:// | [optional] 
 
 ## Methods
 

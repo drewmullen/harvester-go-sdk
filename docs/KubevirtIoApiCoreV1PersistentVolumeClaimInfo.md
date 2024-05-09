@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AccessModes** | Pointer to **[]string** |  | [optional] 
-**Capacity** | Pointer to **map[string]string** |  | [optional] 
-**FilesystemOverhead** | Pointer to **string** |  | [optional] 
-**Preallocated** | Pointer to **bool** |  | [optional] 
-**Requests** | Pointer to **map[string]string** |  | [optional] 
-**VolumeMode** | Pointer to **string** |  | [optional] 
+**AccessModes** | Pointer to **[]string** | AccessModes contains the desired access modes the volume should have. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#access-modes-1 | [optional] 
+**Capacity** | Pointer to **map[string]string** | Capacity represents the capacity set on the corresponding PVC status | [optional] 
+**FilesystemOverhead** | Pointer to **string** | Percentage of filesystem&#39;s size to be reserved when resizing the PVC | [optional] 
+**Preallocated** | Pointer to **bool** | Preallocated indicates if the PVC&#39;s storage is preallocated or not | [optional] 
+**Requests** | Pointer to **map[string]string** | Requests represents the resources requested by the corresponding PVC spec | [optional] 
+**VolumeMode** | Pointer to **string** | VolumeMode defines what type of volume is required by the claim. Value of Filesystem is implied when not included in claim spec. | [optional] 
 
 ## Methods
 

@@ -19,8 +19,9 @@ import (
 // checks if the KubevirtIoApiCoreV1EmptyDiskSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1EmptyDiskSource{}
 
-// KubevirtIoApiCoreV1EmptyDiskSource struct for KubevirtIoApiCoreV1EmptyDiskSource
+// KubevirtIoApiCoreV1EmptyDiskSource EmptyDisk represents a temporary disk which shares the vmis lifecycle.
 type KubevirtIoApiCoreV1EmptyDiskSource struct {
+	// Capacity of the sparse disk.
 	Capacity string `json:"capacity"`
 }
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Optional** | Pointer to **bool** |  | [optional] 
-**SecretName** | Pointer to **string** |  | [optional] 
-**VolumeLabel** | Pointer to **string** |  | [optional] 
+**Optional** | Pointer to **bool** | Specify whether the Secret or it&#39;s keys must be defined | [optional] 
+**SecretName** | Pointer to **string** | Name of the secret in the pod&#39;s namespace to use. More info: https://kubernetes.io/docs/concepts/storage/volumes#secret | [optional] 
+**VolumeLabel** | Pointer to **string** | The volume label of the resulting disk inside the VMI. Different bootstrapping mechanisms require different values. Typical values are \&quot;cidata\&quot; (cloud-init), \&quot;config-2\&quot; (cloud-init) or \&quot;OEMDRV\&quot; (kickstart). | [optional] 
 
 ## Methods
 

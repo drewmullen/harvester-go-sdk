@@ -4,12 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**LastTransitionTime** | Pointer to **string** |  | [optional] 
-**LastUpdateTime** | Pointer to **string** |  | [optional] 
-**Message** | Pointer to **string** |  | [optional] 
-**Reason** | Pointer to **string** |  | [optional] 
-**Status** | **string** |  | [default to ""]
-**Type** | **string** |  | [default to ""]
+**LastTransitionTime** | Pointer to **string** | Last time the condition transitioned from one status to another. | [optional] 
+**LastUpdateTime** | Pointer to **string** | The last time this condition was updated. | [optional] 
+**Message** | Pointer to **string** | Human-readable message indicating details about last transition | [optional] 
+**Reason** | Pointer to **string** | The reason for the condition&#39;s last transition. | [optional] 
+**Status** | **string** | Status of the condition, one of True, False, Unknown. | [default to ""]
+**Type** | **string** | Type of the condition. | [default to ""]
 
 ## Methods
 

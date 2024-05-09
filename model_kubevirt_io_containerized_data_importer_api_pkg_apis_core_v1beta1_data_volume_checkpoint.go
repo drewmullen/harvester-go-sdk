@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint DataVolumeCheckpoint defines a stage in a warm migration.
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeCheckpoint struct {
+	// Current is the identifier of the snapshot created for this checkpoint.
 	Current string `json:"current"`
+	// Previous is the identifier of the snapshot from the previous checkpoint.
 	Previous string `json:"previous"`
 }
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**VmIPv6NetworkCIDR** | Pointer to **string** |  | [optional] 
-**VmNetworkCIDR** | Pointer to **string** |  | [optional] 
+**VmIPv6NetworkCIDR** | Pointer to **string** | IPv6 CIDR for the vm network. Defaults to fd10:0:2::/120 if not specified. | [optional] 
+**VmNetworkCIDR** | Pointer to **string** | CIDR for vm network. Default 10.0.2.0/24 if not specified. | [optional] 
 
 ## Methods
 

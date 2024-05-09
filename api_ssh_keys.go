@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedKeyPairRequest) PropagationPolicy(propagationPolicy s
 	return r
 }
 
-func (r ApiDeleteNamespacedKeyPairRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedKeyPairRequest) Execute() (*HarvesterhciIoV1beta1KeyPair, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedKeyPairExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *SSHKeysAPIService) DeleteNamespacedKeyPair(ctx context.Context, name st
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *SSHKeysAPIService) DeleteNamespacedKeyPairExecute(r ApiDeleteNamespacedKeyPairRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return HarvesterhciIoV1beta1KeyPair
+func (a *SSHKeysAPIService) DeleteNamespacedKeyPairExecute(r ApiDeleteNamespacedKeyPairRequest) (*HarvesterhciIoV1beta1KeyPair, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *HarvesterhciIoV1beta1KeyPair
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SSHKeysAPIService.DeleteNamespacedKeyPair")

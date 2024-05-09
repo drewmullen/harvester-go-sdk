@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedSupportBundle
 
-> K8sIoV1Status DeleteNamespacedSupportBundle(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1SupportBundle DeleteNamespacedSupportBundle(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Support Bundle
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `SupportBundlesAPI.DeleteNamespacedSupportBundle``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedSupportBundle`: K8sIoV1Status
+	// response from `DeleteNamespacedSupportBundle`: HarvesterhciIoV1beta1SupportBundle
 	fmt.Fprintf(os.Stdout, "Response from `SupportBundlesAPI.DeleteNamespacedSupportBundle`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1SupportBundle**](HarvesterhciIoV1beta1SupportBundle.md)
 
 ### Authorization
 

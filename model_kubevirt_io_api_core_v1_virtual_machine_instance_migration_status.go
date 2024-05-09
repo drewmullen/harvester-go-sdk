@@ -17,11 +17,13 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineInstanceMigrationStatus type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceMigrationStatus{}
 
-// KubevirtIoApiCoreV1VirtualMachineInstanceMigrationStatus struct for KubevirtIoApiCoreV1VirtualMachineInstanceMigrationStatus
+// KubevirtIoApiCoreV1VirtualMachineInstanceMigrationStatus VirtualMachineInstanceMigration reprents information pertaining to a VMI's migration.
 type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationStatus struct {
 	Conditions []KubevirtIoApiCoreV1VirtualMachineInstanceMigrationCondition `json:"conditions,omitempty"`
+	// Represents the status of a live migration
 	MigrationState *KubevirtIoApiCoreV1VirtualMachineInstanceMigrationState `json:"migrationState,omitempty"`
 	Phase *string `json:"phase,omitempty"`
+	// PhaseTransitionTimestamp is the timestamp of when the last phase change occurred
 	PhaseTransitionTimestamps []KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp `json:"phaseTransitionTimestamps,omitempty"`
 }
 

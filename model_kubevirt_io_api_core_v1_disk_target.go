@@ -19,8 +19,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1DiskTarget{}
 
 // KubevirtIoApiCoreV1DiskTarget struct for KubevirtIoApiCoreV1DiskTarget
 type KubevirtIoApiCoreV1DiskTarget struct {
+	// Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi, usb.
 	Bus *string `json:"bus,omitempty"`
+	// If specified, the virtual disk will be placed on the guests pci address with the specified PCI address. For example: 0000:81:01.10
 	PciAddress *string `json:"pciAddress,omitempty"`
+	// ReadOnly. Defaults to false.
 	Readonly *bool `json:"readonly,omitempty"`
 }
 

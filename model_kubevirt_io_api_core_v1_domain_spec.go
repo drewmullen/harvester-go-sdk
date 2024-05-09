@@ -21,16 +21,27 @@ var _ MappedNullable = &KubevirtIoApiCoreV1DomainSpec{}
 
 // KubevirtIoApiCoreV1DomainSpec struct for KubevirtIoApiCoreV1DomainSpec
 type KubevirtIoApiCoreV1DomainSpec struct {
+	// Chassis specifies the chassis info passed to the domain.
 	Chassis *KubevirtIoApiCoreV1Chassis `json:"chassis,omitempty"`
+	// Clock sets the clock and timers of the vmi.
 	Clock *KubevirtIoApiCoreV1Clock `json:"clock,omitempty"`
+	// CPU allow specified the detailed CPU topology inside the vmi.
 	Cpu *KubevirtIoApiCoreV1CPU `json:"cpu,omitempty"`
+	// Devices allows adding disks, network interfaces, and others
 	Devices KubevirtIoApiCoreV1Devices `json:"devices"`
+	// Features like acpi, apic, hyperv, smm.
 	Features *KubevirtIoApiCoreV1Features `json:"features,omitempty"`
+	// Firmware.
 	Firmware *KubevirtIoApiCoreV1Firmware `json:"firmware,omitempty"`
+	// Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto
 	IoThreadsPolicy *string `json:"ioThreadsPolicy,omitempty"`
+	// Launch Security setting of the vmi.
 	LaunchSecurity *KubevirtIoApiCoreV1LaunchSecurity `json:"launchSecurity,omitempty"`
+	// Machine type.
 	Machine *KubevirtIoApiCoreV1Machine `json:"machine,omitempty"`
+	// Memory allow specifying the VMI memory features.
 	Memory *KubevirtIoApiCoreV1Memory `json:"memory,omitempty"`
+	// Resources describes the Compute Resources required by this vmi.
 	Resources *KubevirtIoApiCoreV1ResourceRequirements `json:"resources,omitempty"`
 }
 

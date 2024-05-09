@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1SoundDevice type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1SoundDevice{}
 
-// KubevirtIoApiCoreV1SoundDevice struct for KubevirtIoApiCoreV1SoundDevice
+// KubevirtIoApiCoreV1SoundDevice Represents the user's configuration to emulate sound cards in the VMI.
 type KubevirtIoApiCoreV1SoundDevice struct {
+	// We only support ich9 or ac97. If SoundDevice is not set: No sound card is emulated. If SoundDevice is set but Model is not: ich9
 	Model *string `json:"model,omitempty"`
+	// User's defined name for this sound device
 	Name string `json:"name"`
 }
 

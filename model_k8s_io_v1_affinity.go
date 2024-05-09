@@ -17,10 +17,13 @@ import (
 // checks if the K8sIoV1Affinity type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1Affinity{}
 
-// K8sIoV1Affinity struct for K8sIoV1Affinity
+// K8sIoV1Affinity Affinity is a group of affinity scheduling rules.
 type K8sIoV1Affinity struct {
+	// Describes node affinity scheduling rules for the pod.
 	NodeAffinity *K8sIoV1NodeAffinity `json:"nodeAffinity,omitempty"`
+	// Describes pod affinity scheduling rules (e.g. co-locate this pod in the same node, zone, etc. as some other pod(s)).
 	PodAffinity *K8sIoV1PodAffinity `json:"podAffinity,omitempty"`
+	// Describes pod anti-affinity scheduling rules (e.g. avoid putting this pod in the same node, zone, etc. as some other pod(s)).
 	PodAntiAffinity *K8sIoV1PodAntiAffinity `json:"podAntiAffinity,omitempty"`
 }
 

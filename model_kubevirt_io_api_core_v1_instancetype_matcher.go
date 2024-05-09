@@ -17,12 +17,17 @@ import (
 // checks if the KubevirtIoApiCoreV1InstancetypeMatcher type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1InstancetypeMatcher{}
 
-// KubevirtIoApiCoreV1InstancetypeMatcher struct for KubevirtIoApiCoreV1InstancetypeMatcher
+// KubevirtIoApiCoreV1InstancetypeMatcher InstancetypeMatcher references a instancetype that is used to fill fields in the VMI template.
 type KubevirtIoApiCoreV1InstancetypeMatcher struct {
+	// InferFromVolume lists the name of a volume that should be used to infer or discover the instancetype to be used through known annotations on the underlying resource. Once applied to the InstancetypeMatcher this field is removed.
 	InferFromVolume *string `json:"inferFromVolume,omitempty"`
+	// InferFromVolumeFailurePolicy controls what should happen on failure when inferring the instancetype. Allowed values are: \"RejectInferFromVolumeFailure\" and \"IgnoreInferFromVolumeFailure\". If not specified, \"RejectInferFromVolumeFailure\" is used by default.
 	InferFromVolumeFailurePolicy *string `json:"inferFromVolumeFailurePolicy,omitempty"`
+	// Kind specifies which instancetype resource is referenced. Allowed values are: \"VirtualMachineInstancetype\" and \"VirtualMachineClusterInstancetype\". If not specified, \"VirtualMachineClusterInstancetype\" is used by default.
 	Kind *string `json:"kind,omitempty"`
+	// Name is the name of the VirtualMachineInstancetype or VirtualMachineClusterInstancetype
 	Name *string `json:"name,omitempty"`
+	// RevisionName specifies a ControllerRevision containing a specific copy of the VirtualMachineInstancetype or VirtualMachineClusterInstancetype to be used. This is initially captured the first time the instancetype is applied to the VirtualMachineInstance.
 	RevisionName *string `json:"revisionName,omitempty"`
 }
 

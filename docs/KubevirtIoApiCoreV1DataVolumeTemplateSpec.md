@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ApiVersion** | Pointer to **string** |  | [optional] 
-**Kind** | Pointer to **string** |  | [optional] 
+**ApiVersion** | Pointer to **string** | APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources | [optional] 
+**Kind** | Pointer to **string** | Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds | [optional] 
 **Metadata** | Pointer to [**K8sIoV1ObjectMeta**](K8sIoV1ObjectMeta.md) |  | [optional] [default to {}]
-**Spec** | [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec.md) |  | [default to {}]
-**Status** | Pointer to **map[string]interface{}** |  | [optional] 
+**Spec** | [**KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec**](KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSpec.md) | DataVolumeSpec contains the DataVolume specification. | [default to {}]
+**Status** | Pointer to **map[string]interface{}** | DataVolumeTemplateDummyStatus is here simply for backwards compatibility with a previous API. | [optional] 
 
 ## Methods
 

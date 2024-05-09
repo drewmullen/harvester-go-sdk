@@ -19,12 +19,16 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachine type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachine{}
 
-// KubevirtIoApiCoreV1VirtualMachine struct for KubevirtIoApiCoreV1VirtualMachine
+// KubevirtIoApiCoreV1VirtualMachine VirtualMachine handles the VirtualMachines that are not running or are in a stopped state The VirtualMachine contains the template to create the VirtualMachineInstance. It also mirrors the running state of the created VirtualMachineInstance in its status.
 type KubevirtIoApiCoreV1VirtualMachine struct {
+	// APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 	ApiVersion *string `json:"apiVersion,omitempty"`
+	// Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	Kind *string `json:"kind,omitempty"`
 	Metadata *K8sIoV1ObjectMeta `json:"metadata,omitempty"`
+	// Spec contains the specification of VirtualMachineInstance created
 	Spec KubevirtIoApiCoreV1VirtualMachineSpec `json:"spec"`
+	// Status holds the current state of the controller and brief information about its associated VirtualMachineInstance
 	Status *KubevirtIoApiCoreV1VirtualMachineStatus `json:"status,omitempty"`
 }
 

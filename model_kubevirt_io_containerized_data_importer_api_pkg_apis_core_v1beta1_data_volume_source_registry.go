@@ -17,12 +17,17 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry DataVolumeSourceRegistry provides the parameters to create a Data Volume from an registry source
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceRegistry struct {
+	// CertConfigMap provides a reference to the Registry certs
 	CertConfigMap *string `json:"certConfigMap,omitempty"`
+	// ImageStream is the name of image stream for import
 	ImageStream *string `json:"imageStream,omitempty"`
+	// PullMethod can be either \"pod\" (default import), or \"node\" (node docker cache based import)
 	PullMethod *string `json:"pullMethod,omitempty"`
+	// SecretRef provides the secret reference needed to access the Registry source
 	SecretRef *string `json:"secretRef,omitempty"`
+	// URL is the url of the registry source (starting with the scheme: docker, oci-archive)
 	Url *string `json:"url,omitempty"`
 }
 

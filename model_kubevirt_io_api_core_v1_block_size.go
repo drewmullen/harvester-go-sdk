@@ -17,7 +17,7 @@ import (
 // checks if the KubevirtIoApiCoreV1BlockSize type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1BlockSize{}
 
-// KubevirtIoApiCoreV1BlockSize struct for KubevirtIoApiCoreV1BlockSize
+// KubevirtIoApiCoreV1BlockSize BlockSize provides the option to change the block size presented to the VM for a disk. Only one of its members may be specified.
 type KubevirtIoApiCoreV1BlockSize struct {
 	Custom *KubevirtIoApiCoreV1CustomBlockSize `json:"custom,omitempty"`
 	MatchVolume *KubevirtIoApiCoreV1FeatureState `json:"matchVolume,omitempty"`

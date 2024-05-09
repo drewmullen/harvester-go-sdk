@@ -19,12 +19,19 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterfac
 
 // KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface struct for KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface
 type KubevirtIoApiCoreV1VirtualMachineInstanceNetworkInterface struct {
+	// Specifies the origin of the interface data collected. values: domain, guest-agent, multus-status.
 	InfoSource *string `json:"infoSource,omitempty"`
+	// The interface name inside the Virtual Machine
 	InterfaceName *string `json:"interfaceName,omitempty"`
+	// IP address of a Virtual Machine interface. It is always the first item of IPs
 	IpAddress *string `json:"ipAddress,omitempty"`
+	// List of all IP addresses of a Virtual Machine interface
 	IpAddresses []string `json:"ipAddresses,omitempty"`
+	// Hardware address of a Virtual Machine interface
 	Mac *string `json:"mac,omitempty"`
+	// Name of the interface, corresponds to name of the network assigned to the interface
 	Name *string `json:"name,omitempty"`
+	// Specifies how many queues are allocated by MultiQueue
 	QueueCount *int32 `json:"queueCount,omitempty"`
 }
 

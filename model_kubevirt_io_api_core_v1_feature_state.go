@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1FeatureState type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1FeatureState{}
 
-// KubevirtIoApiCoreV1FeatureState struct for KubevirtIoApiCoreV1FeatureState
+// KubevirtIoApiCoreV1FeatureState Represents if a feature is enabled or disabled.
 type KubevirtIoApiCoreV1FeatureState struct {
+	// Enabled determines if the feature should be enabled or disabled on the guest. Defaults to true.
 	Enabled *bool `json:"enabled,omitempty"`
 }
 

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **PvcName** | Pointer to **string** |  | [optional] [default to ""]
 **PvcNamespace** | Pointer to **string** |  | [optional] [default to ""]
 **Retry** | Pointer to **int32** |  | [optional] [default to 0]
-**SourceType** | **string** |  | [default to ""]
+**SourceType** | **string** |   Possible enum values:  - &#x60;\&quot;download\&quot;&#x60;  - &#x60;\&quot;export-from-volume\&quot;&#x60;  - &#x60;\&quot;upload\&quot;&#x60; | [default to ""]
 **StorageClassParameters** | Pointer to **map[string]string** |  | [optional] 
 **Url** | Pointer to **string** |  | [optional] [default to ""]
 

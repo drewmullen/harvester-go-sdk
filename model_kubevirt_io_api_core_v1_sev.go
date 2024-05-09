@@ -19,9 +19,13 @@ var _ MappedNullable = &KubevirtIoApiCoreV1SEV{}
 
 // KubevirtIoApiCoreV1SEV struct for KubevirtIoApiCoreV1SEV
 type KubevirtIoApiCoreV1SEV struct {
+	// If specified, run the attestation process for a vmi.
 	Attestation map[string]interface{} `json:"attestation,omitempty"`
+	// Base64 encoded guest owner's Diffie-Hellman key.
 	DhCert *string `json:"dhCert,omitempty"`
+	// Guest policy flags as defined in AMD SEV API specification. Note: due to security reasons it is not allowed to enable guest debugging. Therefore NoDebug flag is not exposed to users and is always true.
 	Policy *KubevirtIoApiCoreV1SEVPolicy `json:"policy,omitempty"`
+	// Base64 encoded session blob.
 	Session *string `json:"session,omitempty"`
 }
 

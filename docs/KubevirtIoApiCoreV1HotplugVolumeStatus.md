@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AttachPodName** | Pointer to **string** |  | [optional] 
-**AttachPodUID** | Pointer to **string** |  | [optional] 
+**AttachPodName** | Pointer to **string** | AttachPodName is the name of the pod used to attach the volume to the node. | [optional] 
+**AttachPodUID** | Pointer to **string** | AttachPodUID is the UID of the pod used to attach the volume to the node. | [optional] 
 
 ## Methods
 

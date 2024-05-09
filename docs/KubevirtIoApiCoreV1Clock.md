@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Timer** | Pointer to [**KubevirtIoApiCoreV1Timer**](KubevirtIoApiCoreV1Timer.md) |  | [optional] 
-**Timezone** | Pointer to **string** |  | [optional] 
-**Utc** | Pointer to [**KubevirtIoApiCoreV1ClockOffsetUTC**](KubevirtIoApiCoreV1ClockOffsetUTC.md) |  | [optional] 
+**Timer** | Pointer to [**KubevirtIoApiCoreV1Timer**](KubevirtIoApiCoreV1Timer.md) | Timer specifies whih timers are attached to the vmi. | [optional] 
+**Timezone** | Pointer to **string** | Timezone sets the guest clock to the specified timezone. Zone name follows the TZ environment variable format (e.g. &#39;America/New_York&#39;). | [optional] 
+**Utc** | Pointer to [**KubevirtIoApiCoreV1ClockOffsetUTC**](KubevirtIoApiCoreV1ClockOffsetUTC.md) | UTC sets the guest clock to UTC on each boot. If an offset is specified, guest changes to the clock will be kept during reboots and are not reset. | [optional] 
 
 ## Methods
 

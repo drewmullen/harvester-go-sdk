@@ -167,7 +167,7 @@ No authorization required
 
 ## DeleteNamespacedVirtualMachineTemplate
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineTemplate(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1VirtualMachineTemplate DeleteNamespacedVirtualMachineTemplate(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Virtual Machine Template
 
@@ -200,7 +200,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplate``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedVirtualMachineTemplate`: K8sIoV1Status
+	// response from `DeleteNamespacedVirtualMachineTemplate`: HarvesterhciIoV1beta1VirtualMachineTemplate
 	fmt.Fprintf(os.Stdout, "Response from `VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplate`: %v\n", resp)
 }
 ```
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1VirtualMachineTemplate**](HarvesterhciIoV1beta1VirtualMachineTemplate.md)
 
 ### Authorization
 
@@ -248,7 +248,7 @@ No authorization required
 
 ## DeleteNamespacedVirtualMachineTemplateVersion
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1VirtualMachineTemplateVersion DeleteNamespacedVirtualMachineTemplateVersion(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Virtual Machine Template Version
 
@@ -281,7 +281,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplateVersion``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedVirtualMachineTemplateVersion`: K8sIoV1Status
+	// response from `DeleteNamespacedVirtualMachineTemplateVersion`: HarvesterhciIoV1beta1VirtualMachineTemplateVersion
 	fmt.Fprintf(os.Stdout, "Response from `VirtualMachineTemplatesAPI.DeleteNamespacedVirtualMachineTemplateVersion`: %v\n", resp)
 }
 ```
@@ -311,7 +311,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1VirtualMachineTemplateVersion**](HarvesterhciIoV1beta1VirtualMachineTemplateVersion.md)
 
 ### Authorization
 

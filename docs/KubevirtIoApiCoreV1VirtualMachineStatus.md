@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Conditions** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineCondition**](KubevirtIoApiCoreV1VirtualMachineCondition.md) |  | [optional] 
-**Created** | Pointer to **bool** |  | [optional] 
-**DesiredGeneration** | Pointer to **int64** |  | [optional] 
-**MemoryDumpRequest** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest**](KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest.md) |  | [optional] 
-**ObservedGeneration** | Pointer to **int64** |  | [optional] 
-**PrintableStatus** | Pointer to **string** |  | [optional] 
-**Ready** | Pointer to **bool** |  | [optional] 
-**RestoreInProgress** | Pointer to **string** |  | [optional] 
-**SnapshotInProgress** | Pointer to **string** |  | [optional] 
-**StartFailure** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineStartFailure**](KubevirtIoApiCoreV1VirtualMachineStartFailure.md) |  | [optional] 
-**StateChangeRequests** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineStateChangeRequest**](KubevirtIoApiCoreV1VirtualMachineStateChangeRequest.md) |  | [optional] 
-**VolumeRequests** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineVolumeRequest**](KubevirtIoApiCoreV1VirtualMachineVolumeRequest.md) |  | [optional] 
-**VolumeSnapshotStatuses** | Pointer to [**[]KubevirtIoApiCoreV1VolumeSnapshotStatus**](KubevirtIoApiCoreV1VolumeSnapshotStatus.md) |  | [optional] 
+**Conditions** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineCondition**](KubevirtIoApiCoreV1VirtualMachineCondition.md) | Hold the state information of the VirtualMachine and its VirtualMachineInstance | [optional] 
+**Created** | Pointer to **bool** | Created indicates if the virtual machine is created in the cluster | [optional] 
+**DesiredGeneration** | Pointer to **int64** | DesiredGeneration is the generation which is desired for the VMI. This will be used in comparisons with ObservedGeneration to understand when the VMI is out of sync. This will be changed at the same time as ObservedGeneration to remove errors which could occur if Generation is updated through an Update() before ObservedGeneration in Status. | [optional] 
+**MemoryDumpRequest** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest**](KubevirtIoApiCoreV1VirtualMachineMemoryDumpRequest.md) | MemoryDumpRequest tracks memory dump request phase and info of getting a memory dump to the given pvc | [optional] 
+**ObservedGeneration** | Pointer to **int64** | ObservedGeneration is the generation observed by the vmi when started. | [optional] 
+**PrintableStatus** | Pointer to **string** | PrintableStatus is a human readable, high-level representation of the status of the virtual machine | [optional] 
+**Ready** | Pointer to **bool** | Ready indicates if the virtual machine is running and ready | [optional] 
+**RestoreInProgress** | Pointer to **string** | RestoreInProgress is the name of the VirtualMachineRestore currently executing | [optional] 
+**SnapshotInProgress** | Pointer to **string** | SnapshotInProgress is the name of the VirtualMachineSnapshot currently executing | [optional] 
+**StartFailure** | Pointer to [**KubevirtIoApiCoreV1VirtualMachineStartFailure**](KubevirtIoApiCoreV1VirtualMachineStartFailure.md) | StartFailure tracks consecutive VMI startup failures for the purposes of crash loop backoffs | [optional] 
+**StateChangeRequests** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineStateChangeRequest**](KubevirtIoApiCoreV1VirtualMachineStateChangeRequest.md) | StateChangeRequests indicates a list of actions that should be taken on a VMI e.g. stop a specific VMI then start a new one. | [optional] 
+**VolumeRequests** | Pointer to [**[]KubevirtIoApiCoreV1VirtualMachineVolumeRequest**](KubevirtIoApiCoreV1VirtualMachineVolumeRequest.md) | VolumeRequests indicates a list of volumes add or remove from the VMI template and hotplug on an active running VMI. | [optional] 
+**VolumeSnapshotStatuses** | Pointer to [**[]KubevirtIoApiCoreV1VolumeSnapshotStatus**](KubevirtIoApiCoreV1VolumeSnapshotStatus.md) | VolumeSnapshotStatuses indicates a list of statuses whether snapshotting is supported by each volume. | [optional] 
 
 ## Methods
 

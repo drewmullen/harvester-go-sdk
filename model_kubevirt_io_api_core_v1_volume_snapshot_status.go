@@ -21,8 +21,11 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VolumeSnapshotStatus{}
 
 // KubevirtIoApiCoreV1VolumeSnapshotStatus struct for KubevirtIoApiCoreV1VolumeSnapshotStatus
 type KubevirtIoApiCoreV1VolumeSnapshotStatus struct {
+	// True if the volume supports snapshotting
 	Enabled bool `json:"enabled"`
+	// Volume name
 	Name string `json:"name"`
+	// Empty if snapshotting is enabled, contains reason otherwise
 	Reason *string `json:"reason,omitempty"`
 }
 

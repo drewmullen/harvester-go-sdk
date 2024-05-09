@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Sev** | Pointer to [**KubevirtIoApiCoreV1SEV**](KubevirtIoApiCoreV1SEV.md) |  | [optional] 
+**Sev** | Pointer to [**KubevirtIoApiCoreV1SEV**](KubevirtIoApiCoreV1SEV.md) | AMD Secure Encrypted Virtualization (SEV). | [optional] 
 
 ## Methods
 

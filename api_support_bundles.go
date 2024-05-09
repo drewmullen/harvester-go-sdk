@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedSupportBundleRequest) PropagationPolicy(propagationPo
 	return r
 }
 
-func (r ApiDeleteNamespacedSupportBundleRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedSupportBundleRequest) Execute() (*HarvesterhciIoV1beta1SupportBundle, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedSupportBundleExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *SupportBundlesAPIService) DeleteNamespacedSupportBundle(ctx context.Con
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *SupportBundlesAPIService) DeleteNamespacedSupportBundleExecute(r ApiDeleteNamespacedSupportBundleRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return HarvesterhciIoV1beta1SupportBundle
+func (a *SupportBundlesAPIService) DeleteNamespacedSupportBundleExecute(r ApiDeleteNamespacedSupportBundleRequest) (*HarvesterhciIoV1beta1SupportBundle, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *HarvesterhciIoV1beta1SupportBundle
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SupportBundlesAPIService.DeleteNamespacedSupportBundle")

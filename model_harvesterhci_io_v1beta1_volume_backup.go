@@ -19,8 +19,9 @@ import (
 // checks if the HarvesterhciIoV1beta1VolumeBackup type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1VolumeBackup{}
 
-// HarvesterhciIoV1beta1VolumeBackup struct for HarvesterhciIoV1beta1VolumeBackup
+// HarvesterhciIoV1beta1VolumeBackup VolumeBackup contains the volume data need to restore a PVC
 type HarvesterhciIoV1beta1VolumeBackup struct {
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	CreationTime *string `json:"creationTime,omitempty"`
 	CsiDriverName string `json:"csiDriverName"`
 	Error *HarvesterhciIoV1beta1Error `json:"error,omitempty"`

@@ -21,6 +21,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1AccessCredentialSecretSource{}
 
 // KubevirtIoApiCoreV1AccessCredentialSecretSource struct for KubevirtIoApiCoreV1AccessCredentialSecretSource
 type KubevirtIoApiCoreV1AccessCredentialSecretSource struct {
+	// SecretName represents the name of the secret in the VMI's namespace
 	SecretName string `json:"secretName"`
 }
 

@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Host** | Pointer to **string** |  | [optional] 
-**Port** | **string** |  | [default to "{}"]
+**Host** | Pointer to **string** | Optional: Host name to connect to, defaults to the pod IP. | [optional] 
+**Port** | **string** | Number or name of the port to access on the container. Number must be in the range 1 to 65535. Name must be an IANA_SVC_NAME. | [default to "{}"]
 
 ## Methods
 

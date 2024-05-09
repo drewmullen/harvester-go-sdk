@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**UseSerial** | Pointer to **bool** |  | [optional] 
+**UseSerial** | Pointer to **bool** | If set, the BIOS output will be transmitted over serial | [optional] 
 
 ## Methods
 

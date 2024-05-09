@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**DataVolume** | Pointer to [**KubevirtIoApiCoreV1DataVolumeSource**](KubevirtIoApiCoreV1DataVolumeSource.md) |  | [optional] 
-**PersistentVolumeClaim** | Pointer to [**KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource**](KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource.md) |  | [optional] 
+**DataVolume** | Pointer to [**KubevirtIoApiCoreV1DataVolumeSource**](KubevirtIoApiCoreV1DataVolumeSource.md) | DataVolume represents the dynamic creation a PVC for this volume as well as the process of populating that PVC with a disk image. | [optional] 
+**PersistentVolumeClaim** | Pointer to [**KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource**](KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource.md) | PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims | [optional] 
 
 ## Methods
 

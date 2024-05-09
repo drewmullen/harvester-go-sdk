@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Enabled** | **bool** |  | [default to false]
-**Name** | **string** |  | [default to ""]
-**Reason** | Pointer to **string** |  | [optional] 
+**Enabled** | **bool** | True if the volume supports snapshotting | [default to false]
+**Name** | **string** | Volume name | [default to ""]
+**Reason** | Pointer to **string** | Empty if snapshotting is enabled, contains reason otherwise | [optional] 
 
 ## Methods
 

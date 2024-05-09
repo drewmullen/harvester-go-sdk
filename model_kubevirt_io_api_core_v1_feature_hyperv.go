@@ -17,21 +17,35 @@ import (
 // checks if the KubevirtIoApiCoreV1FeatureHyperv type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1FeatureHyperv{}
 
-// KubevirtIoApiCoreV1FeatureHyperv struct for KubevirtIoApiCoreV1FeatureHyperv
+// KubevirtIoApiCoreV1FeatureHyperv Hyperv specific features.
 type KubevirtIoApiCoreV1FeatureHyperv struct {
+	// EVMCS Speeds up L2 vmexits, but disables other virtualization features. Requires vapic. Defaults to the machine type setting.
 	Evmcs *KubevirtIoApiCoreV1FeatureState `json:"evmcs,omitempty"`
+	// Frequencies improves the TSC clock source handling for Hyper-V on KVM. Defaults to the machine type setting.
 	Frequencies *KubevirtIoApiCoreV1FeatureState `json:"frequencies,omitempty"`
+	// IPI improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting.
 	Ipi *KubevirtIoApiCoreV1FeatureState `json:"ipi,omitempty"`
+	// Reenlightenment enables the notifications on TSC frequency changes. Defaults to the machine type setting.
 	Reenlightenment *KubevirtIoApiCoreV1FeatureState `json:"reenlightenment,omitempty"`
+	// Relaxed instructs the guest OS to disable watchdog timeouts. Defaults to the machine type setting.
 	Relaxed *KubevirtIoApiCoreV1FeatureState `json:"relaxed,omitempty"`
+	// Reset enables Hyperv reboot/reset for the vmi. Requires synic. Defaults to the machine type setting.
 	Reset *KubevirtIoApiCoreV1FeatureState `json:"reset,omitempty"`
+	// Runtime improves the time accounting to improve scheduling in the guest. Defaults to the machine type setting.
 	Runtime *KubevirtIoApiCoreV1FeatureState `json:"runtime,omitempty"`
+	// Spinlocks allows to configure the spinlock retry attempts.
 	Spinlocks *KubevirtIoApiCoreV1FeatureSpinlocks `json:"spinlocks,omitempty"`
+	// SyNIC enables the Synthetic Interrupt Controller. Defaults to the machine type setting.
 	Synic *KubevirtIoApiCoreV1FeatureState `json:"synic,omitempty"`
+	// SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting.
 	Synictimer *KubevirtIoApiCoreV1SyNICTimer `json:"synictimer,omitempty"`
+	// TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting.
 	Tlbflush *KubevirtIoApiCoreV1FeatureState `json:"tlbflush,omitempty"`
+	// VAPIC improves the paravirtualized handling of interrupts. Defaults to the machine type setting.
 	Vapic *KubevirtIoApiCoreV1FeatureState `json:"vapic,omitempty"`
+	// VendorID allows setting the hypervisor vendor id. Defaults to the machine type setting.
 	Vendorid *KubevirtIoApiCoreV1FeatureVendorID `json:"vendorid,omitempty"`
+	// VPIndex enables the Virtual Processor Index to help windows identifying virtual processors. Defaults to the machine type setting.
 	Vpindex *KubevirtIoApiCoreV1FeatureState `json:"vpindex,omitempty"`
 }
 

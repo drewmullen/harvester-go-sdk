@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**AddVolumeOptions** | Pointer to [**KubevirtIoApiCoreV1AddVolumeOptions**](KubevirtIoApiCoreV1AddVolumeOptions.md) |  | [optional] 
-**RemoveVolumeOptions** | Pointer to [**KubevirtIoApiCoreV1RemoveVolumeOptions**](KubevirtIoApiCoreV1RemoveVolumeOptions.md) |  | [optional] 
+**AddVolumeOptions** | Pointer to [**KubevirtIoApiCoreV1AddVolumeOptions**](KubevirtIoApiCoreV1AddVolumeOptions.md) | AddVolumeOptions when set indicates a volume should be added. The details within this field specify how to add the volume | [optional] 
+**RemoveVolumeOptions** | Pointer to [**KubevirtIoApiCoreV1RemoveVolumeOptions**](KubevirtIoApiCoreV1RemoveVolumeOptions.md) | RemoveVolumeOptions when set indicates a volume should be removed. The details within this field specify how to add the volume | [optional] 
 
 ## Methods
 

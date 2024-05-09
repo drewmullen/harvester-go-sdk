@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Multus** | Pointer to [**KubevirtIoApiCoreV1MultusNetwork**](KubevirtIoApiCoreV1MultusNetwork.md) |  | [optional] 
-**Name** | **string** |  | [default to ""]
+**Name** | **string** | Network name. Must be a DNS_LABEL and unique within the vm. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names | [default to ""]
 **Pod** | Pointer to [**KubevirtIoApiCoreV1PodNetwork**](KubevirtIoApiCoreV1PodNetwork.md) |  | [optional] 
 
 ## Methods

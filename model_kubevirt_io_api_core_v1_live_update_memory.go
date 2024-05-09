@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1LiveUpdateMemory{}
 
 // KubevirtIoApiCoreV1LiveUpdateMemory struct for KubevirtIoApiCoreV1LiveUpdateMemory
 type KubevirtIoApiCoreV1LiveUpdateMemory struct {
+	// MaxGuest defines the maximum amount memory that can be allocated for the VM.
 	MaxGuest *string `json:"maxGuest,omitempty"`
 }
 

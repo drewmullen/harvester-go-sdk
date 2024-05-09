@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1AccessCredential type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1AccessCredential{}
 
-// KubevirtIoApiCoreV1AccessCredential struct for KubevirtIoApiCoreV1AccessCredential
+// KubevirtIoApiCoreV1AccessCredential AccessCredential represents a credential source that can be used to authorize remote access to the vm guest Only one of its members may be specified.
 type KubevirtIoApiCoreV1AccessCredential struct {
+	// SSHPublicKey represents the source and method of applying a ssh public key into a guest virtual machine.
 	SshPublicKey *KubevirtIoApiCoreV1SSHPublicKeyAccessCredential `json:"sshPublicKey,omitempty"`
+	// UserPassword represents the source and method for applying a guest user's password
 	UserPassword *KubevirtIoApiCoreV1UserPasswordAccessCredential `json:"userPassword,omitempty"`
 }
 

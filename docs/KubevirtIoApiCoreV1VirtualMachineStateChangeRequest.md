@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Action** | **string** |  | [default to ""]
-**Data** | Pointer to **map[string]string** |  | [optional] 
-**Uid** | Pointer to **string** |  | [optional] 
+**Action** | **string** | Indicates the type of action that is requested. e.g. Start or Stop | [default to ""]
+**Data** | Pointer to **map[string]string** | Provides additional data in order to perform the Action | [optional] 
+**Uid** | Pointer to **string** | Indicates the UUID of an existing Virtual Machine Instance that this change request applies to -- if applicable | [optional] 
 
 ## Methods
 

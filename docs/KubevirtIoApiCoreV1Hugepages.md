@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**PageSize** | Pointer to **string** |  | [optional] 
+**PageSize** | Pointer to **string** | PageSize specifies the hugepage size, for x86_64 architecture valid values are 1Gi and 2Mi. | [optional] 
 
 ## Methods
 

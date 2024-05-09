@@ -19,10 +19,13 @@ import (
 // checks if the KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3 type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3{}
 
-// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3 struct for KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3
+// KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3 DataVolumeSourceS3 provides the parameters to create a Data Volume from an S3 source
 type KubevirtIoContainerizedDataImporterApiPkgApisCoreV1beta1DataVolumeSourceS3 struct {
+	// CertConfigMap is a configmap reference, containing a Certificate Authority(CA) public key, and a base64 encoded pem certificate
 	CertConfigMap *string `json:"certConfigMap,omitempty"`
+	// SecretRef provides the secret reference needed to access the S3 source
 	SecretRef *string `json:"secretRef,omitempty"`
+	// URL is the url of the S3 source
 	Url string `json:"url"`
 }
 

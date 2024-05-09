@@ -4,19 +4,19 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**BlockSize** | Pointer to [**KubevirtIoApiCoreV1BlockSize**](KubevirtIoApiCoreV1BlockSize.md) |  | [optional] 
-**BootOrder** | Pointer to **int32** |  | [optional] 
-**Cache** | Pointer to **string** |  | [optional] 
-**Cdrom** | Pointer to [**KubevirtIoApiCoreV1CDRomTarget**](KubevirtIoApiCoreV1CDRomTarget.md) |  | [optional] 
-**DedicatedIOThread** | Pointer to **bool** |  | [optional] 
-**Disk** | Pointer to [**KubevirtIoApiCoreV1DiskTarget**](KubevirtIoApiCoreV1DiskTarget.md) |  | [optional] 
-**ErrorPolicy** | Pointer to **string** |  | [optional] 
-**Io** | Pointer to **string** |  | [optional] 
-**Lun** | Pointer to [**KubevirtIoApiCoreV1LunTarget**](KubevirtIoApiCoreV1LunTarget.md) |  | [optional] 
-**Name** | **string** |  | [default to ""]
-**Serial** | Pointer to **string** |  | [optional] 
-**Shareable** | Pointer to **bool** |  | [optional] 
-**Tag** | Pointer to **string** |  | [optional] 
+**BlockSize** | Pointer to [**KubevirtIoApiCoreV1BlockSize**](KubevirtIoApiCoreV1BlockSize.md) | If specified, the virtual disk will be presented with the given block sizes. | [optional] 
+**BootOrder** | Pointer to **int32** | BootOrder is an integer value &gt; 0, used to determine ordering of boot devices. Lower values take precedence. Each disk or interface that has a boot order must have a unique value. Disks without a boot order are not tried if a disk with a boot order exists. | [optional] 
+**Cache** | Pointer to **string** | Cache specifies which kvm disk cache mode should be used. Supported values are: CacheNone, CacheWriteThrough. | [optional] 
+**Cdrom** | Pointer to [**KubevirtIoApiCoreV1CDRomTarget**](KubevirtIoApiCoreV1CDRomTarget.md) | Attach a volume as a cdrom to the vmi. | [optional] 
+**DedicatedIOThread** | Pointer to **bool** | dedicatedIOThread indicates this disk should have an exclusive IO Thread. Enabling this implies useIOThreads &#x3D; true. Defaults to false. | [optional] 
+**Disk** | Pointer to [**KubevirtIoApiCoreV1DiskTarget**](KubevirtIoApiCoreV1DiskTarget.md) | Attach a volume as a disk to the vmi. | [optional] 
+**ErrorPolicy** | Pointer to **string** | If specified, it can change the default error policy (stop) for the disk | [optional] 
+**Io** | Pointer to **string** | IO specifies which QEMU disk IO mode should be used. Supported values are: native, default, threads. | [optional] 
+**Lun** | Pointer to [**KubevirtIoApiCoreV1LunTarget**](KubevirtIoApiCoreV1LunTarget.md) | Attach a volume as a LUN to the vmi. | [optional] 
+**Name** | **string** | Name is the device name | [default to ""]
+**Serial** | Pointer to **string** | Serial provides the ability to specify a serial number for the disk device. | [optional] 
+**Shareable** | Pointer to **bool** | If specified the disk is made sharable and multiple write from different VMs are permitted | [optional] 
+**Tag** | Pointer to **string** | If specified, disk address and its tag will be provided to the guest via config drive metadata | [optional] 
 
 ## Methods
 

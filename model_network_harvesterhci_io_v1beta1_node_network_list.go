@@ -19,10 +19,12 @@ import (
 // checks if the NetworkHarvesterhciIoV1beta1NodeNetworkList type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &NetworkHarvesterhciIoV1beta1NodeNetworkList{}
 
-// NetworkHarvesterhciIoV1beta1NodeNetworkList struct for NetworkHarvesterhciIoV1beta1NodeNetworkList
+// NetworkHarvesterhciIoV1beta1NodeNetworkList NodeNetworkList is a list of NodeNetwork resources
 type NetworkHarvesterhciIoV1beta1NodeNetworkList struct {
+	// APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
 	ApiVersion *string `json:"apiVersion,omitempty"`
 	Items []NetworkHarvesterhciIoV1beta1NodeNetwork `json:"items"`
+	// Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
 	Kind *string `json:"kind,omitempty"`
 	Metadata K8sIoV1ListMeta `json:"metadata"`
 }

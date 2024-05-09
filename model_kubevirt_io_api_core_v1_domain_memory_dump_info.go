@@ -17,11 +17,15 @@ import (
 // checks if the KubevirtIoApiCoreV1DomainMemoryDumpInfo type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1DomainMemoryDumpInfo{}
 
-// KubevirtIoApiCoreV1DomainMemoryDumpInfo struct for KubevirtIoApiCoreV1DomainMemoryDumpInfo
+// KubevirtIoApiCoreV1DomainMemoryDumpInfo DomainMemoryDumpInfo represents the memory dump information
 type KubevirtIoApiCoreV1DomainMemoryDumpInfo struct {
+	// ClaimName is the name of the pvc the memory was dumped to
 	ClaimName *string `json:"claimName,omitempty"`
+	// EndTimestamp is the time when the memory dump completed
 	EndTimestamp *string `json:"endTimestamp,omitempty"`
+	// StartTimestamp is the time when the memory dump started
 	StartTimestamp *string `json:"startTimestamp,omitempty"`
+	// TargetFileName is the name of the memory dump output
 	TargetFileName *string `json:"targetFileName,omitempty"`
 }
 
@@ -31,10 +35,6 @@ type KubevirtIoApiCoreV1DomainMemoryDumpInfo struct {
 // will change when the set of required properties is changed
 func NewKubevirtIoApiCoreV1DomainMemoryDumpInfo() *KubevirtIoApiCoreV1DomainMemoryDumpInfo {
 	this := KubevirtIoApiCoreV1DomainMemoryDumpInfo{}
-	var endTimestamp string = ""
-	this.EndTimestamp = &endTimestamp
-	var startTimestamp string = ""
-	this.StartTimestamp = &startTimestamp
 	return &this
 }
 
@@ -43,10 +43,6 @@ func NewKubevirtIoApiCoreV1DomainMemoryDumpInfo() *KubevirtIoApiCoreV1DomainMemo
 // but it doesn't guarantee that properties required by API are set
 func NewKubevirtIoApiCoreV1DomainMemoryDumpInfoWithDefaults() *KubevirtIoApiCoreV1DomainMemoryDumpInfo {
 	this := KubevirtIoApiCoreV1DomainMemoryDumpInfo{}
-	var endTimestamp string = ""
-	this.EndTimestamp = &endTimestamp
-	var startTimestamp string = ""
-	this.StartTimestamp = &startTimestamp
 	return &this
 }
 

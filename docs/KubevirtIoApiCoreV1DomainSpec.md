@@ -4,17 +4,17 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Chassis** | Pointer to [**KubevirtIoApiCoreV1Chassis**](KubevirtIoApiCoreV1Chassis.md) |  | [optional] 
-**Clock** | Pointer to [**KubevirtIoApiCoreV1Clock**](KubevirtIoApiCoreV1Clock.md) |  | [optional] 
-**Cpu** | Pointer to [**KubevirtIoApiCoreV1CPU**](KubevirtIoApiCoreV1CPU.md) |  | [optional] 
-**Devices** | [**KubevirtIoApiCoreV1Devices**](KubevirtIoApiCoreV1Devices.md) |  | [default to {}]
-**Features** | Pointer to [**KubevirtIoApiCoreV1Features**](KubevirtIoApiCoreV1Features.md) |  | [optional] 
-**Firmware** | Pointer to [**KubevirtIoApiCoreV1Firmware**](KubevirtIoApiCoreV1Firmware.md) |  | [optional] 
-**IoThreadsPolicy** | Pointer to **string** |  | [optional] 
-**LaunchSecurity** | Pointer to [**KubevirtIoApiCoreV1LaunchSecurity**](KubevirtIoApiCoreV1LaunchSecurity.md) |  | [optional] 
-**Machine** | Pointer to [**KubevirtIoApiCoreV1Machine**](KubevirtIoApiCoreV1Machine.md) |  | [optional] 
-**Memory** | Pointer to [**KubevirtIoApiCoreV1Memory**](KubevirtIoApiCoreV1Memory.md) |  | [optional] 
-**Resources** | Pointer to [**KubevirtIoApiCoreV1ResourceRequirements**](KubevirtIoApiCoreV1ResourceRequirements.md) |  | [optional] [default to {}]
+**Chassis** | Pointer to [**KubevirtIoApiCoreV1Chassis**](KubevirtIoApiCoreV1Chassis.md) | Chassis specifies the chassis info passed to the domain. | [optional] 
+**Clock** | Pointer to [**KubevirtIoApiCoreV1Clock**](KubevirtIoApiCoreV1Clock.md) | Clock sets the clock and timers of the vmi. | [optional] 
+**Cpu** | Pointer to [**KubevirtIoApiCoreV1CPU**](KubevirtIoApiCoreV1CPU.md) | CPU allow specified the detailed CPU topology inside the vmi. | [optional] 
+**Devices** | [**KubevirtIoApiCoreV1Devices**](KubevirtIoApiCoreV1Devices.md) | Devices allows adding disks, network interfaces, and others | [default to {}]
+**Features** | Pointer to [**KubevirtIoApiCoreV1Features**](KubevirtIoApiCoreV1Features.md) | Features like acpi, apic, hyperv, smm. | [optional] 
+**Firmware** | Pointer to [**KubevirtIoApiCoreV1Firmware**](KubevirtIoApiCoreV1Firmware.md) | Firmware. | [optional] 
+**IoThreadsPolicy** | Pointer to **string** | Controls whether or not disks will share IOThreads. Omitting IOThreadsPolicy disables use of IOThreads. One of: shared, auto | [optional] 
+**LaunchSecurity** | Pointer to [**KubevirtIoApiCoreV1LaunchSecurity**](KubevirtIoApiCoreV1LaunchSecurity.md) | Launch Security setting of the vmi. | [optional] 
+**Machine** | Pointer to [**KubevirtIoApiCoreV1Machine**](KubevirtIoApiCoreV1Machine.md) | Machine type. | [optional] 
+**Memory** | Pointer to [**KubevirtIoApiCoreV1Memory**](KubevirtIoApiCoreV1Memory.md) | Memory allow specifying the VMI memory features. | [optional] 
+**Resources** | Pointer to [**KubevirtIoApiCoreV1ResourceRequirements**](KubevirtIoApiCoreV1ResourceRequirements.md) | Resources describes the Compute Resources required by this vmi. | [optional] [default to {}]
 
 ## Methods
 

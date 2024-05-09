@@ -19,7 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VGPUDisplayOptions{}
 
 // KubevirtIoApiCoreV1VGPUDisplayOptions struct for KubevirtIoApiCoreV1VGPUDisplayOptions
 type KubevirtIoApiCoreV1VGPUDisplayOptions struct {
+	// Enabled determines if a display addapter backed by a vGPU should be enabled or disabled on the guest. Defaults to true.
 	Enabled *bool `json:"enabled,omitempty"`
+	// Enables a boot framebuffer, until the guest OS loads a real GPU driver Defaults to true.
 	RamFB *KubevirtIoApiCoreV1FeatureState `json:"ramFB,omitempty"`
 }
 

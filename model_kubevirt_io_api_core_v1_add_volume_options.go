@@ -19,11 +19,15 @@ import (
 // checks if the KubevirtIoApiCoreV1AddVolumeOptions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1AddVolumeOptions{}
 
-// KubevirtIoApiCoreV1AddVolumeOptions struct for KubevirtIoApiCoreV1AddVolumeOptions
+// KubevirtIoApiCoreV1AddVolumeOptions AddVolumeOptions is provided when dynamically hot plugging a volume and disk
 type KubevirtIoApiCoreV1AddVolumeOptions struct {
+	// Disk represents the hotplug disk that will be plugged into the running VMI
 	Disk KubevirtIoApiCoreV1Disk `json:"disk"`
+	// When present, indicates that modifications should not be persisted. An invalid or unrecognized dryRun directive will result in an error response and no further processing of the request. Valid values are: - All: all dry run stages will be processed
 	DryRun []string `json:"dryRun,omitempty"`
+	// Name represents the name that will be used to map the disk to the corresponding volume. This overrides any name set inside the Disk struct itself.
 	Name string `json:"name"`
+	// VolumeSource represents the source of the volume to map to the disk.
 	VolumeSource KubevirtIoApiCoreV1HotplugVolumeSource `json:"volumeSource"`
 }
 

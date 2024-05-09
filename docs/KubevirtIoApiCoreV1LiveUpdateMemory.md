@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MaxGuest** | Pointer to **string** |  | [optional] 
+**MaxGuest** | Pointer to **string** | MaxGuest defines the maximum amount memory that can be allocated for the VM. | [optional] 
 
 ## Methods
 

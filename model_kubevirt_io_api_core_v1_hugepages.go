@@ -17,8 +17,9 @@ import (
 // checks if the KubevirtIoApiCoreV1Hugepages type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1Hugepages{}
 
-// KubevirtIoApiCoreV1Hugepages struct for KubevirtIoApiCoreV1Hugepages
+// KubevirtIoApiCoreV1Hugepages Hugepages allow to use hugepages for the VirtualMachineInstance instead of regular memory.
 type KubevirtIoApiCoreV1Hugepages struct {
+	// PageSize specifies the hugepage size, for x86_64 architecture valid values are 1Gi and 2Mi.
 	PageSize *string `json:"pageSize,omitempty"`
 }
 

@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Bus** | Pointer to **string** |  | [optional] 
-**Readonly** | Pointer to **bool** |  | [optional] 
-**Reservation** | Pointer to **bool** |  | [optional] 
+**Bus** | Pointer to **string** | Bus indicates the type of disk device to emulate. supported values: virtio, sata, scsi. | [optional] 
+**Readonly** | Pointer to **bool** | ReadOnly. Defaults to false. | [optional] 
+**Reservation** | Pointer to **bool** | Reservation indicates if the disk needs to support the persistent reservation for the SCSI disk | [optional] 
 
 ## Methods
 

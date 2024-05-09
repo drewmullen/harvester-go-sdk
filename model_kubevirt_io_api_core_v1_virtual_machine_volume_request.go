@@ -19,7 +19,9 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineVolumeRequest{}
 
 // KubevirtIoApiCoreV1VirtualMachineVolumeRequest struct for KubevirtIoApiCoreV1VirtualMachineVolumeRequest
 type KubevirtIoApiCoreV1VirtualMachineVolumeRequest struct {
+	// AddVolumeOptions when set indicates a volume should be added. The details within this field specify how to add the volume
 	AddVolumeOptions *KubevirtIoApiCoreV1AddVolumeOptions `json:"addVolumeOptions,omitempty"`
+	// RemoveVolumeOptions when set indicates a volume should be removed. The details within this field specify how to add the volume
 	RemoveVolumeOptions *KubevirtIoApiCoreV1RemoveVolumeOptions `json:"removeVolumeOptions,omitempty"`
 }
 

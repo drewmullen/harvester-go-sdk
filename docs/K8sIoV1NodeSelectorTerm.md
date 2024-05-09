@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**MatchExpressions** | Pointer to [**[]K8sIoV1NodeSelectorRequirement**](K8sIoV1NodeSelectorRequirement.md) |  | [optional] 
-**MatchFields** | Pointer to [**[]K8sIoV1NodeSelectorRequirement**](K8sIoV1NodeSelectorRequirement.md) |  | [optional] 
+**MatchExpressions** | Pointer to [**[]K8sIoV1NodeSelectorRequirement**](K8sIoV1NodeSelectorRequirement.md) | A list of node selector requirements by node&#39;s labels. | [optional] 
+**MatchFields** | Pointer to [**[]K8sIoV1NodeSelectorRequirement**](K8sIoV1NodeSelectorRequirement.md) | A list of node selector requirements by node&#39;s fields. | [optional] 
 
 ## Methods
 

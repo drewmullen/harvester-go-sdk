@@ -17,7 +17,7 @@ import (
 // checks if the HarvesterhciIoV1beta1SecretBackup type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &HarvesterhciIoV1beta1SecretBackup{}
 
-// HarvesterhciIoV1beta1SecretBackup struct for HarvesterhciIoV1beta1SecretBackup
+// HarvesterhciIoV1beta1SecretBackup SecretBackup contains the secret data need to restore a secret referenced by the VM
 type HarvesterhciIoV1beta1SecretBackup struct {
 	Data *map[string]string `json:"data,omitempty"`
 	Name *string `json:"name,omitempty"`

@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedVirtualMachineRestoreRequest) PropagationPolicy(propa
 	return r
 }
 
-func (r ApiDeleteNamespacedVirtualMachineRestoreRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedVirtualMachineRestoreRequest) Execute() (*HarvesterhciIoV1beta1VirtualMachineRestore, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedVirtualMachineRestoreExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *RestoresAPIService) DeleteNamespacedVirtualMachineRestore(ctx context.C
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *RestoresAPIService) DeleteNamespacedVirtualMachineRestoreExecute(r ApiDeleteNamespacedVirtualMachineRestoreRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return HarvesterhciIoV1beta1VirtualMachineRestore
+func (a *RestoresAPIService) DeleteNamespacedVirtualMachineRestoreExecute(r ApiDeleteNamespacedVirtualMachineRestoreRequest) (*HarvesterhciIoV1beta1VirtualMachineRestore, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *HarvesterhciIoV1beta1VirtualMachineRestore
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "RestoresAPIService.DeleteNamespacedVirtualMachineRestore")

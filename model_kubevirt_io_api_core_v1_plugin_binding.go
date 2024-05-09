@@ -19,8 +19,9 @@ import (
 // checks if the KubevirtIoApiCoreV1PluginBinding type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1PluginBinding{}
 
-// KubevirtIoApiCoreV1PluginBinding struct for KubevirtIoApiCoreV1PluginBinding
+// KubevirtIoApiCoreV1PluginBinding PluginBinding represents a binding implemented in a plugin.
 type KubevirtIoApiCoreV1PluginBinding struct {
+	// Name references to the binding name as denined in the kubevirt CR. version: 1alphav1
 	Name string `json:"name"`
 }
 

@@ -17,9 +17,11 @@ import (
 // checks if the K8sIoV1Preconditions type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &K8sIoV1Preconditions{}
 
-// K8sIoV1Preconditions struct for K8sIoV1Preconditions
+// K8sIoV1Preconditions Preconditions must be fulfilled before an operation (update, delete, etc.) is carried out.
 type K8sIoV1Preconditions struct {
+	// Specifies the target ResourceVersion
 	ResourceVersion *string `json:"resourceVersion,omitempty"`
+	// Specifies the target UID.
 	Uid *string `json:"uid,omitempty"`
 }
 

@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Name** | **string** |  | [default to ""]
+**Name** | **string** | Name references to the binding name as denined in the kubevirt CR. version: 1alphav1 | [default to ""]
 
 ## Methods
 

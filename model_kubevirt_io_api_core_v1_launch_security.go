@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1LaunchSecurity{}
 
 // KubevirtIoApiCoreV1LaunchSecurity struct for KubevirtIoApiCoreV1LaunchSecurity
 type KubevirtIoApiCoreV1LaunchSecurity struct {
+	// AMD Secure Encrypted Virtualization (SEV).
 	Sev *KubevirtIoApiCoreV1SEV `json:"sev,omitempty"`
 }
 

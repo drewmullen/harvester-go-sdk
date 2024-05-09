@@ -19,9 +19,11 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineCondition type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineCondition{}
 
-// KubevirtIoApiCoreV1VirtualMachineCondition struct for KubevirtIoApiCoreV1VirtualMachineCondition
+// KubevirtIoApiCoreV1VirtualMachineCondition VirtualMachineCondition represents the state of VirtualMachine
 type KubevirtIoApiCoreV1VirtualMachineCondition struct {
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	LastProbeTime *string `json:"lastProbeTime,omitempty"`
+	// Time is a wrapper around time.Time which supports correct marshaling to YAML and JSON.  Wrappers are provided for many of the factory methods that the time package offers.
 	LastTransitionTime *string `json:"lastTransitionTime,omitempty"`
 	Message *string `json:"message,omitempty"`
 	Reason *string `json:"reason,omitempty"`

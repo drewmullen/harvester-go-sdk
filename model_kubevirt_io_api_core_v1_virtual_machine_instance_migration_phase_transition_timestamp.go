@@ -17,9 +17,11 @@ import (
 // checks if the KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp{}
 
-// KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp struct for KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp
+// KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp VirtualMachineInstanceMigrationPhaseTransitionTimestamp gives a timestamp in relation to when a phase is set on a vmi
 type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationPhaseTransitionTimestamp struct {
+	// Phase is the status of the VirtualMachineInstanceMigrationPhase in kubernetes world. It is not the VirtualMachineInstanceMigrationPhase status, but partially correlates to it.
 	Phase *string `json:"phase,omitempty"`
+	// PhaseTransitionTimestamp is the timestamp of when the phase change occurred
 	PhaseTransitionTimestamp *string `json:"phaseTransitionTimestamp,omitempty"`
 }
 

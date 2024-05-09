@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedVirtualMachineImage
 
-> K8sIoV1Status DeleteNamespacedVirtualMachineImage(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> HarvesterhciIoV1beta1VirtualMachineImage DeleteNamespacedVirtualMachineImage(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Virtual Machine Image
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `ImagesAPI.DeleteNamespacedVirtualMachineImage``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedVirtualMachineImage`: K8sIoV1Status
+	// response from `DeleteNamespacedVirtualMachineImage`: HarvesterhciIoV1beta1VirtualMachineImage
 	fmt.Fprintf(os.Stdout, "Response from `ImagesAPI.DeleteNamespacedVirtualMachineImage`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**K8sIoV1Status**](K8sIoV1Status.md)
+[**HarvesterhciIoV1beta1VirtualMachineImage**](HarvesterhciIoV1beta1VirtualMachineImage.md)
 
 ### Authorization
 

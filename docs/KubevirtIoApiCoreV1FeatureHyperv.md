@@ -4,20 +4,20 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Evmcs** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Frequencies** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Ipi** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Reenlightenment** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Relaxed** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Reset** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Runtime** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Spinlocks** | Pointer to [**KubevirtIoApiCoreV1FeatureSpinlocks**](KubevirtIoApiCoreV1FeatureSpinlocks.md) |  | [optional] 
-**Synic** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Synictimer** | Pointer to [**KubevirtIoApiCoreV1SyNICTimer**](KubevirtIoApiCoreV1SyNICTimer.md) |  | [optional] 
-**Tlbflush** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Vapic** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
-**Vendorid** | Pointer to [**KubevirtIoApiCoreV1FeatureVendorID**](KubevirtIoApiCoreV1FeatureVendorID.md) |  | [optional] 
-**Vpindex** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) |  | [optional] 
+**Evmcs** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | EVMCS Speeds up L2 vmexits, but disables other virtualization features. Requires vapic. Defaults to the machine type setting. | [optional] 
+**Frequencies** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | Frequencies improves the TSC clock source handling for Hyper-V on KVM. Defaults to the machine type setting. | [optional] 
+**Ipi** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | IPI improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. | [optional] 
+**Reenlightenment** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | Reenlightenment enables the notifications on TSC frequency changes. Defaults to the machine type setting. | [optional] 
+**Relaxed** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | Relaxed instructs the guest OS to disable watchdog timeouts. Defaults to the machine type setting. | [optional] 
+**Reset** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | Reset enables Hyperv reboot/reset for the vmi. Requires synic. Defaults to the machine type setting. | [optional] 
+**Runtime** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | Runtime improves the time accounting to improve scheduling in the guest. Defaults to the machine type setting. | [optional] 
+**Spinlocks** | Pointer to [**KubevirtIoApiCoreV1FeatureSpinlocks**](KubevirtIoApiCoreV1FeatureSpinlocks.md) | Spinlocks allows to configure the spinlock retry attempts. | [optional] 
+**Synic** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | SyNIC enables the Synthetic Interrupt Controller. Defaults to the machine type setting. | [optional] 
+**Synictimer** | Pointer to [**KubevirtIoApiCoreV1SyNICTimer**](KubevirtIoApiCoreV1SyNICTimer.md) | SyNICTimer enables Synthetic Interrupt Controller Timers, reducing CPU load. Defaults to the machine type setting. | [optional] 
+**Tlbflush** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | TLBFlush improves performances in overcommited environments. Requires vpindex. Defaults to the machine type setting. | [optional] 
+**Vapic** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | VAPIC improves the paravirtualized handling of interrupts. Defaults to the machine type setting. | [optional] 
+**Vendorid** | Pointer to [**KubevirtIoApiCoreV1FeatureVendorID**](KubevirtIoApiCoreV1FeatureVendorID.md) | VendorID allows setting the hypervisor vendor id. Defaults to the machine type setting. | [optional] 
+**Vpindex** | Pointer to [**KubevirtIoApiCoreV1FeatureState**](KubevirtIoApiCoreV1FeatureState.md) | VPIndex enables the Virtual Processor Index to help windows identifying virtual processors. Defaults to the machine type setting. | [optional] 
 
 ## Methods
 

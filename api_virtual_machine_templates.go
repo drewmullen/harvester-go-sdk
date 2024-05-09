@@ -305,7 +305,7 @@ func (r ApiDeleteNamespacedVirtualMachineTemplateRequest) PropagationPolicy(prop
 	return r
 }
 
-func (r ApiDeleteNamespacedVirtualMachineTemplateRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedVirtualMachineTemplateRequest) Execute() (*HarvesterhciIoV1beta1VirtualMachineTemplate, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedVirtualMachineTemplateExecute(r)
 }
 
@@ -329,13 +329,13 @@ func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTempla
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTemplateExecute(r ApiDeleteNamespacedVirtualMachineTemplateRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return HarvesterhciIoV1beta1VirtualMachineTemplate
+func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTemplateExecute(r ApiDeleteNamespacedVirtualMachineTemplateRequest) (*HarvesterhciIoV1beta1VirtualMachineTemplate, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *HarvesterhciIoV1beta1VirtualMachineTemplate
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VirtualMachineTemplatesAPIService.DeleteNamespacedVirtualMachineTemplate")
@@ -463,7 +463,7 @@ func (r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) PropagationPoli
 	return r
 }
 
-func (r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) Execute() (*HarvesterhciIoV1beta1VirtualMachineTemplateVersion, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedVirtualMachineTemplateVersionExecute(r)
 }
 
@@ -487,13 +487,13 @@ func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTempla
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTemplateVersionExecute(r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return HarvesterhciIoV1beta1VirtualMachineTemplateVersion
+func (a *VirtualMachineTemplatesAPIService) DeleteNamespacedVirtualMachineTemplateVersionExecute(r ApiDeleteNamespacedVirtualMachineTemplateVersionRequest) (*HarvesterhciIoV1beta1VirtualMachineTemplateVersion, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *HarvesterhciIoV1beta1VirtualMachineTemplateVersion
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "VirtualMachineTemplatesAPIService.DeleteNamespacedVirtualMachineTemplateVersion")

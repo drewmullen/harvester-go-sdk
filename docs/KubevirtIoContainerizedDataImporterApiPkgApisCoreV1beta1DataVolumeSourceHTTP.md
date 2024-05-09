@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**CertConfigMap** | Pointer to **string** |  | [optional] 
-**ExtraHeaders** | Pointer to **[]string** |  | [optional] 
-**SecretExtraHeaders** | Pointer to **[]string** |  | [optional] 
-**SecretRef** | Pointer to **string** |  | [optional] 
-**Url** | **string** |  | [default to ""]
+**CertConfigMap** | Pointer to **string** | CertConfigMap is a configmap reference, containing a Certificate Authority(CA) public key, and a base64 encoded pem certificate | [optional] 
+**ExtraHeaders** | Pointer to **[]string** | ExtraHeaders is a list of strings containing extra headers to include with HTTP transfer requests | [optional] 
+**SecretExtraHeaders** | Pointer to **[]string** | SecretExtraHeaders is a list of Secret references, each containing an extra HTTP header that may include sensitive information | [optional] 
+**SecretRef** | Pointer to **string** | SecretRef A Secret reference, the secret should contain accessKeyId (user name) base64 encoded, and secretKey (password) also base64 encoded | [optional] 
+**Url** | **string** | URL is the URL of the http(s) endpoint | [default to ""]
 
 ## Methods
 

@@ -181,7 +181,7 @@ func (r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) PropagationPo
 	return r
 }
 
-func (r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*K8sIoV1Status, *http.Response, error) {
+func (r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) Execute() (*KubevirtIoApiCoreV1VirtualMachineInstanceMigration, *http.Response, error) {
 	return r.ApiService.DeleteNamespacedVirtualMachineInstanceMigrationExecute(r)
 }
 
@@ -205,13 +205,13 @@ func (a *MigrationsAPIService) DeleteNamespacedVirtualMachineInstanceMigration(c
 }
 
 // Execute executes the request
-//  @return K8sIoV1Status
-func (a *MigrationsAPIService) DeleteNamespacedVirtualMachineInstanceMigrationExecute(r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) (*K8sIoV1Status, *http.Response, error) {
+//  @return KubevirtIoApiCoreV1VirtualMachineInstanceMigration
+func (a *MigrationsAPIService) DeleteNamespacedVirtualMachineInstanceMigrationExecute(r ApiDeleteNamespacedVirtualMachineInstanceMigrationRequest) (*KubevirtIoApiCoreV1VirtualMachineInstanceMigration, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodDelete
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *K8sIoV1Status
+		localVarReturnValue  *KubevirtIoApiCoreV1VirtualMachineInstanceMigration
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MigrationsAPIService.DeleteNamespacedVirtualMachineInstanceMigration")

@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1VirtualMachineInstanceMigrationSpec{}
 
 // KubevirtIoApiCoreV1VirtualMachineInstanceMigrationSpec struct for KubevirtIoApiCoreV1VirtualMachineInstanceMigrationSpec
 type KubevirtIoApiCoreV1VirtualMachineInstanceMigrationSpec struct {
+	// The name of the VMI to perform the migration on. VMI must exist in the migration objects namespace
 	VmiName *string `json:"vmiName,omitempty"`
 }
 

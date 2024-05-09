@@ -88,7 +88,7 @@ No authorization required
 
 ## DeleteNamespacedPersistentVolumeClaim
 
-> KubevirtIoApiCoreV1VirtualMachine DeleteNamespacedPersistentVolumeClaim(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
+> K8sIoV1PersistentVolumeClaim DeleteNamespacedPersistentVolumeClaim(ctx, name, namespace).K8sIoV1DeleteOptions(k8sIoV1DeleteOptions).GracePeriodSeconds(gracePeriodSeconds).OrphanDependents(orphanDependents).PropagationPolicy(propagationPolicy).Execute()
 
 Delete a Namespaced Persistent Volume Claim
 
@@ -121,7 +121,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "Error when calling `VolumesAPI.DeleteNamespacedPersistentVolumeClaim``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `DeleteNamespacedPersistentVolumeClaim`: KubevirtIoApiCoreV1VirtualMachine
+	// response from `DeleteNamespacedPersistentVolumeClaim`: K8sIoV1PersistentVolumeClaim
 	fmt.Fprintf(os.Stdout, "Response from `VolumesAPI.DeleteNamespacedPersistentVolumeClaim`: %v\n", resp)
 }
 ```
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**KubevirtIoApiCoreV1VirtualMachine**](KubevirtIoApiCoreV1VirtualMachine.md)
+[**K8sIoV1PersistentVolumeClaim**](K8sIoV1PersistentVolumeClaim.md)
 
 ### Authorization
 

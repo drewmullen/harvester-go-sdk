@@ -19,10 +19,13 @@ import (
 // checks if the KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource type satisfies the MappedNullable interface at compile time
 var _ MappedNullable = &KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource{}
 
-// KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource struct for KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource
+// KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource PersistentVolumeClaimVolumeSource represents a reference to a PersistentVolumeClaim in the same namespace. Directly attached to the vmi via qemu. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 type KubevirtIoApiCoreV1PersistentVolumeClaimVolumeSource struct {
+	// claimName is the name of a PersistentVolumeClaim in the same namespace as the pod using this volume. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#persistentvolumeclaims
 	ClaimName string `json:"claimName"`
+	// Hotpluggable indicates whether the volume can be hotplugged and hotunplugged.
 	Hotpluggable *bool `json:"hotpluggable,omitempty"`
+	// readOnly Will force the ReadOnly setting in VolumeMounts. Default false.
 	ReadOnly *bool `json:"readOnly,omitempty"`
 }
 

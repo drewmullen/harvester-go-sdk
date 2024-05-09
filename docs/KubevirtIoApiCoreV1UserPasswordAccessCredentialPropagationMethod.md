@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**QemuGuestAgent** | Pointer to **map[string]interface{}** |  | [optional] 
+**QemuGuestAgent** | Pointer to **map[string]interface{}** | QemuGuestAgentAccessCredentailPropagation means passwords are dynamically injected into the vm at runtime via the qemu guest agent. This feature requires the qemu guest agent to be running within the guest. | [optional] 
 
 ## Methods
 

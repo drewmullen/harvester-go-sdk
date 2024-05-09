@@ -19,6 +19,7 @@ var _ MappedNullable = &KubevirtIoApiCoreV1NUMA{}
 
 // KubevirtIoApiCoreV1NUMA struct for KubevirtIoApiCoreV1NUMA
 type KubevirtIoApiCoreV1NUMA struct {
+	// GuestMappingPassthrough will create an efficient guest topology based on host CPUs exclusively assigned to a pod. The created topology ensures that memory and CPUs on the virtual numa nodes never cross boundaries of host numa nodes.
 	GuestMappingPassthrough map[string]interface{} `json:"guestMappingPassthrough,omitempty"`
 }
 

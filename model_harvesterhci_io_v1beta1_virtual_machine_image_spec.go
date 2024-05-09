@@ -27,6 +27,7 @@ type HarvesterhciIoV1beta1VirtualMachineImageSpec struct {
 	PvcName *string `json:"pvcName,omitempty"`
 	PvcNamespace *string `json:"pvcNamespace,omitempty"`
 	Retry *int32 `json:"retry,omitempty"`
+	//   Possible enum values:  - `\"download\"`  - `\"export-from-volume\"`  - `\"upload\"`
 	SourceType string `json:"sourceType"`
 	StorageClassParameters *map[string]string `json:"storageClassParameters,omitempty"`
 	Url *string `json:"url,omitempty"`

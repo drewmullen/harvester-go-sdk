@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **DeviceName** | **string** |  | [default to ""]
-**Name** | **string** |  | [default to ""]
-**Tag** | Pointer to **string** |  | [optional] 
+**Name** | **string** | Name of the GPU device as exposed by a device plugin | [default to ""]
+**Tag** | Pointer to **string** | If specified, the virtual network interface address and its tag will be provided to the guest via config drive | [optional] 
 **VirtualGPUOptions** | Pointer to [**KubevirtIoApiCoreV1VGPUOptions**](KubevirtIoApiCoreV1VGPUOptions.md) |  | [optional] 
 
 ## Methods
